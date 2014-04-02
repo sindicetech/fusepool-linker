@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  
+  Three example agents. 
+  Matching: <urn:x-temp:/id/00013d96-d9cd-43ba-a193-1dbf35fe53de> and <urn:x-temp:/id/73c1e108-0b13-4823-a56f-30022398a887>
+  Not matching: <urn:x-temp:/id/000ea65b-7f48-481f-99ac-3370eb6caadd>
+  
+  Equivalent of threeAgents.nt
+-->
+<rdf:RDF
+  xmlns:ns1="http://www.owl-ontologies.com/sumo.owl#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:schema="http://schema.org/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <ns1:Agent rdf:about="urn:x-temp:/id/000ea65b-7f48-481f-99ac-3370eb6caadd">
+    <schema:address>
+      <rdf:Description rdf:about="urn:x-temp:/id/3bf9e13b-e46b-4961-9ef8-d908727e6c02">
+        <schema:addressCountry rdf:resource="urn:x-temp:/code/country/GB"/>
+        <schema:addressLocality>GB-Reading, Berkshire RG1 8EQ</schema:addressLocality>
+        <schema:streetAddress>Urquhart-Dykes &amp;amp; Lord 1 Richfield Place Richfield Avenue</schema:streetAddress>
+      </rdf:Description>
+    </schema:address>
+    <rdfs:label>Brock, Peter William (GB)</rdfs:label>
+  </ns1:Agent>
+  <ns1:Agent rdf:about="urn:x-temp:/id/73c1e108-0b13-4823-a56f-30022398a887">
+    <rdfs:label>Freiherr von Gravenreuth, GÃ¼nter, Dipl.-Ing. (FH)</rdfs:label>
+    <schema:address>
+      <rdf:Description rdf:about="urn:x-temp:/id/ac12957e-b0f3-476e-ab6f-5836eed100a1">
+        <schema:addressCountry rdf:resource="urn:x-temp:/code/country/DE"/>
+        <schema:addressLocality>D-80336 MÃ¼nchen</schema:addressLocality>
+        <schema:streetAddress>Schwanthalerstrasse 3</schema:streetAddress>
+      </rdf:Description>
+    </schema:address>
+  </ns1:Agent>
+  <ns1:Agent rdf:about="urn:x-temp:/id/00013d96-d9cd-43ba-a193-1dbf35fe53de">
+    <schema:address>
+      <rdf:Description rdf:about="urn:x-temp:/id/9ef4c037-f27e-4d72-afd3-1cbf713fba61">
+        <schema:addressCountry rdf:resource="urn:x-temp:/code/country/DE"/>
+        <schema:addressLocality>D-80336 MÃ¼nchen</schema:addressLocality>
+        <schema:streetAddress>Schwanthalerstrasse 3</schema:streetAddress>
+      </rdf:Description>
+    </schema:address>
+    <rdfs:label>Freiherr von Gravenreuth, GÃ¼nter, Dipl.-Ing. (FH)</rdfs:label>
+  </ns1:Agent>
+</rdf:RDF>

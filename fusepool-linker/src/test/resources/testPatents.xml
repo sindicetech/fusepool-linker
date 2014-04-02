@@ -1,0 +1,2995 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" >
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#default-iid">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#default-iid-nullable">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#default-iid-nonblank">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#default-iid-nonblank-nullable">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#default">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#default-nullable">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-varchar">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-varchar-nullable">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-varchar-dt">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-varchar-dt-nullable">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-varchar-lang">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-varchar-lang-nullable">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-varchar-uri">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-varchar-uri-nullable">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-varchar-literal">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-varchar-literal-nullable">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-longvarchar">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-longvarchar-nullable">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-longvarchar-dt">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-longvarchar-dt-nullable">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-longvarchar-lang">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-longvarchar-lang-nullable">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-nvarchar">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-nvarchar-nullable">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-nvarchar-dt">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-nvarchar-dt-nullable">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-nvarchar-lang">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-nvarchar-lang-nullable">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-nvarchar-uri">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-nvarchar-uri-nullable">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-nvarchar-literal">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-nvarchar-literal-nullable">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-longnvarchar">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-longnvarchar-nullable">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-longnvarchar-dt">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-longnvarchar-dt-nullable">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-longnvarchar-lang">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-longnvarchar-lang-nullable">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-longvarbinary">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-longvarbinary-nullable">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-integer">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-integer-nullable">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-integer-uri">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-integer-uri-nullable">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-integer-literal">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-integer-literal-nullable">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-numeric">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-numeric-nullable">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-numeric-uri">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-numeric-uri-nullable">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-numeric-literal">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-numeric-literal-nullable">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-doubleprecision">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-doubleprecision-nullable">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-date">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-date-nullable">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-time">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-time-nullable">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-datetime">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-datetime-nullable">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#multipart-uri">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#multipart-uri-nullable">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#multipart-literal">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#multipart-literal-nullable">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#multipart-uri-fn-nullable">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#multipart-literal-fn-nullable">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#zeropart-uri">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#zeropart-uri-nullable">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#zeropart-literal">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#zeropart-literal-nullable">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#zeropart-uri-fn-nullable">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#zeropart-literal-fn-nullable">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-varchar-uri-fn">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-varchar-uri-fn-nullable">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-nvarchar-uri-fn">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-nvarchar-uri-fn-nullable">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-integer-uri-fn">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-integer-uri-fn-nullable">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-numeric-uri-fn">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-numeric-uri-fn-nullable">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-varchar-literal-fn">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-varchar-literal-fn-nullable">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-nvarchar-literal-fn">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-nvarchar-literal-fn-nullable">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-integer-literal-fn">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-integer-literal-fn-nullable">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-numeric-literal-fn">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-numeric-literal-fn-nullable">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/schemas/virtrdf#DefaultQuadStorage">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadStorage" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/schemas/virtrdf#DefaultQuadStorage-UserMaps">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMap" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/schemas/virtrdf#DefaultQuadMap">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMap" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sinv-iid">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sinv-iid-nullable">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sinv-iid-nonblank">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sinv-iid-nonblank-nullable">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sinv">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sinv-nullable">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/schemas/virtrdf#DefaultServiceStorage">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadStorage" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/schemas/virtrdf#DefaultServiceStorage-UserMaps">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMap" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/schemas/virtrdf#DefaultServiceMap">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMap" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#default-iid-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#default-iid-nullable-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#default-iid-nonblank-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#default-iid-nonblank-nullable-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#default-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#default-nullable-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-varchar-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-varchar-nullable-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-varchar-dt-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-varchar-dt-nullable-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-varchar-lang-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-varchar-lang-nullable-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-longvarchar-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-longvarchar-nullable-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-longvarchar-dt-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-longvarchar-dt-nullable-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-longvarchar-lang-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-longvarchar-lang-nullable-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-nvarchar-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-nvarchar-nullable-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-nvarchar-dt-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-nvarchar-dt-nullable-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-nvarchar-lang-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-nvarchar-lang-nullable-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-longnvarchar-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-longnvarchar-nullable-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-longnvarchar-dt-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-longnvarchar-dt-nullable-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-longnvarchar-lang-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-longnvarchar-lang-nullable-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-longvarbinary-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-longvarbinary-nullable-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-varchar-uri-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-varchar-uri-nullable-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-varchar-literal-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-varchar-literal-nullable-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-nvarchar-uri-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-nvarchar-uri-nullable-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-nvarchar-literal-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-nvarchar-literal-nullable-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-integer-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-integer-nullable-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-integer-uri-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-integer-uri-nullable-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-integer-literal-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-integer-literal-nullable-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-doubleprecision-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-doubleprecision-nullable-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-numeric-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-numeric-nullable-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-numeric-uri-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-numeric-uri-nullable-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-numeric-literal-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-numeric-literal-nullable-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-date-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-date-nullable-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-time-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-time-nullable-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-datetime-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-datetime-nullable-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#multipart-uri-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#multipart-uri-nullable-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#multipart-literal-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#multipart-literal-nullable-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#multipart-uri-fn-nullable-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#multipart-literal-fn-nullable-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#zeropart-uri-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#zeropart-uri-nullable-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#zeropart-literal-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#zeropart-literal-nullable-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#zeropart-uri-fn-nullable-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#zeropart-literal-fn-nullable-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-varchar-uri-fn-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-varchar-uri-fn-nullable-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-nvarchar-uri-fn-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-nvarchar-uri-fn-nullable-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-integer-uri-fn-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-integer-uri-fn-nullable-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-numeric-uri-fn-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-numeric-uri-fn-nullable-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-varchar-literal-fn-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-varchar-literal-fn-nullable-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-nvarchar-literal-fn-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-nvarchar-literal-fn-nullable-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-integer-literal-fn-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-integer-literal-fn-nullable-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-numeric-literal-fn-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sql-numeric-literal-fn-nullable-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/schemas/virtrdf#DefaultQuadMap-G">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapValue" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/schemas/virtrdf#DefaultQuadMap-S">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapValue" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/schemas/virtrdf#DefaultQuadMap-P">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapValue" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/schemas/virtrdf#DefaultQuadMap-O">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapValue" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/schemas/virtrdf#DefaultQuadMap-atables">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapATable" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/schemas/virtrdf#DefaultQuadMap-G-cols">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapColumn" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/schemas/virtrdf#DefaultQuadMap-G-col-G">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapColumn" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/schemas/virtrdf#DefaultQuadMap-S-cols">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapColumn" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/schemas/virtrdf#DefaultQuadMap-S-col-S">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapColumn" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/schemas/virtrdf#DefaultQuadMap-P-cols">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapColumn" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/schemas/virtrdf#DefaultQuadMap-P-col-P">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapColumn" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/schemas/virtrdf#DefaultQuadMap-O-cols">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapColumn" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/schemas/virtrdf#DefaultQuadMap-ft">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFText" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/schemas/virtrdf#DefaultQuadMap-geo">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFText" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/schemas/virtrdf#DefaultQuadMap-O-col-O">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapColumn" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/schemas/virtrdf#DefaultQuadMap-pquad">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapATable" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sinv-iid-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sinv-iid-nullable-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sinv-iid-nonblank-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sinv-iid-nonblank-nullable-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sinv-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/virtrdf-data-formats#sinv-nullable-SuperFormats">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/schemas/virtrdf#DefaultServiceMap-G">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapValue" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/schemas/virtrdf#DefaultServiceMap-S">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapValue" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/schemas/virtrdf#DefaultServiceMap-P">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapValue" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/schemas/virtrdf#DefaultServiceMap-O">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapValue" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/schemas/virtrdf#DefaultServiceMap-atables">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapATable" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/schemas/virtrdf#DefaultServiceMap-G-cols">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapColumn" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/schemas/virtrdf#DefaultServiceMap-G-col-G">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapColumn" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/schemas/virtrdf#DefaultServiceMap-S-cols">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapColumn" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/schemas/virtrdf#DefaultServiceMap-S-col-S">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapColumn" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/schemas/virtrdf#DefaultServiceMap-P-cols">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapColumn" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/schemas/virtrdf#DefaultServiceMap-P-col-P">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapColumn" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/schemas/virtrdf#DefaultServiceMap-O-cols">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapColumn" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/schemas/virtrdf#DefaultServiceMap-ft">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapFText" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/schemas/virtrdf#DefaultServiceMap-O-col-O">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapColumn" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/schemas/virtrdf#DefaultServiceMap-pquad">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadMapATable" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/schemas/virtrdf#DefaultServiceMap-ft-conds">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-string" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/schemas/virtrdf#SyncToQuads">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#QuadStorage" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.openlinksw.com/schemas/virtrdf#SyncToQuads-UserMaps">
+    <rdf:type rdf:resource="http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMap" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8890/sparql">
+    <rdf:type rdf:resource="http://www.w3.org/ns/sparql-service-description#Service" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#label">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Class">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Nothing">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#complementOf">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#unionOf">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Ontology">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#imports">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#OntologyProperty" />
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#isDefinedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#comment">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#versionInfo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty" />
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#priorVersion">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#OntologyProperty" />
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#OntologyProperty">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#AnnotationProperty">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#equivalentClass">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#disjointWith">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#equivalentProperty">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#differentFrom">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#distinctMembers">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#AllDifferent">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#intersectionOf">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#oneOf">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Restriction">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#onProperty">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#allValuesFrom">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#hasValue">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#someValuesFrom">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#minCardinality">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#maxCardinality">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#cardinality">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#ObjectProperty">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#DatatypeProperty">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#inverseOf">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#TransitiveProperty">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#SymmetricProperty">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#FunctionalProperty">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#InverseFunctionalProperty">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#seeAlso">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#backwardCompatibleWith">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#OntologyProperty" />
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#incompatibleWith">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#OntologyProperty" />
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#DeprecatedClass">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#DeprecatedProperty">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#DataRange">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#sameAs">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://csarven.ca/#i">
+    <rdf:type rdf:resource="http://www.w3.org/ns/prov#Agent" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6018003">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6010385">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/33420928">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/9191604">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25692293">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/19828668">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/19728598">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/20331620">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/9192140">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6011152">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6010493">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25772091">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6010350">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6010673">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6010390">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6010745">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6010741">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6010698">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/13263858">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6010562">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6010691">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6010744">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25772107">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6011358">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6010964">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6010961">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6011441">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6011173">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6010910">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6010672">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6011106">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/27122448">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/4319842">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25183563">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25183567">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25183471">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/13222746">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25185701">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25185704">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/37758588">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/13485681">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6011059">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6011359">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/4321327">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6011507">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/9192009">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6011174">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25191396">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6011208">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25772114">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6011220">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25190800">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25189555">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6011133">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6011470">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6011132">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25772130">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6011121">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6011060">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6011311">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/4322957">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25188946">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/27299158">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6011218">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6011252">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25191735">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25193076">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25193080">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/9192019">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/9192020">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10215321">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25772155">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25192212">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6011402">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/19828683">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10190657">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25186270">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10192229">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25185514">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6011465">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10191846">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10191830">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/9191927">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/9192004">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10464308">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10214400">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/26248235">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25192962">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25185345">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/3767039">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/27157041">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25185352">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/27122625">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25190586">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/4108839">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10212030">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25193932">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25192188">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10209224">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25190920">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25192459">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25194314">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25194312">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25193563">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25193139">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/27122812">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/9191958">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/9191587">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/26220052">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/9192057">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/9191871">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6010391">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6011790">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25196016">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/3568207">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/3567092">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6012336">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6013133">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6012880">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25191405">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25195087">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6011554">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6013202">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6012566">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6011517">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/4323894">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6011788">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6011950">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6011606">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6011607">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/9192226">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25206695">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/19728615">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6011534">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6011555">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6011739">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25772199">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25197880">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25192579">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25772164">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6011792">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6012472">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25206519">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25194881">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/9192398">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25195312">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6012084">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25195499">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25195510">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25691589">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/4332315">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25702447">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25197418">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25702452">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6012081">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6012290">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6012415">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6012416">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6012217">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6012978">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6013042">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25772213">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6012230">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6012730">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6012557">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25197523">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10232513">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6011762">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25205344">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6012193">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6012624">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6012548">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6013039">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6013128">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6012777">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/4333965">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/27123362">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6012533">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/9192413">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25202400">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6012253">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6012106">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6012088">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6012137">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6012913">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6012914">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6012396">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6012232">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6012422">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6012934">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6012825">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6012969">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6013096">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6013026">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6012645">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/13604060">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25203210">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6013170">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6013205">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25205286">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6013063">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/4334887">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25699309">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6012900">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/27123633">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25772266">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/26702670">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/27187232">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25205251">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6013059">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/19828781">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/19828756">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25187176">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/19828764">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10236297">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10241855">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/26645329">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10242029">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10242040">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6011783">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6011812">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25204111">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/19828778">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10256930">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/26258722">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/27255260">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10267184">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/4333161">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10259107">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/19828791">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25201898">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6012873">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/3861556">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/27123448">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/27420069">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/19828819">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10269580">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10198905">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25202118">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25624088">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10241589">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10234192">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25192776">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25195564">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/3691310">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10222690">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25198901">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10252847">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10247953">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/26248995">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25195427">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10254870">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/4108910">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10230306">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25200336">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10241609">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/26249725">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25201802">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10244237">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/27123152">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25206317">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25207406">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25207447">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10267609">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25211599">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/27123695">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10263293">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10242447">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10242480">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10241925">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10246120">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25201683">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10258745">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25207460">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25203403">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10251100">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25206468">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25203031">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25205578">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/26258912">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25206465">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10251360">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/27123592">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25208932">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25207126">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25208107">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10993256">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/27123597">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/27123577">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/26258981">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10251259">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25209959">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10271605">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/9192608">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/9192712">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/9192711">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/26220058">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/26220102">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/9192181">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/9192607">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/9192350">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/26220080">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/9192341">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/9193005">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/9192677">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/26220098">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/9192527">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/9192507">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/9192614">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/9192965">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/9192966">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/9192874">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/9192837">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/9192947">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/9193250">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25185809">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25207936">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25209147">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/4335240">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25692591">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/20331692">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/26255230">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25187772">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25197489">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6014300">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25216103">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25216035">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6013934">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6013567">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/19728618">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/4329489">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25195504">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6011791">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6013252">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6013253">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6014014">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6013332">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25197149">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6014106">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6013375">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6013462">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6013071">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10273200">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6013281">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6013331">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6013280">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6013279">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6013390">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6013389">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25686139">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/4340240">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/19728633">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/4340222">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25691930">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6013446">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6013737">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6012680">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/4340163">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6013915">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6013916">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25772337">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6014170">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6013589">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6013312">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6013542">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6680761">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/19728632">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6013514">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25210206">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6013677">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6013800">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6014260">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/20331842">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6014153">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/13779020">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6013786">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6019366">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6013572">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6014046">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6014055">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10280782">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10280798">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25219264">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25214069">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/13790690">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6014245">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6014045">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6014144">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6014088">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6014126">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6014140">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6014167">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25772311">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25703869">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6014277">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6014169">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25221677">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/3571224">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25219339">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6014309">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6014191">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/26268074">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6013348">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/19828881">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10273461">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/19828854">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/19828845">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/19828846">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/20331840">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6013512">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/19828859">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25772317">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25216480">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/19728635">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25221543">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/19828862">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6013687">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/19828908">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6013886">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10277097">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10222047">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25214402">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10287624">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10277111">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/3691325">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10282952">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25216710">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10272836">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/3767091">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10280186">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25213739">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25216409">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25212012">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10273708">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10271908">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/27254832">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10276546">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/8119244">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10297401">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10282153">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10288477">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25214157">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/4109108">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25217875">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/26259930">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10299397">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10298337">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10304468">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/9191622">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/9192678">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/26220123">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/9193307">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/9192646">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/9193203">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/26220120">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/26220127">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/9193263">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/9193396">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/9193164">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/9193165">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/9193272">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/9193273">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/9193274">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/20331813">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/3571126">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6015072">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6010349">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25225476">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6014581">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6011715">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6014842">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25202337">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/4334639">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6015021">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6013771">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25204020">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6014352">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25772369">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6013203">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6013535">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/26255950">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25224264">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6014698">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25699651">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6014150">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/4344799">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/19728641">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25226722">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25221139">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6014279">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6014491">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6014143">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6014278">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6014125">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/4346229">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6014838">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/27420119">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25772356">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/19728643">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6014806">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25221571">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25216943">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6014067">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25228969">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/4347259">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25223018">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/27175333">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/4349396">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6014355">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6014577">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6680939">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6014773">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/4347895">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/4347916">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/13857262">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/14126009">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6014738">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6014887">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10298554">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25221222">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10314103">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/3767111">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/3767094">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6014478">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6014859">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25220025">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/13940419">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/9193737">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25223493">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6015243">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6015136">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25555705">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6015138">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6015139">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6015137">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6015066">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25772398">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/4350303">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25772418">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10306770">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6014871">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6014965">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25222827">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25232219">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25222799">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25231417">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6015060">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6015143">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/26339800">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6015332">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/4349284">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6015319">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6015052">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6015053">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25199588">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/26376009">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6015176">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/26260658">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/4349625">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6014992">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/4350025">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/26429816">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25228901">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6015335">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25230894">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6015135">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6015334">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/19828919">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6015338">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6015337">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6015358">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6015333">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25689497">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6014794">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10326015">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25225184">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25227820">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6015397">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6015396">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6015173">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6015172">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6015399">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6015312">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25231283">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25228016">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25230069">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25231363">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/14054783">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6015378">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6014185">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6013111">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25204369">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/4351557">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25206501">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25226192">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6014333">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6015171">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/27124297">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/3843019">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/19828927">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/19828957">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25232558">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/27124136">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/4345494">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6014505">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25624511">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6014342">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25227423">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25230984">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10308068">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25231507">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25197101">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/26338942">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10316644">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25206247">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25221218">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25202429">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25223668">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25208277">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25223665">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25223662">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10281704">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25223024">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25230964">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10310123">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10283092">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25228123">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/27124517">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25232548">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25230355">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/27124438">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10316543">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10327427">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10298829">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/26242840">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10307991">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25218638">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10315043">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10316401">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25229248">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/27258940">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10315773">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10304339">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25227463">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25222819">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25226115">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25229240">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25225403">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25226749">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25226755">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10311547">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10311558">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25225998">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25225479">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25226721">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10328791">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25227906">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25227908">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/14299173">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10325295">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/26261163">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25228904">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/10328308">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25229741">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/8474326">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/27124484">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/3767107">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25232222">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25232663">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25232133">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/9192613">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/9193935">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/9193622">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/9194111">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/9193695">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25224287">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/9193811">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/9193813">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/9193830">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/26220145">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/9193760">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/9193911">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/9194263">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/9193838">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/9192143">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/4344475">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/27165321">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6016386">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25192576">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25192582">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6681684">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6012449">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6014382">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/3767062">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6012583">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25222434">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6016444">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6014354">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/4344814">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25241258">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25236122">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/20332003">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6014492">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25222327">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6014437">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/4347903">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6015770">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25223490">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6014869">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6014515">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6014821">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25772387">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6016378">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/6014494">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25228916">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/14071058">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25698353">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/25697750">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:x-temp:/doc/family/26436654">
+    <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="vb10001">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+  </rdf:Description>
+</rdf:RDF>

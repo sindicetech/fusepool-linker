@@ -1,0 +1,2 @@
+com.sindice.fusepooladapter.storage.TdbWrapper
+org.apache.clerezza.rdf.jena.tdb.storage.TdbTcProvider

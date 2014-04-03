@@ -1,3 +1,19 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one or more
+ * contributor license agreements.  See the NOTICE file distributed with
+ * this work for additional information regarding copyright ownership.
+ * The ASF licenses this file to You under the Apache License, Version 2.0
+ * (the "License"); you may not use this file except in compliance with
+ * the License.  You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 package com.sindice.fusepooladapter;
 
 import java.io.IOException;
@@ -16,7 +32,6 @@ import com.sindice.fusepooladapter.storage.JenaInputStoreImpl;
 import com.sindice.fusepooladapter.storage.OutputStore;
 /**
  * implementation of {@link com.sindice.fusepooladapter.SingleLinker} using Duke
- * @author josef
  *
  */
 public class LinkerAdapter implements SingleLinker {
@@ -46,7 +61,7 @@ public class LinkerAdapter implements SingleLinker {
    * 
    * @return Directory created in a temp dir of the system.
    */
-  public String defaultInputDir() {
+  protected String defaultInputDir() {
 	  String dir = Files.createTempDir().getAbsolutePath();
 	  logger.info("Created inputDir {} ", dir);
 	  return dir;
@@ -59,7 +74,7 @@ public class LinkerAdapter implements SingleLinker {
    * 
    * @return Directory created in a temp dir of the system.
    */
-  public String defaultOutputDir() {
+  protected String defaultOutputDir() {
 	  String dir = Files.createTempDir().getAbsolutePath();
 	  logger.info("Created outputDir {} ", dir);
 	  return dir;
@@ -70,7 +85,7 @@ public class LinkerAdapter implements SingleLinker {
    * 
    * @return 2
    */
-  public int defaultNumberOfThreads() {
+  protected int defaultNumberOfThreads() {
 	  return 2;
   }
   
@@ -79,7 +94,7 @@ public class LinkerAdapter implements SingleLinker {
    * 
    * @return "classpath:patents-jena-jdbc.xml"
    */
-  public String defaultConfigFileLocation() {
+  protected String defaultConfigFileLocation() {
 	  return "classpath:patents-jena-jdbc.xml";
   }
     

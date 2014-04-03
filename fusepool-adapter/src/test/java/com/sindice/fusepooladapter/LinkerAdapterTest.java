@@ -48,10 +48,22 @@ public class LinkerAdapterTest {
 	 * via {@link TestTripleCollectionPatents}. Two match, one doesn't. Uses the
 	 * conf-final.xml Duke configuration specified in conf.properties.
 	 */
-	@Ignore
 	@Test
 	public void testSmall() throws IOException {
-		LinkerAdapter adapter = new LinkerAdapter("conf.properties");
+		LinkerAdapter adapter = new ConfigurableLinkerAdapter("conf.properties");
+		TripleCollection resultTriples = adapter
+				.interlink(new TestTripleCollectionPatents());
+		System.out.println(resultTriples.size());
+	}
+
+	/**
+	 * A simple test of deduplication of 3 agents loaded from threeAgents.xml
+	 * via {@link TestTripleCollectionPatents}. Two match, one doesn't. Uses the
+	 * conf-final.xml Duke configuration specified in conf.properties.
+	 */
+	@Test
+	public void testSmallLinkerAdapter() throws IOException {
+		LinkerAdapter adapter = new LinkerAdapter();
 		TripleCollection resultTriples = adapter
 				.interlink(new TestTripleCollectionPatents());
 		System.out.println(resultTriples.size());
@@ -70,7 +82,7 @@ public class LinkerAdapterTest {
 	@Test
 	public void testFull() throws IOException {
 		logger.info("Full test");
-		LinkerAdapter adapter = new LinkerAdapter("classpath:patents-jena-jdbc.xml", 
+		LinkerAdapter adapter = new ConfigurableLinkerAdapter("classpath:patents-jena-jdbc.xml", 
 				"/data/tmp_fusepool/in", // data is loaded from OutputStore (see below, a Clerezza TripleCollection) to this "inpath" 
 										 //      so that it can be conveniently queried via SPARQL 
 				"out", // results are stored in this "outpath"

@@ -1,9 +1,17 @@
-/**
- * Copyright (c) 2014, Sindice Limited. All Rights Reserved.
+/*
+ * Created by Sindice LTD http://sindicetech.com
+ * Sindice LTD licenses this file to You under the Apache License, Version 2.0
+ * (the "License"); you may not use this file except in compliance with
+ * the License.  You may obtain a copy of the License at
  *
- * Fusepool-linker this is proprietary software do not use without authorization by Sindice Limited.
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
-
 package com.sindice.fusepooladapter;
 
 import java.io.IOException;
@@ -15,6 +23,7 @@ import org.apache.clerezza.rdf.core.TripleCollection;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.google.common.io.Files;
 import com.sindice.fusepool.DukeRunner;
 import com.sindice.fusepooladapter.storage.InputTripleStore;
 import com.sindice.fusepooladapter.storage.JenaInputStoreImpl;
@@ -30,6 +39,63 @@ public class LinkerAdapter implements SingleLinker {
   private final String outpath;
   private final String dukeConfigFileLocation;
   private final int threadsNo;
+  
+  /**
+   * Default constructor that uses the default*() methods to initialize fields.
+   * 
+   * @throws IOException
+   */
+  public LinkerAdapter() throws IOException {
+	  this.inpath = defaultInputDir();
+	  this.outpath = defaultOutputDir();
+	  this.threadsNo = defaultNumberOfThreads();
+	  this.dukeConfigFileLocation = defaultConfigFileLocation();
+  }
+  
+  /**
+   * Creates a default temporary directory to be used as the input dir.
+   * 
+   * Used by the default constructor, can be overridden.
+   * 
+   * @return Directory created in a temp dir of the system.
+   */
+  protected String defaultInputDir() {
+	  String dir = Files.createTempDir().getAbsolutePath();
+	  logger.info("Created inputDir {} ", dir);
+	  return dir;
+  }
+  
+  /**
+   * Creates a default temporary directory to be used as the output dir.
+   * 
+   * Used by the default constructor, can be overridden.
+   * 
+   * @return Directory created in a temp dir of the system.
+   */
+  protected String defaultOutputDir() {
+	  String dir = Files.createTempDir().getAbsolutePath();
+	  logger.info("Created outputDir {} ", dir);
+	  return dir;
+  }
+  
+  /**
+   * Returns the default number of threads to run Duke with.
+   * 
+   * @return 2
+   */
+  protected int defaultNumberOfThreads() {
+	  return 2;
+  }
+  
+  /**
+   * Returns the default config file location.
+   * 
+   * @return "classpath:patents-jena-jdbc.xml"
+   */
+  protected String defaultConfigFileLocation() {
+	  return "classpath:patents-jena-jdbc.xml";
+  }
+    
   /**
    * constructor using provided parameters
    * 
@@ -72,7 +138,7 @@ public class LinkerAdapter implements SingleLinker {
       this.threadsNo = Integer.parseInt(properties.getProperty("dukethrno"));
 
   } 
-  
+    
   @Override
   public TripleCollection interlink(TripleCollection dataToInterlink) {
     // populates input store

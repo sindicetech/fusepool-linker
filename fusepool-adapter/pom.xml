@@ -4,7 +4,8 @@
 	<groupId>com.sindice</groupId>
 	<artifactId>fusepool-adapter</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	
+        <name>Fusepool Duke Linker Adapter</name>
+        
 	<build>
 		<plugins>
 			<plugin>

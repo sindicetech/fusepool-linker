@@ -4,7 +4,7 @@
 	<groupId>com.sindice</groupId>
 	<artifactId>fusepool-linker</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>fusepool-linker</name>
+	<name>Fusepool Duke Linker</name>
 
 	<build>
 		<plugins>

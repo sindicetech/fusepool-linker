@@ -32,31 +32,32 @@ import com.sindice.fusepooladapter.storage.OutputStore;
 public class LinkerAdapter implements SingleLinker {
 
   private static final Logger logger = LoggerFactory.getLogger(LinkerAdapter.class);
+  private String inDir;
+  private String outDir;
   
+  public LinkerAdapter() {
+	  this.inDir = Files.createTempDir().getAbsolutePath();
+	  logger.info("Created inputDir {} ", inDir);
+	  this.outDir = Files.createTempDir().getAbsolutePath();
+	  logger.info("Created outputDir {} ", outDir);
+  }
+    
   /**
    * Creates a default temporary directory to be used as the input dir.
-   * 
-   * Used by the default constructor, can be overridden.
    * 
    * @return Directory created in a temp dir of the system.
    */
   protected String defaultInputDir() {
-	  String dir = Files.createTempDir().getAbsolutePath();
-	  logger.info("Created inputDir {} ", dir);
-	  return dir;
+	  return inDir;
   }
   
   /**
    * Creates a default temporary directory to be used as the output dir.
    * 
-   * Used by the default constructor, can be overridden.
-   * 
    * @return Directory created in a temp dir of the system.
    */
   protected String defaultOutputDir() {
-	  String dir = Files.createTempDir().getAbsolutePath();
-	  logger.info("Created outputDir {} ", dir);
-	  return dir;
+	  return outDir;
   }
   
   /**
@@ -90,9 +91,7 @@ public class LinkerAdapter implements SingleLinker {
     // starts processing
     DukeRunner runner = null;
     try {
-      runner = new DukeRunner(defaultConfigFileLocation(),"jdbc:jena:tdb:location=" + defaultInputDir(),  defaultOutputDir(), defaultNumberOfThreads()) {
-      //  runner = new DukeRunner(dukeConfigFileLocation,"jdbc:jena:tdb:location=" + inpath,  "jdbc:jena:tdb:location=" + outpath, threadsNo) {
-      };
+      runner = new DukeRunner(defaultConfigFileLocation(),"jdbc:jena:tdb:location=" + defaultInputDir(),  defaultOutputDir(), defaultNumberOfThreads());
     } catch (SQLException e) {
       logger.error("error during initialization of the Duke");
     }

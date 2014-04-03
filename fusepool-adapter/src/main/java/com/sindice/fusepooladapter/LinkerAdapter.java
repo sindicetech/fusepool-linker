@@ -28,10 +28,12 @@ import com.sindice.fusepool.DukeRunner;
 import com.sindice.fusepooladapter.storage.InputTripleStore;
 import com.sindice.fusepooladapter.storage.JenaInputStoreImpl;
 import com.sindice.fusepooladapter.storage.OutputStore;
+import org.osgi.service.component.annotations.Component;
 /**
  * implementation of {@link com.sindice.fusepooladapter.SingleLinker} using Duke
  *
  */
+@Component(service = SingleLinker.class)
 public class LinkerAdapter implements SingleLinker {
 
   private static final Logger logger = LoggerFactory.getLogger(LinkerAdapter.class);

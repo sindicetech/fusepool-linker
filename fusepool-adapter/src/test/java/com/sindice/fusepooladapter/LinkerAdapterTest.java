@@ -31,6 +31,9 @@ import com.hp.hpl.jena.tdb.TDB;
 import com.hp.hpl.jena.tdb.TDBFactory;
 import com.sindice.fusepool.testutils.TestTripleCollectionPatents;
 import com.sindice.fusepooladapter.storage.OutputStore;
+import org.apache.clerezza.rdf.core.serializedform.Parser;
+import org.apache.clerezza.rdf.core.serializedform.SupportedFormat;
+import org.junit.Assert;
 
 /**
  * Junit tests for manual testing of deduplication.
@@ -68,7 +71,19 @@ public class LinkerAdapterTest {
 				.interlink(new TestTripleCollectionPatents());
 		System.out.println(resultTriples.size());
 	}
-
+	
+	@Test
+	public void testSmallDataFile() throws IOException {
+		LinkerAdapter adapter = new LinkerAdapter();
+		TripleCollection triples = Parser.getInstance().parse(getClass().getResourceAsStream("patent-data-sample-short.ttl"), SupportedFormat.TURTLE);
+		TripleCollection resultTriples = adapter
+				.interlink(triples);
+		System.out.println("in short sample found: "+resultTriples.size());
+		Assert.assertTrue("no interlink found, but urn:x-temp:/id/5caaf04a-30ab-4c6a-9d0e-07ffc3a569d0"
+				+ " and urn:x-temp:/id/5efdb576-ebb5-4efd-8b00-d943425eaf59 look the same", 
+				resultTriples.size() > 0);
+	}
+	
 	/**
 	 * Test that runs the full flow. 
 	 * 

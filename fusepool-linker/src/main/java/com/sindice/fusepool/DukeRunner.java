@@ -156,6 +156,7 @@ public class DukeRunner {
 	}
 	
 	private void loadConfig(String pathToConfig) {
+		Thread.currentThread().setContextClassLoader(getClass().getClassLoader());
 		try {
 			try {
 				this.configuration = ConfigLoader.load(pathToConfig);

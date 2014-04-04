@@ -95,7 +95,7 @@ public class JenaInputStoreImpl implements InputTripleStore {
 		  }
     } catch (IOException e) {
       logger.error("error cleanin the store ", e);
-      throw new IllegalArgumentException("wrong datafolder");
+      throw new RuntimeException("wrong datafolder", e);
     }
     Dataset dataset = TDBFactory.createDataset(datafolder);
     dataset.begin(ReadWrite.WRITE);

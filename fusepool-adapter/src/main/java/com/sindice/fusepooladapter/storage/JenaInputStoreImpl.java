@@ -60,6 +60,7 @@ public class JenaInputStoreImpl implements InputTripleStore {
   /**
    * cleans and populate the triplestore by triples from input collection 
    */
+  @Override
   public int populate(TripleCollection triples) {
     Path dataPath = Paths.get(datafolder);
 	  try {
@@ -94,8 +95,7 @@ public class JenaInputStoreImpl implements InputTripleStore {
 			  }
 		  }
     } catch (IOException e) {
-      logger.error("error cleanin the store ", e);
-      throw new RuntimeException("wrong datafolder", e);
+      throw new RuntimeException("error cleaning the store ", e);
     }
     Dataset dataset = TDBFactory.createDataset(datafolder);
     dataset.begin(ReadWrite.WRITE);

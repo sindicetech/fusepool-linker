@@ -76,7 +76,7 @@ public class JenaInputStoreImpl implements InputTripleStore {
 					try {
 						Files.delete(filePath);
 					} catch (IOException ex) {
-						for (int i = 0; i < 10; i++) {
+						for (int i = 0; i < 50; i++) {
 							try {
 								System.gc();
 								Files.delete(filePath);

@@ -88,6 +88,9 @@ public class OutputStore implements TripleCollection {
 						  break;
 					  }
 				  }
+				  if (filePath.toFile().exists()) {
+					  throw new IOException("delete failed: "+filePath);
+				  }
 			  }
 		  }
       }

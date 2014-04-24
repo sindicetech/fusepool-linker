@@ -60,23 +60,45 @@ public class JenaInputStoreImpl implements InputTripleStore {
   /**
    * cleans and populate the triplestore by triples from input collection 
    */
+  @Override
   public int populate(TripleCollection triples) {
     Path dataPath = Paths.get(datafolder);
-    try {
-    if (Files.exists(dataPath)){
-      DirectoryStream<Path> files;
-     
-        files = Files.newDirectoryStream(dataPath);
-     
-      if (files != null){
-        for (Path filePath: files){
-          Files.delete(filePath);
-        }
-      } 
-    }
-    } catch (IOException e) {
-      logger.error("error cleanin the store ");
-      throw new IllegalArgumentException("wrong datafolder");
+	try {
+		if (Files.exists(dataPath)) {
+			DirectoryStream<Path> files;
+
+			files = Files.newDirectoryStream(dataPath);
+
+			if (files != null) {
+
+				for (Path filePath : files) {
+
+					try {
+						Files.delete(filePath);
+					} catch (IOException ex) {
+						for (int i = 0; i < 50; i++) {
+							try {
+								System.gc();
+								Files.delete(filePath);
+							} catch (IOException ex1) {
+								try {
+									Thread.sleep(10);
+								} catch (InterruptedException ex2) {
+									Thread.currentThread().interrupt();
+								}
+								continue;
+							}
+							break;
+						}
+					}
+					if (filePath.toFile().exists()) {
+						throw new IOException("delete failed: " + filePath);
+					}
+				}
+			}
+		}
+	} catch (IOException e) {
+      throw new RuntimeException("error cleaning the store ", e);
     }
     Dataset dataset = TDBFactory.createDataset(datafolder);
     dataset.begin(ReadWrite.WRITE);

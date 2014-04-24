@@ -68,14 +68,34 @@ public class OutputStore implements TripleCollection {
       Path dataPath = Paths.get(datafolder);
       if (Files.exists(dataPath)){
         DirectoryStream<Path> files = Files.newDirectoryStream(dataPath);
-        if (files != null){
-          for (Path filePath: files){
-            Files.delete(filePath);
-          }
-        } 
+        if (files != null) {
+			  for (Path filePath : files) {
+				  try {
+					  Files.delete(filePath);
+				  } catch (IOException ex) {
+					  for (int i = 0; i < 50; i++) {
+						  try {
+							  System.gc();
+							  Files.delete(filePath);
+						  } catch (IOException ex1) {
+							  try {
+								  Thread.sleep(10);
+							  } catch (InterruptedException ex2) {
+								  Thread.currentThread().interrupt();
+							  }
+							  continue;
+						  }
+						  break;
+					  }
+				  }
+				  if (filePath.toFile().exists()) {
+					  throw new IOException("delete failed: "+filePath);
+				  }
+			  }
+		  }
       }
     } catch (IOException e) {
-      throw new IllegalArgumentException("wrong output data path", e);
+      throw new RuntimeException("wrong output data path", e);
     }
   }
   /**

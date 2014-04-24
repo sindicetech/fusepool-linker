@@ -25,11 +25,15 @@ import com.sindice.fusepool.DukeRunner;
 import com.sindice.fusepooladapter.storage.InputTripleStore;
 import com.sindice.fusepooladapter.storage.JenaInputStoreImpl;
 import com.sindice.fusepooladapter.storage.OutputStore;
+import eu.fusepool.datalifecycle.Interlinker;
+import org.apache.clerezza.rdf.core.UriRef;
+import org.osgi.service.component.annotations.Component;
 /**
  * implementation of {@link com.sindice.fusepooladapter.SingleLinker} using Duke
  *
  */
-public class LinkerAdapter implements SingleLinker {
+@Component(service = Interlinker.class)
+public class LinkerAdapter implements Interlinker {
 
   private static final Logger logger = LoggerFactory.getLogger(LinkerAdapter.class);
   private String inDir;
@@ -78,7 +82,6 @@ public class LinkerAdapter implements SingleLinker {
 	  return "classpath:patents-jena-jdbc.xml";
   }
     
-  @Override
   public TripleCollection interlink(TripleCollection dataToInterlink) {
     // populates input store
 	logger.info("Populating input store ...");
@@ -104,5 +107,25 @@ public class LinkerAdapter implements SingleLinker {
     logger.info("Output store contains {} triples", outStore.size());
     return outStore;
   }
+
+	@Override
+	public TripleCollection interlink(TripleCollection dataToInterlink, UriRef interlinkAgainst) {
+		throw new UnsupportedOperationException("Not supported yet.");
+	}
+
+	@Override
+	public TripleCollection interlink(TripleCollection source, TripleCollection target) {
+		//using equals takes potentialy too much time
+		if (source == target) {
+			return interlink(target);
+		} else {
+			throw new UnsupportedOperationException("duke doesn't support different source and target yet");
+		}
+	}
+
+	@Override
+	public String getName() {
+		return "duke-interlinker";
+	}
 
 }

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <modelVersion>4.0.0</modelVersion>
-    <!-- <parent>
+    <parent>
         <groupId>eu.fusepool</groupId>
         <artifactId>parent</artifactId>
         <version>0.1-SNAPSHOT</version>
-        <relativePath>../parent</relativePath>
-    </parent> -->
+        <relativePath></relativePath>
+    </parent>
     <groupId>eu.fusepool</groupId>
     <artifactId>fusepool-linker-parent</artifactId>
     <packaging>pom</packaging>

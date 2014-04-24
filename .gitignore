@@ -1,1 +1,4 @@
 target
+/fusepool-adapter/log/
+/fusepool-adapter/in-data/
+/fusepool-adapter/out-data/

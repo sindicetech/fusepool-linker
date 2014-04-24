@@ -16,12 +16,12 @@ package com.sindice.fusepooladapter.storage;
 
 import org.apache.clerezza.rdf.core.access.WeightedTcProvider;
 import org.apache.clerezza.rdf.jena.tdb.storage.TdbTcProvider;
-import org.apache.felix.scr.annotations.Service;
+//import org.apache.felix.scr.annotations.Service;
 
 /**
  * class that helps running TCManager out of the clezzera framework 
  */
-@Service(WeightedTcProvider.class)
+//@Service(WeightedTcProvider.class)
 public class TdbWrapper  extends TdbTcProvider implements  WeightedTcProvider{
 	 private int weight = 80;
 	public TdbWrapper(){

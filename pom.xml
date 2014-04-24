@@ -4,7 +4,7 @@
         <groupId>eu.fusepool</groupId>
         <artifactId>parent</artifactId>
         <version>0.1-SNAPSHOT</version>
-        <relativePath></relativePath>
+        <relativePath>/home/jakub/cvs/fusepool-platform</relativePath>
     </parent>
     <groupId>eu.fusepool</groupId>
     <artifactId>fusepool-linker-parent</artifactId>

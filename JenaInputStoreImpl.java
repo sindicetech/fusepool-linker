@@ -14,6 +14,7 @@
  */
 package com.sindice.fusepooladapter.storage;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
@@ -26,16 +27,21 @@ import org.apache.clerezza.rdf.core.BNode;
 import org.apache.clerezza.rdf.core.Triple;
 import org.apache.clerezza.rdf.core.TripleCollection;
 import org.apache.clerezza.rdf.jena.commons.Tria2JenaUtil;
+import org.apache.commons.io.FileUtils;
 import org.apache.jena.riot.RiotException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.hp.hpl.jena.graph.Node;
+import com.hp.hpl.jena.query.ARQ;
 import com.hp.hpl.jena.query.Dataset;
 import com.hp.hpl.jena.query.ReadWrite;
 import com.hp.hpl.jena.rdf.model.Model;
+import com.hp.hpl.jena.sparql.mgt.SystemInfo;
 import com.hp.hpl.jena.tdb.TDB;
 import com.hp.hpl.jena.tdb.TDBFactory;
+import com.hp.hpl.jena.tdb.base.block.FileMode;
+import com.hp.hpl.jena.tdb.mgt.TDBMgt;
 import com.hp.hpl.jena.tdb.sys.SystemTDB;
 /**
  *
@@ -49,16 +55,6 @@ public class JenaInputStoreImpl implements InputTripleStore {
   private final Tria2JenaUtil t2j;
   
   public JenaInputStoreImpl(String datafolder){
-    logger.info("SystemTDB.fileMode() = " + SystemTDB.fileMode());
-    logger.info("TDB version = " + TDB.VERSION);
-    logger.info("TDB BUILD_DATE = " + TDB.BUILD_DATE);
-    logger.info("TDB NAME = " + TDB.NAME);
-    logger.info("TDB PATH = " + TDB.PATH);
-    logger.info("TDB logInfoName = " + TDB.logInfoName);
-    logger.info("TDB logLoaderName = " + TDB.logLoaderName);
-    logger.info("TDB namespace = " + TDB.namespace);
-    logger.info("TDB tdbIRI = " + TDB.tdbIRI);
-	    	  
     Path dataPath = Paths.get(datafolder);
     if (Files.exists(dataPath)){
       if (! Files.isDirectory(dataPath)){
@@ -73,45 +69,65 @@ public class JenaInputStoreImpl implements InputTripleStore {
    */
   @Override
   public int populate(TripleCollection triples) {
-    Path dataPath = Paths.get(datafolder);
-	try {
-		if (Files.exists(dataPath)) {
-			DirectoryStream<Path> files;
-
-			files = Files.newDirectoryStream(dataPath);
-
-			if (files != null) {
-
-				for (Path filePath : files) {
-
-					try {
-						Files.delete(filePath);
-					} catch (IOException ex) {
-						for (int i = 0; i < 50; i++) {
-							try {
-								System.gc();
-								Files.delete(filePath);
-							} catch (IOException ex1) {
-								try {
-									Thread.sleep(10);
-								} catch (InterruptedException ex2) {
-									Thread.currentThread().interrupt();
-								}
-								continue;
-							}
-							break;
-						}
-					}
-					if (filePath.toFile().exists()) {
-						throw new IOException("delete failed: " + filePath);
-					}
-				}
-			}
-		}
-	} catch (IOException e) {
-      throw new RuntimeException("error cleaning the store ", e);
-    }
+	  try {
+		FileUtils.deleteDirectory(new File(datafolder));
+	} catch (IOException e2) {
+	      throw new RuntimeException("error cleaning the store ", e2);
+	}
+//    Path dataPath = Paths.get(datafolder);
+//	try {
+//		if (Files.exists(dataPath)) {
+//			DirectoryStream<Path> files;
+//
+//			files = Files.newDirectoryStream(dataPath);
+//
+//			if (files != null) {
+//
+//				for (Path filePath : files) {
+//
+//					try {
+//						Files.delete(filePath);
+//					} catch (IOException ex) {
+//						for (int i = 0; i < 50; i++) {
+//							try {
+//								System.gc();
+//								Files.delete(filePath);
+//							} catch (IOException ex1) {
+//								try {
+//									Thread.sleep(10);
+//								} catch (InterruptedException ex2) {
+//									Thread.currentThread().interrupt();
+//								}
+//								continue;
+//							}
+//							break;
+//						}
+//					}
+//					if (filePath.toFile().exists()) {
+//						throw new IOException("delete failed: " + filePath);
+//					}
+//				}
+//			}
+//		}
+//	} catch (IOException e) {
+//      throw new RuntimeException("error cleaning the store ", e);
+//    }
+	  TDB.getContext().set(SystemTDB.symFileMode, FileMode.mapped);
+		//SystemTDB.setFileMode(FileMode.direct);
+		TDB.getContext().set(ARQ.symLogExec, true) ;
+		//ARQ.getContext().set(ARQ., value);
     Dataset dataset = TDBFactory.createDataset(datafolder);
+    
+    logger.info("SystemTDB.fileMode() = " + SystemTDB.fileMode());
+    logger.info("TDB version = " + TDB.VERSION);
+    logger.info("TDB BUILD_DATE = " + TDB.BUILD_DATE);
+    logger.info("TDB NAME = " + TDB.NAME);
+    logger.info("TDB PATH = " + TDB.PATH);
+    logger.info("TDB logInfoName = " + TDB.logInfoName);
+    logger.info("TDB logLoaderName = " + TDB.logLoaderName);
+    logger.info("TDB namespace = " + TDB.namespace);
+    logger.info("TDB tdbIRI = " + TDB.tdbIRI);
+    
     dataset.begin(ReadWrite.WRITE);
     // Get model inside the transaction
     Model model = dataset.getDefaultModel();
@@ -127,9 +143,11 @@ public class JenaInputStoreImpl implements InputTripleStore {
         }
     }
     int size = (int) model.size();
+    model.close();
     dataset.commit();
     TDB.sync(dataset);
     dataset.end();
+    dataset.close();
     return size;
   }
 

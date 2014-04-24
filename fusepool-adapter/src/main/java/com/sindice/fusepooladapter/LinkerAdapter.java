@@ -83,11 +83,12 @@ public class LinkerAdapter implements Interlinker {
   }
     
   public TripleCollection interlink(TripleCollection dataToInterlink) {
+	  inDir = Files.createTempDir().getAbsolutePath();
     // populates input store
 	logger.info("Populating input store ...");
     InputTripleStore instore = new JenaInputStoreImpl(defaultInputDir());
     int inputSize = instore.populate(dataToInterlink);
-    logger.info("Input store populated with {} triples", inputSize);
+    logger.info("Input store in {} populated with {} triples", defaultInputDir(), inputSize);
     OutputStore outStore = new OutputStore(defaultOutputDir());
     outStore.clean();
     

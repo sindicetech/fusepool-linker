@@ -14,6 +14,7 @@
  */
 package com.sindice.fusepooladapter;
 
+import java.io.File;
 import java.sql.SQLException;
 
 import org.apache.clerezza.rdf.core.TripleCollection;
@@ -25,7 +26,11 @@ import com.sindice.fusepool.DukeRunner;
 import com.sindice.fusepooladapter.storage.InputTripleStore;
 import com.sindice.fusepooladapter.storage.JenaInputStoreImpl;
 import com.sindice.fusepooladapter.storage.OutputStore;
+import com.sindice.fusepooladapter.storage.SafeDeleter;
+import com.sindice.fusepooladapter.storage.SesameInputNativeStoreImpl;
+
 import eu.fusepool.datalifecycle.Interlinker;
+
 import org.apache.clerezza.rdf.core.UriRef;
 import org.osgi.service.component.annotations.Component;
 /**
@@ -79,23 +84,30 @@ public class LinkerAdapter implements Interlinker {
    * @return "classpath:patents-jena-jdbc.xml"
    */
   protected String defaultConfigFileLocation() {
-	  return "classpath:patents-jena-jdbc.xml";
+	  return "classpath:patents-sesame-native.xml";
   }
     
   public TripleCollection interlink(TripleCollection dataToInterlink) {
 	  inDir = Files.createTempDir().getAbsolutePath();
     // populates input store
 	logger.info("Populating input store ...");
-    InputTripleStore instore = new JenaInputStoreImpl(defaultInputDir());
+    InputTripleStore instore = new SesameInputNativeStoreImpl(defaultInputDir());
     int inputSize = instore.populate(dataToInterlink);
     logger.info("Input store in {} populated with {} triples", defaultInputDir(), inputSize);
     OutputStore outStore = new OutputStore(defaultOutputDir());
     outStore.clean();
     
+    File lock = new File(defaultInputDir() + File.separator + "lock");
+    logger.warn("Removing lock "+ lock.getAbsolutePath());
+    SafeDeleter.delete(lock.getAbsolutePath());
+    lock.delete();
+    
+    
     // starts processing
     DukeRunner runner = null;
     try {
-      runner = new DukeRunner(defaultConfigFileLocation(),"jdbc:jena:tdb:location=" + defaultInputDir(),  defaultOutputDir(), defaultNumberOfThreads());
+    	//runner = new DukeRunner(defaultConfigFileLocation(),"jdbc:jena:tdb:location=" + defaultInputDir(),  defaultOutputDir(), defaultNumberOfThreads());    	
+    	runner = new DukeRunner(defaultConfigFileLocation(), defaultInputDir(),  defaultOutputDir(), defaultNumberOfThreads());
     } catch (SQLException e) {
       logger.error("error during initialization of the Duke");
     }

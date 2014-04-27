@@ -22,9 +22,9 @@
       <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
     </encoder>
   </appender>
-  <logger name="com.sindice" level="INFO" />
+  <logger name="com.sindice" level="DEBUG" />
   
-  <root level="WARN">
+  <root level="INFO">
   <!--   <appender-ref ref="FILE"/> -->
      <appender-ref ref="STDOUT"/> 
   </root>

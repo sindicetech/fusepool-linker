@@ -51,6 +51,7 @@ public class LinkerAdapterTest {
 	 * via {@link TestTripleCollectionPatents}. Two match, one doesn't. Uses the
 	 * conf-final.xml Duke configuration specified in conf.properties.
 	 */
+	@Ignore
 	@Test
 	public void testSmall() throws IOException {
 		LinkerAdapter adapter = new ConfigurableLinkerAdapter("conf.properties");
@@ -64,6 +65,7 @@ public class LinkerAdapterTest {
 	 * via {@link TestTripleCollectionPatents}. Two match, one doesn't. Uses the
 	 * conf-final.xml Duke configuration specified in conf.properties.
 	 */
+	@Ignore
 	@Test
 	public void testSmallLinkerAdapter() throws IOException {
 		LinkerAdapter adapter = new LinkerAdapter();

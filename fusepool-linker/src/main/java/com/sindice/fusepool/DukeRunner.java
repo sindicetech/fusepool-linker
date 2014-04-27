@@ -22,6 +22,7 @@ import no.priv.garshol.duke.ConfigLoader;
 import no.priv.garshol.duke.Configuration;
 import no.priv.garshol.duke.Processor;
 import no.priv.garshol.duke.datasources.JDBCDataSource;
+import no.priv.garshol.duke.datasources.SesameDataSource;
 import no.priv.garshol.duke.matchers.MatchListener;
 
 import org.slf4j.Logger;
@@ -110,29 +111,40 @@ public class DukeRunner {
 		initialize(listeners);
 	}
 	
-	/**
-	 * Creates a Duke instance with the given config and creates a match listener that 
-	 * stores results in the given folder.
-	 * 
-	 * Always creates a new Lucene index.
-	 * 
-	 * IMPORTANT: assumes deduplication mode with a single datasource that is a JDBC datasource already configured from 
-	 * the config pathToConfig. It loads the config and replaces the connect string with the given jdbcOutputConnectionString.
-	 * 
-	 * @param pathToConfig Can be file path, it is looked for in classpath too.
-	 * @param jdbcInputConnectionString JDBC connection string for connecting to the triplestore where matches should be stored
-	 * @param dataFolder data folder where matches should be stored
-	 */
-	public DukeRunner(String pathToConfig, String jdbcInputConnectionString, String dataFolder, int dukeThreads) throws SQLException {
+//	/**
+//	 * Creates a Duke instance with the given config and creates a match listener that 
+//	 * stores results in the given folder.
+//	 * 
+//	 * Always creates a new Lucene index.
+//	 * 
+//	 * IMPORTANT: assumes deduplication mode with a single datasource that is a JDBC datasource already configured from 
+//	 * the config pathToConfig. It loads the config and replaces the connect string with the given jdbcOutputConnectionString.
+//	 * 
+//	 * @param pathToConfig Can be file path, it is looked for in classpath too.
+//	 * @param jdbcInputConnectionString JDBC connection string for connecting to the triplestore where matches should be stored
+//	 * @param dataFolder data folder where matches should be stored
+//	 */
+//	public DukeRunner(String pathToConfig, String jdbcInputConnectionString, String dataFolder, int dukeThreads) throws SQLException {
+//		loadConfig(pathToConfig);
+//
+//		((JDBCDataSource)configuration.getDataSources().iterator().next()).setConnectionString(jdbcInputConnectionString);
+//		
+//		MatchListener[] listeners = initStorage(dataFolder);		
+//		initialize(listeners);
+//		
+//		processor.setThreads(dukeThreads);
+//	}
+	
+	public DukeRunner(String pathToConfig, String inputDir, String dataFolder, int dukeThreads) throws SQLException {
 		loadConfig(pathToConfig);
 
-		((JDBCDataSource)configuration.getDataSources().iterator().next()).setConnectionString(jdbcInputConnectionString);
+		((SesameDataSource)configuration.getDataSources().iterator().next()).setDatafolder(inputDir);
 		
 		MatchListener[] listeners = initStorage(dataFolder);		
 		initialize(listeners);
 		
 		processor.setThreads(dukeThreads);
-	}
+	}	
 	
 	/**
 	 * Creates a Duke instance with the given config and adds all the match listeners.

@@ -1,0 +1,76 @@
+<duke>
+  <schema>
+    <threshold>0.9</threshold>
+
+    <property type="id">
+      <name>ID</name>
+    </property>
+
+    <property>
+      <name>NAME</name>
+      <comparator>no.priv.garshol.duke.comparators.JaccardIndexComparator</comparator>
+      <low>0.1</low>
+      <high>0.9</high>
+    </property>    
+    <property>
+      <name>COUNTRY</name>
+      <comparator>no.priv.garshol.duke.comparators.ExactComparator</comparator>
+      <low>0.1</low>
+      <high>0.8</high>
+    </property>    
+    <property>
+      <name>LOCALITY</name>
+      <comparator>no.priv.garshol.duke.comparators.JaccardIndexComparator</comparator>
+      <low>0.1</low>
+      <high>0.88</high>
+    </property>    
+    <property>
+      <name>STREET</name>
+      <comparator>no.priv.garshol.duke.comparators.JaccardIndexComparator</comparator>
+      <low>0.1</low>
+      <high>0.9</high>
+    </property>    
+  </schema>  
+
+  <database class="no.priv.garshol.duke.databases.LuceneDatabase">
+    <!-- must turn off fuzzy search, or it will take forever -->
+    <param name="fuzzy-search" value="false"/>
+  </database>
+  
+  <sesame>
+    <param name="datafolder" value="jdbc:jena:tdb:location=/home/jakub/cvs/sindicetech/POCs/fusepool-adapter/in"/>
+    <param name="query" value="
+    PREFIX w3: &lt;http://www.w3.org/ns/prov#&gt;
+    PREFIX foaf: &lt;http://xmlns.com/foaf/0.1/&gt;
+    PREFIX sumo: &lt;http://www.owl-ontologies.com/sumo.owl#&gt;
+    PREFIX schema: &lt;http://schema.org/&gt;
+    PREFIX pmo: &lt;http://www.patexpert.org/ontologies/pmo.owl#&gt;
+    PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+
+SELECT * WHERE { 
+  ?agent a sumo:CognitiveAgent .
+  ?agent rdfs:label ?agentName .
+  OPTIONAL { 
+    ?agent schema:address  ?agentAddressUri .
+    OPTIONAL { ?agentAddressUri schema:addressCountry ?addressCountryUri .}
+    OPTIONAL { ?agentAddressUri schema:addressLocality ?addressLocality . }
+    OPTIONAL { ?agentAddressUri schema:streetAddress ?streetAddress .  } 
+  }
+} ORDER BY ?agent      "/>
+
+    <column name="agent"
+            property="ID"/>
+    <column name="agentName"
+            cleaner="no.priv.garshol.duke.cleaners.LowerCaseNormalizeCleaner"
+            property="NAME"/>
+    <column name="addressCountryUri"
+            property="COUNTRY"/>
+    <column name="addressLocality"
+            cleaner="no.priv.garshol.duke.cleaners.LowerCaseNormalizeCleaner"
+            property="LOCALITY"/>
+    <column name="streetAddress"
+            cleaner="no.priv.garshol.duke.cleaners.LowerCaseNormalizeCleaner"
+            property="STREET"/>
+  </sesame>  
+</duke>
+

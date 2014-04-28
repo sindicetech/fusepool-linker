@@ -14,5 +14,6 @@
     <modules>
         <module>fusepool-adapter</module>
         <module>fusepool-linker</module>
+        <module>duke</module>
     </modules>
 </project>

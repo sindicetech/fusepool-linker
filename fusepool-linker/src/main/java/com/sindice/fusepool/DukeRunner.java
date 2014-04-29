@@ -14,6 +14,7 @@
  */
 package com.sindice.fusepool;
 
+import java.io.File;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.Collection;
@@ -21,8 +22,10 @@ import java.util.Collection;
 import no.priv.garshol.duke.ConfigLoader;
 import no.priv.garshol.duke.Configuration;
 import no.priv.garshol.duke.Processor;
+import no.priv.garshol.duke.datasources.CSVDataSource;
 import no.priv.garshol.duke.datasources.JDBCDataSource;
 import no.priv.garshol.duke.datasources.SesameDataSource;
+import no.priv.garshol.duke.datasources.SesameDataSource.SesameIterator;
 import no.priv.garshol.duke.matchers.MatchListener;
 
 import org.slf4j.Logger;
@@ -40,6 +43,7 @@ import com.sindice.fusepool.stores.TripleWriter;
  * 
  */
 public class DukeRunner {
+	public static final String AGENTS_CSV_FILENAME = "agents.csv";	
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 	private Configuration configuration;
 	private Processor processor;
@@ -138,7 +142,7 @@ public class DukeRunner {
 	public DukeRunner(String pathToConfig, String inputDir, String dataFolder, int dukeThreads) throws SQLException {
 		loadConfig(pathToConfig);
 
-		((SesameDataSource)configuration.getDataSources().iterator().next()).setDatafolder(inputDir);
+		((CSVDataSource)configuration.getDataSources().iterator().next()).setInputFile(inputDir + File.separator + AGENTS_CSV_FILENAME);;
 		
 		MatchListener[] listeners = initStorage(dataFolder);		
 		initialize(listeners);
@@ -164,7 +168,7 @@ public class DukeRunner {
 		for (MatchListener listener : listeners) {
 			addMatchListener(listener);
 		}
-		this.processor.setLogger(new DukeSlf4jLogger(logger));
+		this.processor.setLogger(new DukeSlf4jLogger(LoggerFactory.getLogger(Processor.class)));
 	}
 	
 	private void loadConfig(String pathToConfig) {

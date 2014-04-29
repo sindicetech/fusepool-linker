@@ -74,6 +74,7 @@ public class LinkerAdapterTest {
 		System.out.println(resultTriples.size());
 	}
 	
+	//@Ignore
 	@Test
 	public void testSmallDataFile() throws IOException {
 		LinkerAdapter adapter = new LinkerAdapter();
@@ -99,13 +100,14 @@ public class LinkerAdapterTest {
 	@Test
 	public void testFull() throws IOException {
 		logger.info("Full test");
-		LinkerAdapter adapter = new ConfigurableLinkerAdapter("classpath:patents-jena-jdbc.xml", 
+		LinkerAdapter adapter = new ConfigurableLinkerAdapter("classpath:patents-csv.xml", 
 				"/data/tmp_fusepool/in", // data is loaded from OutputStore (see below, a Clerezza TripleCollection) to this "inpath" 
 										 //      so that it can be conveniently queried via SPARQL 
 				"out", // results are stored in this "outpath"
 				2);    // the number of matching threads used by Duke 
 		OutputStore os = new OutputStore("fullTestData"); // contains the dataset to deduplicate. Can be loaded using loadTestCollectionFull()
 		os.init();
+		logger.info("Store contains " + os.size() + " triples.");
 		TripleCollection resultTriples = adapter.interlink(os);
 		logger.info("Triples in result: " + resultTriples.size());
 		os.destroy();

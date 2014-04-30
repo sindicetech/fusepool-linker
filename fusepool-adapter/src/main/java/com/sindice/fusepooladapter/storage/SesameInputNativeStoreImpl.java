@@ -15,15 +15,22 @@
 package com.sindice.fusepooladapter.storage;
 
 import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.HashMap;
 import java.util.Iterator;
+import java.util.Map;
 
 import org.apache.clerezza.rdf.core.Triple;
 import org.apache.clerezza.rdf.core.TripleCollection;
 import org.openrdf.model.ValueFactory;
+import org.openrdf.query.Binding;
 import org.openrdf.query.BindingSet;
+import org.openrdf.query.MalformedQueryException;
+import org.openrdf.query.QueryEvaluationException;
 import org.openrdf.query.QueryLanguage;
 import org.openrdf.query.TupleQuery;
 import org.openrdf.query.TupleQueryResult;
@@ -34,6 +41,15 @@ import org.openrdf.repository.sail.SailRepository;
 import org.openrdf.sail.nativerdf.NativeStore;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.supercsv.cellprocessor.Optional;
+import org.supercsv.cellprocessor.constraint.NotNull;
+import org.supercsv.cellprocessor.ift.CellProcessor;
+import org.supercsv.io.CsvMapWriter;
+import org.supercsv.io.ICsvMapWriter;
+import org.supercsv.prefs.CsvPreference;
+
+import com.sindice.fusepool.DukeRunner;
+import com.sindice.fusepool.StopWatch;
 
 /**
  * 
@@ -47,27 +63,27 @@ public class SesameInputNativeStoreImpl implements InputTripleStore {
 	private static final Logger logger = LoggerFactory
 			.getLogger(SesameInputNativeStoreImpl.class);
 	private final String datafolder;
-	
-	public static void main(String[] args) {
-String query = "    PREFIX w3: <http://www.w3.org/ns/prov#> \n" +
-    "PREFIX foaf: <http://xmlns.com/foaf/0.1/> \n" +
-    "PREFIX sumo: <http://www.owl-ontologies.com/sumo.owl#> \n" +
-    "PREFIX schema: <http://schema.org/> \n" +
-    "PREFIX pmo: <http://www.patexpert.org/ontologies/pmo.owl#> \n" +
-    "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> \n\n" +
+	private static final String query = "    PREFIX w3: <http://www.w3.org/ns/prov#> \n"
+			+ "PREFIX foaf: <http://xmlns.com/foaf/0.1/> \n"
+			+ "PREFIX sumo: <http://www.owl-ontologies.com/sumo.owl#> \n"
+			+ "PREFIX schema: <http://schema.org/> \n"
+			+ "PREFIX pmo: <http://www.patexpert.org/ontologies/pmo.owl#> \n"
+			+ "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> \n\n"
+			+
 
-"SELECT * WHERE {  \n" +
-"  ?agent a sumo:CognitiveAgent . \n" +
-  "?agent rdfs:label ?agentName . \n" +
-  "OPTIONAL {  \n" +
-    "?agent schema:address  ?agentAddressUri . \n" +
-    "OPTIONAL { ?agentAddressUri schema:addressCountry ?addressCountryUri .} \n" +
-    "OPTIONAL { ?agentAddressUri schema:addressLocality ?addressLocality . } \n" +
-    "OPTIONAL { ?agentAddressUri schema:streetAddress ?streetAddress .  }  \n" +
-  "} \n" +
-"} ORDER BY ?agent ";		
-		
-//query = "select * where {?s ?p ?o. }";
+			"SELECT * WHERE {  \n"
+			+ "  ?agent a sumo:CognitiveAgent . \n"
+			+ "?agent rdfs:label ?agentName . \n"
+			+ "OPTIONAL {  \n"
+			+ "?agent schema:address  ?addressUri . \n"
+			+ "OPTIONAL { ?addressUri schema:addressCountry ?addressCountryUri .} \n"
+			+ "OPTIONAL { ?addressUri schema:addressLocality ?addressLocality . } \n"
+			+ "OPTIONAL { ?addressUri schema:streetAddress ?streetAddress .  }  \n"
+			+ "} \n" + "} ORDER BY ?agent ";
+
+	public static void main(String[] args) {
+
+		// query = "select * where {?s ?p ?o. }";
 
 		Repository repo = new SailRepository(new NativeStore(new File(
 				"/tmp/1398437680141-0")));
@@ -80,34 +96,36 @@ String query = "    PREFIX w3: <http://www.w3.org/ns/prov#> \n" +
 		}
 
 		long size = -1;
-		
+
 		try {
 			RepositoryConnection con = repo.getConnection();
-//			RepositoryResult<Statement> res = con.getStatements(null, null, null, false);
-//			while (res.hasNext()) {
-//				Statement st = res.next();
-//				System.out.println("Statement: " + TripleWriter.toString(st));
-//			}
+			// RepositoryResult<Statement> res = con.getStatements(null, null,
+			// null, false);
+			// while (res.hasNext()) {
+			// Statement st = res.next();
+			// System.out.println("Statement: " + TripleWriter.toString(st));
+			// }
 			System.out.println("Size: " + con.size());
-			
+
 			TupleQueryResult result = null;
 			try {
-				TupleQuery tupleQuery = con.prepareTupleQuery(QueryLanguage.SPARQL, query);
+				TupleQuery tupleQuery = con.prepareTupleQuery(
+						QueryLanguage.SPARQL, query);
 
-			  result = tupleQuery.evaluate();
-			  
+				result = tupleQuery.evaluate();
+
 				System.out.println("Has next X: " + result.hasNext());
-			  while (result.hasNext()) {
-				  BindingSet bs = result.next();
-				  //System.out.println("Binding: " + bs.toString());
-			  }
+				while (result.hasNext()) {
+					BindingSet bs = result.next();
+					// System.out.println("Binding: " + bs.toString());
+				}
 			} finally {
 				if (result != null) {
 					result.close();
 				}
 				con.close();
 			}
-			
+
 		} catch (Exception ex) {
 			throw new RuntimeException(ex);
 		}
@@ -132,6 +150,7 @@ String query = "    PREFIX w3: <http://www.w3.org/ns/prov#> \n" +
 		SafeDeleter.delete(datafolder);
 
 		logger.info("Creating Sesame Native store in " + datafolder);
+
 		Repository repo = new SailRepository(new NativeStore(new File(
 				datafolder)));
 		try {
@@ -143,32 +162,100 @@ String query = "    PREFIX w3: <http://www.w3.org/ns/prov#> \n" +
 		}
 
 		long size = -1;
-		
+
 		try {
 			RepositoryConnection con = repo.getConnection();
 			ValueFactory factory = repo.getValueFactory();
-			//URI context
+			con.begin();
+			// URI context
+			StopWatch.start();
 			try {
 				Iterator<Triple> iterator = triples.iterator();
 				while (iterator.hasNext()) {
 					Triple triple = iterator.next();
-					//System.out.println("triple: " + triple.toString());
-//					URI s = factory.createURI(triple.getSubject().toString());
-//					URI p = factory.createURI(triple.getPredicate().toString());
-//					URI o = factory.createURI(triple.getObject().toString());
-					//con.add(s, p, o);
+					// System.out.println("triple: " + triple.toString());
+					// URI s =
+					// factory.createURI(triple.getSubject().toString());
+					// URI p =
+					// factory.createURI(triple.getPredicate().toString());
+					// URI o = factory.createURI(triple.getObject().toString());
+					// con.add(s, p, o);
 					con.add(SesameUtils.toStatement(factory, triple));
 				}
 
 				size = con.size();
+				StopWatch.end();
+				
+				logger.info(StopWatch.popTimeString("Loading Sesame store took %s ms without commit."));
+				
+				StopWatch.start();
+				writeCsv(con);
+				StopWatch.end();
+				logger.info(StopWatch.popTimeString("Writing CSV took %s ms."));
 			} finally {
+				StopWatch.start();
+				con.commit();
 				con.close();
+				StopWatch.end();
+				logger.info(StopWatch.popTimeString("Commiting took %s ms."));
 			}
 		} catch (Exception e) {
-			throw new RuntimeException("Problem working with Sesame Native store: " + e.getMessage(), e);
+			throw new RuntimeException(
+					"Problem working with Sesame Native store: "
+							+ e.getMessage(), e);
 		}
 
 		return (int) size; // TODO change interface
+	}
+
+	public static String[] header = {
+		"agent", "agentName", "addressUri", "addressCountry", "addressCountryUri", "addressLocality", "streetAddress"
+	};
+	private static CellProcessor[] processors = {
+		new NotNull(), new NotNull(), new Optional(), new Optional(), new Optional(), new Optional(), new Optional() 
+	};
+
+	private Map<String, Object> toMap(BindingSet set) {
+		Map<String, Object> map = new HashMap<String, Object>();
+
+		Iterator<Binding> it = set.iterator();
+
+		while (it.hasNext()) {
+			Binding b = it.next();
+
+			map.put(b.getName(), b.getValue().stringValue());
+		}
+
+		return map;
+	}
+
+	private void writeCsv(RepositoryConnection con) throws RepositoryException,
+			MalformedQueryException, QueryEvaluationException, IOException {
+		TupleQueryResult result = null;
+		ICsvMapWriter mapWriter = null;
+		try {
+			TupleQuery tupleQuery = con.prepareTupleQuery(QueryLanguage.SPARQL,
+					query);
+
+			result = tupleQuery.evaluate();
+
+			mapWriter = new CsvMapWriter(new FileWriter(datafolder + File.separator + DukeRunner.AGENTS_CSV_FILENAME),
+                    CsvPreference.STANDARD_PREFERENCE);
+            
+            mapWriter.writeHeader(header);
+			            			
+			while (result.hasNext()) {
+				BindingSet bs = result.next();	          
+				
+	            mapWriter.write(toMap(bs), header, processors);
+			}
+		} finally {
+			if (result != null) {
+				result.close();
+			}
+			mapWriter.close();
+		}
+
 	}
 
 	public void init() {

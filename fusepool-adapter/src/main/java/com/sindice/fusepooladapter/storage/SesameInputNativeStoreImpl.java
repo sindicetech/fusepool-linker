@@ -14,6 +14,8 @@
  */
 package com.sindice.fusepooladapter.storage;
 
+import com.sindice.fusepool.DukeRunner;
+import com.sindice.fusepool.StopWatch;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -23,9 +25,10 @@ import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
-
+import java.util.concurrent.locks.Lock;
 import org.apache.clerezza.rdf.core.Triple;
 import org.apache.clerezza.rdf.core.TripleCollection;
+import org.apache.clerezza.rdf.core.access.LockableMGraph;
 import org.openrdf.model.ValueFactory;
 import org.openrdf.query.Binding;
 import org.openrdf.query.BindingSet;
@@ -47,9 +50,6 @@ import org.supercsv.cellprocessor.ift.CellProcessor;
 import org.supercsv.io.CsvMapWriter;
 import org.supercsv.io.ICsvMapWriter;
 import org.supercsv.prefs.CsvPreference;
-
-import com.sindice.fusepool.DukeRunner;
-import com.sindice.fusepool.StopWatch;
 
 /**
  * 
@@ -169,7 +169,12 @@ public class SesameInputNativeStoreImpl implements InputTripleStore {
 			con.begin();
 			// URI context
 			StopWatch.start();
-			try {
+			Lock l = null;
+			if (triples instanceof LockableMGraph) {
+				l = ((LockableMGraph)triples).getLock().readLock();
+				l.lock();
+			}
+			try {	
 				Iterator<Triple> iterator = triples.iterator();
 				while (iterator.hasNext()) {
 					Triple triple = iterator.next();
@@ -196,6 +201,9 @@ public class SesameInputNativeStoreImpl implements InputTripleStore {
 				StopWatch.start();
 				con.commit();
 				con.close();
+				if (l != null) {
+					l.unlock();
+				}
 				StopWatch.end();
 				logger.info(StopWatch.popTimeString("Commiting took %s ms."));
 			}

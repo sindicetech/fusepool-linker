@@ -97,7 +97,7 @@ public class ConfigurableLinkerAdapter extends LinkerAdapter {
 	 * @return "classpath:patents-jena-jdbc.xml"
 	 */
 	@Override
-	protected String defaultConfigFileLocation() {
+	protected String defaultDedupConfigFileLocation() {
 		return dukeConfigFileLocation;
 	}
 }

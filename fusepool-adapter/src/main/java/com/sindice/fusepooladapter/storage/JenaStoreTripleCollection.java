@@ -44,12 +44,12 @@ import com.hp.hpl.jena.tdb.TDBFactory;
  * 
  * 
  */
-public class OutputStore implements TripleCollection {
+public class JenaStoreTripleCollection implements TripleCollection {
   private final String datafolder;
   private Dataset dataset;
   private final Jena2TriaUtil j2t;
 
-  public OutputStore(String datafolder) {
+  public JenaStoreTripleCollection(String datafolder) {
     Path dataPath = Paths.get(datafolder);
     if (Files.exists(dataPath)){
       if (! Files.isDirectory(dataPath)){

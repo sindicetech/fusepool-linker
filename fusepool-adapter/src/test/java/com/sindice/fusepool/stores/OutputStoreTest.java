@@ -21,6 +21,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
+import com.sindice.fusepooladapter.storage.JenaStoreTripleCollection;
 import org.apache.clerezza.rdf.core.Triple;
 import org.apache.clerezza.rdf.core.UriRef;
 import org.apache.clerezza.rdf.core.impl.PlainLiteralImpl;
@@ -34,7 +35,6 @@ import com.hp.hpl.jena.query.ReadWrite;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.tdb.TDB;
 import com.hp.hpl.jena.tdb.TDBFactory;
-import com.sindice.fusepooladapter.storage.OutputStore;
 
 public class OutputStoreTest {
 
@@ -58,10 +58,10 @@ public class OutputStoreTest {
     Set<Triple> expectedSet = new HashSet<Triple>();
     expectedSet.add(testTriple1);
     expectedSet.add(testTriple);
-    OutputStore store = null;
+    JenaStoreTripleCollection store = null;
     try {
       String tmpDataPath = folder.newFolder("data").getAbsolutePath();
-      store = new OutputStore(tmpDataPath);
+      store = new JenaStoreTripleCollection(tmpDataPath);
       store.clean();
       Dataset dataset = TDBFactory.createDataset(tmpDataPath);
       dataset.begin(ReadWrite.WRITE);

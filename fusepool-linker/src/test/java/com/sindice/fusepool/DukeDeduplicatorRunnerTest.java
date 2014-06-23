@@ -33,7 +33,7 @@ import org.junit.Test;
 import com.sindice.fusepool.matchers.CollectingMatchListener;
 import com.sindice.fusepool.stores.SetTripleWriter;
 
-public class DukeRunnerTest extends DukeBaseTest {
+public class DukeDeduplicatorRunnerTest extends DukeBaseTest {
 	private ConfigurationImpl config;
 
 	@Before
@@ -51,14 +51,6 @@ public class DukeRunnerTest extends DukeBaseTest {
 	}
 
 	@Test
-	public void testSetup() {
-		@SuppressWarnings("unused")
-		DukeRunner duke = new DukeRunner("conf3.xml");
-		duke = new DukeRunner("conf3.xml",
-				new CollectingMatchListener(new SetTripleWriter()));
-	}
-
-	@Test
 	public void testCollectingMatches() {
 		SetTripleWriter matches = new SetTripleWriter();
 
@@ -67,10 +59,8 @@ public class DukeRunnerTest extends DukeBaseTest {
 	    records.add(DukeBaseTest.makeRecord("ID", "2", "NAME", "aaaaa", "EMAIL", "BBBBB"));
 
 		config.addDataSource(0, new TestDataSource(records));
-		DukeRunner duke = new DukeRunner(config);
-		
-		duke.addMatchListener(new CollectingMatchListener(matches));
-			    
+		DukeDeduplicatorRunner duke = new DukeDeduplicatorRunner(config, matches, 1);
+
 	    duke.run();
 	    
 	    assertEquals(2, matches.size());		

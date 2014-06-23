@@ -45,9 +45,6 @@ public class CollectingMatchListener extends AbstractMatchListener {
 	 * 
 	 * @param collection
 	 *            Collection to which to store the converted matches.
-	 * @param converter
-	 *            Converter to convert matches in the form of a
-	 *            {@link SimpleTriple} to the resulting type T.
 	 */
 	public CollectingMatchListener(TripleWriter collection) {
 		this.collection = collection;

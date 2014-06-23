@@ -28,16 +28,16 @@ import com.hp.hpl.jena.tdb.TDB;
 import com.hp.hpl.jena.tdb.TDBFactory;
 import com.sindice.fusepool.matchers.SimpleTriple;
 
-public class JenaAdapter implements TripleWriter {
+public class JenaTripleWriter implements TripleWriter {
 	private final static Logger logger = LoggerFactory
-			.getLogger(JenaAdapter.class);
+			.getLogger(JenaTripleWriter.class);
 	private static final SimpleTriple SENTINEL = new SimpleTriple("SENTINEL", "SENTINEL", "SENTINEL");
 	private final BlockingQueue<SimpleTriple> queue = new ArrayBlockingQueue<SimpleTriple>(
 			10000);
     private final String datafolder;
     private volatile Thread thread;
 
-	public JenaAdapter(String datafolder) {
+	public JenaTripleWriter(String datafolder) {
 		this.datafolder = datafolder;
 	}
 	

@@ -18,6 +18,8 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
+import com.sindice.fusepooladapter.storage.JenaStoreTripleCollection;
+import org.apache.clerezza.rdf.core.Triple;
 import org.apache.clerezza.rdf.core.TripleCollection;
 import org.junit.Ignore;
 import org.junit.Test;
@@ -30,7 +32,6 @@ import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.tdb.TDB;
 import com.hp.hpl.jena.tdb.TDBFactory;
 import com.sindice.fusepool.testutils.TestTripleCollectionPatents;
-import com.sindice.fusepooladapter.storage.OutputStore;
 import org.apache.clerezza.rdf.core.serializedform.Parser;
 import org.apache.clerezza.rdf.core.serializedform.SupportedFormat;
 import org.junit.Assert;
@@ -74,19 +75,32 @@ public class LinkerAdapterTest {
 		System.out.println(resultTriples.size());
 	}
 	
-	//@Ignore
+	@Ignore
 	@Test
 	public void testSmallDataFile() throws IOException {
 		LinkerAdapter adapter = new LinkerAdapter();
 		TripleCollection triples = Parser.getInstance().parse(getClass().getResourceAsStream("patent-data-sample-short.ttl"), SupportedFormat.TURTLE);
 		TripleCollection resultTriples = adapter
 				.interlink(triples);
-		System.out.println("in short sample found: "+resultTriples.size());
+		System.out.println("Found duplicates: " + resultTriples.size());
 		Assert.assertTrue("no interlink found, but urn:x-temp:/id/5caaf04a-30ab-4c6a-9d0e-07ffc3a569d0"
 				+ " and urn:x-temp:/id/5efdb576-ebb5-4efd-8b00-d943425eaf59 look the same", 
 				resultTriples.size() > 0);
 	}
-	
+
+    @Ignore
+    @Test
+    public void testSmallDataInterlinkingFile() throws IOException {
+        LinkerAdapter adapter = new LinkerAdapter();
+        TripleCollection patents = Parser.getInstance().parse(getClass().getResourceAsStream("patent-data-sample-short.ttl"), SupportedFormat.TURTLE);
+        TripleCollection companies = Parser.getInstance().parse(getClass().getResourceAsStream("companies500.nt"), SupportedFormat.N_TRIPLE);
+        TripleCollection resultTriples = adapter.interlink(patents, companies);
+        System.out.println("Found links between datasets: " + resultTriples.size());
+        Assert.assertTrue("no interlink found, but urn:x-temp:/id/5caaf04a-30ab-4c6a-9d0e-07ffc3a569d0"
+                + " and urn:x-temp:/id/5efdb576-ebb5-4efd-8b00-d943425eaf59 look the same",
+                resultTriples.size() > 0);
+    }
+
 	/**
 	 * Test that runs the full flow. 
 	 * 
@@ -101,11 +115,11 @@ public class LinkerAdapterTest {
 	public void testFull() throws IOException {
 		logger.info("Full test");
 		LinkerAdapter adapter = new ConfigurableLinkerAdapter("classpath:patents-csv.xml", 
-				"/data/tmp_fusepool/in", // data is loaded from OutputStore (see below, a Clerezza TripleCollection) to this "inpath" 
+				"/data/tmp_fusepool/in", // data is loaded from JenaStoreTripleCollection (see below, a Clerezza TripleCollection) to this "inpath"
 										 //      so that it can be conveniently queried via SPARQL 
 				"out", // results are stored in this "outpath"
 				2);    // the number of matching threads used by Duke 
-		OutputStore os = new OutputStore("fullTestData"); // contains the dataset to deduplicate. Can be loaded using loadTestCollectionFull()
+		JenaStoreTripleCollection os = new JenaStoreTripleCollection("fullTestData"); // contains the dataset to deduplicate. Can be loaded using loadTestCollectionFull()
 		os.init();
 		logger.info("Store contains " + os.size() + " triples.");
 		TripleCollection resultTriples = adapter.interlink(os);
@@ -121,12 +135,22 @@ public class LinkerAdapterTest {
 	@Ignore
 	@Test
 	public void testVerify() throws IOException {
-		OutputStore os = new OutputStore("out");
+		JenaStoreTripleCollection os = new JenaStoreTripleCollection("tmp/out");
 		os.init();
 		System.out.println(os.size());
 //		os.clean();
 //		os.destroy();
 	}
+
+    @Test
+    public void testList() {
+        JenaStoreTripleCollection os = new JenaStoreTripleCollection("/tmp/1403545446895-0");
+        os.init();
+
+        for (Triple triple : os) {
+            System.out.println(triple);
+        }
+    }
 
 	/**
 	 * Populates a Jena TDB store with the dataset that is to be deduplicated by the testFull() method.
@@ -135,7 +159,7 @@ public class LinkerAdapterTest {
 	@Ignore
 	@Test
 	public void loadTestCollectionFull() throws FileNotFoundException {
-		Dataset dataset = TDBFactory.createDataset("fullTestData");
+		Dataset dataset = TDBFactory.createDataset("tmp/fullTestData");
 		dataset.begin(ReadWrite.WRITE);
 		// Get model inside the transaction
 		Model model = dataset.getDefaultModel();

@@ -43,7 +43,7 @@ public class Runner {
         return "found "+interlinks.size()+" links in patent-data-sample-short.ttl";
     }
 
-    @Reference(target = "(component.name=com.sindice.fusepooladapter.LinkerAdapter)")
+    @Reference(target = "(component.name=com.sindice.com.sindice.fusepooladapter.LinkerAdapter)")
     public void setLinker(Interlinker linker) {
         this.linker = linker;
     }

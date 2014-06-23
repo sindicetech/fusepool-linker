@@ -17,6 +17,7 @@ package com.sindice.fusepooladapter.storage;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.Writer;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -24,6 +25,8 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
+import com.sindice.fusepool.DukeDeduplicatorRunner;
+import com.sindice.fusepooladapter.LinkerAdapter;
 import org.apache.clerezza.rdf.core.Triple;
 import org.apache.clerezza.rdf.core.TripleCollection;
 import org.openrdf.model.ValueFactory;
@@ -48,7 +51,6 @@ import org.supercsv.io.CsvMapWriter;
 import org.supercsv.io.ICsvMapWriter;
 import org.supercsv.prefs.CsvPreference;
 
-import com.sindice.fusepool.DukeRunner;
 import com.sindice.fusepool.StopWatch;
 
 /**
@@ -59,11 +61,10 @@ import com.sindice.fusepool.StopWatch;
  * 
  * 
  */
-public class SesameInputNativeStoreImpl implements InputTripleStore {
+public class SesameToCsvInputStore implements InputTripleStore {
 	private static final Logger logger = LoggerFactory
-			.getLogger(SesameInputNativeStoreImpl.class);
-	private final String datafolder;
-	private static final String query = "    PREFIX w3: <http://www.w3.org/ns/prov#> \n"
+			.getLogger(SesameToCsvInputStore.class);
+	public static final String query = "    PREFIX w3: <http://www.w3.org/ns/prov#> \n"
 			+ "PREFIX foaf: <http://xmlns.com/foaf/0.1/> \n"
 			+ "PREFIX sumo: <http://www.owl-ontologies.com/sumo.owl#> \n"
 			+ "PREFIX schema: <http://schema.org/> \n"
@@ -71,7 +72,7 @@ public class SesameInputNativeStoreImpl implements InputTripleStore {
 			+ "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> \n\n"
 			+
 
-			"SELECT * WHERE {  \n"
+			"SELECT ?agent ?agentName ?addressUri ?addressCountryUri ?addressLocality ?streetAddress WHERE {  \n"
 			+ "  ?agent a sumo:CognitiveAgent . \n"
 			+ "?agent rdfs:label ?agentName . \n"
 			+ "OPTIONAL {  \n"
@@ -80,8 +81,9 @@ public class SesameInputNativeStoreImpl implements InputTripleStore {
 			+ "OPTIONAL { ?addressUri schema:addressLocality ?addressLocality . } \n"
 			+ "OPTIONAL { ?addressUri schema:streetAddress ?streetAddress .  }  \n"
 			+ "} \n" + "} ORDER BY ?agent ";
+    private final Writer writer;
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
 		// query = "select * where {?s ?p ?o. }";
 
@@ -131,15 +133,8 @@ public class SesameInputNativeStoreImpl implements InputTripleStore {
 		}
 	}
 
-	public SesameInputNativeStoreImpl(String datafolder) {
-		Path dataPath = Paths.get(datafolder);
-		if (Files.exists(dataPath)) {
-			if (!Files.isDirectory(dataPath)) {
-				throw new IllegalArgumentException(
-						"file instead of folder specified for output data");
-			}
-		}
-		this.datafolder = datafolder;
+	public SesameToCsvInputStore(Writer writer) {
+        this.writer = writer;
 	}
 
 	/**
@@ -147,12 +142,11 @@ public class SesameInputNativeStoreImpl implements InputTripleStore {
 	 */
 	@Override
 	public int populate(TripleCollection triples) {
-		SafeDeleter.delete(datafolder);
+        File tmpDir = com.google.common.io.Files.createTempDir();
 
-		logger.info("Creating Sesame Native store in " + datafolder);
+		logger.info("Creating Sesame Native store in " + tmpDir);
 
-		Repository repo = new SailRepository(new NativeStore(new File(
-				datafolder)));
+		Repository repo = new SailRepository(new NativeStore(tmpDir));
 		try {
 			repo.initialize();
 		} catch (RepositoryException e) {
@@ -239,8 +233,7 @@ public class SesameInputNativeStoreImpl implements InputTripleStore {
 
 			result = tupleQuery.evaluate();
 
-			mapWriter = new CsvMapWriter(new FileWriter(datafolder + File.separator + DukeRunner.AGENTS_CSV_FILENAME),
-                    CsvPreference.STANDARD_PREFERENCE);
+			mapWriter = new CsvMapWriter(writer, CsvPreference.STANDARD_PREFERENCE);
             
             mapWriter.writeHeader(header);
 			            			

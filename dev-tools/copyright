@@ -13,15 +13,3 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.sindice.fusepool;
-class Range {
-	public Range(long start) {
-		this.start = start;
-	}
-	public Range() {
-		this.start = System.currentTimeMillis();
-	}
-
-	public long start = 0;
-	public long end = 0;
-}

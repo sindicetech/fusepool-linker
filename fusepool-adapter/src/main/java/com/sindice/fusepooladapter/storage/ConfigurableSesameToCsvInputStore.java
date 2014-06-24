@@ -61,7 +61,7 @@ public class ConfigurableSesameToCsvInputStore implements InputTripleStore {
 	 * Cleans and populates the triplestore by triples from input collection
 	 */
 	@Override
-	public int populate(TripleCollection triples) {
+	public long populate(TripleCollection triples) {
         File tmpDir = com.google.common.io.Files.createTempDir();
 
 		logger.info("Creating Sesame Native store in " + tmpDir);
@@ -119,7 +119,9 @@ public class ConfigurableSesameToCsvInputStore implements InputTripleStore {
 							+ e.getMessage(), e);
 		}
 
-		return (int) size; // TODO change interface
+        //SafeDeleter.delete(tmpDir.getAbsolutePath());
+
+		return size; // TODO change interface
 	}
 
 	private Map<String, Object> toMap(BindingSet set) {

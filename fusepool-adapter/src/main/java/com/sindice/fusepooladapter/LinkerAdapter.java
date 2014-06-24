@@ -23,7 +23,6 @@ import com.sindice.fusepooladapter.storage.ConfigurableSesameToCsvInputStore;
 import com.sindice.fusepooladapter.storage.JenaStoreTripleCollection;
 import com.sindice.fusepooladapter.storage.SesameToCsvInputStore;
 import eu.fusepool.datalifecycle.Interlinker;
-import no.priv.garshol.duke.ConfigLoader;
 import no.priv.garshol.duke.Configuration;
 import no.priv.garshol.duke.DataSource;
 import no.priv.garshol.duke.datasources.CSVDataSource;
@@ -32,7 +31,6 @@ import org.apache.clerezza.rdf.core.UriRef;
 import org.osgi.service.component.annotations.Component;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.xml.sax.SAXException;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -105,13 +103,13 @@ public class LinkerAdapter implements Interlinker {
         return DEFAULT_INTERLINK_CONFIG_FILE_LOCATION;
     }
 
-    private int populateInStore(TripleCollection data, String query, String outputFile) {
+    private long populateInStore(TripleCollection data, String query, String outputFile) {
         logger.info("Populating input store {}", outputFile);
         StopWatch.start();
 
         try (FileWriter writer = new FileWriter(outputFile)) {
 
-            int size = new ConfigurableSesameToCsvInputStore(writer, query).populate(data);
+            long size = new ConfigurableSesameToCsvInputStore(writer, query).populate(data);
 
             StopWatch.end();
             logger.info("Input store in {} populated with {} triples in " + StopWatch.popTimeString("%s ms"), outputFile, size);
@@ -136,7 +134,7 @@ public class LinkerAdapter implements Interlinker {
         //TODO ... when that's done then we can perhaps also read the columns from Duke's configuration instead of parsing the query, see {@link SparqlToCsvHeader}
         populateInStore(dataToInterlink, SesameToCsvInputStore.query, storeFile);
 
-        Configuration configuration = loadConfig(defaultDedupConfigFileLocation());
+        Configuration configuration = LinkerConfiguration.loadConfig(defaultDedupConfigFileLocation());
         ((CSVDataSource)configuration.getDataSources().iterator().next()).setInputFile( storeFile );
 
         DukeDeduplicatorRunner runner = new DukeDeduplicatorRunner(configuration, new JenaTripleWriter(defaultOutputDir()), defaultNumberOfThreads());
@@ -155,74 +153,40 @@ public class LinkerAdapter implements Interlinker {
 		return outStore;
 	}
 
-    private Configuration loadConfig(String pathToConfig) {
-        Thread.currentThread().setContextClassLoader(getClass().getClassLoader());
-        try {
-            try {
-                return ConfigLoader.load(pathToConfig);
-            } catch (IOException e) {
-                if (!pathToConfig.startsWith("classpath:")) {
-                    try {
-                        return ConfigLoader.load("classpath:" + pathToConfig);
-                    } catch (IOException e1) {
-                        throw new RuntimeException("Problem accessing Duke configuration: " + pathToConfig, e1);
-                    }
-                }
-                throw new RuntimeException("Problem accessing Duke configuration: " + pathToConfig);
-            }
-        } catch (SAXException e) {
-            throw new RuntimeException("Problem while reading Duke configuration " + pathToConfig, e);
-        }
-    }
-
 	@Override
 	public TripleCollection interlink(TripleCollection dataToInterlink,
 			UriRef interlinkAgainst) {
 		throw new UnsupportedOperationException("Not supported yet.");
 	}
 
-	@Override
-	public TripleCollection interlink(TripleCollection source, TripleCollection target) {
-		// using equals takes potentially too much time
-		if (source == target) {
-			return interlink(target);
-		}
+    public TripleCollection interlink(TripleCollection source, TripleCollection target, LinkerConfiguration configuration) {
+        // using equals takes potentially too much time
+        if (source == target) {
+            return interlink(target);
+        }
 
         inDir = Files.createTempDir().getAbsolutePath();
-        // populates input store
 
         String storeFileSource = defaultInputDir() + File.separator + "source_" + AGENTS_CSV_FILENAME;
-        populateInStore(source, SesameToCsvInputStore.query, storeFileSource);
+        populateInStore(source, configuration.getSparqlQuery1(), storeFileSource);
 
         String storeFileTarget = defaultInputDir() + File.separator + "target_" + AGENTS_CSV_FILENAME;
-        String query = "PREFIX foaf:        <http://xmlns.com/foaf/0.1/>\n" +
-                "PREFIX rdfs:        <http://www.w3.org/2000/01/rdf-schema#>\n" +
-                "PREFIX owl:         <http://www.w3.org/2002/07/owl#>\n" +
-                "PREFIX dbpedia-owl: <http://dbpedia.org/ontology/> \n" +
-                "PREFIX dbpedia:     <http://dbpedia.org/property/>\n" +
-                "PREFIX sindicetech: <http://sindicetech.com/ontology/>\n" +
-                "SELECT ?iri ?companyName ?countryCode ?locationCityName WHERE {" +
-                "    ?iri a dbpedia-owl:Company;\n" +
-                "         foaf:name ?companyName;\n" +
-                "         dbpedia:countryCode ?countryCode;\n" +
-                "         sindicetech:locationCityName ?locationCityName" +
-                "}";
-        populateInStore(target, query, storeFileTarget);
+        populateInStore(target, configuration.getSparqlQuery2(), storeFileTarget);
 
-        Configuration configuration = loadConfig(defaultInterlinkConfigFileLocation());
-        Iterator<DataSource> iterator = configuration.getDataSources(1).iterator();
+        Iterator<DataSource> iterator = configuration.getDukeConfiguration().getDataSources(1).iterator();
 
         if (!iterator.hasNext()) {
-            throw new RuntimeException(String.format("Configuration %s must have two datasources configured, contains none.", defaultInterlinkConfigFileLocation()));
+            throw new RuntimeException(String.format("Duke configuration must have two datasources configured, contains none."));
         }
         ((CSVDataSource)iterator.next()).setInputFile(storeFileSource);
 
-        iterator = configuration.getDataSources(2).iterator();
+        iterator = configuration.getDukeConfiguration().getDataSources(2).iterator();
         if (!iterator.hasNext()) {
-            throw new RuntimeException(String.format("Configuration %s must have two datasources configured, contains only one.", defaultInterlinkConfigFileLocation()));
+            throw new RuntimeException(String.format("Duke configuration must have two datasources configured, contains only one."));
         }
         ((CSVDataSource)iterator.next()).setInputFile(storeFileTarget);
-        DukeDeduplicatorRunner runner = new DukeDeduplicatorRunner(configuration, new JenaTripleWriter(defaultOutputDir()), defaultNumberOfThreads());
+
+        DukeDeduplicatorRunner runner = new DukeDeduplicatorRunner(configuration.getDukeConfiguration(), new JenaTripleWriter(defaultOutputDir()), defaultNumberOfThreads());
 
         logger.debug("Starting Duke");
         StopWatch.start();
@@ -236,6 +200,11 @@ public class LinkerAdapter implements Interlinker {
         outStore.init();
         logger.info("Output store contains {} triples", outStore.size());
         return outStore;
+    }
+
+	@Override
+	public TripleCollection interlink(TripleCollection source, TripleCollection target) {
+        return interlink(source, target, PatentsDbpediaLinkerConfiguration.getInstance());
 	}
 
 	@Override

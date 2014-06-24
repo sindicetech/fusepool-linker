@@ -93,8 +93,8 @@ public class LinkerAdapterTest {
     @Test
     public void testSmallDataInterlinkingFile() throws IOException {
         LinkerAdapter adapter = new LinkerAdapter();
-        TripleCollection patents = Parser.getInstance().parse(getClass().getResourceAsStream("patent-data-sample-short.ttl"), SupportedFormat.TURTLE);
-        TripleCollection companies = Parser.getInstance().parse(getClass().getResourceAsStream("companies500.nt"), SupportedFormat.N_TRIPLE);
+        TripleCollection patents = Parser.getInstance().parse(getClass().getResourceAsStream("patent_5.ttl"), SupportedFormat.TURTLE);
+        TripleCollection companies = Parser.getInstance().parse(getClass().getResourceAsStream("companies_5.nt"), SupportedFormat.N_TRIPLE);
         TripleCollection resultTriples = adapter.interlink(patents, companies);
         System.out.println("Found links between datasets: " + resultTriples.size());
         Assert.assertTrue("no interlink found, but urn:x-temp:/id/5caaf04a-30ab-4c6a-9d0e-07ffc3a569d0"
@@ -102,7 +102,25 @@ public class LinkerAdapterTest {
                 resultTriples.size() > 0);
     }
 
-	/**
+    @Ignore
+    @Test
+    public void testPatentDbpediaInterlinkingSmall() throws IOException {
+        LinkerAdapter adapter = new LinkerAdapter();
+        TripleCollection patents = Parser.getInstance().parse(getClass().getResourceAsStream("patent_5.ttl"), SupportedFormat.TURTLE);
+        TripleCollection companies = Parser.getInstance().parse(getClass().getResourceAsStream("companies_5.nt"), SupportedFormat.N_TRIPLE);
+
+        LinkerConfiguration configuration = new LinkerConfiguration(LinkerConfiguration.loadConfig("classpath:patentDbpediaSmall-csv.xml"),
+                PatentsDbpediaLinkerConfiguration.getInstance().getSparqlQuery1(),
+                PatentsDbpediaLinkerConfiguration.getInstance().getSparqlQuery2());
+        TripleCollection resultTriples = adapter.interlink(patents, companies, configuration);
+
+        System.out.println("Found links between datasets: " + resultTriples.size());
+
+        Assert.assertTrue("no interlink found, but the datasets transform to identical records",
+                resultTriples.size() == 1);
+    }
+
+    /**
 	 * Test that runs the full flow. 
 	 * 
 	 *  It is assumed that the "fullTestData" is a Jena TDB data folder loaded with the input dataset to deduplicate.

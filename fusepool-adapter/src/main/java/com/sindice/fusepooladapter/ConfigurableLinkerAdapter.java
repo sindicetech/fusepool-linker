@@ -47,7 +47,7 @@ public class ConfigurableLinkerAdapter extends LinkerAdapter {
 			String inpath, String outpath, int threadsNo) throws IOException {
 		this.inpath = FileSystems.getDefault().getPath(inpath).toAbsolutePath()
 				.toString();
-		;
+
 		this.outpath = FileSystems.getDefault().getPath(outpath)
 				.toAbsolutePath().toString();
 		this.dukeConfigFileLocation = dukeConfigFileLocation;
@@ -75,7 +75,7 @@ public class ConfigurableLinkerAdapter extends LinkerAdapter {
 		this.inpath = FileSystems.getDefault()
 				.getPath(properties.getProperty("inpath")).toAbsolutePath()
 				.toString();
-		;
+
 		this.outpath = FileSystems.getDefault()
 				.getPath(properties.getProperty("outpath")).toAbsolutePath()
 				.toString();

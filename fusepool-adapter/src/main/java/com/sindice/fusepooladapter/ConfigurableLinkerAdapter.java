@@ -87,7 +87,7 @@ public class ConfigurableLinkerAdapter extends LinkerAdapter {
 	 * @return Input dir passed to constructor.
 	 */
 	@Override
-	protected String defaultInputDir() {
+	protected String defaultTmpDir() {
 		return inpath;
 	}
 

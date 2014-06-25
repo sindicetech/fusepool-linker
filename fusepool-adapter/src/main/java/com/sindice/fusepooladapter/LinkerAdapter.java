@@ -48,23 +48,23 @@ public class LinkerAdapter implements Interlinker {
     private static final Logger logger = LoggerFactory.getLogger(LinkerAdapter.class);
     public static final String DEFAULT_DEDUP_CONFIG_FILE_LOCATION = "classpath:patents-csv.xml";
     public static final String DEFAULT_INTERLINK_CONFIG_FILE_LOCATION = "classpath:dbpedia-csv.xml";
-    private String inDir;
+    private String tmpDir;
 	private String outDir;
 
 	public LinkerAdapter() {
-		this.inDir = Files.createTempDir().getAbsolutePath();
-		logger.info("Created inputDir {} ", inDir);
+		this.tmpDir = Files.createTempDir().getAbsolutePath();
+		logger.info("Created inputDir {} ", tmpDir);
 		this.outDir = Files.createTempDir().getAbsolutePath();
 		logger.info("Created outputDir {} ", outDir);
 	}
 
 	/**
-	 * Creates a default temporary directory to be used as the input dir.
+	 * Returns a default temporary directory where intermediate data will be stored
 	 * 
 	 * @return Directory created in a temp dir of the system.
 	 */
-	protected String defaultInputDir() {
-		return inDir;
+	protected String defaultTmpDir() {
+		return tmpDir;
 	}
 
 	/**
@@ -125,10 +125,10 @@ public class LinkerAdapter implements Interlinker {
      * dataToInterlink -> Sesame -> CSV file -> Duke -> Jena-based output store
      */
 	public TripleCollection interlink(TripleCollection dataToInterlink) {
-		inDir = Files.createTempDir().getAbsolutePath();
+		tmpDir = Files.createTempDir().getAbsolutePath();
 		// populates input store
 
-        String storeFile = defaultInputDir() + File.separator + AGENTS_CSV_FILENAME;
+        String storeFile = defaultTmpDir() + File.separator + AGENTS_CSV_FILENAME;
 
         //TODO instead of passing a hardcoded query like this, find a way to read the query from duke's configuration
         //TODO ... when that's done then we can perhaps also read the columns from Duke's configuration instead of parsing the query, see {@link SparqlToCsvHeader}
@@ -165,12 +165,12 @@ public class LinkerAdapter implements Interlinker {
             return interlink(target);
         }
 
-        inDir = Files.createTempDir().getAbsolutePath();
+        tmpDir = Files.createTempDir().getAbsolutePath();
 
-        String storeFileSource = defaultInputDir() + File.separator + "source_" + AGENTS_CSV_FILENAME;
+        String storeFileSource = defaultTmpDir() + File.separator + "source_" + AGENTS_CSV_FILENAME;
         populateInStore(source, configuration.getSparqlQuery1(), storeFileSource);
 
-        String storeFileTarget = defaultInputDir() + File.separator + "target_" + AGENTS_CSV_FILENAME;
+        String storeFileTarget = defaultTmpDir() + File.separator + "target_" + AGENTS_CSV_FILENAME;
         populateInStore(target, configuration.getSparqlQuery2(), storeFileTarget);
 
         Iterator<DataSource> iterator = configuration.getDukeConfiguration().getDataSources(1).iterator();

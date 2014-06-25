@@ -10,19 +10,19 @@
       <name>NAME</name>
       <comparator>no.priv.garshol.duke.comparators.JaccardIndexComparator</comparator>
       <low>0.1</low>
-      <high>0.9</high>
+      <high>0.99</high>
     </property>    
     <property>
       <name>COUNTRY</name>
       <comparator>no.priv.garshol.duke.comparators.JaccardIndexComparator</comparator>
       <low>0.1</low>
-      <high>0.9</high>
+      <high>0.7</high>
     </property>    
     <property>
       <name>LOCALITY</name>
       <comparator>no.priv.garshol.duke.comparators.JaccardIndexComparator</comparator>
       <low>0.1</low>
-      <high>0.9</high>
+      <high>0.7</high>
     </property>    
   </schema>
 
@@ -31,7 +31,7 @@
     <param name="fuzzy-search" value="false"/>
   </database>
 
-    <group>
+    <group><!-- patents -->
     <csv>
         <param name="input-file" value=""/>
 
@@ -41,14 +41,15 @@
                 cleaner="no.priv.garshol.duke.cleaners.LowerCaseNormalizeCleaner"
                 property="NAME"/>
         <column name="addressCountryUri"
-                property="COUNTRY"/>
+                property="COUNTRY"
+                cleaner="com.sindice.fusepool.cleaners.UriToCountryCodeCleaner"/>
         <column name="addressLocality"
                 cleaner="no.priv.garshol.duke.cleaners.LowerCaseNormalizeCleaner"
                 property="LOCALITY"/>
     </csv>
     </group>
 
-  <group>
+  <group><!-- companies -->
   <csv>
     <param name="input-file" value=""/>
     <column name="iri"

@@ -30,11 +30,6 @@ import com.sindice.fusepool.stores.TripleWriter;
  * 
  * If the passed collection implements {@link Closeable} then calls close() at
  * the end of processing.
- * 
- * 
- * @param <T>
- *            A triple type that is the result of converting a
- *            {@link SimpleTriple} via the given {@link TripleConverter}.
  */
 public class CollectingMatchListener extends AbstractMatchListener {
 	static String ID_PROPERTY = "ID";
@@ -56,17 +51,18 @@ public class CollectingMatchListener extends AbstractMatchListener {
 		String id1 = r1.getValue(ID_PROPERTY);
 		String id2 = r2.getValue(ID_PROPERTY);
 
+        System.out.println("Found a match: "+id1+"   "+id2);
 		collection.add(new SimpleTriple(id1, SimpleTriple.OWL_SAMEAS, id2));
 	}
 
 	@Override
 	public void endProcessing() {
-		if (collection instanceof Closeable) {
+		if (collection instanceof AutoCloseable) {
 			try {
-				((Closeable) collection).close();
-			} catch (IOException e) {
+				collection.close();
+			} catch (Exception e) {
 				throw new TripleStorageException(
-						"Problem while trying to commit: " + e.getMessage(), e);
+						"Problem while closing writer: " + e.getMessage(), e);
 			}
 		}
 	}

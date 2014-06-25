@@ -142,7 +142,7 @@ public class SesameToCsvInputStore implements InputTripleStore {
 	 * cleans and populate the triplestore by triples from input collection
 	 */
 	@Override
-	public int populate(TripleCollection triples) {
+	public long populate(TripleCollection triples) {
         File tmpDir = com.google.common.io.Files.createTempDir();
 
 		logger.info("Creating Sesame Native store in " + tmpDir);

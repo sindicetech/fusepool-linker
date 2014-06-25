@@ -21,7 +21,7 @@ import org.apache.clerezza.rdf.core.TripleCollection;
  *
  */
 public interface InputTripleStore {
-  public int populate(TripleCollection triples);
+  public long populate(TripleCollection triples);
   public void init();
 
 }

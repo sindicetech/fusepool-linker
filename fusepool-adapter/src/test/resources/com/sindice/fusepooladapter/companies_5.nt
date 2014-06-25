@@ -1,0 +1,4 @@
+<http://dbpedia.org/resource/Euratom_FAKE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://dbpedia.org/ontology/Company> .
+<http://dbpedia.org/resource/Euratom_FAKE> <http://xmlns.com/foaf/0.1/name> "EUROPÄISCHE ATOMGEMEINSCHAFT (EURATOM)" .
+<http://dbpedia.org/resource/Euratom_FAKE> <http://dbpedia.org/property/countryCode> <urn:x-temp:/code/country/LU> .
+<http://dbpedia.org/resource/Euratom_FAKE> <http://sindicetech.com/ontology/locationCityName> "L-1019 Luxembourg" .

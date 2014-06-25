@@ -73,7 +73,7 @@ public class JenaInputStoreImpl implements InputTripleStore {
    * cleans and populate the triplestore by triples from input collection 
    */
   @Override
-  public int populate(TripleCollection triples) {
+  public long populate(TripleCollection triples) {
     Path dataPath = Paths.get(datafolder);
 	try {
 		if (Files.exists(dataPath)) {

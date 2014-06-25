@@ -66,7 +66,12 @@ public class DukeDeduplicatorRunner {
 	}
 	
 	public void run() {
-		processor.deduplicate();
+        if (configuration.getDataSources().isEmpty()) {
+            // datasources are probably configured in groups --> interlinking
+            processor.link();
+        } else {
+		    processor.deduplicate();
+        }
 	}
 }
 

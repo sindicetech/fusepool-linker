@@ -38,7 +38,6 @@ import com.sindice.fusepooladapter.storage.ConfigurableSesameToCsvInputStore;
 import com.sindice.fusepooladapter.storage.CsvConfig;
 import com.sindice.fusepooladapter.storage.DukeConfigToCsvHeader;
 import com.sindice.fusepooladapter.storage.JenaStoreTripleCollection;
-import com.sindice.fusepooladapter.storage.SesameToCsvInputStore;
 
 import eu.fusepool.datalifecycle.Interlinker;
 

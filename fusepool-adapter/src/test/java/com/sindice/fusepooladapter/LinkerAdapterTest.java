@@ -15,11 +15,13 @@
  */
 package com.sindice.fusepooladapter;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import com.sindice.fusepooladapter.storage.JenaStoreTripleCollection;
+
 import org.apache.clerezza.rdf.core.Triple;
 import org.apache.clerezza.rdf.core.TripleCollection;
 import org.junit.Ignore;
@@ -33,6 +35,7 @@ import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.tdb.TDB;
 import com.hp.hpl.jena.tdb.TDBFactory;
 import com.sindice.fusepool.testutils.TestTripleCollectionPatents;
+
 import org.apache.clerezza.rdf.core.serializedform.Parser;
 import org.apache.clerezza.rdf.core.serializedform.SupportedFormat;
 import org.junit.Assert;
@@ -89,7 +92,7 @@ public class LinkerAdapterTest {
 				resultTriples.size() > 0);
 	}
 
-    @Ignore
+    //@Ignore
     @Test
     public void testSmallDataInterlinkingFile() throws IOException {
         LinkerAdapter adapter = new LinkerAdapter();
@@ -106,7 +109,7 @@ public class LinkerAdapterTest {
                 resultTriples.size() > 1);
     }
 
-    @Ignore
+    //@Ignore
     @Test
     public void testPatentDbpediaInterlinkingSmall() throws IOException {
         LinkerAdapter adapter = new LinkerAdapter();
@@ -152,10 +155,14 @@ public class LinkerAdapterTest {
     /**
      *
      */
-    @Ignore
+    //@Ignore
     @Test
     public void testInterlinkingFull() throws IOException {
-        logger.info("Full test");
+    	// here load the collections it is needed only once
+    	//loadTestCollectionFull("/Users/szydan/home/data/fusepool/patents/patent-data-sample.nt", "tmp/patentsJena", "N-TRIPLE");
+    	//loadTestCollectionFull("/Users/szydan/home/data/fusepool/dbpedia-companies/dbpedia-companies-small.nt", "tmp/dbpediaSmallJena", "N-TRIPLE");
+    	
+    	logger.info("Full test");
         LinkerAdapter adapter = new ConfigurableLinkerAdapter("classpath:dbpedia-csv.xml",
                 "tmp", // temporary folder used for intermediate data
                 "patentDbpediaOut", // results are stored in this "outpath"
@@ -203,17 +210,26 @@ public class LinkerAdapterTest {
 	 * Populates a Jena TDB store with the dataset that is to be deduplicated by the testFull() method.
 	 *  
 	 */
-	@Ignore
+	
+    @Ignore
 	@Test
 	public void loadTestCollectionFull() throws FileNotFoundException {
-		Dataset dataset = TDBFactory.createDataset("tmp/dbpediaSmallJena");
+    	loadTestCollectionFull("/data/tmp_fusepool/dbpedia-companies/dbpedia-companies-small.nt", "tmp/dbpediaSmallJena", "N-TRIPLE");
+    }	
+    
+    private void loadTestCollectionFull(String pathToInputFileInNtriplesFormat, String pathToDataset, String format) throws FileNotFoundException {
+		File collection = new File(pathToDataset);
+		collection.delete();
+		
+    	Dataset dataset = TDBFactory.createDataset(pathToDataset);
 		dataset.begin(ReadWrite.WRITE);
 		// Get model inside the transaction
 		Model model = dataset.getDefaultModel();
 		FileInputStream in = null;
 		try {
-			in = new FileInputStream("/data/tmp_fusepool/dbpedia-companies/dbpedia-companies-small.nt");
-			model.read(in, null, "N-TRIPLE");
+			in = new FileInputStream(pathToInputFileInNtriplesFormat);
+			logger.info(pathToInputFileInNtriplesFormat);
+			model.read(in, null, format);
 		} finally {
 			if (in != null) {
 				try {

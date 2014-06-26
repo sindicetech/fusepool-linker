@@ -19,9 +19,7 @@ import com.google.common.io.Files;
 import com.sindice.fusepool.DukeDeduplicatorRunner;
 import com.sindice.fusepool.StopWatch;
 import com.sindice.fusepool.stores.JenaTripleWriter;
-import com.sindice.fusepooladapter.storage.ConfigurableSesameToCsvInputStore;
-import com.sindice.fusepooladapter.storage.JenaStoreTripleCollection;
-import com.sindice.fusepooladapter.storage.SesameToCsvInputStore;
+import com.sindice.fusepooladapter.storage.*;
 import eu.fusepool.datalifecycle.Interlinker;
 import no.priv.garshol.duke.Configuration;
 import no.priv.garshol.duke.DataSource;
@@ -103,13 +101,13 @@ public class LinkerAdapter implements Interlinker {
         return DEFAULT_INTERLINK_CONFIG_FILE_LOCATION;
     }
 
-    private long populateInStore(TripleCollection data, String query, String outputFile) {
+    private long convertToCsv(TripleCollection data, String query, CsvConfig config, String outputFile) {
         logger.info("Converting input data to CSV {}", outputFile);
         StopWatch.start();
 
         try (FileWriter writer = new FileWriter(outputFile)) {
 
-            long size = new ConfigurableSesameToCsvInputStore(writer, query).populate(data);
+            long size = new ConfigurableSesameToCsvInputStore(writer, config, query).populate(data);
 
             StopWatch.end();
             logger.info("{} triples converted to {} in " + StopWatch.popTimeString("%s ms"), size, outputFile);
@@ -130,12 +128,11 @@ public class LinkerAdapter implements Interlinker {
 
         String storeFile = defaultTmpDir() + File.separator + AGENTS_CSV_FILENAME;
 
-        //TODO instead of passing a hardcoded query like this, find a way to read the query from duke's configuration
-        //TODO ... when that's done then we can perhaps also read the columns from Duke's configuration instead of parsing the query, see {@link SparqlToCsvHeader}
-        populateInStore(dataToInterlink, SesameToCsvInputStore.query, storeFile);
-
         Configuration configuration = LinkerConfiguration.loadConfig(defaultDedupConfigFileLocation());
-        ((CSVDataSource)configuration.getDataSources().iterator().next()).setInputFile( storeFile );
+        CSVDataSource dataSource = (CSVDataSource) configuration.getDataSources().iterator().next();
+        dataSource.setInputFile( storeFile );
+
+        convertToCsv(dataToInterlink, SesameToCsvInputStore.query, DukeConfigToCsvHeader.transform(dataSource), storeFile);
 
         DukeDeduplicatorRunner runner = new DukeDeduplicatorRunner(configuration, new JenaTripleWriter(defaultOutputDir()), defaultNumberOfThreads());
 
@@ -167,24 +164,26 @@ public class LinkerAdapter implements Interlinker {
 
         tmpDir = Files.createTempDir().getAbsolutePath();
 
-        String storeFileSource = defaultTmpDir() + File.separator + "source_" + AGENTS_CSV_FILENAME;
-        populateInStore(source, configuration.getSparqlQuery1(), storeFileSource);
-
-        String storeFileTarget = defaultTmpDir() + File.separator + "target_" + AGENTS_CSV_FILENAME;
-        populateInStore(target, configuration.getSparqlQuery2(), storeFileTarget);
-
         Iterator<DataSource> iterator = configuration.getDukeConfiguration().getDataSources(1).iterator();
-
         if (!iterator.hasNext()) {
             throw new RuntimeException(String.format("Duke configuration must have two datasources configured, contains none."));
         }
-        ((CSVDataSource)iterator.next()).setInputFile(storeFileSource);
+        CSVDataSource dataSource1 = (CSVDataSource) iterator.next();
+        String storeFileSource = defaultTmpDir() + File.separator + "source_" + AGENTS_CSV_FILENAME;
+        dataSource1.setInputFile(storeFileSource);
 
         iterator = configuration.getDukeConfiguration().getDataSources(2).iterator();
         if (!iterator.hasNext()) {
             throw new RuntimeException(String.format("Duke configuration must have two datasources configured, contains only one."));
         }
-        ((CSVDataSource)iterator.next()).setInputFile(storeFileTarget);
+        CSVDataSource dataSource2 = (CSVDataSource) iterator.next();
+        String storeFileTarget = defaultTmpDir() + File.separator + "target_" + AGENTS_CSV_FILENAME;
+        dataSource2.setInputFile(storeFileTarget);
+
+        convertToCsv(source, configuration.getSparqlQuery1(), DukeConfigToCsvHeader.transform(dataSource1), storeFileSource);
+
+        convertToCsv(target, configuration.getSparqlQuery2(), DukeConfigToCsvHeader.transform(dataSource2), storeFileTarget);
+
 
         DukeDeduplicatorRunner runner = new DukeDeduplicatorRunner(configuration.getDukeConfiguration(), new JenaTripleWriter(defaultOutputDir()), defaultNumberOfThreads());
 

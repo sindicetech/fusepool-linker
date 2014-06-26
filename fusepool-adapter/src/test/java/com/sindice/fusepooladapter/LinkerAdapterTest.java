@@ -15,17 +15,23 @@
  */
 package com.sindice.fusepooladapter;
 
+import static org.junit.Assert.assertEquals;
+
 import java.io.File;
 import java.io.BufferedWriter;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.Properties;
 
 import com.sindice.fusepooladapter.configuration.LinkerConfiguration;
 import com.sindice.fusepooladapter.configuration.PatentsDbpediaLinkerConfiguration;
+import com.sindice.fusepooladapter.configuration.PatentsLinkerConfiguration;
 import com.sindice.fusepooladapter.storage.JenaStoreTripleCollection;
 
 import org.apache.clerezza.rdf.core.Triple;
@@ -58,21 +64,38 @@ public class LinkerAdapterTest {
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 
 	/**
+	 * Simple test to correctly generate property file
+	 * @throws Exception
+	 */
+	@Test
+	public void saveParamChanges() throws Exception {
+
+	        File dir = new File("target");
+	        dir.mkdir();
+			Properties props = new Properties();
+	        props.setProperty("sparqlQuery1", PatentsLinkerConfiguration.getInstance().getSparqlQuery1());
+	        props.setProperty("sparqlQuery2", PatentsLinkerConfiguration.getInstance().getSparqlQuery2());
+	        
+	        File f = new File(dir,"test.properties");
+	        
+	        OutputStream out = new FileOutputStream( f );
+	        props.store(out, "This is an optional header comment string");
+	}
+
+	
+	/**
 	 * A simple test of deduplication of 3 agents loaded from threeAgents.xml
 	 * via {@link TestTripleCollectionPatents}. Two match, one doesn't. Uses the
 	 * conf-final.xml Duke configuration specified in conf.properties.
 	 */
-	@Ignore
 	@Test
 	public void testSmall() throws IOException {
 	
-		// TODO: FIX this test once we have new version of ConfigurableLinkerAdapter which works with properties 
-		
-		LinkerAdapter adapter = new ConfigurableLinkerAdapter("conf.properties");
-		TripleCollection resultTriples = adapter
-				.interlink(new TestTripleCollectionPatents());
-		System.out.println(resultTriples.size());
+		LinkerAdapter adapter = new GenericLinkerAdapter("conf.properties");
+		TripleCollection resultTriples = adapter.interlink(new TestTripleCollectionPatents());
+		assertEquals(0, resultTriples.size());
 	}
+	
 
 	/**
 	 * A simple test of deduplication of 3 agents loaded from threeAgents.xml
@@ -150,8 +173,6 @@ public class LinkerAdapterTest {
 		logger.info("Full test");
 		
 		LinkerAdapter adapter = new PatentLinkerAdapter();
-		adapter.setTmpDir("/data/tmp_fusepool/in");
-		adapter.setOutDir("tmp/out");
 		adapter.setDukeThreadNo(Runtime.getRuntime().availableProcessors());
         
 		JenaStoreTripleCollection os = new JenaStoreTripleCollection("tmp/patentsJena"); // contains the dataset to deduplicate. Can be loaded using loadTestCollectionFull()
@@ -182,8 +203,6 @@ public class LinkerAdapterTest {
         logger.info("Dbpedia store contains " + dbpedia.size() + " triples.");
 
         LinkerAdapter adapter = new PatentsDbpediaLinkerAdapter();
-        adapter.setTmpDir("tmp");
-        adapter.setTmpDir("target/patentDbpediaOut");
     	adapter.setDukeThreadNo(Runtime.getRuntime().availableProcessors());
         
         LinkerConfiguration linkerConfiguration = PatentsDbpediaLinkerConfiguration.getInstance();

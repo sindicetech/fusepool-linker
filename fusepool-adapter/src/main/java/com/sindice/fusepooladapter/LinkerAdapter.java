@@ -51,9 +51,9 @@ public abstract class LinkerAdapter implements Interlinker, Deduplicator {
      */
     private static final String TEMP_DIR_NAME = "fusepool-linker-1F4DAB";
 
-    private String tmpDir;
-	private String outDir;
-	private int dukeThreadNo = 2;
+    protected String tmpDir;
+    protected String outDir;
+    protected int dukeThreadNo = 2;
 
 	public LinkerAdapter() {
         // make sure our TEMP_DIR_NAME exists in the system temporary directory
@@ -89,14 +89,6 @@ public abstract class LinkerAdapter implements Interlinker, Deduplicator {
 		return tmpDir;
 	}
 	
-	public void setTmpDir(String pathToTempDir) {
-		this.tmpDir = pathToTempDir;
-	}
-
-	public void setOutDir(String pathToOutDir) {
-		this.outDir = pathToOutDir;
-	}
-
 	public void setDukeThreadNo(int dukeThreadNo) {
 		this.dukeThreadNo = dukeThreadNo;
 	}

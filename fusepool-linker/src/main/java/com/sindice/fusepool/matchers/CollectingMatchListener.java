@@ -51,7 +51,6 @@ public class CollectingMatchListener extends AbstractMatchListener {
 		String id1 = r1.getValue(ID_PROPERTY);
 		String id2 = r2.getValue(ID_PROPERTY);
 
-        System.out.println("Found a match: "+id1+"   "+id2);
 		collection.add(new SimpleTriple(id1, SimpleTriple.OWL_SAMEAS, id2));
 	}
 

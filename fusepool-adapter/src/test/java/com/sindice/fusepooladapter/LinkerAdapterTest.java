@@ -34,6 +34,7 @@ import com.sindice.fusepooladapter.configuration.PatentsDbpediaLinkerConfigurati
 import com.sindice.fusepooladapter.configuration.PatentsLinkerConfiguration;
 import com.sindice.fusepooladapter.storage.JenaStoreTripleCollection;
 
+import com.sindice.fusepooladapter.tools.StorageHelper;
 import org.apache.clerezza.rdf.core.Triple;
 import org.apache.clerezza.rdf.core.TripleCollection;
 import org.junit.Ignore;
@@ -54,10 +55,6 @@ import org.junit.Assert;
 
 /**
  * Junit tests for manual testing of deduplication.
- * 
- * {@link #loadTestCollectionFull()} does the initial loading of the data later
- * used by {@link #testFull()}.
- * 
  * 
  */
 public class LinkerAdapterTest {
@@ -97,63 +94,6 @@ public class LinkerAdapterTest {
 	}
 	
 
-	/**
-	 * A simple test of deduplication of 3 agents loaded from threeAgents.xml
-	 * via {@link TestTripleCollectionPatents}. Two match, one doesn't. Uses the
-	 * conf-final.xml Duke configuration specified in conf.properties.
-	 */
-	@Test
-	public void testSmallLinkerAdapter() throws IOException {
-		LinkerAdapter adapter = new PatentLinkerAdapter();
-		TripleCollection resultTriples = adapter.interlink(new TestTripleCollectionPatents());
-		System.out.println(resultTriples.size());
-	}
-	
-	
-	@Test
-	public void testSmallDataFile() throws IOException {
-		LinkerAdapter adapter = new PatentLinkerAdapter();
-		TripleCollection triples = Parser.getInstance().parse(getClass().getResourceAsStream("patent-data-sample-short.ttl"), SupportedFormat.TURTLE);
-		TripleCollection resultTriples = adapter.interlink(triples);
-		System.out.println("Found duplicates: " + resultTriples.size());
-		Assert.assertTrue("no interlink found, but urn:x-temp:/id/5caaf04a-30ab-4c6a-9d0e-07ffc3a569d0"
-				+ " and urn:x-temp:/id/5efdb576-ebb5-4efd-8b00-d943425eaf59 look the same", 
-				resultTriples.size() > 0);
-	}
-
-    @Test
-    public void testSmallDataInterlinkingFile() throws IOException {
-        LinkerAdapter adapter = new PatentsDbpediaLinkerAdapter();
-        TripleCollection patents = Parser.getInstance().parse(getClass().getResourceAsStream("patent-data-sample-short.ttl"), SupportedFormat.TURTLE);
-        TripleCollection companies = Parser.getInstance().parse(getClass().getResourceAsStream("companies500.nt"), SupportedFormat.N_TRIPLE);
-        LinkerConfiguration configuration = new LinkerConfiguration(LinkerConfiguration.loadConfig("classpath:dbpedia-csv.xml"),
-                PatentsDbpediaLinkerConfiguration.getInstance().getSparqlQuery1(),
-                PatentsDbpediaLinkerConfiguration.getInstance().getSparqlQuery2());
-        TripleCollection resultTriples = adapter.interlink(patents, companies, configuration);
-
-        System.out.println("Found links between datasets: " + resultTriples.size());
-
-        Assert.assertTrue("no interlink found, but the datasets transform to identical records",
-                resultTriples.size() > 1);
-    }
-
-    @Test
-    public void testPatentDbpediaInterlinkingSmall() throws IOException {
-        LinkerAdapter adapter = new PatentsDbpediaLinkerAdapter();
-        TripleCollection patents = Parser.getInstance().parse(getClass().getResourceAsStream("patent_5.ttl"), SupportedFormat.TURTLE);
-        TripleCollection companies = Parser.getInstance().parse(getClass().getResourceAsStream("companies_5.nt"), SupportedFormat.N_TRIPLE);
-
-        LinkerConfiguration configuration = new LinkerConfiguration(LinkerConfiguration.loadConfig("classpath:patentDbpediaSmall-csv.xml"),
-                PatentsDbpediaLinkerConfiguration.getInstance().getSparqlQuery1(),
-                PatentsDbpediaLinkerConfiguration.getInstance().getSparqlQuery2());
-        TripleCollection resultTriples = adapter.interlink(patents, companies, configuration);
-
-        System.out.println("Found links between datasets: " + resultTriples.size());
-
-        Assert.assertTrue("no interlink found, but the datasets transform to identical records",
-                resultTriples.size() == 1);
-    }
-
     /**
 	 * Test that runs the full flow. 
 	 * 
@@ -190,8 +130,8 @@ public class LinkerAdapterTest {
     @Test
     public void testInterlinkingFull() throws IOException {
     	// here load the collections it is needed only once
-    	loadTestCollectionFull("/Users/szydan/home/data/fusepool/patents/patent-data-sample.nt", "tmp/patentsJena", "N-TRIPLE");
-    	loadTestCollectionFull("/Users/szydan/home/data/fusepool/dbpedia-companies/dbpedia-companies-small.nt", "tmp/dbpediaSmallJena", "N-TRIPLE");
+    	StorageHelper.loadTestCollectionFull("/Users/szydan/home/data/fusepool/patents/patent-data-sample.nt", "tmp/patentsJena", "N-TRIPLE");
+        StorageHelper.loadTestCollectionFull("/Users/szydan/home/data/fusepool/dbpedia-companies/dbpedia-companies-small.nt", "tmp/dbpediaSmallJena", "N-TRIPLE");
     	
     	logger.info("Full test");
  
@@ -213,73 +153,17 @@ public class LinkerAdapterTest {
         dbpedia.destroy();
     }
 
-	/**
-	 * A method to verify the number of triples in the "out" store populated by the full test.
-	 * 
-	 *  Commented code cleans the store.
-	 */
 	@Ignore
 	@Test
 	public void testVerify() throws IOException {
-		JenaStoreTripleCollection os = new JenaStoreTripleCollection("tmp/out");
-		os.init();
-		System.out.println(os.size());
-//		os.clean();
-//		os.destroy();
+        System.out.println( StorageHelper.getJenaTripleCollectionSize("tmp/out") );
 	}
 
+    //  $ sed -r 's/^([^ ]*) .*/\1/' patentDbpediaOut.nt | sort -u | wc -l
+    //  92
+    @Ignore
     @Test
     public void testList() throws IOException {
-        JenaStoreTripleCollection os = new JenaStoreTripleCollection("/home/jakub/cvs/sindicetech/fusepool-linker/patentDbpediaOut");
-        os.init();
-
-        //  $ sed -r 's/^([^ ]*) .*/\1/' patentDbpediaOut.nt | sort -u | wc -l
-        //  92
-
-        BufferedWriter writer = Files.newBufferedWriter(Paths.get("tmp/patentDbpediaOut.nt"), Charset.forName("UTF-8"));
-        for (Triple triple : os) {
-            System.out.println(triple);
-            writer.write(triple.toString());
-            writer.newLine();
-        }
+        StorageHelper.printJenaTripleCollectionToFile("/home/jakub/cvs/sindicetech/fusepool-linker/patentDbpediaOut", "tmp/patentDbpediaOut.nt");
     }
-
-	/**
-	 * Populates a Jena TDB store with the dataset that is to be deduplicated by the testFull() method.
-	 *  
-	 */
-	
-    @Ignore
-	@Test
-	public void loadTestCollectionFull() throws FileNotFoundException {
-    	loadTestCollectionFull("/data/tmp_fusepool/dbpedia-companies/dbpedia-companies-small.nt", "tmp/dbpediaSmallJena", "N-TRIPLE");
-    }	
-    
-    private void loadTestCollectionFull(String pathToInputFileInNtriplesFormat, String pathToDataset, String format) throws FileNotFoundException {
-		File collection = new File(pathToDataset);
-		collection.delete();
-		
-    	Dataset dataset = TDBFactory.createDataset(pathToDataset);
-		dataset.begin(ReadWrite.WRITE);
-		// Get model inside the transaction
-		Model model = dataset.getDefaultModel();
-		FileInputStream in = null;
-		try {
-			in = new FileInputStream(pathToInputFileInNtriplesFormat);
-			logger.info(pathToInputFileInNtriplesFormat);
-			model.read(in, null, format);
-		} finally {
-			if (in != null) {
-				try {
-					in.close();
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
-			}
-		}
-		System.out.println(model.size());
-		dataset.commit();
-		TDB.sync(dataset);
-		dataset.end();
-	}
 }

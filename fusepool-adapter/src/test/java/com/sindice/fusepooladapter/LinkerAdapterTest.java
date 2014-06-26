@@ -24,6 +24,8 @@ import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
+import com.sindice.fusepooladapter.configuration.LinkerConfiguration;
+import com.sindice.fusepooladapter.configuration.PatentsDbpediaLinkerConfiguration;
 import com.sindice.fusepooladapter.storage.JenaStoreTripleCollection;
 
 import org.apache.clerezza.rdf.core.Triple;
@@ -63,6 +65,9 @@ public class LinkerAdapterTest {
 	@Ignore
 	@Test
 	public void testSmall() throws IOException {
+	
+		// TODO: FIX this test once we have new version of ConfigurableLinkerAdapter which works with properties 
+		
 		LinkerAdapter adapter = new ConfigurableLinkerAdapter("conf.properties");
 		TripleCollection resultTriples = adapter
 				.interlink(new TestTripleCollectionPatents());
@@ -74,32 +79,28 @@ public class LinkerAdapterTest {
 	 * via {@link TestTripleCollectionPatents}. Two match, one doesn't. Uses the
 	 * conf-final.xml Duke configuration specified in conf.properties.
 	 */
-	@Ignore
 	@Test
 	public void testSmallLinkerAdapter() throws IOException {
-		LinkerAdapter adapter = new LinkerAdapter();
-		TripleCollection resultTriples = adapter
-				.interlink(new TestTripleCollectionPatents());
+		LinkerAdapter adapter = new PatentLinkerAdapter();
+		TripleCollection resultTriples = adapter.interlink(new TestTripleCollectionPatents());
 		System.out.println(resultTriples.size());
 	}
 	
-	@Ignore
+	
 	@Test
 	public void testSmallDataFile() throws IOException {
-		LinkerAdapter adapter = new LinkerAdapter();
+		LinkerAdapter adapter = new PatentLinkerAdapter();
 		TripleCollection triples = Parser.getInstance().parse(getClass().getResourceAsStream("patent-data-sample-short.ttl"), SupportedFormat.TURTLE);
-		TripleCollection resultTriples = adapter
-				.interlink(triples);
+		TripleCollection resultTriples = adapter.interlink(triples);
 		System.out.println("Found duplicates: " + resultTriples.size());
 		Assert.assertTrue("no interlink found, but urn:x-temp:/id/5caaf04a-30ab-4c6a-9d0e-07ffc3a569d0"
 				+ " and urn:x-temp:/id/5efdb576-ebb5-4efd-8b00-d943425eaf59 look the same", 
 				resultTriples.size() > 0);
 	}
 
-    //@Ignore
     @Test
     public void testSmallDataInterlinkingFile() throws IOException {
-        LinkerAdapter adapter = new LinkerAdapter();
+        LinkerAdapter adapter = new PatentsDbpediaLinkerAdapter();
         TripleCollection patents = Parser.getInstance().parse(getClass().getResourceAsStream("patent-data-sample-short.ttl"), SupportedFormat.TURTLE);
         TripleCollection companies = Parser.getInstance().parse(getClass().getResourceAsStream("companies500.nt"), SupportedFormat.N_TRIPLE);
         LinkerConfiguration configuration = new LinkerConfiguration(LinkerConfiguration.loadConfig("classpath:dbpedia-csv.xml"),
@@ -113,10 +114,9 @@ public class LinkerAdapterTest {
                 resultTriples.size() > 1);
     }
 
-    //@Ignore
     @Test
     public void testPatentDbpediaInterlinkingSmall() throws IOException {
-        LinkerAdapter adapter = new LinkerAdapter();
+        LinkerAdapter adapter = new PatentsDbpediaLinkerAdapter();
         TripleCollection patents = Parser.getInstance().parse(getClass().getResourceAsStream("patent_5.ttl"), SupportedFormat.TURTLE);
         TripleCollection companies = Parser.getInstance().parse(getClass().getResourceAsStream("companies_5.nt"), SupportedFormat.N_TRIPLE);
 
@@ -143,11 +143,17 @@ public class LinkerAdapterTest {
 	@Ignore
 	@Test
 	public void testDeduplicationFull() throws IOException {
+		
+		// load the collection has to be done only once
+		//loadTestCollectionFull("/Users/szydan/home/data/fusepool/patents/patent-data-sample.nt", "tmp/patentsJena", "N-TRIPLE");
+    	
 		logger.info("Full test");
-		LinkerAdapter adapter = new ConfigurableLinkerAdapter("classpath:patents-csv.xml", 
-				"/data/tmp_fusepool/in", // temporary folder used for intermediate data
-				"tmp/out", // results are stored in this "outpath"
-				2);    // the number of matching threads used by Duke 
+		
+		LinkerAdapter adapter = new PatentLinkerAdapter();
+		adapter.setTmpDir("/data/tmp_fusepool/in");
+		adapter.setOutDir("tmp/out");
+		adapter.setDukeThreadNo(Runtime.getRuntime().availableProcessors());
+        
 		JenaStoreTripleCollection os = new JenaStoreTripleCollection("tmp/patentsJena"); // contains the dataset to deduplicate. Can be loaded using loadTestCollectionFull()
 		os.init();
 		logger.info("Store contains " + os.size() + " triples.");
@@ -159,26 +165,29 @@ public class LinkerAdapterTest {
     /**
      *
      */
-    //@Ignore
+    @Ignore
     @Test
     public void testInterlinkingFull() throws IOException {
     	// here load the collections it is needed only once
-    	//loadTestCollectionFull("/Users/szydan/home/data/fusepool/patents/patent-data-sample.nt", "tmp/patentsJena", "N-TRIPLE");
-    	//loadTestCollectionFull("/Users/szydan/home/data/fusepool/dbpedia-companies/dbpedia-companies-small.nt", "tmp/dbpediaSmallJena", "N-TRIPLE");
+    	loadTestCollectionFull("/Users/szydan/home/data/fusepool/patents/patent-data-sample.nt", "tmp/patentsJena", "N-TRIPLE");
+    	loadTestCollectionFull("/Users/szydan/home/data/fusepool/dbpedia-companies/dbpedia-companies-small.nt", "tmp/dbpediaSmallJena", "N-TRIPLE");
     	
     	logger.info("Full test");
-        LinkerAdapter adapter = new ConfigurableLinkerAdapter("classpath:dbpedia-csv.xml",
-                "tmp", // temporary folder used for intermediate data
-                "patentDbpediaOut", // results are stored in this "outpath"
-                2);    // the number of matching threads used by Duke
-        JenaStoreTripleCollection patents = new JenaStoreTripleCollection("tmp/patentsJena"); // contains the dataset to deduplicate. Can be loaded using loadTestCollectionFull()
+ 
+    	JenaStoreTripleCollection patents = new JenaStoreTripleCollection("tmp/patentsJena"); // contains the dataset to deduplicate. Can be loaded using loadTestCollectionFull()
         patents.init();
         JenaStoreTripleCollection dbpedia = new JenaStoreTripleCollection("tmp/dbpediaSmallJena"); // contains the dataset to deduplicate. Can be loaded using loadTestCollectionFull()
         dbpedia.init();
         logger.info("Patent store contains " + patents.size() + " triples.");
         logger.info("Dbpedia store contains " + dbpedia.size() + " triples.");
 
-        TripleCollection resultTriples = adapter.interlink(patents, dbpedia);
+        LinkerAdapter adapter = new PatentsDbpediaLinkerAdapter();
+        adapter.setTmpDir("tmp");
+        adapter.setTmpDir("target/patentDbpediaOut");
+    	adapter.setDukeThreadNo(Runtime.getRuntime().availableProcessors());
+        
+        LinkerConfiguration linkerConfiguration = PatentsDbpediaLinkerConfiguration.getInstance();
+        TripleCollection resultTriples = adapter.interlink(patents, dbpedia, linkerConfiguration );
 
         logger.info("Triples in result: " + resultTriples.size());
         patents.destroy();

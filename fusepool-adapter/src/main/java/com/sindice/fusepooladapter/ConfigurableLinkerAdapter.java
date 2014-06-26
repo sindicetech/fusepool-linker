@@ -19,8 +19,11 @@ import java.io.IOException;
 import java.nio.file.FileSystems;
 import java.util.Properties;
 
+import org.apache.clerezza.rdf.core.TripleCollection;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import com.sindice.fusepooladapter.configuration.LinkerConfiguration;
 
 public class ConfigurableLinkerAdapter extends LinkerAdapter {
 	private final Logger logger = LoggerFactory.getLogger(this.getClass());
@@ -111,8 +114,27 @@ public class ConfigurableLinkerAdapter extends LinkerAdapter {
 	 * 
 	 * @return "classpath:patents-jena-jdbc.xml"
 	 */
+	//@Override
+	//protected String defaultDedupConfigFileLocation() {
+	//	return dukeConfigFileLocation;
+	//}
+
 	@Override
-	protected String defaultDedupConfigFileLocation() {
-		return dukeConfigFileLocation;
+	public TripleCollection interlink(TripleCollection source,
+			TripleCollection target) {
+		// TODO Auto-generated method stub
+		return null;
 	}
+
+	@Override
+	public TripleCollection interlink(TripleCollection dataToInterlink) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	@Override
+	public String getName() {
+		return "duke-interlinker "+ this.getClass().getName();
+	}
+
 }

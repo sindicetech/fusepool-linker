@@ -1,4 +1,5 @@
-package com.sindice.fusepooladapter;
+package com.sindice.fusepooladapter.configuration;
+
 
 /**
  *

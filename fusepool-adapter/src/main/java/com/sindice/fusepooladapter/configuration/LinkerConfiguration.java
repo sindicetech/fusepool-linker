@@ -1,8 +1,11 @@
-package com.sindice.fusepooladapter;
+package com.sindice.fusepooladapter.configuration;
 
 import no.priv.garshol.duke.ConfigLoader;
 import no.priv.garshol.duke.Configuration;
+
 import org.xml.sax.SAXException;
+
+import com.sindice.fusepooladapter.LinkerAdapter;
 
 import java.io.IOException;
 
@@ -15,8 +18,8 @@ import java.io.IOException;
 public class LinkerConfiguration {
     private Configuration dukeConfiguration;
     private String sparqlQuery1, sparqlQuery2;
-
-    public LinkerConfiguration(Configuration dukeConfiguration, String sparqlQuery1, String sparqlQuery2) {
+    
+	public LinkerConfiguration(Configuration dukeConfiguration, String sparqlQuery1, String sparqlQuery2) {
         this.dukeConfiguration = dukeConfiguration;
         this.sparqlQuery1 = sparqlQuery1;
         this.sparqlQuery2 = sparqlQuery2;
@@ -65,4 +68,5 @@ public class LinkerConfiguration {
     public void setSparqlQuery2(String sparqlQuery2) {
         this.sparqlQuery2 = sparqlQuery2;
     }
+    
 }

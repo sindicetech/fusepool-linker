@@ -62,10 +62,16 @@ import com.sindice.fusepool.StopWatch;
  * 
  * 
  */
+
+//NOTE this class is not used - should be deleted !!! 
+
 public class SesameToCsvInputStore implements InputTripleStore {
 	private static final Logger logger = LoggerFactory
 			.getLogger(SesameToCsvInputStore.class);
-	public static final String query = "    PREFIX w3: <http://www.w3.org/ns/prov#> \n"
+
+	
+	public static final String query = 
+			  "PREFIX w3: <http://www.w3.org/ns/prov#> \n"
 			+ "PREFIX foaf: <http://xmlns.com/foaf/0.1/> \n"
 			+ "PREFIX sumo: <http://www.owl-ontologies.com/sumo.owl#> \n"
 			+ "PREFIX schema: <http://schema.org/> \n"

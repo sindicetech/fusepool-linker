@@ -15,41 +15,41 @@
  */
 package com.sindice.fusepooladapter;
 
-import com.google.common.io.Files;
-import com.sindice.fusepool.DukeDeduplicatorRunner;
-import com.sindice.fusepool.StopWatch;
-import com.sindice.fusepool.stores.JenaTripleWriter;
-import com.sindice.fusepooladapter.storage.ConfigurableSesameToCsvInputStore;
-import com.sindice.fusepooladapter.storage.JenaStoreTripleCollection;
-import com.sindice.fusepooladapter.storage.SesameToCsvInputStore;
-import eu.fusepool.datalifecycle.Interlinker;
-import no.priv.garshol.duke.Configuration;
-import no.priv.garshol.duke.DataSource;
-import no.priv.garshol.duke.datasources.CSVDataSource;
-import org.apache.clerezza.rdf.core.TripleCollection;
-import org.apache.clerezza.rdf.core.UriRef;
-import org.osgi.service.component.annotations.Component;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Iterator;
 
+import no.priv.garshol.duke.Configuration;
+import no.priv.garshol.duke.DataSource;
+import no.priv.garshol.duke.datasources.CSVDataSource;
+
+import org.apache.clerezza.rdf.core.TripleCollection;
+import org.apache.clerezza.rdf.core.UriRef;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.google.common.io.Files;
+import com.sindice.fusepool.DukeDeduplicatorRunner;
+import com.sindice.fusepool.StopWatch;
+import com.sindice.fusepool.stores.JenaTripleWriter;
+import com.sindice.fusepooladapter.configuration.LinkerConfiguration;
+import com.sindice.fusepooladapter.storage.ConfigurableSesameToCsvInputStore;
+import com.sindice.fusepooladapter.storage.JenaStoreTripleCollection;
+
+import eu.fusepool.datalifecycle.Interlinker;
+
 /**
  * Implementation of linking and deduplication using Duke.
  * 
  */
-@Component(service = Interlinker.class)
-public class LinkerAdapter implements Interlinker {
+public abstract class LinkerAdapter implements Interlinker, Deduplicator {
     public static final String AGENTS_CSV_FILENAME = "agents.csv";
 
     private static final Logger logger = LoggerFactory.getLogger(LinkerAdapter.class);
-    public static final String DEFAULT_DEDUP_CONFIG_FILE_LOCATION = "classpath:patents-csv.xml";
-    public static final String DEFAULT_INTERLINK_CONFIG_FILE_LOCATION = "classpath:dbpedia-csv.xml";
     private String tmpDir;
 	private String outDir;
+	private int dukeThreadNo = 2;
 
 	public LinkerAdapter() {
 		this.tmpDir = Files.createTempDir().getAbsolutePath();
@@ -65,6 +65,18 @@ public class LinkerAdapter implements Interlinker {
 	 */
 	protected String defaultTmpDir() {
 		return tmpDir;
+	}
+	
+	public void setTmpDir(String pathToTempDir) {
+		this.tmpDir = pathToTempDir;
+	}
+
+	public void setOutDir(String pathToOutDir) {
+		this.outDir = pathToOutDir;
+	}
+
+	public void setDukeThreadNo(int dukeThreadNo) {
+		this.dukeThreadNo = dukeThreadNo;
 	}
 
 	/**
@@ -82,26 +94,9 @@ public class LinkerAdapter implements Interlinker {
 	 * @return 2
 	 */
 	protected int defaultNumberOfThreads() {
-		return 2;
+		return dukeThreadNo;
 	}
 
-	/**
-	 * Returns the default deduplication config file location.
-	 * 
-	 * @return DEFAULT_DEDUP_CONFIG_FILE_LOCATION = {@value #DEFAULT_DEDUP_CONFIG_FILE_LOCATION}
-	 */
-	protected String defaultDedupConfigFileLocation() {
-		return DEFAULT_DEDUP_CONFIG_FILE_LOCATION;
-	}
-
-    /**
-     * Returns the default interlinking config file location.
-     *
-     * @return DEFAULT_INTERLINK_CONFIG_FILE_LOCATION = {@value #DEFAULT_INTERLINK_CONFIG_FILE_LOCATION}
-     */
-    protected String defaultInterlinkConfigFileLocation() {
-        return DEFAULT_INTERLINK_CONFIG_FILE_LOCATION;
-    }
 
     private long populateInStore(TripleCollection data, String query, String outputFile) {
         logger.info("Converting input data to CSV {}", outputFile);
@@ -121,23 +116,23 @@ public class LinkerAdapter implements Interlinker {
 
     }
 
-    /*
+	public abstract TripleCollection interlink(TripleCollection dataToInterlink);
+			
+		
+	/*
      * dataToInterlink -> Sesame -> CSV file -> Duke -> Jena-based output store
      */
-	public TripleCollection interlink(TripleCollection dataToInterlink) {
+	public TripleCollection interlink(TripleCollection dataToInterlink, LinkerConfiguration configuration) {
 		tmpDir = Files.createTempDir().getAbsolutePath();
 		// populates input store
 
         String storeFile = defaultTmpDir() + File.separator + AGENTS_CSV_FILENAME;
 
-        //TODO instead of passing a hardcoded query like this, find a way to read the query from duke's configuration
-        //TODO ... when that's done then we can perhaps also read the columns from Duke's configuration instead of parsing the query, see {@link SparqlToCsvHeader}
-        populateInStore(dataToInterlink, SesameToCsvInputStore.query, storeFile);
-
-        Configuration configuration = LinkerConfiguration.loadConfig(defaultDedupConfigFileLocation());
-        ((CSVDataSource)configuration.getDataSources().iterator().next()).setInputFile( storeFile );
-
-        DukeDeduplicatorRunner runner = new DukeDeduplicatorRunner(configuration, new JenaTripleWriter(defaultOutputDir()), defaultNumberOfThreads());
+        populateInStore(dataToInterlink, configuration.getSparqlQuery1(), storeFile);
+        Configuration dukeConfiguration = configuration.getDukeConfiguration();
+        ((CSVDataSource)dukeConfiguration.getDataSources().iterator().next()).setInputFile( storeFile );
+        
+        DukeDeduplicatorRunner runner = new DukeDeduplicatorRunner(dukeConfiguration, new JenaTripleWriter(defaultOutputDir()), defaultNumberOfThreads());
 
 		logger.debug("Starting Duke");
 		StopWatch.start();
@@ -159,10 +154,14 @@ public class LinkerAdapter implements Interlinker {
 		throw new UnsupportedOperationException("Not supported yet.");
 	}
 
+	@Override
+	public abstract TripleCollection interlink(TripleCollection source, TripleCollection target);
+
+	
     public TripleCollection interlink(TripleCollection source, TripleCollection target, LinkerConfiguration configuration) {
         // using equals takes potentially too much time
         if (source == target) {
-            return interlink(target);
+            return interlink(target, configuration);
         }
 
         tmpDir = Files.createTempDir().getAbsolutePath();
@@ -201,15 +200,5 @@ public class LinkerAdapter implements Interlinker {
         logger.info("Output store, {}, contains {} triples", defaultOutputDir(), outStore.size());
         return outStore;
     }
-
-	@Override
-	public TripleCollection interlink(TripleCollection source, TripleCollection target) {
-        return interlink(source, target, PatentsDbpediaLinkerConfiguration.getInstance());
-	}
-
-	@Override
-	public String getName() {
-		return "duke-interlinker";
-	}
 
 }

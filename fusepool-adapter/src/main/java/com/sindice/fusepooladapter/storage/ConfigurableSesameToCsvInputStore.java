@@ -119,9 +119,7 @@ public class ConfigurableSesameToCsvInputStore implements InputTripleStore {
 							+ e.getMessage(), e);
 		}
 
-        //SafeDeleter.delete(tmpDir.getAbsolutePath());
-
-		return size; // TODO change interface
+		return size;
 	}
 
 	private Map<String, Object> toMap(BindingSet set) {

@@ -70,7 +70,7 @@ public class DukeDeduplicatorRunner {
             // datasources are probably configured in groups --> interlinking
             processor.link();
         } else {
-		    processor.deduplicate();
+            processor.deduplicate();
         }
 	}
 }

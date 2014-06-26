@@ -80,7 +80,7 @@ public class DukeSlf4jLogger implements Logger {
 
 	@Override
 	public void error(String msg) {
-		logger.error(msg);;
+		logger.error(msg);
 	}
 
 	@Override

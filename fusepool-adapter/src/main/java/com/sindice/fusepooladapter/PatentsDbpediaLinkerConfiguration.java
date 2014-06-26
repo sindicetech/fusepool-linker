@@ -30,10 +30,10 @@ public class PatentsDbpediaLinkerConfiguration extends LinkerConfiguration {
             "PREFIX dbpedia:     <http://dbpedia.org/property/>\n" +
             "PREFIX sindicetech: <http://sindicetech.com/ontology/>\n" +
             "SELECT ?iri ?companyName ?countryCode ?locationCityName WHERE {" +
-            "    ?iri a dbpedia-owl:Company;\n" +
-            "         foaf:name ?companyName;\n" +
-            "         dbpedia:countryCode ?countryCode;\n" +
-            "         sindicetech:locationCityName ?locationCityName" +
+            "    ?iri a dbpedia-owl:Company .\n" +
+            "    OPTIONAL { ?iri foaf:name ?companyName } \n" +
+            "    OPTIONAL { ?iri dbpedia:countryCode ?countryCode }\n" +
+            "    OPTIONAL { ?iri sindicetech:locationCityName ?locationCityName }\n" +
             "}";
 
     private static final PatentsDbpediaLinkerConfiguration instance = new PatentsDbpediaLinkerConfiguration();

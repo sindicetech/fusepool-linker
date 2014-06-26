@@ -62,8 +62,6 @@ public class JenaTripleWriter implements TripleWriter {
 		Model model = dataset.getDefaultModel();
 		model.removeAll();
 
-
-
 		// new transaction for writing
 
 		int cnt = 0;
@@ -73,7 +71,7 @@ public class JenaTripleWriter implements TripleWriter {
 				try {
 					triple = queue.take();
 				} catch (InterruptedException e) {
-					logger.error("interupted waiting for triple to process", e);
+					logger.error("Interrupted waiting for triples to process", e);
 				}
 				if (triple == SENTINEL){
 					break;
@@ -112,6 +110,7 @@ public class JenaTripleWriter implements TripleWriter {
 
 	@Override
 	public void init() {
+        logger.warn("INIT");
 		this.thread = new Thread(this,"triplesWritter");
 		this.thread.start();
 	}

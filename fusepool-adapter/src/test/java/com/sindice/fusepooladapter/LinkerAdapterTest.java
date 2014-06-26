@@ -16,9 +16,13 @@
 package com.sindice.fusepooladapter;
 
 import java.io.File;
+import java.io.BufferedWriter;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.nio.charset.Charset;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 import com.sindice.fusepooladapter.storage.JenaStoreTripleCollection;
 
@@ -197,12 +201,18 @@ public class LinkerAdapterTest {
 	}
 
     @Test
-    public void testList() {
-        JenaStoreTripleCollection os = new JenaStoreTripleCollection("/tmp/1403694580993-0");
+    public void testList() throws IOException {
+        JenaStoreTripleCollection os = new JenaStoreTripleCollection("/home/jakub/cvs/sindicetech/fusepool-linker/patentDbpediaOut");
         os.init();
 
+        //  $ sed -r 's/^([^ ]*) .*/\1/' patentDbpediaOut.nt | sort -u | wc -l
+        //  92
+
+        BufferedWriter writer = Files.newBufferedWriter(Paths.get("tmp/patentDbpediaOut.nt"), Charset.forName("UTF-8"));
         for (Triple triple : os) {
             System.out.println(triple);
+            writer.write(triple.toString());
+            writer.newLine();
         }
     }
 

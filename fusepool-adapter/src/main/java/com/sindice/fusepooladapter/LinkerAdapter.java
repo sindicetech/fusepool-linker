@@ -104,7 +104,7 @@ public class LinkerAdapter implements Interlinker {
     }
 
     private long populateInStore(TripleCollection data, String query, String outputFile) {
-        logger.info("Populating input store {}", outputFile);
+        logger.info("Converting input data to CSV {}", outputFile);
         StopWatch.start();
 
         try (FileWriter writer = new FileWriter(outputFile)) {
@@ -112,11 +112,11 @@ public class LinkerAdapter implements Interlinker {
             long size = new ConfigurableSesameToCsvInputStore(writer, query).populate(data);
 
             StopWatch.end();
-            logger.info("Input store in {} populated with {} triples in " + StopWatch.popTimeString("%s ms"), outputFile, size);
+            logger.info("{} triples converted to {} in " + StopWatch.popTimeString("%s ms"), size, outputFile);
 
             return size;
         } catch (IOException e) {
-            throw new RuntimeException("Problem populating input store: " + e.getMessage(), e);
+            throw new RuntimeException("Problem converting input to CSV: " + e.getMessage(), e);
         }
 
     }
@@ -147,9 +147,9 @@ public class LinkerAdapter implements Interlinker {
 
 		// wrap results as a TripleCollection and provide it back
         JenaStoreTripleCollection outStore = new JenaStoreTripleCollection(defaultOutputDir());
-        outStore.clean();
+        //outStore.clean();
 		outStore.init();
-		logger.info("Output store contains {} triples", outStore.size());
+		logger.info("Output store, {}, contains {} triples", defaultOutputDir(), outStore.size());
 		return outStore;
 	}
 
@@ -198,7 +198,7 @@ public class LinkerAdapter implements Interlinker {
         JenaStoreTripleCollection outStore = new JenaStoreTripleCollection(defaultOutputDir());
         //outStore.clean();
         outStore.init();
-        logger.info("Output store contains {} triples", outStore.size());
+        logger.info("Output store, {}, contains {} triples", defaultOutputDir(), outStore.size());
         return outStore;
     }
 

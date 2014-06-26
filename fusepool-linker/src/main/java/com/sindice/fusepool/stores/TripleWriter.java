@@ -19,7 +19,7 @@ import java.io.Closeable;
 
 import com.sindice.fusepool.matchers.SimpleTriple;
 
-public interface TripleWriter extends Runnable, Closeable {
+public interface TripleWriter extends Runnable, AutoCloseable {
 	public boolean add(SimpleTriple triple);
 	public void init();
 }

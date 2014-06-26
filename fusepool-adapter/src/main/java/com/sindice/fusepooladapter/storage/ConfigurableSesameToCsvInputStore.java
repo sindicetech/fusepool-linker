@@ -51,10 +51,10 @@ public class ConfigurableSesameToCsvInputStore implements InputTripleStore {
     private final Writer writer;
     private final CsvConfig config;
 
-    public ConfigurableSesameToCsvInputStore(Writer writer, String query) {
+    public ConfigurableSesameToCsvInputStore(Writer writer, CsvConfig config, String query) {
         this.writer = writer;
         this.query = query;
-        this.config = SparqlToCsvHeader.transform(query);
+        this.config = config;
     }
 
 	/**
@@ -119,9 +119,7 @@ public class ConfigurableSesameToCsvInputStore implements InputTripleStore {
 							+ e.getMessage(), e);
 		}
 
-        //SafeDeleter.delete(tmpDir.getAbsolutePath());
-
-		return size; // TODO change interface
+		return size;
 	}
 
 	private Map<String, Object> toMap(BindingSet set) {

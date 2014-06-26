@@ -41,6 +41,7 @@ public class DukeDeduplicatorRunner {
      */
 	public DukeDeduplicatorRunner(Configuration configuration, TripleWriter outputWriter, int dukeThreads) {
 		this.configuration = configuration;
+        configuration.validate();
 
         outputWriter.init();
 
@@ -68,9 +69,11 @@ public class DukeDeduplicatorRunner {
 	public void run() {
         if (configuration.getDataSources().isEmpty()) {
             // datasources are probably configured in groups --> interlinking
+            logger.info("Starting interlinking");
             processor.link();
         } else {
-		    processor.deduplicate();
+            logger.info("Starting deduplication");
+            processor.deduplicate();
         }
 	}
 }

@@ -18,40 +18,23 @@ package com.sindice.fusepooladapter;
 import static org.junit.Assert.assertEquals;
 
 import java.io.File;
-import java.io.BufferedWriter;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
-import java.nio.charset.Charset;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.Properties;
 
-import com.sindice.fusepooladapter.configuration.LinkerConfiguration;
-import com.sindice.fusepooladapter.configuration.PatentsDbpediaLinkerConfiguration;
-import com.sindice.fusepooladapter.configuration.PatentsLinkerConfiguration;
-import com.sindice.fusepooladapter.storage.JenaStoreTripleCollection;
-
-import com.sindice.fusepooladapter.tools.StorageHelper;
-import org.apache.clerezza.rdf.core.Triple;
 import org.apache.clerezza.rdf.core.TripleCollection;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.hp.hpl.jena.query.Dataset;
-import com.hp.hpl.jena.query.ReadWrite;
-import com.hp.hpl.jena.rdf.model.Model;
-import com.hp.hpl.jena.tdb.TDB;
-import com.hp.hpl.jena.tdb.TDBFactory;
 import com.sindice.fusepool.testutils.TestTripleCollectionPatents;
-
-import org.apache.clerezza.rdf.core.serializedform.Parser;
-import org.apache.clerezza.rdf.core.serializedform.SupportedFormat;
-import org.junit.Assert;
+import com.sindice.fusepooladapter.configuration.LinkerConfiguration;
+import com.sindice.fusepooladapter.configuration.PatentsDbpediaLinkerConfiguration;
+import com.sindice.fusepooladapter.configuration.PatentsLinkerConfiguration;
+import com.sindice.fusepooladapter.storage.JenaStoreTripleCollection;
+import com.sindice.fusepooladapter.tools.StorageHelper;
 
 /**
  * Junit tests for manual testing of deduplication.

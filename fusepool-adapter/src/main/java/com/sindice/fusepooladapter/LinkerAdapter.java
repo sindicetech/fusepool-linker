@@ -23,10 +23,13 @@ import com.sindice.fusepooladapter.storage.ConfigurableSesameToCsvInputStore;
 import com.sindice.fusepooladapter.storage.CsvConfig;
 import com.sindice.fusepooladapter.storage.DukeConfigToCsvHeader;
 import com.sindice.fusepooladapter.storage.JenaStoreTripleCollection;
+
 import eu.fusepool.datalifecycle.Interlinker;
 import no.priv.garshol.duke.Configuration;
 import no.priv.garshol.duke.DataSource;
 import no.priv.garshol.duke.datasources.CSVDataSource;
+import no.priv.garshol.duke.datasources.JDBCDataSource;
+
 import org.apache.clerezza.rdf.core.TripleCollection;
 import org.apache.clerezza.rdf.core.UriRef;
 import org.slf4j.Logger;
@@ -140,9 +143,16 @@ public abstract class LinkerAdapter implements Interlinker, Deduplicator {
 
         Configuration dukeConfiguration = configuration.getDukeConfiguration();
         
-        CSVDataSource dataSource = (CSVDataSource) dukeConfiguration.getDataSources().iterator().next();
-        dataSource.setInputFile( storeFile );
-        convertToCsv(dataToInterlink, configuration.getSparqlQuery1(), DukeConfigToCsvHeader.transform(dataSource), storeFile);
+        
+        DataSource dataSource = dukeConfiguration.getDataSources().iterator().next();
+        if( dataSource instanceof CSVDataSource) {
+        	CSVDataSource csvDataSource = (CSVDataSource) dataSource; 
+        	csvDataSource.setInputFile( storeFile );
+        	convertToCsv(dataToInterlink, configuration.getSparqlQuery1(), DukeConfigToCsvHeader.transform(csvDataSource), storeFile);
+        }else {
+            throw new IllegalArgumentException("Only CSVDataSource is supported");
+        }
+        
         DukeRunner runner = new DukeRunner(dukeConfiguration, new JenaTripleWriter(defaultOutputDir()), defaultNumberOfThreads());
 
 		logger.debug("Starting Duke");

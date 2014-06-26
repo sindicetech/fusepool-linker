@@ -16,20 +16,6 @@ import java.io.IOException;
  *
  */
 public class LinkerAdapterRealTest {
-    /**
-     * A simple test of deduplication of 3 agents loaded from threeAgents.xml
-     * via {@link com.sindice.fusepool.testutils.TestTripleCollectionPatents}. Two match, one doesn't. Uses the
-     * conf-final.xml Duke configuration specified in conf.properties.
-     */
-    @Test
-    @Ignore
-    public void testSmallLinkerAdapter() throws IOException {
-        LinkerAdapter adapter = new PatentLinkerAdapter();
-        TripleCollection resultTriples = adapter.interlink(new TestTripleCollectionPatents());
-
-        // TODO fix to use the conf-final.xml once we have the generic linker adapter
-    }
-
 
     @Test
     public void testSmallDataFile() throws IOException {

@@ -31,10 +31,9 @@ import no.priv.garshol.duke.comparators.Levenshtein;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.sindice.fusepool.matchers.CollectingMatchListener;
 import com.sindice.fusepool.stores.SetTripleWriter;
 
-public class DukeDeduplicatorRunnerTest extends DukeBaseTest {
+public class DukeRunnerTest extends DukeBaseTest {
 	private ConfigurationImpl config;
 
 	@Before
@@ -60,7 +59,7 @@ public class DukeDeduplicatorRunnerTest extends DukeBaseTest {
 	    records.add(DukeBaseTest.makeRecord("ID", "2", "NAME", "aaaaa", "EMAIL", "BBBBB"));
 
 		config.addDataSource(0, new TestDataSource(records));
-		DukeDeduplicatorRunner duke = new DukeDeduplicatorRunner(config, matches, 1);
+		DukeRunner duke = new DukeRunner(config, matches, 1);
 
 	    duke.run();
 	    

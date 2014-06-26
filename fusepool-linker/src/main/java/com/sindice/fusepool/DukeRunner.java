@@ -31,7 +31,7 @@ import java.util.Collection;
  * Always creates a new Lucene index.
  * 
  */
-public class DukeDeduplicatorRunner {
+public class DukeRunner {
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 	private Configuration configuration;
 	private Processor processor;
@@ -39,7 +39,7 @@ public class DukeDeduplicatorRunner {
     /**
      *
      */
-	public DukeDeduplicatorRunner(Configuration configuration, TripleWriter outputWriter, int dukeThreads) {
+	public DukeRunner(Configuration configuration, TripleWriter outputWriter, int dukeThreads) {
 		this.configuration = configuration;
         configuration.validate();
 

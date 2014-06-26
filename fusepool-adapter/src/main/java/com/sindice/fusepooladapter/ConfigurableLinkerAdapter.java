@@ -120,8 +120,8 @@ public class ConfigurableLinkerAdapter extends LinkerAdapter {
 	//}
 
 	@Override
-	public TripleCollection interlink(TripleCollection source,
-			TripleCollection target) {
+	public TripleCollection interlink(TripleCollection dataset1,
+			TripleCollection dataset2) {
 		// TODO Auto-generated method stub
 		return null;
 	}

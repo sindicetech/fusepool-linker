@@ -15,22 +15,7 @@
  */
 package com.sindice.fusepooladapter;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.Iterator;
-
-import no.priv.garshol.duke.Configuration;
-import no.priv.garshol.duke.DataSource;
-import no.priv.garshol.duke.datasources.CSVDataSource;
-
-import org.apache.clerezza.rdf.core.TripleCollection;
-import org.apache.clerezza.rdf.core.UriRef;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import com.google.common.io.Files;
-import com.sindice.fusepool.DukeDeduplicatorRunner;
+import com.sindice.fusepool.DukeRunner;
 import com.sindice.fusepool.StopWatch;
 import com.sindice.fusepool.stores.JenaTripleWriter;
 import com.sindice.fusepooladapter.configuration.LinkerConfiguration;
@@ -38,26 +23,61 @@ import com.sindice.fusepooladapter.storage.ConfigurableSesameToCsvInputStore;
 import com.sindice.fusepooladapter.storage.CsvConfig;
 import com.sindice.fusepooladapter.storage.DukeConfigToCsvHeader;
 import com.sindice.fusepooladapter.storage.JenaStoreTripleCollection;
-
 import eu.fusepool.datalifecycle.Interlinker;
+import no.priv.garshol.duke.Configuration;
+import no.priv.garshol.duke.DataSource;
+import no.priv.garshol.duke.datasources.CSVDataSource;
+import org.apache.clerezza.rdf.core.TripleCollection;
+import org.apache.clerezza.rdf.core.UriRef;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.nio.file.Paths;
+import java.util.Iterator;
 
 /**
  * Implementation of linking and deduplication using Duke.
  * 
  */
 public abstract class LinkerAdapter implements Interlinker, Deduplicator {
-    public static final String AGENTS_CSV_FILENAME = "agents.csv";
-
     private static final Logger logger = LoggerFactory.getLogger(LinkerAdapter.class);
+    public static final String CSV_FILENAME = "intermediate.csv";
+
+    /**
+     * Pseudo-random name so that the temp folder is easy to find and conflict is reasonably impossible.
+     */
+    private static final String TEMP_DIR_NAME = "fusepool-linker-1F4DAB";
+
     private String tmpDir;
 	private String outDir;
 	private int dukeThreadNo = 2;
 
 	public LinkerAdapter() {
-		this.tmpDir = Files.createTempDir().getAbsolutePath();
-		logger.info("Created inputDir {} ", tmpDir);
-		this.outDir = Files.createTempDir().getAbsolutePath();
-		logger.info("Created outputDir {} ", outDir);
+        // make sure our TEMP_DIR_NAME exists in the system temporary directory
+        File tempDir = new File(System.getProperty("java.io.tmpdir") + File.separator + TEMP_DIR_NAME);
+        if (!tempDir.exists()) {
+            if (!tempDir.mkdir()) {
+                throw new RuntimeException("Couldn't create temporary directory " + tempDir.getAbsolutePath().toString());
+            }
+        }
+        if (!tempDir.isDirectory()) {
+            throw new RuntimeException("Couldn't create temporary directory " + tempDir.getAbsolutePath().toString() + ". There is a file with the same name.");
+        }
+        try {
+            this.tmpDir = java.nio.file.Files.createTempDirectory(tempDir.toPath(), "adapter-").toAbsolutePath().toString();
+        } catch (IOException e) {
+            throw new RuntimeException("Could not create temporary directory in " + tempDir, e);
+        }
+        logger.info("Created temporary directory {} ", tmpDir);
+        try {
+            this.outDir = java.nio.file.Files.createTempDirectory(Paths.get(tmpDir), "output-").toAbsolutePath().toString();
+        } catch (IOException e) {
+            throw new RuntimeException("Could not create temporary directory in " + tempDir, e);
+        }
+        logger.info("Created output directory {} ", outDir);
 	}
 
 	/**
@@ -100,13 +120,12 @@ public abstract class LinkerAdapter implements Interlinker, Deduplicator {
 	}
 
 
-    private long convertToCsv(TripleCollection data, String query, CsvConfig config, String outputFile) {
+    private long convertToCsv(TripleCollection dataset, String query, CsvConfig config, String outputFile) {
         logger.info("Converting input data to CSV {}", outputFile);
         StopWatch.start();
 
         try (FileWriter writer = new FileWriter(outputFile)) {
-
-            long size = new ConfigurableSesameToCsvInputStore(writer, config, query).populate(data);
+            long size = new ConfigurableSesameToCsvInputStore(writer, config, query, defaultTmpDir()).populate(dataset);
 
             StopWatch.end();
             logger.info("{} triples converted to {} in " + StopWatch.popTimeString("%s ms"), size, outputFile);
@@ -125,18 +144,14 @@ public abstract class LinkerAdapter implements Interlinker, Deduplicator {
      * dataToInterlink -> Sesame -> CSV file -> Duke -> Jena-based output store
      */
 	public TripleCollection interlink(TripleCollection dataToInterlink, LinkerConfiguration configuration) {
-		tmpDir = Files.createTempDir().getAbsolutePath();
-		// populates input store
+        String storeFile = defaultTmpDir() + File.separator + CSV_FILENAME;
 
-        String storeFile = defaultTmpDir() + File.separator + AGENTS_CSV_FILENAME;
-
-        
         Configuration dukeConfiguration = configuration.getDukeConfiguration();
         
         CSVDataSource dataSource = (CSVDataSource) dukeConfiguration.getDataSources().iterator().next();
         dataSource.setInputFile( storeFile );
         convertToCsv(dataToInterlink, configuration.getSparqlQuery1(), DukeConfigToCsvHeader.transform(dataSource), storeFile);
-        DukeDeduplicatorRunner runner = new DukeDeduplicatorRunner(dukeConfiguration, new JenaTripleWriter(defaultOutputDir()), defaultNumberOfThreads());
+        DukeRunner runner = new DukeRunner(dukeConfiguration, new JenaTripleWriter(defaultOutputDir()), defaultNumberOfThreads());
 
 		logger.debug("Starting Duke");
 		StopWatch.start();
@@ -159,7 +174,7 @@ public abstract class LinkerAdapter implements Interlinker, Deduplicator {
 	}
 
 	@Override
-	public abstract TripleCollection interlink(TripleCollection source, TripleCollection target);
+	public abstract TripleCollection interlink(TripleCollection dataset1, TripleCollection dataset2);
 
 	
     public TripleCollection interlink(TripleCollection source, TripleCollection target, LinkerConfiguration configuration) {
@@ -168,14 +183,12 @@ public abstract class LinkerAdapter implements Interlinker, Deduplicator {
             return interlink(target, configuration);
         }
 
-        tmpDir = Files.createTempDir().getAbsolutePath();
-
         Iterator<DataSource> iterator = configuration.getDukeConfiguration().getDataSources(1).iterator();
         if (!iterator.hasNext()) {
             throw new RuntimeException(String.format("Duke configuration must have two datasources configured, contains none."));
         }
         CSVDataSource dataSource1 = (CSVDataSource) iterator.next();
-        String storeFileSource = defaultTmpDir() + File.separator + "source_" + AGENTS_CSV_FILENAME;
+        String storeFileSource = defaultTmpDir() + File.separator + "source_" + CSV_FILENAME;
         dataSource1.setInputFile(storeFileSource);
 
         iterator = configuration.getDukeConfiguration().getDataSources(2).iterator();
@@ -183,15 +196,13 @@ public abstract class LinkerAdapter implements Interlinker, Deduplicator {
             throw new RuntimeException(String.format("Duke configuration must have two datasources configured, contains only one."));
         }
         CSVDataSource dataSource2 = (CSVDataSource) iterator.next();
-        String storeFileTarget = defaultTmpDir() + File.separator + "target_" + AGENTS_CSV_FILENAME;
+        String storeFileTarget = defaultTmpDir() + File.separator + "target_" + CSV_FILENAME;
         dataSource2.setInputFile(storeFileTarget);
 
         convertToCsv(source, configuration.getSparqlQuery1(), DukeConfigToCsvHeader.transform(dataSource1), storeFileSource);
-
         convertToCsv(target, configuration.getSparqlQuery2(), DukeConfigToCsvHeader.transform(dataSource2), storeFileTarget);
 
-
-        DukeDeduplicatorRunner runner = new DukeDeduplicatorRunner(configuration.getDukeConfiguration(), new JenaTripleWriter(defaultOutputDir()), defaultNumberOfThreads());
+        DukeRunner runner = new DukeRunner(configuration.getDukeConfiguration(), new JenaTripleWriter(defaultOutputDir()), defaultNumberOfThreads());
 
         logger.debug("Starting Duke");
         StopWatch.start();

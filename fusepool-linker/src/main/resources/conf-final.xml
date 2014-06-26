@@ -33,75 +33,7 @@
 		</property>
 
 	</schema>
-	<jdbc>
-		<param name="driver-class" value="org.apache.jena.jdbc.tdb.TDBDriver" />
-
-<!-- Agent query -->
-		<param name="query"
-			value="
-    PREFIX w3: &lt;http://www.w3.org/ns/prov#&gt;
-    PREFIX foaf: &lt;http://xmlns.com/foaf/0.1/&gt;
-    PREFIX sumo: &lt;http://www.owl-ontologies.com/sumo.owl#&gt;
-    PREFIX schema: &lt;http://schema.org/&gt;
-    PREFIX pmo: &lt;http://www.patexpert.org/ontologies/pmo.owl#&gt;
-    PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
-
-SELECT * WHERE { 
-  ?agent a sumo:Agent .
-  ?agent rdfs:label ?agentName .
-  OPTIONAL { 
-    ?agent schema:address  ?agentAddressUri .
-    OPTIONAL { ?agentAddressUri schema:addressCountry ?addressCountryUri .}
-    OPTIONAL { ?agentAddressUri schema:addressLocality ?addressLocality . }
-    OPTIONAL { ?agentAddressUri schema:streetAddress ?streetAddress .  } 
-  }
-} ORDER BY ?agent      " />
-
-<!-- CognitiveAgent query 
-		<param name="query"
-			value="
-    PREFIX w3: &lt;http://www.w3.org/ns/prov#&gt;
-    PREFIX foaf: &lt;http://xmlns.com/foaf/0.1/&gt;
-    PREFIX sumo: &lt;http://www.owl-ontologies.com/sumo.owl#&gt;
-    PREFIX schema: &lt;http://schema.org/&gt;
-    PREFIX pmo: &lt;http://www.patexpert.org/ontologies/pmo.owl#&gt;
-    PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
-
-SELECT * WHERE { 
-  ?agent a sumo:CognitiveAgent .
-  ?agent rdfs:label ?agentName .
-  OPTIONAL { 
-    ?agent schema:address  ?agentAddressUri .
-    OPTIONAL { ?agentAddressUri schema:addressCountry ?addressCountryUri .}
-    OPTIONAL { ?agentAddressUri schema:addressLocality ?addressLocality . }
-    OPTIONAL { ?agentAddressUri schema:streetAddress ?streetAddress .  } 
-  }
-} ORDER BY ?agent      " />
--->
-
-<!-- both Agent or CongitiveAgent query
- 		<param name="query"
-			value="
-    PREFIX w3: &lt;http://www.w3.org/ns/prov#&gt;
-    PREFIX foaf: &lt;http://xmlns.com/foaf/0.1/&gt;
-    PREFIX sumo: &lt;http://www.owl-ontologies.com/sumo.owl#&gt;
-    PREFIX schema: &lt;http://schema.org/&gt;
-    PREFIX pmo: &lt;http://www.patexpert.org/ontologies/pmo.owl#&gt;
-    PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
-
-SELECT * WHERE { 
-  ?agent a ?agentType .
-  ?agent rdfs:label ?agentName .
-  OPTIONAL { 
-    ?agent schema:address  ?agentAddressUri .
-    OPTIONAL { ?agentAddressUri schema:addressCountry ?addressCountryUri .}
-    OPTIONAL { ?agentAddressUri schema:addressLocality ?addressLocality . }
-    OPTIONAL { ?agentAddressUri schema:streetAddress ?streetAddress .  } 
-  }
-} ORDER BY ?agent BINDINGS ?agent {(sumo:Agent) (sumo:CognitiveAgent)}
-" />
--->
-
+	<csv>
 		<database class="no.priv.garshol.duke.databases.LuceneDatabase">
 			<!-- must turn off fuzzy search, or it will take forever -->
 			<param name="fuzzy-search" value="false" />
@@ -115,5 +47,5 @@ SELECT * WHERE {
 			cleaner="com.sindice.fusepool.cleaners.AddressLocalityCleaner"
 			property="ADDRESS" />
 		<column name="streetAddress" property="STREET" />
-	</jdbc>
+	</csv>
 </duke>

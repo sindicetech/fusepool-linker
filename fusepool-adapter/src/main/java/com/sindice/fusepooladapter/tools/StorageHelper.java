@@ -26,14 +26,14 @@ public class StorageHelper {
      *
      */
     public static void loadTestCollectionFull() throws FileNotFoundException {
-        loadTestCollectionFull("/data/tmp_fusepool/dbpedia-companies/dbpedia-companies-small.nt", "tmp/dbpediaSmallJena", "N-TRIPLE");
+        loadTestCollectionFull("/data/tmp_fusepool/dbpedia-companies/dbpedia-companies-bigger.nt", "tmp/dbpediaBigJena", "N-TRIPLE");
     }
 
-    public static void loadTestCollectionFull(String pathToInputFile, String pathToDataset, String format) throws FileNotFoundException {
-        File collection = new File(pathToDataset);
+    public static void loadTestCollectionFull(String pathToInputFile, String pathToOutputDir, String format) throws FileNotFoundException {
+        File collection = new File(pathToOutputDir);
         collection.delete();
 
-        Dataset dataset = TDBFactory.createDataset(pathToDataset);
+        Dataset dataset = TDBFactory.createDataset(pathToOutputDir);
         dataset.begin(ReadWrite.WRITE);
         // Get model inside the transaction
         Model model = dataset.getDefaultModel();
@@ -84,7 +84,7 @@ public class StorageHelper {
         }
     }
 
-    public static void main(String...args) {
-
+    public static void main(String...args) throws Exception {
+        loadTestCollectionFull();
     }
 }

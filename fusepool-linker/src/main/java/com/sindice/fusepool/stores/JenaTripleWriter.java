@@ -48,7 +48,7 @@ public class JenaTripleWriter implements TripleWriter {
 			queue.put(triple);
 			return true;
 		} catch (InterruptedException e) {
-			logger.error("interupted during add", e);
+			logger.error("Interrupted during add", e);
 		}
 		return false;
 	}
@@ -92,13 +92,13 @@ public class JenaTripleWriter implements TripleWriter {
 	}
 
 	public void stop() {
-		logger.info("adapter stopped");
+		logger.info("Adapter stopped");
 		add(SENTINEL);
 		//wait for me 
 		try {
 			thread.join();
 		} catch (InterruptedException e) {
-			logger.error("interupted before storing thread finished", e);
+			logger.error("Interrupted before storing thread finished", e);
 		}
 	}
 
@@ -110,8 +110,7 @@ public class JenaTripleWriter implements TripleWriter {
 
 	@Override
 	public void init() {
-        logger.warn("INIT");
-		this.thread = new Thread(this,"triplesWritter");
+		this.thread = new Thread(this,"JenaTripleWriter");
 		this.thread.start();
 	}
 

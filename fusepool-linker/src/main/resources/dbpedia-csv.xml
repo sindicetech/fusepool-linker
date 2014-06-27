@@ -11,19 +11,19 @@
       <comparator>no.priv.garshol.duke.comparators.JaccardIndexComparator</comparator>
       <low>0.1</low>
       <high>0.99</high>
-    </property>    
+    </property>
     <property>
       <name>COUNTRY</name>
       <comparator>no.priv.garshol.duke.comparators.JaccardIndexComparator</comparator>
       <low>0.1</low>
       <high>0.7</high>
-    </property>    
+    </property>
     <property>
       <name>LOCALITY</name>
       <comparator>no.priv.garshol.duke.comparators.JaccardIndexComparator</comparator>
       <low>0.1</low>
       <high>0.7</high>
-    </property>    
+    </property>
   </schema>
 
   <database class="no.priv.garshol.duke.databases.LuceneDatabase">
@@ -37,12 +37,15 @@
 
         <column name="agent"
                 property="ID"/>
+        
         <column name="agentName"
                 cleaner="no.priv.garshol.duke.cleaners.LowerCaseNormalizeCleaner"
                 property="NAME"/>
+        
         <column name="addressCountryUri"
                 property="COUNTRY"
                 cleaner="com.sindice.fusepool.cleaners.UriToCountryCodeCleaner"/>
+        
         <column name="addressLocality"
                 cleaner="no.priv.garshol.duke.cleaners.LowerCaseNormalizeCleaner"
                 property="LOCALITY"/>
@@ -52,13 +55,17 @@
   <group><!-- companies -->
   <csv>
     <param name="input-file" value=""/>
+
     <column name="iri"
             property="ID"/>
+
     <column name="companyName"
             cleaner="no.priv.garshol.duke.cleaners.LowerCaseNormalizeCleaner"
             property="NAME"/>
+
     <column name="countryCode"
             property="COUNTRY"/>
+
     <column name="locationCityName"
             cleaner="no.priv.garshol.duke.cleaners.LowerCaseNormalizeCleaner"
             property="LOCALITY"/>

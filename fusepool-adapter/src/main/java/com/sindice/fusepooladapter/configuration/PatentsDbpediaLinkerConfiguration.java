@@ -24,7 +24,8 @@ public class PatentsDbpediaLinkerConfiguration extends LinkerConfiguration {
             + "OPTIONAL { ?addressUri schema:streetAddress ?streetAddress .  }  \n"
             + "} \n" + "} ORDER BY ?agent ";
 
-    private static String dbpediaSparql = "PREFIX foaf:        <http://xmlns.com/foaf/0.1/>\n" +
+    private static String dbpediaSparql = 
+            "PREFIX foaf:        <http://xmlns.com/foaf/0.1/>\n" +
             "PREFIX rdfs:        <http://www.w3.org/2000/01/rdf-schema#>\n" +
             "PREFIX owl:         <http://www.w3.org/2002/07/owl#>\n" +
             "PREFIX dbpedia-owl: <http://dbpedia.org/ontology/> \n" +

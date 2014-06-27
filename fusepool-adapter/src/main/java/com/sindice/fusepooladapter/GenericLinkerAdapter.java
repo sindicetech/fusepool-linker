@@ -36,7 +36,7 @@ public class GenericLinkerAdapter extends LinkerAdapter {
 		Properties properties = new Properties();
 		properties.load(Thread.currentThread().getContextClassLoader()
 				.getResourceAsStream(confFileName));
-		if ( properties.getProperty("dukeconfig") == null || properties.getProperty("dukethrno") == null || properties.getProperty("sparqlQuery1") == null) {
+		if ( properties.getProperty("dukeconfig") == null || properties.getProperty("dukethrno") == null ) {
 			throw new IllegalArgumentException("missing mandatory property");
 		}
 		this.dukeThreadNo = Integer.parseInt(properties.getProperty("dukethrno"));
@@ -45,6 +45,7 @@ public class GenericLinkerAdapter extends LinkerAdapter {
 		//TODO: here if duke is configured for deduplication and sparqlDatasource is used 
 		// then sparqlQueries are not needed at all -> remove the condition above 
 		// but they are required if the datasource is csv
+		// properties.getProperty("sparqlQuery1") == null
 		String sparqlQuery1 = properties.getProperty("sparqlQuery1");
 		String sparqlQuery2 = properties.getProperty("sparqlQuery2");
 		this.linkerConfiguration = new LinkerConfiguration( LinkerConfiguration.loadConfig(dukeConfigurationPath), sparqlQuery1, sparqlQuery2);

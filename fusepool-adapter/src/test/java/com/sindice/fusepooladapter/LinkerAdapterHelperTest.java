@@ -15,12 +15,11 @@
  */
 package com.sindice.fusepooladapter;
 
-import com.sindice.fusepool.testutils.TestTripleCollectionPatents;
-import com.sindice.fusepooladapter.configuration.LinkerConfiguration;
-import com.sindice.fusepooladapter.configuration.PatentsDbpediaLinkerConfiguration;
-import com.sindice.fusepooladapter.configuration.PatentsLinkerConfiguration;
-import com.sindice.fusepooladapter.storage.JenaStoreTripleCollection;
-import com.sindice.fusepooladapter.tools.StorageHelper;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.util.Properties;
 
 import org.apache.clerezza.rdf.core.TripleCollection;
 import org.junit.Ignore;
@@ -28,13 +27,12 @@ import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStream;
-import java.util.Properties;
-
-import static org.junit.Assert.assertEquals;
+import com.sindice.fusepool.testutils.TestTripleCollectionPatents;
+import com.sindice.fusepooladapter.configuration.LinkerConfiguration;
+import com.sindice.fusepooladapter.configuration.PatentsDbpediaLinkerConfiguration;
+import com.sindice.fusepooladapter.configuration.PatentsLinkerConfiguration;
+import com.sindice.fusepooladapter.storage.JenaStoreTripleCollection;
+import com.sindice.fusepooladapter.tools.StorageHelper;
 
 /**
  * Junit tests for manual testing of deduplication.
@@ -101,7 +99,7 @@ public class LinkerAdapterHelperTest {
         adapter.setDukeThreadNo(Runtime.getRuntime().availableProcessors());
         
         // triple collection can be null as it will not be used at the moment  
-        TripleCollection resultTriples = adapter.interlink((TripleCollection)null);
+        TripleCollection resultTriples = adapter.interlink(new TestTripleCollectionPatents());
 		logger.info("Triples in result: " + resultTriples.size());
     }
 
@@ -113,7 +111,7 @@ public class LinkerAdapterHelperTest {
         adapter.setDukeThreadNo(Runtime.getRuntime().availableProcessors());
         
         // triple collection can be null as it will not be used at the moment  
-        TripleCollection resultTriples = adapter.interlink((TripleCollection)null,(TripleCollection)null);
+        TripleCollection resultTriples = adapter.interlink(new TestTripleCollectionPatents(), new TestTripleCollectionPatents());
 		logger.info("Triples in result: " + resultTriples.size());
     }
 
@@ -125,20 +123,21 @@ public class LinkerAdapterHelperTest {
     @Test
     public void testInterlinkingFull() throws IOException {
     	// here load the collections it is needed only once
-    	//StorageHelper.loadTestCollectionFull("/Users/szydan/home/data/fusepool/patents/patent-data-sample.nt", "tmp/patentsJena", "N-TRIPLE");
-        //StorageHelper.loadTestCollectionFull("/Users/szydan/home/data/fusepool/dbpedia-companies/dbpedia-companies-small.nt", "tmp/dbpediaSmallJena", "N-TRIPLE");
+    	StorageHelper.loadTestCollectionFull("/Users/szydan/home/data/fusepool/patents/patent-data-sample.nt", "tmp/patentsJena", "N-TRIPLE");
+        StorageHelper.loadTestCollectionFull("/Users/szydan/home/data/fusepool/dbpedia-companies/dbpedia-companies-small.nt", "tmp/dbpediaSmallJena", "N-TRIPLE");
     	
     	logger.info("Full test");
  
     	JenaStoreTripleCollection patents = new JenaStoreTripleCollection("tmp/patentsJena"); // contains the dataset to deduplicate. Can be loaded using loadTestCollectionFull()
         patents.init();
-        JenaStoreTripleCollection dbpedia = new JenaStoreTripleCollection("tmp/dbpediaBigJena"); // contains the dataset to deduplicate. Can be loaded using loadTestCollectionFull()
+        JenaStoreTripleCollection dbpedia = new JenaStoreTripleCollection("tmp/dbpediaSmallJena"); // contains the dataset to deduplicate. Can be loaded using loadTestCollectionFull()
         dbpedia.init();
         logger.info("Patent store contains " + patents.size() + " triples.");
         logger.info("Dbpedia store contains " + dbpedia.size() + " triples.");
 
         LinkerAdapter adapter = new PatentsDbpediaLinkerAdapter();
-
+        adapter.setDukeThreadNo(Runtime.getRuntime().availableProcessors());
+        
         LinkerConfiguration linkerConfiguration = PatentsDbpediaLinkerConfiguration.getInstance();
         TripleCollection resultTriples = adapter.interlink(patents, dbpedia, linkerConfiguration );
 

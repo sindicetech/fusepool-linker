@@ -197,21 +197,26 @@ public abstract class LinkerAdapter implements Interlinker, Deduplicator {
         if (!iterator.hasNext()) {
             throw new RuntimeException(String.format("Duke configuration must have two datasources configured, contains none."));
         }
-        CSVDataSource dataSource1 = (CSVDataSource) iterator.next();
-        String storeFileSource = defaultTmpDir() + File.separator + "source_" + CSV_FILENAME;
-        dataSource1.setInputFile(storeFileSource);
-
+        
+        DataSource dataSource1 = iterator.next();
+        if(dataSource1 instanceof CSVDataSource) {
+        	CSVDataSource csvDataSource1 = (CSVDataSource) dataSource1;
+            String storeFileSource = defaultTmpDir() + File.separator + "source_" + CSV_FILENAME;
+            csvDataSource1.setInputFile(storeFileSource);
+            convertToCsv(source, configuration.getSparqlQuery1(), DukeConfigToCsvHeader.transform(csvDataSource1), storeFileSource);
+        }
         iterator = configuration.getDukeConfiguration().getDataSources(2).iterator();
         if (!iterator.hasNext()) {
             throw new RuntimeException(String.format("Duke configuration must have two datasources configured, contains only one."));
         }
-        CSVDataSource dataSource2 = (CSVDataSource) iterator.next();
-        String storeFileTarget = defaultTmpDir() + File.separator + "target_" + CSV_FILENAME;
-        dataSource2.setInputFile(storeFileTarget);
-
-        convertToCsv(source, configuration.getSparqlQuery1(), DukeConfigToCsvHeader.transform(dataSource1), storeFileSource);
-        convertToCsv(target, configuration.getSparqlQuery2(), DukeConfigToCsvHeader.transform(dataSource2), storeFileTarget);
-
+        DataSource dataSource2 = iterator.next();
+        if(dataSource2 instanceof CSVDataSource) {
+            CSVDataSource csvDataSource2 = (CSVDataSource) dataSource2;
+            String storeFileTarget = defaultTmpDir() + File.separator + "target_" + CSV_FILENAME;
+            csvDataSource2.setInputFile(storeFileTarget);
+            convertToCsv(target, configuration.getSparqlQuery2(), DukeConfigToCsvHeader.transform(csvDataSource2), storeFileTarget);
+        }
+        
         DukeRunner runner = new DukeRunner(configuration.getDukeConfiguration(), new JenaTripleWriter(defaultOutputDir()), defaultNumberOfThreads());
 
         logger.debug("Starting Duke");

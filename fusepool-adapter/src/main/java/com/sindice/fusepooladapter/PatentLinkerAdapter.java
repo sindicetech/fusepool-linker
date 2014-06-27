@@ -1,10 +1,11 @@
 package com.sindice.fusepooladapter;
 
 import org.apache.clerezza.rdf.core.TripleCollection;
+import org.osgi.service.component.annotations.Component;
 
 import com.sindice.fusepooladapter.configuration.PatentsLinkerConfiguration;
 
-import java.io.IOException;
+import eu.fusepool.datalifecycle.Interlinker;
 
 /**
  * Concrete implementation of Intrelinker for deduplicate marks patents dataset
@@ -12,6 +13,7 @@ import java.io.IOException;
  * @author szydan
  *
  */
+@Component(service = Interlinker.class)
 public class PatentLinkerAdapter extends LinkerAdapter{
 
     @Override

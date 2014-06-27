@@ -16,11 +16,16 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 
 /**
+ * Helper class for managing Jena collections 
  *
  */
 public class StorageHelper {
     private static Logger logger = LoggerFactory.getLogger(StorageHelper.class);
 
+    
+    private StorageHelper() {
+        //hide utility class constructor
+    }
     /**
      * Populates a Jena TDB store with the given dataset
      *

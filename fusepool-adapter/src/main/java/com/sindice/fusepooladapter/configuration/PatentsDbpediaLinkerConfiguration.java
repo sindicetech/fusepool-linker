@@ -2,6 +2,8 @@ package com.sindice.fusepooladapter.configuration;
 
 
 /**
+ * Concrete implementation of LinkerConfiguration
+ * Holds default configuration for interlinking Patents (marc) with companies from dbpedia
  *
  */
 public class PatentsDbpediaLinkerConfiguration extends LinkerConfiguration {

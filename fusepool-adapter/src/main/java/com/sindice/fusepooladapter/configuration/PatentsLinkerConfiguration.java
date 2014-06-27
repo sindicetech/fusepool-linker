@@ -1,6 +1,13 @@
 package com.sindice.fusepooladapter.configuration;
 
 
+ /**
+ * Concrete implementation of LinkerConfiguration
+ * Holds default configuration for deduplicating Patents (marc)
+ *
+ * @author szydan
+ *
+ */
 public class PatentsLinkerConfiguration extends LinkerConfiguration {
 
 	public static final String DEFAULT_DEDUP_CONFIG_FILE_LOCATION = "classpath:patents-csv.xml";

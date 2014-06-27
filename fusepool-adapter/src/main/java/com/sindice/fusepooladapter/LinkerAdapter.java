@@ -38,6 +38,7 @@ import org.slf4j.LoggerFactory;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Iterator;
 
@@ -60,28 +61,33 @@ public abstract class LinkerAdapter implements Interlinker, Deduplicator {
 
 	public LinkerAdapter() {
         // make sure our TEMP_DIR_NAME exists in the system temporary directory
-        File tempDir = new File(System.getProperty("java.io.tmpdir") + File.separator + TEMP_DIR_NAME);
-        if (!tempDir.exists()) {
-            if (!tempDir.mkdir()) {
-                throw new RuntimeException("Couldn't create temporary directory " + tempDir.getAbsolutePath().toString());
+        File fusepoolLinkerTmpDir = new File(System.getProperty("java.io.tmpdir") + File.separator + TEMP_DIR_NAME);
+        if (!fusepoolLinkerTmpDir.exists()) {
+            if (!fusepoolLinkerTmpDir.mkdir()) {
+                throw new RuntimeException("Couldn't create temporary directory " + fusepoolLinkerTmpDir.getAbsolutePath().toString());
             }
         }
-        if (!tempDir.isDirectory()) {
-            throw new RuntimeException("Couldn't create temporary directory " + tempDir.getAbsolutePath().toString() + ". There is a file with the same name.");
+        if (!fusepoolLinkerTmpDir.isDirectory()) {
+            throw new RuntimeException("Couldn't create temporary directory " + fusepoolLinkerTmpDir.getAbsolutePath().toString() + ". There is a file with the same name.");
         }
         try {
-            this.tmpDir = java.nio.file.Files.createTempDirectory(tempDir.toPath(), "adapter-").toAbsolutePath().toString();
+            this.tmpDir = java.nio.file.Files.createTempDirectory(fusepoolLinkerTmpDir.toPath(), "adapter-").toAbsolutePath().toString();
         } catch (IOException e) {
-            throw new RuntimeException("Could not create temporary directory in " + tempDir, e);
+            throw new RuntimeException("Could not create temporary directory in " + fusepoolLinkerTmpDir, e);
         }
         logger.info("Created temporary directory {} ", tmpDir);
-        try {
-            this.outDir = java.nio.file.Files.createTempDirectory(Paths.get(tmpDir), "output-").toAbsolutePath().toString();
-        } catch (IOException e) {
-            throw new RuntimeException("Could not create temporary directory in " + tempDir, e);
-        }
+
+        this.outDir = createTempDirectory("output-").toAbsolutePath().toString();
         logger.info("Created output directory {} ", outDir);
 	}
+
+    protected Path createTempDirectory(String prefix) {
+        try {
+            return java.nio.file.Files.createTempDirectory(Paths.get(tmpDir), prefix);
+        } catch (IOException e) {
+            throw new RuntimeException("Could not create temporary directory in " + tmpDir, e);
+        }
+    }
 
 	/**
 	 * Returns a default temporary directory where intermediate data will be stored
@@ -145,11 +151,11 @@ public abstract class LinkerAdapter implements Interlinker, Deduplicator {
         
         
         DataSource dataSource = dukeConfiguration.getDataSources().iterator().next();
-        if( dataSource instanceof CSVDataSource) {
+        if (dataSource instanceof CSVDataSource) {
         	CSVDataSource csvDataSource = (CSVDataSource) dataSource; 
         	csvDataSource.setInputFile( storeFile );
         	convertToCsv(dataToInterlink, configuration.getSparqlQuery1(), DukeConfigToCsvHeader.transform(csvDataSource), storeFile);
-        }else {
+        } else {
             throw new IllegalArgumentException("Only CSVDataSource is supported");
         }
         

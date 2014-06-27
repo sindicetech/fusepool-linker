@@ -3,6 +3,7 @@ package com.sindice.fusepooladapter;
 import com.sindice.fusepool.testutils.TestTripleCollectionPatents;
 import com.sindice.fusepooladapter.configuration.LinkerConfiguration;
 import com.sindice.fusepooladapter.configuration.PatentsDbpediaLinkerConfiguration;
+import com.sindice.fusepooladapter.configuration.PatentsLinkerConfiguration;
 import org.apache.clerezza.rdf.core.TripleCollection;
 import org.apache.clerezza.rdf.core.serializedform.Parser;
 import org.apache.clerezza.rdf.core.serializedform.SupportedFormat;
@@ -33,9 +34,9 @@ public class LinkerAdapterTest {
 
     @Test
     public void testSmallDataFile() throws IOException {
-        LinkerAdapter adapter = new PatentLinkerAdapter();
+        LinkerAdapter adapter = new DebuggingLinkerAdapter(); //new PatentLinkerAdapter();
         TripleCollection triples = Parser.getInstance().parse(getClass().getResourceAsStream("patent-data-sample-short.ttl"), SupportedFormat.TURTLE);
-        TripleCollection resultTriples = adapter.interlink(triples);
+        TripleCollection resultTriples = adapter.interlink(triples, PatentsLinkerConfiguration.getInstance());
         Assert.assertTrue("No interlink found, but urn:x-temp:/id/5caaf04a-30ab-4c6a-9d0e-07ffc3a569d0"
                 + " and urn:x-temp:/id/5efdb576-ebb5-4efd-8b00-d943425eaf59 should match",
                 resultTriples.size() > 0);

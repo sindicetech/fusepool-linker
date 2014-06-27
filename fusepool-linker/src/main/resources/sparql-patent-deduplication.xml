@@ -37,10 +37,31 @@
     <param name="fuzzy-search" value="false"/>
   </database>
   
-  <csv>
-    <param name="input-file" value=""/>
+  
+   <sparql>
+    <param name="endpoint" value="http://kaste1:8080/openrdf-sesame/repositories/fusepool"/>
+    <param name="triple-mode" value="false"/>
+    
+    <param name="query" value="
+    PREFIX w3: &lt;http://www.w3.org/ns/prov#&gt;
+    PREFIX foaf: &lt;http://xmlns.com/foaf/0.1/&gt;
+    PREFIX sumo: &lt;http://www.owl-ontologies.com/sumo.owl#&gt;
+    PREFIX pmo: &lt;http://www.patexpert.org/ontologies/pmo.owl#&gt;
+    PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+	PREFIX schema: &lt;http://schema.org/&gt;
+	
+	SELECT ?uri ?agentName ?addressUri ?addressCountryUri  ?addressLocality ?streetAddress WHERE { 
+    ?uri a sumo:CognitiveAgent ;
+         rdfs:label ?agentName.
+    OPTIONAL { 
+      ?uri schema:address  ?addressUri . 
+      OPTIONAL { ?addressUri  schema:addressCountry ?addressCountryUri . }
+      OPTIONAL { ?addressUri  schema:addressLocality ?addressLocality . } 
+      OPTIONAL { ?addressUri  schema:streetAddress ?streetAddress . }
+    }
+    } ORDER BY ?uri" />
 
-    <column name="agent"
+    <column name="uri"
             property="ID"/>
     <column name="agentName"
             cleaner="no.priv.garshol.duke.cleaners.LowerCaseNormalizeCleaner"
@@ -53,6 +74,6 @@
     <column name="streetAddress"
             cleaner="no.priv.garshol.duke.cleaners.LowerCaseNormalizeCleaner"
             property="STREET"/>
-  </csv>  
-</duke>
+  </sparql>
 
+</duke>

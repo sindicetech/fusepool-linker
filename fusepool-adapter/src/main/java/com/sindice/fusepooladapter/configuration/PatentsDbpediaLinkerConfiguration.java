@@ -15,8 +15,8 @@ public class PatentsDbpediaLinkerConfiguration extends LinkerConfiguration {
             +
 
             "SELECT ?agent ?agentName ?addressUri ?addressCountryUri ?addressLocality ?streetAddress WHERE {  \n"
-            + "  ?agent a sumo:CognitiveAgent . \n"
-            + "?agent rdfs:label ?agentName . \n"
+            + "  ?agent a sumo:CognitiveAgent ; \n"
+            + "         rdfs:label ?agentName . \n"
             + "OPTIONAL {  \n"
             + "?agent schema:address  ?addressUri . \n"
             + "OPTIONAL { ?addressUri schema:addressCountry ?addressCountryUri .} \n"

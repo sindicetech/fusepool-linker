@@ -8,13 +8,13 @@
 
 		<property>
 
-			<property>
+		<property>
 				<name>STATE</name>
 				<comparator>no.priv.garshol.duke.comparators.ExactComparator</comparator>
 				<low>0.01</low>
 				<high>0.9</high>
-			</property>
-			<name>NAME</name>
+		</property>
+		<name>NAME</name>
 			<comparator>no.priv.garshol.duke.comparators.JaccardIndexComparator</comparator>
 			<low>0.01</low>
 			<high>0.9</high>

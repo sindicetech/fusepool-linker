@@ -29,6 +29,7 @@ import no.priv.garshol.duke.Configuration;
 import no.priv.garshol.duke.DataSource;
 import no.priv.garshol.duke.datasources.CSVDataSource;
 import no.priv.garshol.duke.datasources.JDBCDataSource;
+import no.priv.garshol.duke.datasources.SparqlDataSource;
 
 import org.apache.clerezza.rdf.core.TripleCollection;
 import org.apache.clerezza.rdf.core.UriRef;
@@ -149,13 +150,14 @@ public abstract class LinkerAdapter implements Interlinker, Deduplicator {
         	CSVDataSource csvDataSource = (CSVDataSource) dataSource; 
         	csvDataSource.setInputFile( storeFile );
         	convertToCsv(dataToInterlink, configuration.getSparqlQuery1(), DukeConfigToCsvHeader.transform(csvDataSource), storeFile);
+        }else if(dataSource instanceof SparqlDataSource) {
+        	// do nothing as csv file is not needed
         }else {
-            throw new IllegalArgumentException("Only CSVDataSource is supported");
+                throw new IllegalArgumentException("Only CSVDataSource and SparqlDataSource are supported");
         }
         
         DukeRunner runner = new DukeRunner(dukeConfiguration, new JenaTripleWriter(defaultOutputDir()), defaultNumberOfThreads());
-
-		logger.debug("Starting Duke");
+        logger.debug("Starting Duke");
 		StopWatch.start();
 		runner.run();
 		StopWatch.end();

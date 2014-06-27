@@ -21,6 +21,7 @@ import com.sindice.fusepooladapter.configuration.PatentsDbpediaLinkerConfigurati
 import com.sindice.fusepooladapter.configuration.PatentsLinkerConfiguration;
 import com.sindice.fusepooladapter.storage.JenaStoreTripleCollection;
 import com.sindice.fusepooladapter.tools.StorageHelper;
+
 import org.apache.clerezza.rdf.core.TripleCollection;
 import org.junit.Ignore;
 import org.junit.Test;
@@ -42,6 +43,7 @@ import static org.junit.Assert.assertEquals;
 public class LinkerAdapterHelperTest {
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 
+	
 	/**
 	 * Simple test to correctly generate property file
 	 * @throws Exception
@@ -71,7 +73,7 @@ public class LinkerAdapterHelperTest {
 	 *  Output is stored to the specified outpath - another Jena TDB store.
 	 * 
 	 */
-	@Ignore
+	//@Ignore
 	@Test
 	public void testDeduplicationFull() throws IOException {
 		
@@ -90,7 +92,32 @@ public class LinkerAdapterHelperTest {
 		logger.info("Triples in result: " + resultTriples.size());
 		os.destroy();
 	}
+	
+    @Ignore
+	@Test
+    public void testDeduplicationFullPatentsSparql() throws IOException {
 
+        LinkerAdapter adapter = new GenericLinkerAdapter("sparql-patent-deduplication.properties");
+        adapter.setDukeThreadNo(Runtime.getRuntime().availableProcessors());
+        
+        // triple collection can be null as it will not be used at the moment  
+        TripleCollection resultTriples = adapter.interlink((TripleCollection)null);
+		logger.info("Triples in result: " + resultTriples.size());
+    }
+
+    @Ignore
+	@Test
+    public void testInterlinkingFullSparql() throws IOException {
+
+        LinkerAdapter adapter = new GenericLinkerAdapter("sparql-patent-dbpedia-interlinking.properties");
+        adapter.setDukeThreadNo(Runtime.getRuntime().availableProcessors());
+        
+        // triple collection can be null as it will not be used at the moment  
+        TripleCollection resultTriples = adapter.interlink((TripleCollection)null,(TripleCollection)null);
+		logger.info("Triples in result: " + resultTriples.size());
+    }
+
+    
     /**
      *
      */

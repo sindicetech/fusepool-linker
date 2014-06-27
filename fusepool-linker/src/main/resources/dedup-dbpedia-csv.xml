@@ -1,0 +1,52 @@
+<duke>
+  <schema>
+    <threshold>0.8</threshold>
+
+    <property type="id">
+      <name>ID</name>
+    </property>
+
+    <property lookup="true">
+      <name>NAME</name>
+      <comparator>no.priv.garshol.duke.comparators.JaccardIndexComparator</comparator>
+      <low>0.1</low>
+      <high>0.99</high>
+    </property>
+    <property>
+      <name>COUNTRY</name>
+      <comparator>no.priv.garshol.duke.comparators.JaccardIndexComparator</comparator>
+      <low>0.1</low>
+      <high>0.7</high>
+    </property>
+    <property>
+      <name>LOCALITY</name>
+      <comparator>no.priv.garshol.duke.comparators.JaccardIndexComparator</comparator>
+      <low>0.1</low>
+      <high>0.7</high>
+    </property>
+  </schema>
+
+  <database class="no.priv.garshol.duke.databases.LuceneDatabase">
+    <!-- must turn off fuzzy search, or it will take forever -->
+    <param name="fuzzy-search" value="false"/>
+  </database>
+
+  <csv>
+    <param name="input-file" value=""/>
+
+    <column name="iri"
+            property="ID"/>
+
+    <column name="companyName"
+            cleaner="no.priv.garshol.duke.cleaners.LowerCaseNormalizeCleaner"
+            property="NAME"/>
+
+    <column name="countryCode"
+            property="COUNTRY"/>
+
+    <column name="locationCityName"
+            cleaner="no.priv.garshol.duke.cleaners.LowerCaseNormalizeCleaner"
+            property="LOCALITY"/>
+  </csv>
+</duke>
+

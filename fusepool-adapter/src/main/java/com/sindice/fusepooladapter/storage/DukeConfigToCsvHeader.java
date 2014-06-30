@@ -9,7 +9,7 @@ import java.util.Collection;
 import java.util.List;
 
 /**
- *
+ * Extracts columns from Duke's {@link ColumnarDataSource} and returns it in the form of a {@link CsvConfig}.
  */
 public class DukeConfigToCsvHeader {
 

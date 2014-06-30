@@ -20,6 +20,9 @@ import java.util.HashSet;
 
 import com.sindice.fusepool.matchers.SimpleTriple;
 
+/**
+ * A simple set implementation of {@link TripleWriter}. Useful for testing and in-memory implementations.
+ */
 public class SetTripleWriter extends HashSet<SimpleTriple> implements TripleWriter {
 	private static final long serialVersionUID = 1L;
 

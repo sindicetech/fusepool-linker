@@ -1,10 +1,9 @@
 package com.sindice.fusepooladapter.configuration;
 
 /**
-* Concrete implementation of LinkerConfiguration
-* Holds default configuration for deduplicating companies (Dbpedia)
-*
-* @author szydan
+ *
+* A concrete implementation of {@link LinkerConfiguration}
+* Holds default configuration for deduplicating DbPedia companies
 *
 */
 public class DbpediaLinkerConfiguration extends LinkerConfiguration {

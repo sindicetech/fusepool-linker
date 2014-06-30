@@ -45,6 +45,9 @@ import eu.fusepool.datalifecycle.Interlinker;
 
 /**
  * Implementation of linking and deduplication using Duke.
+ *
+ * Please note that intermediate files are stored in the OS's temporary directory in the directory {@value #TEMP_DIR_NAME}.
+ * The directory is not automatically cleaned and may contain large amounts of data after running the linker.
  * 
  */
 public abstract class LinkerAdapter implements Interlinker, Deduplicator {

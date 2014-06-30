@@ -8,10 +8,8 @@ import com.sindice.fusepooladapter.configuration.PatentsLinkerConfiguration;
 import eu.fusepool.datalifecycle.Interlinker;
 
 /**
- * Concrete implementation of Intrelinker for deduplicate marks patents dataset
+ * A concrete implementation of {@link LinkerAdapter} for deduplication of the MAREC patents dataset
  * 
- * @author szydan
- *
  */
 @Component(service = Interlinker.class)
 public class PatentLinkerAdapter extends LinkerAdapter{

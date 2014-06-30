@@ -29,6 +29,12 @@ import com.hp.hpl.jena.tdb.TDB;
 import com.hp.hpl.jena.tdb.TDBFactory;
 import com.sindice.fusepool.matchers.SimpleTriple;
 
+/**
+ * A queued writer that creates a Jena TDB store and populates it with added triples.
+ *
+ * The writer's writing thread must be started by calling the {@link #init()} method and it must be stopped by
+ * calling the {@link #stop()} method.
+ */
 public class JenaTripleWriter implements TripleWriter {
 	private final static Logger logger = LoggerFactory
 			.getLogger(JenaTripleWriter.class);

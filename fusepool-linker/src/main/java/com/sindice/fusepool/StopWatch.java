@@ -17,7 +17,10 @@ package com.sindice.fusepool;
 
 import java.util.Stack;
 
-public class StopWatch {	
+/**
+ * A simple stack-based stopwatch implementation for measuring execution time.
+ */
+public class StopWatch {
 	private static Stack<Range> stack = new Stack<Range>();
 	
 	public static void start() {

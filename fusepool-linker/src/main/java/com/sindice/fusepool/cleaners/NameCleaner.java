@@ -20,6 +20,9 @@ import java.util.regex.Pattern;
 
 import no.priv.garshol.duke.Cleaner;
 
+/**
+ * Name cleaner for MAREC patent data.
+ */
 public class NameCleaner implements Cleaner {
 	private static final Pattern DELETED = Pattern.compile("^DELETED ");
 	private static final Pattern STATE = Pattern.compile("\\s\\([A-Z]{2}\\).*");

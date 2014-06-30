@@ -7,6 +7,9 @@ import com.sindice.fusepooladapter.configuration.PatentsDbpediaLinkerConfigurati
 
 import eu.fusepool.datalifecycle.Interlinker;
 
+/**
+ * A concrete implementation of the {@link LinkerAdapter} for interlinking of MAREC patents with DbPedia companies.
+ */
 @Component(service = Interlinker.class)
 public class PatentsDbpediaLinkerAdapter extends LinkerAdapter {
 

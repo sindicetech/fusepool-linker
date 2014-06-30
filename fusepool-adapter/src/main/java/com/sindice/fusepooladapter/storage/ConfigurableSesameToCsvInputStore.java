@@ -46,6 +46,9 @@ import java.util.Map;
 /**
  * An implementation of {@link InputTripleStore } that uses the Sesame RDF framework.
  *
+ * Converts triples passed to {@link #populate(org.apache.clerezza.rdf.core.TripleCollection)} to CSV based on the
+ * CSV configuration and the SPARQL query passed to the constructor.
+ *
  */
 public class ConfigurableSesameToCsvInputStore implements InputTripleStore {
 	private static final Logger logger = LoggerFactory.getLogger(ConfigurableSesameToCsvInputStore.class);
@@ -62,7 +65,8 @@ public class ConfigurableSesameToCsvInputStore implements InputTripleStore {
     }
 
 	/**
-	 * Cleans and populates the triplestore by triples from input collection
+	 * Creates an intermediate Sesame triple store, populates it with given triples, queries it, and saves
+     * the result to a CSV file according to configuration.
 	 */
 	@Override
 	public long populate(TripleCollection triples) {

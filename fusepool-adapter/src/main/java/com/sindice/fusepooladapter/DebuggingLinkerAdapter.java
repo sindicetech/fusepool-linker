@@ -29,7 +29,7 @@ import java.util.regex.Pattern;
  * with a {@link LinkerConfiguration}.
  *
  * <p><b>IMPORTANT</b>:<pre>
- *            this class assumes that a RollingFileAppender with name FILE is configured in logback configuration,
+ *            this class assumes that a FileAppender (or a subclass such as RollingFileAppender) with name FILE is configured in logback configuration,
  *            creates an additional FileAppender for a file saved in the same directory with the same file name + "_debug.log" suffix.
  *            AND it analyzes the first lines of the log file with the "_debug.log" suffix that match the {@link #RECORD_ID_PATTERN}.
  *            (this is of course fragile as it depends on Logback keeping the same log format. It can be later changed to read record

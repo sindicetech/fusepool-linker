@@ -19,6 +19,9 @@ import java.util.regex.Pattern;
 
 import no.priv.garshol.duke.Cleaner;
 
+/**
+ * Address cleaner for the MAREC patent data
+ */
 public class AddressLocalityCleaner implements Cleaner {
 	private static final Pattern STATE= Pattern.compile("^[A-Z]{1,2}\\-");
 

@@ -17,7 +17,7 @@ package com.sindice.fusepooladapter.storage;
 
 import org.apache.clerezza.rdf.core.TripleCollection;
 /**
- * interface for input triple store 
+ * Interface for input triple store
  *
  */
 public interface InputTripleStore {

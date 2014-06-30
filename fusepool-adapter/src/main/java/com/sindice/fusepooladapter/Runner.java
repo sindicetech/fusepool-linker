@@ -30,7 +30,7 @@ import org.osgi.service.component.annotations.Reference;
 import eu.fusepool.datalifecycle.Interlinker;
 
 /**
- *
+ * A Fusepool component that runs interlinking or deduplication upon a GET request to "/duke-linker".
  */
 @Component(service = Object.class, immediate = true, property = {"javax.ws.rs=true"})
 @Path("duke-linker")

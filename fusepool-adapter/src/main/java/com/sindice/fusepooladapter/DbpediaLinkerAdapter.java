@@ -8,10 +8,8 @@ import com.sindice.fusepooladapter.configuration.DbpediaLinkerConfiguration;
 import eu.fusepool.datalifecycle.Interlinker;
 
 /**
- * Concrete implementation of Intrelinker for deduplicate Dbpedia companies
+ * A concrete implementation of {@link LinkerAdapter} for deduplication of DbPedia companies
  * 
- * @author szydan
- *
  */
 @Component(service = Interlinker.class)
 public class DbpediaLinkerAdapter extends LinkerAdapter {

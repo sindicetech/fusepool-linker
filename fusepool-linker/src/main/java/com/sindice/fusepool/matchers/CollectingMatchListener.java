@@ -28,7 +28,7 @@ import com.sindice.fusepool.stores.TripleWriter;
 /**
  * Duke {@link MatchListener} to collect matches to a given collection.
  * 
- * If the passed collection implements {@link Closeable} then calls close() at
+ * If the passed collection implements {@link AutoCloseable} then calls close() at
  * the end of processing.
  */
 public class CollectingMatchListener extends AbstractMatchListener {

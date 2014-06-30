@@ -28,8 +28,6 @@ import java.util.Collection;
 /**
  * Convenience class to run Duke deduplication in embedded mode.
  * 
- * Always creates a new Lucene index.
- * 
  */
 public class DukeRunner {
 	private Logger logger = LoggerFactory.getLogger(this.getClass());

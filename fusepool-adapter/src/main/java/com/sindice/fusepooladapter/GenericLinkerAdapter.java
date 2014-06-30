@@ -10,13 +10,12 @@ import org.apache.clerezza.rdf.core.TripleCollection;
 import com.sindice.fusepooladapter.configuration.LinkerConfiguration;
 
 /**
- * Generic implementation of Intrelinker for 
+ * Generic implementation of {@link LinkerAdapter} for
  * deduplication or interlinking of any 2 datasets.
- * Deduplication and interlinking is done by Duke.
- * To use it one MUST provide LinkerConfiguration.
- * 
- * @author szydan
  *
+ * Deduplication and interlinking is done by Duke.
+ * To use it one MUST provide a {@link LinkerConfiguration}.
+ * 
  */
 public class GenericLinkerAdapter extends LinkerAdapter {
 

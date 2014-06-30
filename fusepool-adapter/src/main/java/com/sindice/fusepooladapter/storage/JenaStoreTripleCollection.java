@@ -41,9 +41,7 @@ import com.hp.hpl.jena.rdf.model.StmtIterator;
 import com.hp.hpl.jena.tdb.TDBFactory;
 
 /**
- * storage for output graph
- * 
- * 
+ * A {@link TripleCollection} implementation for reading a Jena TDB store.
  */
 public class JenaStoreTripleCollection implements TripleCollection {
   private final String datafolder;

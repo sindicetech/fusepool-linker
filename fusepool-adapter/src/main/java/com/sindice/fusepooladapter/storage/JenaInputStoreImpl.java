@@ -40,7 +40,7 @@ import com.hp.hpl.jena.tdb.TDBFactory;
 import com.hp.hpl.jena.tdb.sys.SystemTDB;
 /**
  *
- * implementation of {@link com.sindice.fusepooladapter.storage.InputTripleStore } that uses Jena rdf framework
+ * An implementation of {@link com.sindice.fusepooladapter.storage.InputTripleStore } that uses the Jena RDF framework
  *
  *
  */

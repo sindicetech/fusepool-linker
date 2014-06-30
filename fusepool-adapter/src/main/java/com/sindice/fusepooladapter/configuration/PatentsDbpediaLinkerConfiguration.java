@@ -1,6 +1,9 @@
-package com.sindice.fusepooladapter;
+package com.sindice.fusepooladapter.configuration;
+
 
 /**
+ * Concrete implementation of LinkerConfiguration
+ * Holds default configuration for interlinking Patents (marc) with companies from dbpedia
  *
  */
 public class PatentsDbpediaLinkerConfiguration extends LinkerConfiguration {
@@ -14,8 +17,8 @@ public class PatentsDbpediaLinkerConfiguration extends LinkerConfiguration {
             +
 
             "SELECT ?agent ?agentName ?addressUri ?addressCountryUri ?addressLocality ?streetAddress WHERE {  \n"
-            + "  ?agent a sumo:CognitiveAgent . \n"
-            + "?agent rdfs:label ?agentName . \n"
+            + "  ?agent a sumo:CognitiveAgent ; \n"
+            + "         rdfs:label ?agentName . \n"
             + "OPTIONAL {  \n"
             + "?agent schema:address  ?addressUri . \n"
             + "OPTIONAL { ?addressUri schema:addressCountry ?addressCountryUri .} \n"
@@ -23,7 +26,8 @@ public class PatentsDbpediaLinkerConfiguration extends LinkerConfiguration {
             + "OPTIONAL { ?addressUri schema:streetAddress ?streetAddress .  }  \n"
             + "} \n" + "} ORDER BY ?agent ";
 
-    private static String dbpediaSparql = "PREFIX foaf:        <http://xmlns.com/foaf/0.1/>\n" +
+    private static String dbpediaSparql = 
+            "PREFIX foaf:        <http://xmlns.com/foaf/0.1/>\n" +
             "PREFIX rdfs:        <http://www.w3.org/2000/01/rdf-schema#>\n" +
             "PREFIX owl:         <http://www.w3.org/2002/07/owl#>\n" +
             "PREFIX dbpedia-owl: <http://dbpedia.org/ontology/> \n" +

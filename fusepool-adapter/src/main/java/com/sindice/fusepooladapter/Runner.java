@@ -15,12 +15,9 @@
  */
 package com.sindice.fusepooladapter;
 
-import eu.fusepool.datalifecycle.Interlinker;
-import java.io.File;
-import java.io.FileInputStream;
-import java.util.Date;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
+
 import org.apache.clerezza.rdf.core.MGraph;
 import org.apache.clerezza.rdf.core.TripleCollection;
 import org.apache.clerezza.rdf.core.serializedform.Parser;
@@ -29,6 +26,8 @@ import org.apache.stanbol.commons.indexedgraph.IndexedMGraph;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
+
+import eu.fusepool.datalifecycle.Interlinker;
 
 /**
  *

@@ -37,6 +37,8 @@ import org.supercsv.prefs.CsvPreference;
 import java.io.File;
 import java.io.IOException;
 import java.io.Writer;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -50,11 +52,13 @@ public class ConfigurableSesameToCsvInputStore implements InputTripleStore {
 	private final String query;
     private final Writer writer;
     private final CsvConfig config;
+    private final String tmpRootDir;
 
-    public ConfigurableSesameToCsvInputStore(Writer writer, String query) {
+    public ConfigurableSesameToCsvInputStore(Writer writer, CsvConfig config, String query, String tmpRootDir) {
         this.writer = writer;
         this.query = query;
-        this.config = SparqlToCsvHeader.transform(query);
+        this.config = config;
+        this.tmpRootDir = tmpRootDir;
     }
 
 	/**
@@ -62,9 +66,14 @@ public class ConfigurableSesameToCsvInputStore implements InputTripleStore {
 	 */
 	@Override
 	public long populate(TripleCollection triples) {
-        File tmpDir = com.google.common.io.Files.createTempDir();
+        File tmpDir = null;
+        try {
+            tmpDir = Files.createTempDirectory(Paths.get(tmpRootDir), "sesame-store-").toFile();
+        } catch (IOException e) {
+            throw new RuntimeException("Couldn't create temporary directory in " + tmpRootDir, e);
+        }
 
-		logger.info("Creating Sesame Native store in " + tmpDir);
+        logger.info("Creating Sesame Native store in " + tmpDir);
 
 		Repository repo = new SailRepository(new NativeStore(tmpDir));
 		try {
@@ -119,9 +128,7 @@ public class ConfigurableSesameToCsvInputStore implements InputTripleStore {
 							+ e.getMessage(), e);
 		}
 
-        //SafeDeleter.delete(tmpDir.getAbsolutePath());
-
-		return size; // TODO change interface
+		return size;
 	}
 
 	private Map<String, Object> toMap(BindingSet set) {

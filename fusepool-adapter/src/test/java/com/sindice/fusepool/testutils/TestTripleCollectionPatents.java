@@ -31,7 +31,6 @@ import org.apache.clerezza.rdf.core.serializedform.Parser;
  * Immutable test instance for tests
  *
  */
-
 public class TestTripleCollectionPatents implements TripleCollection {
 	private Graph testGraph;
 	

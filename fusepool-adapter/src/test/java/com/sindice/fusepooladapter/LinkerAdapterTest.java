@@ -34,6 +34,19 @@ public class LinkerAdapterTest {
 
     @Test
     public void testSmallDataFile() throws IOException {
+        PatentLinkerAdapter adapter = new PatentLinkerAdapter();
+        TripleCollection triples = Parser.getInstance().parse(getClass().getResourceAsStream("patent-data-sample-short.ttl"), SupportedFormat.TURTLE);
+        TripleCollection resultTriples = adapter.interlink(triples);
+        Assert.assertTrue("No interlink found, but for example urn:x-temp:/id/21bb523d-390a-4713-9026-06c37f78881c"
+                + " and urn:x-temp:/id/2504abd0-7ee7-45ef-88df-ad318ec33869 should match",
+                resultTriples.size() > 0);
+    }
+
+    /*
+    a modification of testSmallDataFile() for debugging
+     */
+    @Test
+    public void testSmallDataFileWithDebugging() throws IOException {
         DebuggingLinkerAdapter adapter = new DebuggingLinkerAdapter(PatentsLinkerConfiguration.getInstance()); //new PatentLinkerAdapter();
         TripleCollection triples = Parser.getInstance().parse(getClass().getResourceAsStream("patent-data-sample-short.ttl"), SupportedFormat.TURTLE);
         TripleCollection resultTriples = adapter.interlink(triples);

@@ -71,7 +71,7 @@ public class LinkerAdapterHelperTest {
 	 *  Output is stored to the specified outpath - another Jena TDB store.
 	 * 
 	 */
-	//@Ignore
+	@Ignore
 	@Test
 	public void testDeduplicationFull() throws IOException {
 		

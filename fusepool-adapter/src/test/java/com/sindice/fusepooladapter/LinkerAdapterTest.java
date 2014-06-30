@@ -43,20 +43,6 @@ public class LinkerAdapterTest {
         adapter.analyze(2);
     }
 
-    @Ignore
-    @Test
-    public void compareRecords() {
-//        DebuggingLinkerAdapter.compare(
-//                "/tmp/fusepool-linker-1F4DAB/adapter-4335165401058607631/lucene-interlink-2103959415636551051",
-//                PatentsLinkerConfiguration.getInstance().getDukeConfiguration(),
-//                "urn:x-temp:/id/21bb523d-390a-4713-9026-06c37f78881c", "urn:x-temp:/id/2504abd0-7ee7-45ef-88df-ad318ec33869");
-//        DebuggingLinkerAdapter.analyze("/tmp/fusepool-linker-1F4DAB/adapter-4335165401058607631/lucene-interlink-2103959415636551051",
-//                PatentsLinkerConfiguration.getInstance().getDukeConfiguration(),
-//                5);
-        DebuggingLinkerAdapter.analyze("/tmp/fusepool-linker-1F4DAB/adapter-3930029187941568328/lucene-interlink-7074456329884731500", PatentsLinkerConfiguration.getInstance().getDukeConfiguration(),
-                5);
-    }
-
     @Test
     public void testSmallDataInterlinkingFile() throws IOException {
         LinkerAdapter adapter = new PatentsDbpediaLinkerAdapter();

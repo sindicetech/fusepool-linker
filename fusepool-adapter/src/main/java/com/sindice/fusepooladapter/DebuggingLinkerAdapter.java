@@ -269,8 +269,4 @@ public class DebuggingLinkerAdapter extends GenericLinkerAdapter {
 
         logger.info("\t\tOverall: " + prob);
     }
-
-    public static void main(String...args) {
-
-    }
 }

@@ -37,6 +37,7 @@ import eu.fusepool.datalifecycle.Interlinker;
 public class Runner {
     
 	
+    private Interlinker deduplicator;
     private Interlinker linker;
     private Parser parser;
     
@@ -45,19 +46,39 @@ public class Runner {
     }
     
     @GET
-    public String test() throws Exception {
+    @Path("/dedup")
+    public String dedup() throws Exception {
+        System.out.println("Deduplicating");
         MGraph mGraph = new IndexedMGraph();
         parser.parse(mGraph,getClass().getResourceAsStream("patent-data-sample-short.ttl"), SupportedFormat.TURTLE);
-        TripleCollection interlinks = linker.interlink(mGraph, mGraph);
+        TripleCollection interlinks = deduplicator.interlink(mGraph, mGraph);
         return "found "+interlinks.size()+" links in patent-data-sample-short.ttl";
     }
 
-    @Reference(target = "(component.name=com.sindice.com.sindice.fusepooladapter.LinkerAdapter)")
+    @GET
+    @Path("/link")
+    public String link() throws Exception {
+        System.out.println("Linking");
+        MGraph mGraph = new IndexedMGraph();
+        parser.parse(mGraph,getClass().getResourceAsStream("patent-data-sample-short.ttl"), SupportedFormat.TURTLE);
+        TripleCollection interlinks = deduplicator.interlink(mGraph, mGraph);
+        return "found "+interlinks.size()+" links in patent-data-sample-short.ttl";
+    }
+
+    @Reference(target = "(component.name=com.sindice.com.sindice.fusepooladapter.PatentLinkerAdapter)")
+    public void setDeduplicator(Interlinker deduplicator) {
+        this.deduplicator = deduplicator;
+    }
+    public void unsetDeduplicator(Interlinker deduplicator) {
+        this.deduplicator = null;
+    }
+
+    @Reference(target = "(component.name=com.sindice.com.sindice.fusepooladapter.PatentsDbpediaLinkerAdapter)")
     public void setLinker(Interlinker linker) {
         this.linker = linker;
     }
     public void unsetLinker(Interlinker linker) {
-        this.linker = null;
+        this.deduplicator = null;
     }
 
     @Reference

@@ -21,6 +21,9 @@ public class PatentLinkerAdapter extends LinkerAdapter{
 
 	@Override
 	public TripleCollection interlink(TripleCollection dataset1, TripleCollection dataset2) {
+        if (dataset1 == dataset2) {
+            return interlink(dataset1);
+        }
 		throw new UnsupportedOperationException("Not supported. Use PatentsDbpediaLinkerAdapter");
 	}
 

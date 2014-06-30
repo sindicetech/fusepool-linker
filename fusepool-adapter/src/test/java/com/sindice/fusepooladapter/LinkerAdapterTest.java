@@ -45,6 +45,7 @@ public class LinkerAdapterTest {
     /*
     a modification of testSmallDataFile() for debugging
      */
+    @Ignore
     @Test
     public void testSmallDataFileWithDebugging() throws IOException {
         DebuggingLinkerAdapter adapter = new DebuggingLinkerAdapter(PatentsLinkerConfiguration.getInstance()); //new PatentLinkerAdapter();

@@ -70,5 +70,17 @@ Duke's performance can be improved also by increasing heap and Duke's deduplicat
 batch size, reducing lucene query result set by setting the `max-search-hits`
 LuceneDatabase parameter, etc.
 
+# Running inside the Fusepool Platform
+Build Fusepool platform and run it:
+
+             cd launcher/target
+             java -Xmx1024M -XX:MaxPermSize=400M -Xss512k -jar launcher-0.1-SNAPSHOT.jar
+
+Then access http://localhost:8080/system/console/bundles to install the linker and adapter bundles.
+
+To examine Fusepool logs, first locate them at http://localhost:8080/system/console/slinglog
+
+
+
 [1]: https://github.com/larsga/Duke
 [2]: https://code.google.com/p/duke/

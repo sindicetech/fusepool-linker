@@ -1,86 +1,86 @@
+# Fusepool Linker
+
+# Build
+Currently, you have to clone and build https://github.com/fusepool/fusepool-platform and modify the main `pom.xml`
+to point to the platform: `<relativePath>../../fusepool-platform</relativePath>`.
+
+Then build with Maven as usual: `mvn clean install -DskipTests`
+
 # Fusepool Adapter
 
 Fusepool adapter is an adapter between the Fusepool Clerezza-based interface and the Fusepool Linker.
 
 The adapter implements the required interface and takes care of the workflow and input and output conversions.
 
-The main class is the LinkerAdapter with the method 
-**TripleCollection interlink(TripleCollection dataToInterlink)**
-
-The LinkerAdapter class needs the following configuration arguments:
-
-*  Duke configuration file name or path
-*  Path to input data store 
-*  Path to output data store  
-*  Number of threads to run Duke
-
-There are two constructors. The first one uses directly provided arguments and the second one reads arguments 
-from a property file the name of which is passed to the constructor.
-
-Fusepool adapter depends on Fusepool linker, therefore they should be built as follows:
-
-```
-cd fusepool-linker
-mvn install
-cd ../fusepool-adapter
-mvn install
-```
+The main class is the LinkerAdapter which is abstract and has concrete implementation for specific datasets and dataset
+combinations.
 
 ## Configuration and JVM settings
 3GB heap size and use of huge pages are recommended.
 
 The recommended number of threads to run LinkerAdapter, is (#cores-2) on a dedicated machine. 
 
-To test the linking quickly, you can use the LinkerAdapterTest class. It contains methods (all @Ignore-d by default)
+To test the linking quickly, you can use the LinkerAdapterHelperTest class. It contains methods (all @Ignore-d by default)
 to help load the initial store with the input dataset and to run the full deduplication test.
 
-The LinkerAdapterTest.testFull() uses the patents-jena-jdbc.xml configuration. The recommended configuration is 
-conf-final.xml which also employs cleaners for higher precision.
+The GenericLinkerAdapter class can be used for deduplication and interlinking of any datasets. It has to be provided
+with the respective configuration.
 
 # Fusepool Linker
 
-The Fusepool Linker deduplicates triples using [Duke][1]. This version 
-deduplicates only within a single dataset but can be extended for linking.
+The Fusepool Linker deduplicates and interlinks triple datasets using [Duke][1].
 
 The main entry point is the DukeRunner class that executes Duke and takes care of 
-loading input and storing output. Loading and storing is done via JDBC. Currently,
-the only tested JDBC driver is the Jena JDBC driver. Other drivers, such as the
-Virtuoso JDBC driver should be possible to use with small adjustments. 
-For example, a SPARQL query has to start with the "sparql" keyword for Virtuoso
-but not for Jena. 
-
-DukeRunner is configured from external configuration which is on the classpath by
-default. See the src/main/resources/ folder. DukeRunner configures Duke with one
-such configuration file and then modifies the configuration to pass on the JDBC
-input source and also to set the level of concurrency with which Duke should run.
-
-DukeRunner is intended to be run in the same JVM as the user of the class runs in.
-It is however prepared to be run separately too with minor modifications.
+starting Duke and storing output.
 
 Currently, DukeRunner is executed from the LinkerAdapter class in the 
 fusepool-adapter project.
 
-## Configuring Duke
-Example *.xml configuration is provided in the src/main/resources/. Note that 
+# Duke
+Example Duke \*.xml configurations are provided in the src/main/resources/. Note that
 deduplication is very sensitive to configuration parameters and it has to be 
-adjusted for a given dataset. For deduplication of agents in the patent dataset
-example we implemented for instance special address and name cleaners. Proper
-comparators and thresholds have to be chosen for each record field.
+adjusted for a given dataset. For deduplication of agents in the MAREC patent
+dataset example we implemented for instance special address and name cleaners.
+Proper comparators and thresholds have to be chosen for each record field.
 
-[Duke provides some documentation][2] of all the parameters but it is necessary to
-refer to its JavaDocs and source code too. 
+[Duke provides documentation][2] of all the parameters.
 
-## Performance and results
+## Output triples
 
 If agents A and B match then both triples A owl:sameAs B and B owl:sameAs A are
 generated and stored. 
 
-### Improving performance
+## Debugging and tuning
+Debugging and tuning the interlinking process can be a little tricky with Duke.
+That's why we provide the DebuggingLinkerAdapter which serves as a nearly drop-in
+replacement of the GenericLinkerAdapter and provides additional information useful
+for debugging in the logs.
+
+See LinkerAdapterTest.testSmallDataFile() and LinkerAdapterTest.testSmallDataFileWithDebugging()
+for an example how to use the DebuggingLinkerAdapter.
+LinkerAdapterHelperTest.compareRecords() shows how to compare specific records given a path
+to a LuceneDatabase stored by previously running Duke (for example with the DebuggingLinkerAdapter).
+DebuggingLinkerAdapter's JavaDoc explains log output in detail.
+
+## Improving performance
 Duke uses Lucene fuzzy matching by default. This is very slow and disabled by 
-default in the Linker. 
+default in the provided configurations.
 
 Duke's performance can be improved also by increasing heap and Duke's deduplication
-batch size, etc. 
+batch size, reducing lucene query result set by setting the `max-search-hits`
+LuceneDatabase parameter, etc.
+
+# Running inside the Fusepool Platform
+Build Fusepool platform and run it:
+
+             cd launcher/target
+             java -Xmx1024M -XX:MaxPermSize=400M -Xss512k -jar launcher-0.1-SNAPSHOT.jar
+
+Then access http://localhost:8080/system/console/bundles to install the linker and adapter bundles.
+
+To examine Fusepool logs, first locate them at http://localhost:8080/system/console/slinglog
+
+
 
 [1]: https://github.com/larsga/Duke
 [2]: https://code.google.com/p/duke/

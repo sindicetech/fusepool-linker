@@ -1,11 +1,12 @@
-/*
- * Created by Sindice LTD http://sindicetech.com
- * Sindice LTD licenses this file to You under the Apache License, Version 2.0
- * (the "License"); you may not use this file except in compliance with
- * the License.  You may obtain a copy of the License at
+/* 
+ * Copyright 2014 Sindice LTD http://sindicetech.com
  *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
  *     http://www.apache.org/licenses/LICENSE-2.0
- *
+ * 
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -39,7 +40,7 @@ import com.hp.hpl.jena.tdb.TDBFactory;
 import com.hp.hpl.jena.tdb.sys.SystemTDB;
 /**
  *
- * implementation of {@link com.sindice.fusepooladapter.storage.InputTripleStore } that uses Jena rdf framework
+ * An implementation of {@link com.sindice.fusepooladapter.storage.InputTripleStore } that uses the Jena RDF framework
  *
  *
  */
@@ -72,7 +73,7 @@ public class JenaInputStoreImpl implements InputTripleStore {
    * cleans and populate the triplestore by triples from input collection 
    */
   @Override
-  public int populate(TripleCollection triples) {
+  public long populate(TripleCollection triples) {
     Path dataPath = Paths.get(datafolder);
 	try {
 		if (Files.exists(dataPath)) {

@@ -1,11 +1,12 @@
-/*
- * Created by Sindice LTD http://sindicetech.com
- * Sindice LTD licenses this file to You under the Apache License, Version 2.0
- * (the "License"); you may not use this file except in compliance with
- * the License.  You may obtain a copy of the License at
+/* 
+ * Copyright 2014 Sindice LTD http://sindicetech.com
  *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
  *     http://www.apache.org/licenses/LICENSE-2.0
- *
+ * 
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -28,16 +29,22 @@ import com.hp.hpl.jena.tdb.TDB;
 import com.hp.hpl.jena.tdb.TDBFactory;
 import com.sindice.fusepool.matchers.SimpleTriple;
 
-public class JenaAdapter implements TripleWriter {
+/**
+ * A queued writer that creates a Jena TDB store and populates it with added triples.
+ *
+ * The writer's writing thread must be started by calling the {@link #init()} method and it must be stopped by
+ * calling the {@link #stop()} method.
+ */
+public class JenaTripleWriter implements TripleWriter {
 	private final static Logger logger = LoggerFactory
-			.getLogger(JenaAdapter.class);
+			.getLogger(JenaTripleWriter.class);
 	private static final SimpleTriple SENTINEL = new SimpleTriple("SENTINEL", "SENTINEL", "SENTINEL");
 	private final BlockingQueue<SimpleTriple> queue = new ArrayBlockingQueue<SimpleTriple>(
 			10000);
     private final String datafolder;
     private volatile Thread thread;
 
-	public JenaAdapter(String datafolder) {
+	public JenaTripleWriter(String datafolder) {
 		this.datafolder = datafolder;
 	}
 	
@@ -47,7 +54,7 @@ public class JenaAdapter implements TripleWriter {
 			queue.put(triple);
 			return true;
 		} catch (InterruptedException e) {
-			logger.error("interupted during add", e);
+			logger.error("Interrupted during add", e);
 		}
 		return false;
 	}
@@ -61,8 +68,6 @@ public class JenaAdapter implements TripleWriter {
 		Model model = dataset.getDefaultModel();
 		model.removeAll();
 
-
-
 		// new transaction for writing
 
 		int cnt = 0;
@@ -72,7 +77,7 @@ public class JenaAdapter implements TripleWriter {
 				try {
 					triple = queue.take();
 				} catch (InterruptedException e) {
-					logger.error("interupted waiting for triple to process", e);
+					logger.error("Interrupted waiting for triples to process", e);
 				}
 				if (triple == SENTINEL){
 					break;
@@ -93,13 +98,13 @@ public class JenaAdapter implements TripleWriter {
 	}
 
 	public void stop() {
-		logger.info("adapter stopped");
+		logger.info("Adapter stopped");
 		add(SENTINEL);
 		//wait for me 
 		try {
 			thread.join();
 		} catch (InterruptedException e) {
-			logger.error("interupted before storing thread finished", e);
+			logger.error("Interrupted before storing thread finished", e);
 		}
 	}
 
@@ -111,7 +116,7 @@ public class JenaAdapter implements TripleWriter {
 
 	@Override
 	public void init() {
-		this.thread = new Thread(this,"triplesWritter");
+		this.thread = new Thread(this,"JenaTripleWriter");
 		this.thread.start();
 	}
 

@@ -23,9 +23,9 @@
     </encoder>
   </appender>
   <logger name="com.sindice" level="DEBUG" />
-  
+
   <root level="INFO">
-  <!--   <appender-ref ref="FILE"/> -->
+     <appender-ref ref="FILE"/>
      <appender-ref ref="STDOUT"/> 
   </root>
   

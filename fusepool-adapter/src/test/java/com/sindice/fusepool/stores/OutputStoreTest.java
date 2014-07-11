@@ -1,11 +1,12 @@
-/*
- * Created by Sindice LTD http://sindicetech.com
- * Sindice LTD licenses this file to You under the Apache License, Version 2.0
- * (the "License"); you may not use this file except in compliance with
- * the License.  You may obtain a copy of the License at
+/* 
+ * Copyright 2014 Sindice LTD http://sindicetech.com
  *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
  *     http://www.apache.org/licenses/LICENSE-2.0
- *
+ * 
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -21,6 +22,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
+import com.sindice.fusepooladapter.storage.JenaStoreTripleCollection;
 import org.apache.clerezza.rdf.core.Triple;
 import org.apache.clerezza.rdf.core.UriRef;
 import org.apache.clerezza.rdf.core.impl.PlainLiteralImpl;
@@ -34,7 +36,6 @@ import com.hp.hpl.jena.query.ReadWrite;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.tdb.TDB;
 import com.hp.hpl.jena.tdb.TDBFactory;
-import com.sindice.fusepooladapter.storage.OutputStore;
 
 public class OutputStoreTest {
 
@@ -58,10 +59,10 @@ public class OutputStoreTest {
     Set<Triple> expectedSet = new HashSet<Triple>();
     expectedSet.add(testTriple1);
     expectedSet.add(testTriple);
-    OutputStore store = null;
+    JenaStoreTripleCollection store = null;
     try {
       String tmpDataPath = folder.newFolder("data").getAbsolutePath();
-      store = new OutputStore(tmpDataPath);
+      store = new JenaStoreTripleCollection(tmpDataPath);
       store.clean();
       Dataset dataset = TDBFactory.createDataset(tmpDataPath);
       dataset.begin(ReadWrite.WRITE);

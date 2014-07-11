@@ -11,7 +11,7 @@
       <comparator>no.priv.garshol.duke.comparators.JaccardIndexComparator</comparator>
       <low>0.1</low>
       <high>0.9</high>
-    </property>    
+    </property>
     <property>
       <name>COUNTRY</name>
       <comparator>no.priv.garshol.duke.comparators.ExactComparator</comparator>

@@ -1,15 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-        <parent>
-            <groupId>eu.fusepool</groupId>
-            <artifactId>fusepool-linker-parent</artifactId>
-            <version>0.1-SNAPSHOT</version>
-        </parent>
+	<parent>
+		<groupId>eu.fusepool</groupId>
+		<artifactId>fusepool-linker-parent</artifactId>
+		<version>0.1-SNAPSHOT</version>
+	</parent>
 	<groupId>com.sindice</groupId>
 	<artifactId>fusepool-linker</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-        <packaging>bundle</packaging>
+	<packaging>bundle</packaging>
 	<name>Fusepool Duke Linker</name>
 
 	<build>
@@ -53,7 +54,7 @@
 		<dependency>
 			<groupId>no.priv.garshol.duke</groupId>
 			<artifactId>duke</artifactId>
-			<version>1.2-jakub-SNAPSHOT</version>
+			<version>1.2</version>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
@@ -103,23 +104,41 @@
 			<groupId>ch.qos.logback</groupId>
 			<artifactId>logback-classic</artifactId>
 			<version>1.1.1</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-log4j12</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-api</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>jcl-over-slf4j</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>log4j</groupId>
+                    <artifactId>log4j</artifactId>
+                </exclusion>
+            </exclusions>
 		</dependency>
-                
-                <dependency>
-                    <groupId>org.apache.geronimo.specs</groupId>
-                    <artifactId>geronimo-j2ee_1.4_spec</artifactId>
-                    <version>1.1</version>
-                </dependency>
-                <dependency>
-                    <groupId>org.mapdb</groupId>
-                    <artifactId>mapdb</artifactId>
-                    <version>0.9.0</version>
-                </dependency>
-<dependency> 
-            <groupId>net.sf.opencsv</groupId> 
-            <artifactId>opencsv</artifactId> 
-            <version>2.3</version> 
-</dependency> 
-                
+
+		<dependency>
+			<groupId>org.apache.geronimo.specs</groupId>
+			<artifactId>geronimo-j2ee_1.4_spec</artifactId>
+			<version>1.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.mapdb</groupId>
+			<artifactId>mapdb</artifactId>
+			<version>0.9.0</version>
+		</dependency>
+		<dependency>
+			<groupId>net.sf.opencsv</groupId>
+			<artifactId>opencsv</artifactId>
+			<version>2.3</version>
+		</dependency>
+
 	</dependencies>
 </project>

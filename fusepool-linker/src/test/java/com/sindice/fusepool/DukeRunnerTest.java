@@ -1,11 +1,12 @@
-/*
- * Created by Sindice LTD http://sindicetech.com
- * Sindice LTD licenses this file to You under the Apache License, Version 2.0
- * (the "License"); you may not use this file except in compliance with
- * the License.  You may obtain a copy of the License at
+/* 
+ * Copyright 2014 Sindice LTD http://sindicetech.com
  *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
  *     http://www.apache.org/licenses/LICENSE-2.0
- *
+ * 
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -30,7 +31,6 @@ import no.priv.garshol.duke.comparators.Levenshtein;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.sindice.fusepool.matchers.CollectingMatchListener;
 import com.sindice.fusepool.stores.SetTripleWriter;
 
 public class DukeRunnerTest extends DukeBaseTest {
@@ -51,14 +51,6 @@ public class DukeRunnerTest extends DukeBaseTest {
 	}
 
 	@Test
-	public void testSetup() {
-		@SuppressWarnings("unused")
-		DukeRunner duke = new DukeRunner("conf3.xml");
-		duke = new DukeRunner("conf3.xml",
-				new CollectingMatchListener(new SetTripleWriter()));
-	}
-
-	@Test
 	public void testCollectingMatches() {
 		SetTripleWriter matches = new SetTripleWriter();
 
@@ -67,10 +59,8 @@ public class DukeRunnerTest extends DukeBaseTest {
 	    records.add(DukeBaseTest.makeRecord("ID", "2", "NAME", "aaaaa", "EMAIL", "BBBBB"));
 
 		config.addDataSource(0, new TestDataSource(records));
-		DukeRunner duke = new DukeRunner(config);
-		
-		duke.addMatchListener(new CollectingMatchListener(matches));
-			    
+		DukeRunner duke = new DukeRunner(config, matches, 1);
+
 	    duke.run();
 	    
 	    assertEquals(2, matches.size());		

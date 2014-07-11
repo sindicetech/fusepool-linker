@@ -1,0 +1,19 @@
+<urn:x-temp:/id/1ab8117f-b7bc-4884-9839-f264e4948b86>
+        a       <http://schema.org/PostalAddress> ;
+        <http://schema.org/addressCountry>
+                <urn:x-temp:/code/country/LU> ;
+        <http://schema.org/addressLocality>
+                "L-1019 Luxembourg" ;
+        <http://schema.org/streetAddress>
+                "Bâtiment Jean Monnet Plateau du Kirchberg Boíte Postale 1907" .
+
+
+<urn:x-temp:/id/35d34246-9f50-4f02-80f2-5289cb380ebc>
+        a                            <http://www.owl-ontologies.com/sumo.owl#CognitiveAgent> , <http://xmlns.com/foaf/0.1/Agent> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "EUROPÄISCHE ATOMGEMEINSCHAFT (EURATOM)" ;
+        <http://schema.org/address>  <urn:x-temp:/id/1ab8117f-b7bc-4884-9839-f264e4948b86> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#applicantOf>
+                <urn:x-temp:/doc/patent/EP-0000001-A1> ;
+        <http://xmlns.com/foaf/0.1/name>
+                "EUROPÄISCHE ATOMGEMEINSCHAFT (EURATOM)" .

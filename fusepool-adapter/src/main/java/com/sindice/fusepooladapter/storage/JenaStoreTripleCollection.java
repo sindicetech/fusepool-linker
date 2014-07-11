@@ -1,11 +1,12 @@
-/*
- * Created by Sindice LTD http://sindicetech.com
- * Sindice LTD licenses this file to You under the Apache License, Version 2.0
- * (the "License"); you may not use this file except in compliance with
- * the License.  You may obtain a copy of the License at
+/* 
+ * Copyright 2014 Sindice LTD http://sindicetech.com
  *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
  *     http://www.apache.org/licenses/LICENSE-2.0
- *
+ * 
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -40,16 +41,14 @@ import com.hp.hpl.jena.rdf.model.StmtIterator;
 import com.hp.hpl.jena.tdb.TDBFactory;
 
 /**
- * storage for output graph
- * 
- * 
+ * A {@link TripleCollection} implementation for reading a Jena TDB store.
  */
-public class OutputStore implements TripleCollection {
+public class JenaStoreTripleCollection implements TripleCollection {
   private final String datafolder;
   private Dataset dataset;
   private final Jena2TriaUtil j2t;
 
-  public OutputStore(String datafolder) {
+  public JenaStoreTripleCollection(String datafolder) {
     Path dataPath = Paths.get(datafolder);
     if (Files.exists(dataPath)){
       if (! Files.isDirectory(dataPath)){
@@ -64,40 +63,9 @@ public class OutputStore implements TripleCollection {
    * cleans backing triplestore
    */
   public void clean() {
-    try {
-      Path dataPath = Paths.get(datafolder);
-      if (Files.exists(dataPath)){
-        DirectoryStream<Path> files = Files.newDirectoryStream(dataPath);
-        if (files != null) {
-			  for (Path filePath : files) {
-				  try {
-					  Files.delete(filePath);
-				  } catch (IOException ex) {
-					  for (int i = 0; i < 50; i++) {
-						  try {
-							  System.gc();
-							  Files.delete(filePath);
-						  } catch (IOException ex1) {
-							  try {
-								  Thread.sleep(10);
-							  } catch (InterruptedException ex2) {
-								  Thread.currentThread().interrupt();
-							  }
-							  continue;
-						  }
-						  break;
-					  }
-				  }
-				  if (filePath.toFile().exists()) {
-					  throw new IOException("delete failed: "+filePath);
-				  }
-			  }
-		  }
-      }
-    } catch (IOException e) {
-      throw new RuntimeException("wrong output data path", e);
-    }
+    SafeDeleter.delete(datafolder);
   }
+
   /**
    * prepares collection for reading intended to be used after backing triple store is populated
    */

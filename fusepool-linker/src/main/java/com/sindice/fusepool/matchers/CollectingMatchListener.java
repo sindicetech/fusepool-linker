@@ -1,11 +1,12 @@
-/*
- * Created by Sindice LTD http://sindicetech.com
- * Sindice LTD licenses this file to You under the Apache License, Version 2.0
- * (the "License"); you may not use this file except in compliance with
- * the License.  You may obtain a copy of the License at
+/* 
+ * Copyright 2014 Sindice LTD http://sindicetech.com
  *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
  *     http://www.apache.org/licenses/LICENSE-2.0
- *
+ * 
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -27,13 +28,8 @@ import com.sindice.fusepool.stores.TripleWriter;
 /**
  * Duke {@link MatchListener} to collect matches to a given collection.
  * 
- * If the passed collection implements {@link Closeable} then calls close() at
+ * If the passed collection implements {@link AutoCloseable} then calls close() at
  * the end of processing.
- * 
- * 
- * @param <T>
- *            A triple type that is the result of converting a
- *            {@link SimpleTriple} via the given {@link TripleConverter}.
  */
 public class CollectingMatchListener extends AbstractMatchListener {
 	static String ID_PROPERTY = "ID";
@@ -45,9 +41,6 @@ public class CollectingMatchListener extends AbstractMatchListener {
 	 * 
 	 * @param collection
 	 *            Collection to which to store the converted matches.
-	 * @param converter
-	 *            Converter to convert matches in the form of a
-	 *            {@link SimpleTriple} to the resulting type T.
 	 */
 	public CollectingMatchListener(TripleWriter collection) {
 		this.collection = collection;
@@ -63,12 +56,12 @@ public class CollectingMatchListener extends AbstractMatchListener {
 
 	@Override
 	public void endProcessing() {
-		if (collection instanceof Closeable) {
+		if (collection instanceof AutoCloseable) {
 			try {
-				((Closeable) collection).close();
-			} catch (IOException e) {
+				collection.close();
+			} catch (Exception e) {
 				throw new TripleStorageException(
-						"Problem while trying to commit: " + e.getMessage(), e);
+						"Problem while closing writer: " + e.getMessage(), e);
 			}
 		}
 	}

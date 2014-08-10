@@ -33,6 +33,7 @@
                     <instructions>
                         <Embed-Dependency>duke|mapdb</Embed-Dependency>
                         <Embed-Transitive>false</Embed-Transitive>
+                        <Import-Package>ch.qos.logback.*;resolution:=optional,commonj.timers;resolution:=optional,*</Import-Package>
                     </instructions>
                 </configuration>
             </plugin>

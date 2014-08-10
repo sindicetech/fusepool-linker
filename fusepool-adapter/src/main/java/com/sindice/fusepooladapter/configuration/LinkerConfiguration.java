@@ -53,7 +53,7 @@ public class LinkerConfiguration {
                         throw new RuntimeException("Problem accessing Duke dukeConfiguration: " + pathToConfig, e1);
                     }
                 }
-                throw new RuntimeException("Problem accessing Duke dukeConfiguration: " + pathToConfig);
+                throw new RuntimeException("Problem accessing Duke dukeConfiguration: " + pathToConfig, e);
             }
         } catch (SAXException e) {
             throw new RuntimeException("Problem while reading Duke dukeConfiguration " + pathToConfig, e);

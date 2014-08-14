@@ -31,9 +31,11 @@
                 <extensions>true</extensions>
                 <configuration>
                     <instructions>
-                        <Embed-Dependency>duke|mapdb</Embed-Dependency>
+                        <Embed-Dependency>duke|mapdb|fusepool-linker</Embed-Dependency>
                         <Embed-Transitive>false</Embed-Transitive>
                         <Import-Package>ch.qos.logback.*;resolution:=optional,commonj.timers;resolution:=optional,*</Import-Package>
+                        <!-- duke loads some classes dynamically 
+                        <DynamicImport-Package>*</DynamicImport-Package> -->
                     </instructions>
                 </configuration>
             </plugin>

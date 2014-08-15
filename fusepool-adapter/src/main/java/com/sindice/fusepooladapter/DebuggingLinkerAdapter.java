@@ -15,47 +15,33 @@
  */
 package com.sindice.fusepooladapter;
 
-import ch.qos.logback.classic.Level;
-import ch.qos.logback.classic.Logger;
-import ch.qos.logback.classic.LoggerContext;
-import ch.qos.logback.classic.encoder.PatternLayoutEncoder;
-import ch.qos.logback.core.Appender;
-import ch.qos.logback.core.FileAppender;
 import com.sindice.fusepooladapter.configuration.LinkerConfiguration;
 import no.priv.garshol.duke.*;
 import no.priv.garshol.duke.databases.LuceneDatabase;
 import no.priv.garshol.duke.utils.Utils;
+import org.apache.lucene.document.Document;
+import org.apache.lucene.index.DirectoryReader;
+import org.apache.lucene.index.IndexReader;
+import org.apache.lucene.store.Directory;
+import org.apache.lucene.store.FSDirectory;
+import org.apache.lucene.store.NIOFSDirectory;
 import org.slf4j.LoggerFactory;
 
-import java.io.BufferedReader;
+import java.io.File;
 import java.io.IOException;
-import java.nio.charset.Charset;
-import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 /**
  * DebuggingLinkerAdapter is a drop-in replacement for the {@link GenericLinkerAdapter} for the case when its constructed
  * with a {@link LinkerConfiguration}.
  *
- * <p><b>IMPORTANT</b>:<pre>
- *            this class assumes that a FileAppender (or a subclass such as RollingFileAppender) with name FILE is configured in logback configuration,
- *            creates an additional FileAppender for a file saved in the same directory with the same file name + "_debug.log" suffix.
- *            AND it analyzes the first lines of the log file with the "_debug.log" suffix that match the {@link #RECORD_ID_PATTERN}.
- *            (this is of course fragile as it depends on Logback keeping the same log format. It can be later changed to read record
- *            ids directly from the data sources or by custom queries of the Lucene index)
- *</pre>
- *
- * It does three things:<br>
+ * It does two things:<br>
  *     <ul>
- *     <li>sets logging level for Duke's Processor class to DEBUG (so information about matches is logged)</li>
  *     <li>makes the Lucene index persistent (so that it is available for later analysis)</li>
- *     <li>can analyze matches based on the persistent Lucene index and an additional log file</li>
+ *     <li>can analyze matches based on the persistent Lucene index</li>
  *     </ul>
  *
  * <p>After calling one of the interlink() methods, analysis can be invoked by the {@link #analyze(int)} method directly
@@ -91,18 +77,10 @@ import java.util.regex.Pattern;
  * DebuggingLinkerAdapter
  */
 public class DebuggingLinkerAdapter extends GenericLinkerAdapter {
-    private static final String FILE_APPENDER_NAME = "FILE";
-    private static final String DEBUG_FILE_APPENDER_NAME = "FILE_DEBUG";
-    private static final Logger logger = (Logger) LoggerFactory.getLogger(LinkerAdapter.class);
-
-    //example log line:
-    //16:50:00.136 [MatchThread 0] DEBUG no.priv.garshol.duke.Processor - Matching record ID: 'urn:x-temp:/id/35d34246-9f50-4f02-80f2-5289cb380ebc', NAME: 'europaische atomgemeinschaft (euratom)', COUNTRY: 'urn:x-temp:/code/country/LU', LOCALITY: 'l-1019 luxembourg', STREET: 'batiment jean monnet plateau du kirchberg boite postale 1907',  found 3 candidates
-    private static final Pattern RECORD_ID_PATTERN = Pattern.compile("^.*Matching record ID: '([^']*)'.*");
-
+    private static final org.slf4j.Logger logger = (org.slf4j.Logger) LoggerFactory.getLogger(LinkerAdapter.class);
     private Path luceneDatabasePath;
     private final Configuration dukeConfig;
     private final LuceneDatabase database;
-    private String debugFileName;
 
     public DebuggingLinkerAdapter(LinkerConfiguration linkerConfiguration) {
         super(linkerConfiguration);
@@ -110,7 +88,6 @@ public class DebuggingLinkerAdapter extends GenericLinkerAdapter {
         this.dukeConfig = linkerConfiguration.getDukeConfiguration();
         this.database = (LuceneDatabase) dukeConfig.getDatabase(false);
 
-        setDukeLogLevelToDebug();
         makeLucenePersistent();
 
         printHelpToLog();
@@ -126,38 +103,6 @@ public class DebuggingLinkerAdapter extends GenericLinkerAdapter {
         database.setPath(luceneDatabasePath.toAbsolutePath().toString());
     }
 
-    private void setDukeLogLevelToDebug() {
-        Logger processor = (Logger) LoggerFactory.getLogger(Processor.class);
-        processor.setLevel(Level.DEBUG);
-        Logger root = (Logger)LoggerFactory.getLogger(Logger.ROOT_LOGGER_NAME);
-
-        Appender appender = root.getAppender(FILE_APPENDER_NAME);
-        if (appender == null || !(appender instanceof FileAppender)) {
-            throw new RuntimeException("No file appender with name " + FILE_APPENDER_NAME + " found in Logback configuration. It needs to be there so that the file can be analyzed.");
-        }
-        FileAppender mainFileAppender = (FileAppender) root.getAppender(FILE_APPENDER_NAME);
-
-
-        FileAppender fileAppender = new FileAppender();
-        fileAppender.setName(DEBUG_FILE_APPENDER_NAME);
-        this.debugFileName = mainFileAppender.getFile() + "_debug.log";
-        fileAppender.setFile(debugFileName);
-        fileAppender.setAppend(false);
-
-        LoggerContext loggerContext = (LoggerContext) LoggerFactory.getILoggerFactory();
-        fileAppender.setContext(loggerContext);
-        PatternLayoutEncoder encoder = new PatternLayoutEncoder();
-        encoder.setContext(loggerContext);
-        encoder.setPattern("%msg%n");
-        encoder.start();
-        fileAppender.setEncoder(encoder);
-
-        root.addAppender(fileAppender);
-
-        fileAppender.start();
-
-    }
-
     public void analyze(int recordCount) {
         analyze(luceneDatabasePath.toString(), dukeConfig, recordCount);
     }
@@ -166,36 +111,46 @@ public class DebuggingLinkerAdapter extends GenericLinkerAdapter {
         LuceneDatabase db = (LuceneDatabase) config.getDatabase(false);
         db.setPath(luceneDbPath);
 
-        Logger root = (Logger)LoggerFactory.getLogger(Logger.ROOT_LOGGER_NAME);
-        FileAppender appender = (FileAppender) root.getAppender(DEBUG_FILE_APPENDER_NAME);
-        logger.info("Looking for record ids in log file " + appender.getFile() + ", pattern " + RECORD_ID_PATTERN);
+      Collection<String> recordIds = findIds(((LuceneDatabase) config.getDatabase(false)).getPath(), config.getIdentityProperties().iterator().next().getName(), recordCount);
 
-        List<String> recordIds = new ArrayList<>();
-        try (
-                BufferedReader reader = Files.newBufferedReader(Paths.get(appender.getFile()), Charset.forName("UTF-8"))
-        ) {
-            String line;
-            while ((line = reader.readLine()) != null) {
-                Matcher matcher = RECORD_ID_PATTERN.matcher(line);
-                if (!matcher.find()) {
-                    continue;
-                }
-                String recordId = matcher.group(1);
-                recordIds.add(recordId);
-                if (recordIds.size() == recordCount) {
-                    break;
-                }
-            }
-        } catch (IOException e) {
-            throw new RuntimeException("Some problem occurred", e);
-        }
-
-        logger.info(String.format("Found %d record ids: %s", recordIds.size(), recordIds));
+      logger.info(String.format("Found %d record ids: %s", recordIds.size(), recordIds));
 
         for (String id : recordIds) {
             analyzeRecord(db, config, id);
         }
     }
+
+  private static Directory openDirectory(String path) {
+    Directory directory;
+    try {
+        //directory = new MMapDirectory(new File(config.getPath()));
+        // as per http://wiki.apache.org/lucene-java/ImproveSearchingSpeed
+        // we use NIOFSDirectory, provided we're not on Windows
+        if (Utils.isWindowsOS())
+          directory = FSDirectory.open(new File(path));
+        else
+          directory = NIOFSDirectory.open(new File(path));
+    } catch (Exception e) {
+      throw new RuntimeException("Could not open Lucene database: " + e.getMessage(), e);
+    }
+
+    return directory;
+  }
+
+  private static Collection<String> findIds(String path, String idFieldName, int recordCount) {
+    List<String> ids = new ArrayList<>();
+    try {
+      IndexReader reader = DirectoryReader.open(openDirectory(path));
+
+      for (int i = 0 ; i < Math.min(recordCount, reader.numDocs()); i++) {
+        Document document = reader.document(i);
+        ids.add(document.get(idFieldName));
+      }
+      return ids;
+    } catch (IOException ex) {
+      throw new RuntimeException("Problem while trying to search Lucene index in " + path + ": " + ex.getMessage(), ex);
+    }
+  }
 
     private static void analyzeRecord(LuceneDatabase database, Configuration config, String recordId) {
         Record record = database.findRecordById(recordId);

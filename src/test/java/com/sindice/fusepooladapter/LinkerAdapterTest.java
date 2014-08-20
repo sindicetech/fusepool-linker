@@ -80,7 +80,7 @@ public class LinkerAdapterTest {
         LinkerConfiguration configuration = new LinkerConfiguration(LinkerConfiguration.loadConfig("classpath:dbpedia-csv.xml"),
                 PatentsDbpediaLinkerConfiguration.getInstance().getSparqlQuery1(),
                 PatentsDbpediaLinkerConfiguration.getInstance().getSparqlQuery2());
-        TripleCollection resultTriples = adapter.interlink(patents, companies, configuration);
+        TripleCollection resultTriples = adapter.interlink(patents, companies);
 
         Assert.assertTrue("No interlink found, but the datasets transform to identical records",
                 resultTriples.size() > 1);

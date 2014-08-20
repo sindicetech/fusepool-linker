@@ -12,6 +12,10 @@
 	<packaging>bundle</packaging>
 	<name>Fusepool Duke Linker</name>
 
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
 	<build>
 		<plugins>
 			<plugin>

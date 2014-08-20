@@ -61,7 +61,7 @@ public class Runner {
         System.out.println("Linking");
         MGraph mGraph = new IndexedMGraph();
         parser.parse(mGraph,getClass().getResourceAsStream("patent-data-sample-short.ttl"), SupportedFormat.TURTLE);
-        TripleCollection interlinks = deduplicator.interlink(mGraph, mGraph);
+        TripleCollection interlinks = linker.interlink(mGraph, mGraph);
         return "found "+interlinks.size()+" links in patent-data-sample-short.ttl";
     }
 

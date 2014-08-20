@@ -78,7 +78,7 @@ public class Runner {
         this.linker = linker;
     }
     public void unsetLinker(Interlinker linker) {
-        this.deduplicator = null;
+        this.linker = null;
     }
 
     @Reference

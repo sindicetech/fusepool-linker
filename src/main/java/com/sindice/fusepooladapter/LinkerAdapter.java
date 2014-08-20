@@ -191,10 +191,6 @@ public abstract class LinkerAdapter implements Interlinker, Deduplicator {
 
 	
     public TripleCollection interlink(TripleCollection source, TripleCollection target, LinkerConfiguration configuration) {
-        // using equals takes potentially too much time
-        if (source == target) {
-            return interlink(target, configuration);
-        }
 
         Iterator<DataSource> iterator = configuration.getDukeConfiguration().getDataSources(1).iterator();
         if (!iterator.hasNext()) {

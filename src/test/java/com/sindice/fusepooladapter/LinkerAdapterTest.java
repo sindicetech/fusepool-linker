@@ -18,7 +18,9 @@ package com.sindice.fusepooladapter;
 import com.sindice.fusepool.testutils.TestTripleCollectionPatents;
 import com.sindice.fusepooladapter.configuration.LinkerConfiguration;
 import com.sindice.fusepooladapter.configuration.PatentsDbpediaLinkerConfiguration;
+import com.sindice.fusepooladapter.configuration.PatentsDeltaLinkerConfiguration;
 import com.sindice.fusepooladapter.configuration.PatentsLinkerConfiguration;
+import org.apache.clerezza.rdf.core.Triple;
 import org.apache.clerezza.rdf.core.TripleCollection;
 import org.apache.clerezza.rdf.core.serializedform.Parser;
 import org.apache.clerezza.rdf.core.serializedform.SupportedFormat;
@@ -86,6 +88,29 @@ public class LinkerAdapterTest {
                 resultTriples.size() > 1);
     }
 
+  @Test
+  public void testPatentsDeltaInterlinkingFile() throws IOException {
+    LinkerAdapter adapter = new PatentsDeltaLinkerAdapter();
+    TripleCollection patents = Parser.getInstance().parse(getClass().getResourceAsStream("patent-data-sample-short.ttl"), SupportedFormat.TURTLE);
+    TripleCollection patentsDelta = Parser.getInstance().parse(getClass().getResourceAsStream("patent-data-sample-new-delta.ttl"), SupportedFormat.TURTLE);
+
+//    LinkerConfiguration configuration = new LinkerConfiguration(LinkerConfiguration.loadConfig(PatentsDeltaLinkerConfiguration.CONFIG_FILE),
+//        PatentsDeltaLinkerConfiguration.getInstance().getSparqlQuery1(),
+//        PatentsDeltaLinkerConfiguration.getInstance().getSparqlQuery2());
+//    adapter = new DebuggingLinkerAdapter(configuration);
+
+    TripleCollection resultTriples = adapter.interlink(patents, patentsDelta);
+
+    Assert.assertTrue("No interlink found, but the datasets transform to identical records",
+        resultTriples.size() > 1);
+
+    for (Triple triple : resultTriples) {
+      System.out.println(triple.toString());
+    }
+
+//    ((DebuggingLinkerAdapter)adapter).analyze(2);
+  }
+
     @Test
     public void testPatentDbpediaInterlinkingSmall() throws IOException {
         LinkerAdapter adapter = new PatentsDbpediaLinkerAdapter();
@@ -95,6 +120,7 @@ public class LinkerAdapterTest {
         LinkerConfiguration configuration = new LinkerConfiguration(LinkerConfiguration.loadConfig("classpath:patentDbpediaSmall-csv.xml"),
                 PatentsDbpediaLinkerConfiguration.getInstance().getSparqlQuery1(),
                 PatentsDbpediaLinkerConfiguration.getInstance().getSparqlQuery2());
+
         TripleCollection resultTriples = adapter.interlink(patents, companies, configuration);
 
         Assert.assertTrue("No interlink found, but the datasets transform to identical records",

@@ -191,7 +191,6 @@ public abstract class LinkerAdapter implements Interlinker, Deduplicator {
 
 	
     public TripleCollection interlink(TripleCollection source, TripleCollection target, LinkerConfiguration configuration) {
-
         Iterator<DataSource> iterator = configuration.getDukeConfiguration().getDataSources(1).iterator();
         if (!iterator.hasNext()) {
             throw new RuntimeException(String.format("Duke configuration must have two datasources configured, contains none."));

@@ -1,0 +1,16 @@
+<http://csarven.ca/#i>
+        a       <http://www.w3.org/ns/prov#Agent> .
+
+<urn:x-temp:/doc/family/6018003>
+        a       <http://www.patexpert.org/ontologies/pmo.owl#PatentFamily> , <http://www.w3.org/2004/02/skos/core#Collection> ;
+        <http://www.w3.org/2004/02/skos/core#notation>
+                "6018003" .
+
+<urn:x-temp:/id/037bb772-4f5b-42f8-94a8-a4ee145601bd>
+        a       <http://www.owl-ontologies.com/sumo.owl#CognitiveAgent> , <http://xmlns.com/foaf/0.1/Agent> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "FISW GMBH" ;
+        <http://www.patexpert.org/ontologies/pmo.owl#applicantOf>
+                <urn:x-temp:/doc/patent/EP-0000001-A1> ;
+        <http://xmlns.com/foaf/0.1/name>
+                "FISW GMBH" .

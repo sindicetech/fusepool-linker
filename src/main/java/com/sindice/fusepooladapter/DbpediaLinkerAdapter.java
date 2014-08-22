@@ -26,7 +26,8 @@ import eu.fusepool.datalifecycle.Interlinker;
  * A concrete implementation of {@link LinkerAdapter} for deduplication of DbPedia companies
  * 
  */
-@Component(service = Interlinker.class)
+//Disabled as not currently usable in DLC
+//@Component(service = Interlinker.class)
 public class DbpediaLinkerAdapter extends LinkerAdapter {
 
     @Override

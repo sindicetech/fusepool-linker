@@ -26,7 +26,8 @@ import eu.fusepool.datalifecycle.Interlinker;
  * A concrete implementation of {@link LinkerAdapter} for deduplication of the MAREC patents dataset
  * 
  */
-@Component(service = Interlinker.class)
+//Disabling for now (using DeltaLinker instead)
+//@Component(service = Interlinker.class)
 public class PatentLinkerAdapter extends LinkerAdapter{
 
     @Override

@@ -15,23 +15,6 @@
  */
 package com.sindice.fusepooladapter;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.Iterator;
-
-import no.priv.garshol.duke.Configuration;
-import no.priv.garshol.duke.DataSource;
-import no.priv.garshol.duke.datasources.CSVDataSource;
-import no.priv.garshol.duke.datasources.SparqlDataSource;
-
-import org.apache.clerezza.rdf.core.TripleCollection;
-import org.apache.clerezza.rdf.core.UriRef;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.sindice.fusepool.DukeRunner;
 import com.sindice.fusepool.StopWatch;
 import com.sindice.fusepool.stores.JenaTripleWriter;
@@ -40,8 +23,22 @@ import com.sindice.fusepooladapter.storage.ConfigurableSesameToCsvInputStore;
 import com.sindice.fusepooladapter.storage.CsvConfig;
 import com.sindice.fusepooladapter.storage.DukeConfigToCsvHeader;
 import com.sindice.fusepooladapter.storage.JenaStoreTripleCollection;
-
 import eu.fusepool.datalifecycle.Interlinker;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.Iterator;
+import no.priv.garshol.duke.Configuration;
+import no.priv.garshol.duke.DataSource;
+import no.priv.garshol.duke.datasources.CSVDataSource;
+import no.priv.garshol.duke.datasources.SparqlDataSource;
+import org.apache.clerezza.rdf.core.TripleCollection;
+import org.apache.clerezza.rdf.core.UriRef;
+import org.apache.clerezza.rdf.core.access.TcManager;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Implementation of linking and deduplication using Duke.
@@ -62,6 +59,7 @@ public abstract class LinkerAdapter implements Interlinker, Deduplicator {
     protected String tmpDir;
     protected String outDir;
     protected int dukeThreadNo = 2;
+    protected TcManager tcManager = null;
 
 	public LinkerAdapter() {
         // make sure our TEMP_DIR_NAME exists in the system temporary directory
@@ -183,7 +181,11 @@ public abstract class LinkerAdapter implements Interlinker, Deduplicator {
 	@Override
 	public TripleCollection interlink(TripleCollection dataToInterlink,
 			UriRef interlinkAgainst) {
-		throw new UnsupportedOperationException("Not supported yet.");
+        if (tcManager == null) {
+            throw new UnsupportedOperationException("This interlinker does not has a TcManager to allow specifying graphs by name");
+        }
+        TripleCollection dataset2 = tcManager.getTriples(interlinkAgainst);
+		return interlink(dataToInterlink, dataset2);
 	}
 
 	@Override

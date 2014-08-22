@@ -50,4 +50,7 @@ public class PatentsDeltaLinkerAdapter extends LinkerAdapter {
     protected void bindTcManager(TcManager tcManager) {
         this.tcManager = tcManager;
     }
+    protected void unbindTcManager(TcManager tcManager) {
+        this.tcManager = null;
+    }
 }

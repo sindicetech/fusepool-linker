@@ -1,0 +1,1296 @@
+<http://csarven.ca/#i>
+        a       <http://www.w3.org/ns/prov#Agent> .
+
+<urn:x-temp:/doc/family/6018003>
+        a       <http://www.patexpert.org/ontologies/pmo.owl#PatentFamily> , <http://www.w3.org/2004/02/skos/core#Collection> ;
+        <http://www.w3.org/2004/02/skos/core#notation>
+                "6018003" .
+
+<urn:x-temp:/doc/patent/DE-2161506-A1>
+        a       <http://www.patexpert.org/ontologies/pmo.owl#PatentPublication> ;
+        <http://fusepool.eu/ontologies/general#filing-office>
+                <urn:x-temp:/code/filing-office/DE> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#citedBy>
+                <urn:x-temp:/doc/patent/EP-0000001-A1> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#countryOfFiling>
+                "DE" ;
+        <http://www.patexpert.org/ontologies/pmo.owl#kindCode>
+                "A1" ;
+        <http://www.patexpert.org/ontologies/pmo.owl#publicationNumber>
+                "2161506" .
+
+<urn:x-temp:/doc/patent/EP-0000001-A1>
+        a       <http://www.patexpert.org/ontologies/pmo.owl#PatentPublication> , <http://fusepool.eu/ontologies/ecs#ContentItem> , <http://www.patexpert.org/ontologies/pso.owl#A1Document> , <http://www.w3.org/ns/prov#Entity> ;
+        <http://fusepool.eu/ontologies/general#agent>
+                <urn:x-temp:/id/07f0874f-dcee-43b9-bbbe-62521e0f20c4> ;
+        <http://fusepool.eu/ontologies/general#filing-office>
+                <urn:x-temp:/code/filing-office/EP> ;
+        <http://fusepool.eu/ontologies/general#priority-claim>
+                <urn:x-temp:/doc/patent/DE-2739689-A> ;
+        <http://purl.org/dc/elements/1.1/subject>
+                <urn:x-temp:/id/527e121a-2baf-4956-8a9b-6cb1a4a29622> , <urn:x-temp:/id/5e2818e8-a2b2-4e9f-ba9f-0492c46c1086> , <urn:x-temp:/id/7d645a48-dbeb-4a36-968b-df7a9a8c3e49> , <urn:x-temp:/id/95734b02-f43b-4e70-b0d8-f56e0e1f1329> , <urn:x-temp:/id/a00a5ccf-afd8-4673-b054-3d30b7b7f0e4> , <urn:x-temp:/id/fc78b7cd-ffe8-4b7e-9792-543ba02358c2> ;
+        <http://purl.org/dc/terms/abstract>
+                "\n         <div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\">\n            <p>Die Erfindung betrifft eine thermische Wärmepumpe, \nwelche aus einem Wärmerohr (11) besteht, in welchem der \nzwischen der Wärmeübertragungszone zur Wärmezufuhr und \nder Wärmeübertragungszone zur Wärmeabfuhr befindliche \nDampfkanal (16) einen sich über seine Länge ändernden, die \nStrömungsgeschwindigkeit des Dampfes zunächst erhöhenden \nund dann erniedrigenden Querschnitt aufweist und bei welchem \nsich im Bereich der erhöhten Dampfgeschwindigkeit \neine weitere Wärmeübertragungszone mit Wärmezufuhr oder \n-abfuhr befindet. Die erhöhte Dampfgeschwindigkeit kann im \nUnterschallbereich oder im Ueberschallbereich liegen. Die \nQuerschnittsänderung des Dampfkanals (16) im Wärmerohr \n(11) zwischen den beiden äusseren Wärmeübertragungszonen \nwird vorteilhafterweise durch einen Verdrängungskörper (13) \nmit bestimmter Oberflächenkontur bewirkt. </p>\n         </div>\n      "^^<http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral> ;
+        <http://purl.org/dc/terms/creator>
+                <http://csarven.ca/#i> ;
+        <http://purl.org/dc/terms/identifier>
+                "EP-0000001-A1" ;
+        <http://purl.org/dc/terms/issued>
+                "2014-08-21T17:13:24Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+        <http://purl.org/dc/terms/license>
+                "User acknowledges that the Information Retrieval Facility (IRF) and its third party providers retain all right, title and interest in and to this xml under applicable copyright laws. User acquires no ownership rights to this xml including but not limited to its format. User hereby accepts the terms and conditions of the Licence Agreement set forth at http://www.ir-facility.org/legal/marec/data_licence" ;
+        <http://purl.org/dc/terms/license>
+                <http://creativecommons.org/publicdomain/zero/1.0/> ;
+        <http://purl.org/dc/terms/references>
+                <urn:x-temp:/doc/patent/EP-78200013-A> ;
+        <http://purl.org/dc/terms/title>
+                "Pompe de chaleur thermique."@fr , "Thermal heat pump."@en , "Thermische Wärmepumpe."@de ;
+        <http://rdfs.org/sioc/ns#content>
+                "Pompe de chaleur thermique.\nThermal heat pump.\nThermische Wärmepumpe.\n\n         <div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\">\n            <p>Die Erfindung betrifft eine thermische Wärmepumpe, \nwelche aus einem Wärmerohr (11) besteht, in welchem der \nzwischen der Wärmeübertragungszone zur Wärmezufuhr und \nder Wärmeübertragungszone zur Wärmeabfuhr befindliche \nDampfkanal (16) einen sich über seine Länge ändernden, die \nStrömungsgeschwindigkeit des Dampfes zunächst erhöhenden \nund dann erniedrigenden Querschnitt aufweist und bei welchem \nsich im Bereich der erhöhten Dampfgeschwindigkeit \neine weitere Wärmeübertragungszone mit Wärmezufuhr oder \n-abfuhr befindet. Die erhöhte Dampfgeschwindigkeit kann im \nUnterschallbereich oder im Ueberschallbereich liegen. Die \nQuerschnittsänderung des Dampfkanals (16) im Wärmerohr \n(11) zwischen den beiden äusseren Wärmeübertragungszonen \nwird vorteilhafterweise durch einen Verdrängungskörper (13) \nmit bestimmter Oberflächenkontur bewirkt. </p>\n         </div>\n      \n" ;
+        <http://www.patexpert.org/ontologies/pmo.owl#applicant>
+                <urn:x-temp:/id/527e121a-2baf-4956-8a9b-6cb1a4a29622> , <urn:x-temp:/id/7d645a48-dbeb-4a36-968b-df7a9a8c3e49> , <urn:x-temp:/id/95734b02-f43b-4e70-b0d8-f56e0e1f1329> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#cites>
+                <urn:x-temp:/doc/patent/DE-2161506-A1> , <urn:x-temp:/doc/patent/FR-2025459-A5> , <urn:x-temp:/doc/patent/US-3532159-A> , <urn:x-temp:/doc/patent/US-3568762-A> , <urn:x-temp:/doc/patent/US-3913665-A> , <urn:x-temp:/doc/patent/US-3965970-A> , <urn:x-temp:/doc/patent/US-4018269-A> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#countryOfFiling>
+                "EP" ;
+        <http://www.patexpert.org/ontologies/pmo.owl#dateOfPublication>
+                "1978-12-20"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#inventor>
+                <urn:x-temp:/id/5e2818e8-a2b2-4e9f-ba9f-0492c46c1086> , <urn:x-temp:/id/a00a5ccf-afd8-4673-b054-3d30b7b7f0e4> , <urn:x-temp:/id/fc78b7cd-ffe8-4b7e-9792-543ba02358c2> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#kindCode>
+                "A1" ;
+        <http://www.patexpert.org/ontologies/pmo.owl#patentFamily>
+                <urn:x-temp:/doc/family/6018003> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#publicationNumber>
+                "0000001" ;
+        <http://www.w3.org/ns/prov#generatedAtTime>
+                "2014-08-21T17:13:24Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+        <http://www.w3.org/ns/prov#wasAttributedTo>
+                <http://csarven.ca/#i> ;
+        <http://www.w3.org/ns/prov#wasDerivedFrom>
+                <http://relative-uri.fake/> ;
+        <http://www.w3.org/ns/prov#wasGeneratedBy>
+                <urn:x-temp:/prov/activity/c46dc794-c592-40a2-b74a-8f9f3ad8fafe> .
+
+<urn:x-temp:/doc/patent/DE-2739689-A>
+        a       <http://www.patexpert.org/ontologies/pmo.owl#PatentPublication> ;
+        <http://fusepool.eu/ontologies/general#filing-office>
+                <urn:x-temp:/code/filing-office/DE> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#countryOfFiling>
+                "DE" ;
+        <http://www.patexpert.org/ontologies/pmo.owl#dateOfPublication>
+                "1977-09-02"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#kindCode>
+                "A" .
+
+<urn:x-temp:/id/07f0874f-dcee-43b9-bbbe-62521e0f20c4>
+        a                            <http://www.owl-ontologies.com/sumo.owl#Agent> , <http://xmlns.com/foaf/0.1/Agent> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Wey, Hans-Heinrich, Dipl.-Ing." ;
+        <http://fusepool.eu/ontologies/general#agentOf>
+                <urn:x-temp:/doc/patent/EP-0000001-A1> ;
+        <http://schema.org/address>  <urn:x-temp:/id/791d3fdd-5d82-4ed0-bd06-34a166a500a2> ;
+        <http://xmlns.com/foaf/0.1/name>
+                "Wey, Hans-Heinrich, Dipl.-Ing." .
+
+<urn:x-temp:/id/527e121a-2baf-4956-8a9b-6cb1a4a29622>
+        a       <http://xmlns.com/foaf/0.1/Agent> , <http://www.owl-ontologies.com/sumo.owl#CognitiveAgent> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "FISW GMBH" ;
+        <http://www.patexpert.org/ontologies/pmo.owl#applicantOf>
+                <urn:x-temp:/doc/patent/EP-0000001-A1> ;
+        <http://xmlns.com/foaf/0.1/name>
+                "FISW GMBH" .
+
+<urn:x-temp:/id/5e2818e8-a2b2-4e9f-ba9f-0492c46c1086>
+        a       <http://www.owl-ontologies.com/sumo.owl#Human> , <http://xmlns.com/foaf/0.1/Person> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "BUSSE CLAUS-ADOLF" ;
+        <http://www.patexpert.org/ontologies/pmo.owl#inventorOf>
+                <urn:x-temp:/doc/patent/EP-0000001-A1> ;
+        <http://xmlns.com/foaf/0.1/name>
+                "BUSSE CLAUS-ADOLF" .
+
+<urn:x-temp:/id/7d645a48-dbeb-4a36-968b-df7a9a8c3e49>
+        a                            <http://xmlns.com/foaf/0.1/Agent> , <http://www.owl-ontologies.com/sumo.owl#CognitiveAgent> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "FISW GMBH" ;
+        <http://schema.org/address>  <urn:x-temp:/id/77f56d0b-b59c-4030-8cdf-c7f4d101ccae> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#applicantOf>
+                <urn:x-temp:/doc/patent/EP-0000001-A1> ;
+        <http://xmlns.com/foaf/0.1/name>
+                "FISW GMBH" .
+
+<urn:x-temp:/id/95734b02-f43b-4e70-b0d8-f56e0e1f1329>
+        a                            <http://xmlns.com/foaf/0.1/Agent> , <http://www.owl-ontologies.com/sumo.owl#CognitiveAgent> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "EUROPÄISCHE ATOMGEMEINSCHAFT (EURATOM)" ;
+        <http://schema.org/address>  <urn:x-temp:/id/79112ad2-a0b1-42a5-bda1-04e85433b7ca> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#applicantOf>
+                <urn:x-temp:/doc/patent/EP-0000001-A1> ;
+        <http://xmlns.com/foaf/0.1/name>
+                "EUROPÄISCHE ATOMGEMEINSCHAFT (EURATOM)" .
+
+<urn:x-temp:/id/a00a5ccf-afd8-4673-b054-3d30b7b7f0e4>
+        a       <http://www.owl-ontologies.com/sumo.owl#Human> , <http://xmlns.com/foaf/0.1/Person> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "BUSSE CLAUS ADOLF" ;
+        <http://www.patexpert.org/ontologies/pmo.owl#inventorOf>
+                <urn:x-temp:/doc/patent/EP-0000001-A1> ;
+        <http://xmlns.com/foaf/0.1/name>
+                "BUSSE CLAUS ADOLF" .
+
+<urn:x-temp:/id/fc78b7cd-ffe8-4b7e-9792-543ba02358c2>
+        a                            <http://www.owl-ontologies.com/sumo.owl#Human> , <http://xmlns.com/foaf/0.1/Person> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "BUSSE, CLAUS ADOLF, DR." ;
+        <http://schema.org/address>  <urn:x-temp:/id/535707bf-26b0-482a-be2f-6fb812e8e6c9> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#inventorOf>
+                <urn:x-temp:/doc/patent/EP-0000001-A1> ;
+        <http://xmlns.com/foaf/0.1/lastName>
+                "BUSSE, CLAUS ADOLF, DR." .
+
+<urn:x-temp:/doc/patent/EP-78200013-A>
+        a       <http://www.patexpert.org/ontologies/pmo.owl#PatentPublication> ;
+        <http://fusepool.eu/ontologies/general#filing-office>
+                <urn:x-temp:/code/filing-office/EP> ;
+        <http://fusepool.eu/ontologies/general#is-representative>
+                "NO" ;
+        <http://purl.org/dc/terms/identifier>
+                "EP-78200013-A" ;
+        <http://purl.org/dc/terms/language>
+                "de" ;
+        <http://www.patexpert.org/ontologies/pmo.owl#applicationNumber>
+                "78200013" ;
+        <http://www.patexpert.org/ontologies/pmo.owl#countryOfFiling>
+                "EP" ;
+        <http://www.patexpert.org/ontologies/pmo.owl#dateOfPublication>
+                "1978-06-01"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#kindCode>
+                "A" .
+
+<urn:x-temp:/doc/patent/FR-2025459-A5>
+        a       <http://www.patexpert.org/ontologies/pmo.owl#PatentPublication> ;
+        <http://fusepool.eu/ontologies/general#filing-office>
+                <urn:x-temp:/code/filing-office/FR> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#citedBy>
+                <urn:x-temp:/doc/patent/EP-0000001-A1> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#countryOfFiling>
+                "FR" ;
+        <http://www.patexpert.org/ontologies/pmo.owl#kindCode>
+                "A5" ;
+        <http://www.patexpert.org/ontologies/pmo.owl#publicationNumber>
+                "2025459" .
+
+<urn:x-temp:/doc/patent/US-3532159-A>
+        a       <http://www.patexpert.org/ontologies/pmo.owl#PatentPublication> , <http://www.patexpert.org/ontologies/pmo.owl#GrantedPatent> ;
+        <http://fusepool.eu/ontologies/general#filing-office>
+                <urn:x-temp:/code/filing-office/US> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#citedBy>
+                <urn:x-temp:/doc/patent/EP-0000001-A1> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#countryOfFiling>
+                "US" ;
+        <http://www.patexpert.org/ontologies/pmo.owl#kindCode>
+                "A" ;
+        <http://www.patexpert.org/ontologies/pmo.owl#publicationNumber>
+                "3532159" .
+
+<urn:x-temp:/doc/patent/US-3568762-A>
+        a       <http://www.patexpert.org/ontologies/pmo.owl#PatentPublication> , <http://www.patexpert.org/ontologies/pmo.owl#GrantedPatent> ;
+        <http://fusepool.eu/ontologies/general#filing-office>
+                <urn:x-temp:/code/filing-office/US> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#citedBy>
+                <urn:x-temp:/doc/patent/EP-0000001-A1> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#countryOfFiling>
+                "US" ;
+        <http://www.patexpert.org/ontologies/pmo.owl#kindCode>
+                "A" ;
+        <http://www.patexpert.org/ontologies/pmo.owl#publicationNumber>
+                "3568762" .
+
+<urn:x-temp:/doc/patent/US-3913665-A>
+        a       <http://www.patexpert.org/ontologies/pmo.owl#PatentPublication> , <http://www.patexpert.org/ontologies/pmo.owl#GrantedPatent> ;
+        <http://fusepool.eu/ontologies/general#filing-office>
+                <urn:x-temp:/code/filing-office/US> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#citedBy>
+                <urn:x-temp:/doc/patent/EP-0000001-A1> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#countryOfFiling>
+                "US" ;
+        <http://www.patexpert.org/ontologies/pmo.owl#kindCode>
+                "A" ;
+        <http://www.patexpert.org/ontologies/pmo.owl#publicationNumber>
+                "3913665" .
+
+<urn:x-temp:/doc/patent/US-3965970-A>
+        a       <http://www.patexpert.org/ontologies/pmo.owl#PatentPublication> , <http://www.patexpert.org/ontologies/pmo.owl#GrantedPatent> ;
+        <http://fusepool.eu/ontologies/general#filing-office>
+                <urn:x-temp:/code/filing-office/US> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#citedBy>
+                <urn:x-temp:/doc/patent/EP-0000001-A1> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#countryOfFiling>
+                "US" ;
+        <http://www.patexpert.org/ontologies/pmo.owl#kindCode>
+                "A" ;
+        <http://www.patexpert.org/ontologies/pmo.owl#publicationNumber>
+                "3965970" .
+
+<urn:x-temp:/doc/patent/US-4018269-A>
+        a       <http://www.patexpert.org/ontologies/pmo.owl#PatentPublication> , <http://www.patexpert.org/ontologies/pmo.owl#GrantedPatent> ;
+        <http://fusepool.eu/ontologies/general#filing-office>
+                <urn:x-temp:/code/filing-office/US> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#citedBy>
+                <urn:x-temp:/doc/patent/EP-0000001-A1> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#countryOfFiling>
+                "US" ;
+        <http://www.patexpert.org/ontologies/pmo.owl#kindCode>
+                "A" ;
+        <http://www.patexpert.org/ontologies/pmo.owl#publicationNumber>
+                "4018269" .
+
+<urn:x-temp:/prov/activity/c46dc794-c592-40a2-b74a-8f9f3ad8fafe>
+        a       <http://www.w3.org/ns/prov#Activity> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Transformed EP-0000001-A1 data"@en ;
+        <http://www.w3.org/ns/prov#generated>
+                <urn:x-temp:/doc/patent/EP-0000001-A1> ;
+        <http://www.w3.org/ns/prov#startedAtTime>
+                "2014-08-21T17:13:24Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+        <http://www.w3.org/ns/prov#used>
+                <http://relative-uri.fake/> , <https://github.com/fusepool/patents-reengineering/src/main/resources/xsl/marec.xsl> ;
+        <http://www.w3.org/ns/prov#wasAssociatedWith>
+                <http://csarven.ca/#i> .
+
+<urn:x-temp:/id/791d3fdd-5d82-4ed0-bd06-34a166a500a2>
+        a       <http://schema.org/PostalAddress> ;
+        <http://schema.org/addressCountry>
+                <urn:x-temp:/code/country/DE> ;
+        <http://schema.org/addressLocality>
+                "81369 München" ;
+        <http://schema.org/streetAddress>
+                "c/o Kanzlei Hansmann, Vogeser und Partner Albert Rosshaupter-Strasse 65" .
+
+<urn:x-temp:/id/535707bf-26b0-482a-be2f-6fb812e8e6c9>
+        a       <http://schema.org/PostalAddress> ;
+        <http://schema.org/addressCountry>
+                <urn:x-temp:/code/country/IT> ;
+        <http://schema.org/addressLocality>
+                "I-21038 Arolo di Leggiuno (Varese)" ;
+        <http://schema.org/streetAddress>
+                "22, Via Piaggio" .
+
+<urn:x-temp:/id/77f56d0b-b59c-4030-8cdf-c7f4d101ccae>
+        a       <http://schema.org/PostalAddress> ;
+        <http://schema.org/addressCountry>
+                <urn:x-temp:/code/country/LU> .
+
+<urn:x-temp:/id/79112ad2-a0b1-42a5-bda1-04e85433b7ca>
+        a       <http://schema.org/PostalAddress> ;
+        <http://schema.org/addressCountry>
+                <urn:x-temp:/code/country/LU> ;
+        <http://schema.org/addressLocality>
+                "L-1019 Luxembourg" ;
+        <http://schema.org/streetAddress>
+                "Bâtiment Jean Monnet Plateau du Kirchberg Boíte Postale 1907" .
+
+<urn:x-temp:/doc/patent/EP-0000001-B1>
+        a       <http://www.patexpert.org/ontologies/pmo.owl#PatentPublication> , <http://fusepool.eu/ontologies/ecs#ContentItem> , <http://www.w3.org/ns/prov#Entity> , <http://www.patexpert.org/ontologies/pmo.owl#GrantedPatent> , <http://www.patexpert.org/ontologies/pso.owl#B1Document> ;
+        <http://fusepool.eu/ontologies/general#agent>
+                <urn:x-temp:/id/ba9a473d-d4a6-4e44-baac-a028f7c27188> ;
+        <http://fusepool.eu/ontologies/general#filing-office>
+                <urn:x-temp:/code/filing-office/EP> ;
+        <http://fusepool.eu/ontologies/general#priority-claim>
+                <urn:x-temp:/doc/patent/DE-2739689-A> ;
+        <http://purl.org/dc/elements/1.1/subject>
+                <urn:x-temp:/id/079741af-4612-4c7c-b262-a59086f74913> , <urn:x-temp:/id/6bb2f703-a096-4528-8d00-323c2447a000> , <urn:x-temp:/id/6d0520d8-b08c-4246-ac98-31b8730e09e7> , <urn:x-temp:/id/c5cc9256-73a5-48f6-9da0-19fa1bb793f4> , <urn:x-temp:/id/d979db2e-3c38-4c0d-86ea-0c0041d3c136> ;
+        <http://purl.org/dc/terms/creator>
+                <http://csarven.ca/#i> ;
+        <http://purl.org/dc/terms/identifier>
+                "EP-0000001-B1" ;
+        <http://purl.org/dc/terms/issued>
+                "2014-08-21T17:13:28Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+        <http://purl.org/dc/terms/language>
+                "de" ;
+        <http://purl.org/dc/terms/license>
+                "User acknowledges that the Information Retrieval Facility (IRF) and its third party providers retain all right, title and interest in and to this xml under applicable copyright laws. User acquires no ownership rights to this xml including but not limited to its format. User hereby accepts the terms and conditions of the Licence Agreement set forth at http://www.ir-facility.org/legal/marec/data_licence" ;
+        <http://purl.org/dc/terms/license>
+                <http://creativecommons.org/publicdomain/zero/1.0/> ;
+        <http://purl.org/dc/terms/references>
+                <urn:x-temp:/doc/patent/EP-78200013-A> ;
+        <http://purl.org/dc/terms/title>
+                "Pompe de chaleur thermique"@fr , "THERMAL HEAT PUMP"@en , "Thermische Wärmepumpe"@de ;
+        <http://rdfs.org/sioc/ns#content>
+                "Pompe de chaleur thermique\nTHERMAL HEAT PUMP\nThermische Wärmepumpe\n" ;
+        <http://www.patexpert.org/ontologies/pmo.owl#applicant>
+                <urn:x-temp:/id/6d0520d8-b08c-4246-ac98-31b8730e09e7> , <urn:x-temp:/id/c5cc9256-73a5-48f6-9da0-19fa1bb793f4> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#assignee>
+                <urn:x-temp:/id/b9ffe6bb-65ea-487b-88d3-a952b7100774> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#countryOfFiling>
+                "EP" ;
+        <http://www.patexpert.org/ontologies/pmo.owl#dateOfPublication>
+                "1981-01-07"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#inventor>
+                <urn:x-temp:/id/079741af-4612-4c7c-b262-a59086f74913> , <urn:x-temp:/id/6bb2f703-a096-4528-8d00-323c2447a000> , <urn:x-temp:/id/d979db2e-3c38-4c0d-86ea-0c0041d3c136> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#kindCode>
+                "B1" ;
+        <http://www.patexpert.org/ontologies/pmo.owl#patentFamily>
+                <urn:x-temp:/doc/family/6018003> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#publicationNumber>
+                "0000001" ;
+        <http://www.w3.org/ns/prov#generatedAtTime>
+                "2014-08-21T17:13:28Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+        <http://www.w3.org/ns/prov#wasAttributedTo>
+                <http://csarven.ca/#i> ;
+        <http://www.w3.org/ns/prov#wasDerivedFrom>
+                <http://relative-uri.fake/> ;
+        <http://www.w3.org/ns/prov#wasGeneratedBy>
+                <urn:x-temp:/prov/activity/a819d6bd-8bf6-4274-86c9-feeee6ba4a2f> .
+
+<urn:x-temp:/id/ba9a473d-d4a6-4e44-baac-a028f7c27188>
+        a                            <http://www.owl-ontologies.com/sumo.owl#Agent> , <http://xmlns.com/foaf/0.1/Agent> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Wey, Hans-Heinrich, Dipl.-Ing." ;
+        <http://fusepool.eu/ontologies/general#agentOf>
+                <urn:x-temp:/doc/patent/EP-0000001-B1> ;
+        <http://schema.org/address>  <urn:x-temp:/id/38ee0c9f-3acb-45e4-abf0-f616cbce5029> ;
+        <http://xmlns.com/foaf/0.1/name>
+                "Wey, Hans-Heinrich, Dipl.-Ing." .
+
+<urn:x-temp:/id/079741af-4612-4c7c-b262-a59086f74913>
+        a                            <http://www.owl-ontologies.com/sumo.owl#Human> , <http://xmlns.com/foaf/0.1/Person> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "BUSSE, CLAUS ADOLF, DR." ;
+        <http://schema.org/address>  <urn:x-temp:/id/63aab363-c536-4e39-95c2-b730b52fbcee> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#inventorOf>
+                <urn:x-temp:/doc/patent/EP-0000001-B1> ;
+        <http://xmlns.com/foaf/0.1/lastName>
+                "BUSSE, CLAUS ADOLF, DR." .
+
+<urn:x-temp:/id/6bb2f703-a096-4528-8d00-323c2447a000>
+        a       <http://www.owl-ontologies.com/sumo.owl#Human> , <http://xmlns.com/foaf/0.1/Person> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "BUSSE, CLAUS ADOLF, DR." ;
+        <http://www.patexpert.org/ontologies/pmo.owl#inventorOf>
+                <urn:x-temp:/doc/patent/EP-0000001-B1> ;
+        <http://xmlns.com/foaf/0.1/lastName>
+                "BUSSE, CLAUS ADOLF, DR." .
+
+<urn:x-temp:/id/6d0520d8-b08c-4246-ac98-31b8730e09e7>
+        a                            <http://xmlns.com/foaf/0.1/Agent> , <http://www.owl-ontologies.com/sumo.owl#CognitiveAgent> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "FISW GMBH" ;
+        <http://schema.org/address>  <urn:x-temp:/id/ff0a83f7-42ee-4b0d-9fce-d85116736a76> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#applicantOf>
+                <urn:x-temp:/doc/patent/EP-0000001-B1> ;
+        <http://xmlns.com/foaf/0.1/name>
+                "FISW GMBH" .
+
+<urn:x-temp:/id/c5cc9256-73a5-48f6-9da0-19fa1bb793f4>
+        a       <http://xmlns.com/foaf/0.1/Agent> , <http://www.owl-ontologies.com/sumo.owl#CognitiveAgent> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "EUROPAISCHE ATOMGEMEINSCHAFT  (EURATOM)" ;
+        <http://www.patexpert.org/ontologies/pmo.owl#applicantOf>
+                <urn:x-temp:/doc/patent/EP-0000001-B1> ;
+        <http://xmlns.com/foaf/0.1/name>
+                "EUROPAISCHE ATOMGEMEINSCHAFT  (EURATOM)" .
+
+<urn:x-temp:/id/d979db2e-3c38-4c0d-86ea-0c0041d3c136>
+        a       <http://www.owl-ontologies.com/sumo.owl#Human> , <http://xmlns.com/foaf/0.1/Person> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "BUSSE CLAUS-ADOLF" ;
+        <http://www.patexpert.org/ontologies/pmo.owl#inventorOf>
+                <urn:x-temp:/doc/patent/EP-0000001-B1> ;
+        <http://xmlns.com/foaf/0.1/lastName>
+                "BUSSE CLAUS-ADOLF" .
+
+<urn:x-temp:/id/b9ffe6bb-65ea-487b-88d3-a952b7100774>
+        a                            <http://xmlns.com/foaf/0.1/Agent> , <http://www.owl-ontologies.com/sumo.owl#CognitiveAgent> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "EUROPÄISCHE ATOMGEMEINSCHAFT (EURATOM)" ;
+        <http://schema.org/address>  <urn:x-temp:/id/15721d34-f459-4e3e-9ef5-944bc4bc7fb8> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#assigneeOf>
+                <urn:x-temp:/doc/patent/EP-0000001-B1> ;
+        <http://xmlns.com/foaf/0.1/name>
+                "EUROPÄISCHE ATOMGEMEINSCHAFT (EURATOM)" .
+
+<urn:x-temp:/prov/activity/a819d6bd-8bf6-4274-86c9-feeee6ba4a2f>
+        a       <http://www.w3.org/ns/prov#Activity> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Transformed EP-0000001-B1 data"@en ;
+        <http://www.w3.org/ns/prov#generated>
+                <urn:x-temp:/doc/patent/EP-0000001-B1> ;
+        <http://www.w3.org/ns/prov#startedAtTime>
+                "2014-08-21T17:13:28Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+        <http://www.w3.org/ns/prov#used>
+                <http://relative-uri.fake/> , <https://github.com/fusepool/patents-reengineering/src/main/resources/xsl/marec.xsl> ;
+        <http://www.w3.org/ns/prov#wasAssociatedWith>
+                <http://csarven.ca/#i> .
+
+<urn:x-temp:/id/63aab363-c536-4e39-95c2-b730b52fbcee>
+        a       <http://schema.org/PostalAddress> ;
+        <http://schema.org/addressCountry>
+                <urn:x-temp:/code/country/IT> ;
+        <http://schema.org/addressLocality>
+                "I-21038 Arolo di Leggiuno (Varese)" ;
+        <http://schema.org/streetAddress>
+                "22, Via Piaggio" .
+
+<urn:x-temp:/id/15721d34-f459-4e3e-9ef5-944bc4bc7fb8>
+        a       <http://schema.org/PostalAddress> ;
+        <http://schema.org/addressCountry>
+                <urn:x-temp:/code/country/LU> ;
+        <http://schema.org/addressLocality>
+                "L-1019 Luxembourg" ;
+        <http://schema.org/streetAddress>
+                "Bâtiment Jean Monnet Plateau du Kirchberg Boíte Postale 1907" .
+
+<urn:x-temp:/id/38ee0c9f-3acb-45e4-abf0-f616cbce5029>
+        a       <http://schema.org/PostalAddress> ;
+        <http://schema.org/addressCountry>
+                <urn:x-temp:/code/country/DE> ;
+        <http://schema.org/addressLocality>
+                "81369 München" ;
+        <http://schema.org/streetAddress>
+                "c/o Kanzlei Hansmann, Vogeser und Partner Albert Rosshaupter-Strasse 65" .
+
+<urn:x-temp:/id/ff0a83f7-42ee-4b0d-9fce-d85116736a76>
+        a       <http://schema.org/PostalAddress> ;
+        <http://schema.org/addressCountry>
+                <urn:x-temp:/code/country/LU> .
+
+<urn:x-temp:/doc/family/6010385>
+        a       <http://www.patexpert.org/ontologies/pmo.owl#PatentFamily> , <http://www.w3.org/2004/02/skos/core#Collection> ;
+        <http://www.w3.org/2004/02/skos/core#notation>
+                "6010385" .
+
+<urn:x-temp:/doc/patent/DE-2724675-A>
+        a       <http://www.patexpert.org/ontologies/pmo.owl#PatentPublication> ;
+        <http://fusepool.eu/ontologies/general#filing-office>
+                <urn:x-temp:/code/filing-office/DE> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#countryOfFiling>
+                "DE" ;
+        <http://www.patexpert.org/ontologies/pmo.owl#dateOfPublication>
+                "1977-06-01"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#kindCode>
+                "A" .
+
+<urn:x-temp:/doc/patent/EP-0000002-A1>
+        a       <http://www.patexpert.org/ontologies/pmo.owl#PatentPublication> , <http://fusepool.eu/ontologies/ecs#ContentItem> , <http://www.patexpert.org/ontologies/pso.owl#A1Document> , <http://www.w3.org/ns/prov#Entity> ;
+        <http://fusepool.eu/ontologies/general#claim>
+                <urn:x-temp:/doc/patent/EP-0000002-A1/claim/1> ;
+        <http://fusepool.eu/ontologies/general#filing-office>
+                <urn:x-temp:/code/filing-office/EP> ;
+        <http://fusepool.eu/ontologies/general#priority-claim>
+                <urn:x-temp:/doc/patent/DE-2724675-A> ;
+        <http://purl.org/dc/elements/1.1/subject>
+                <urn:x-temp:/id/0000d562-0b79-44c2-93c4-fa759bacb670> , <urn:x-temp:/id/03b178a4-65ae-44f1-b160-2f51fc76ce4a> , <urn:x-temp:/id/0b520770-5d35-4e5e-838b-569b668a7c81> , <urn:x-temp:/id/1dc1e283-0425-432c-8c4f-be7e6d22553b> , <urn:x-temp:/id/24584ed0-3538-4d3d-af59-1be55de35144> , <urn:x-temp:/id/37b13c1a-2653-408a-bb65-aae3c89fa4bc> , <urn:x-temp:/id/54bce7ce-dc9b-45c1-8af0-e0f680054efc> , <urn:x-temp:/id/6106fb32-a127-446d-8424-3a4dd800f25d> , <urn:x-temp:/id/6635be0c-4f68-4584-b3d1-b64f92ea7b69> , <urn:x-temp:/id/7e785be9-37ed-4629-a828-1b70b23c7d56> , <urn:x-temp:/id/898d7990-375a-425f-a176-008c548ceeb4> , <urn:x-temp:/id/a4cfe575-d145-40f6-b7f5-c660c0c8f68c> , <urn:x-temp:/id/c4a34d0a-2ab2-4649-9a47-a55df72e69d8> , <urn:x-temp:/id/c6dd6fe4-5dd3-42a6-a064-b20d13e2bca6> , <urn:x-temp:/id/ebd256a3-21ee-40af-a229-4b30a7749ef9> ;
+        <http://purl.org/dc/terms/abstract>
+                "\n         <div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\">\n            <p>1. Tetrahydrofurane derivatives of the formula I  see diagramm : EP0000002,P22,F6  in which R**1 to R**6 are identical or different and represent hydrogen, straight-chain or branched C1-6 alkyl, C1-2 halogenalkyl with up to three identical or different halogen atoms, alkoxyalkyl with 1 or 2 C atoms in each alkyl part, as well as phenyl or benzyloxyalkyl with 1 or 2 C atoms in the alkyl part each optionally substituted by halogen, C1-2 alkyl, C1-2 alkoxy or C1-2 halogenoalkyl with up to three identical or different halogen atoms, R**5 and R**6 together also represent a saturated carboxylic ring with altogether 3 to 6 C atoms, R**7 represents hydrogen, straight-chain or branched C1-6 alkyl, C3-6 cycloalkyl, C2-4 alkenyl, C2-4 alkinyl, alkoxyalkyl with 1 to 2 C atoms in each alkyl part, as well as phenyl or benzyloxyalkyl with 1 or 2 C atoms in the alkyl part each substituted by halogen, C1-2 alkyl, C1-2 alkoxy, or C1-2 halogenoalkyl with up to three identical or different halogen atoms, R**8 and R**9 are identical or different and represent hydrogen, straight-chain or branched C1-6 alkyl, C2-4 alkenyl, C2-4 alkinyl, C3-6 cycloalkyl, C1-4 alkoxy, as well as phenyl, benzyl or benzyloxy each optionally substituted by halogen, C1-2 alkyl, C1-2 alkoxy or C1-2 halogenoalkyl with up to three identical or different halogen atoms, R**10 represents hydrogen, straight-chain or branched C1-6 alkyl, C2-4 alkenyl, C2-4 alkinyl, C1-2 halogenoalkyl with up to three identical or different halogen atoms, as well as phenyl optionally substituted by halogen, C1-2 alkyl, C1-2 alkoxy or C1-2 halogenoalkyl with up to three identical or different halogen atoms and Y represents optionally substituted aryl with 6 to 10 C atoms, which can carry one or more identical or different substituents from the following : the halogens fluorine, chlorine or bromine ; alkyl and alkoxy with in each case 1 to 4 C atoms ; halogenoalkyl, halogenoalkoxy and halogenoalkylthio with in each case up to 4 C atoms and up to 5 halogen atoms ; phenyl, phenoxy or phenoxycarbonyl optionally substituted by halogen, alkyl and alkoxy with in each case 1 to 2 C atoms as well as halogenalkyl with up to 1 C atoms and up to 3 identical or different halogen atoms as well as halogenoalkyl with up to 1 C atoms and up to 3 identical or different halogen the tri-, tetra- or penta-methylene radical ; with the proviso that if Y represents phenyl this must be substituted if R**1 to R**10 denote hydrogen.</p>\n         </div>\n      "^^<http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral> , "\n         <div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\">\n            <p>Die vorliegende Erfindung betrifft neue \nTetrahydrofuran-Derivate der allg. Formel \n<img file=\"00000001.tif\" he=\"20\" id=\"img-00000001\" img-content=\"cf\" img-format=\"tif\" inline=\"no\" orientation=\"unknown\" wi=\"55\"></img> \n(mit den für die Symbole R¹ bis R¹⁰ und Y in der Beschreibung \nangegebenen Bedeutungen), Verfahren zu deren Herstellung \nund deren Verwendung als Herbizide. </p>\n            <p>Insbesondere eignen sich die neuen Wirkstoffe zur selektiven \nUnkrautbekämpfung in verschiedenen Kulturen, wie \nz.B.Rüben, Sojabohnen, Bohnen, Baumwolle, Raps, Erdnüsse, \nGemüse, Mais und Reis. </p>\n         </div>\n      "^^<http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral> ;
+        <http://purl.org/dc/terms/creator>
+                <http://csarven.ca/#i> ;
+        <http://purl.org/dc/terms/description>
+                "\n         <div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"de\">\n            <p>\n               <pre listing-type=\"other\" xml:space=\"preserve\">\nTetrahydrofuran-Derivate, Verfahren zu ihrer Herstellung sowie ihre Verwendung als Herbizide.\n\n\nDie vorliegende Erfindung betrifft neue Tetrahydrofuran-Derivate, mehrere Verfahren zu ihrer Herstellung sowie ihre Verwendung als Herbizide, insbesondere als selektive Herbizide.\n\n\nEs ist bereits bekannt geworden, dass Chloracetanilide, wie beispielsweise   2-Aethyl-6-methyl-N-(l'-methyl-2'-methoxyäthyl)-    chloracetanilid, als Herbizide, insbesondere zur Bekämpfung von grasartigen Unkräutern, verwendet werden können (vergleiche DT OS 2 328 340). Diese Verbindungen sind in ihrer Selektivität   je-    doch nicht immer befriedigend.  \n\n\nEs wurden neue Tetrahydrofuran-Derivate der Formel\nEMI2.1     \n in welcher   Rsbis    R6 gleich oder verschieden sind und für\nWasserstoff, Alkyl, Halogenalkyl, Alkoxy alkyl, gegebenenfalls substituiertes\nPhenyl oder gegebenenfalls substituiertes\nBenzyloxyalkyl stehen, R5und R6 auch gemeinsam für einen gesättigten carbo cyclischen Ring stehen, R7 für Wasserstoff, Alkyl, Alkenyl, Alkinyl,\nCycloalkyl, Alkoxyalkyl, gegebenenfalls substituiertes Phenyl oder gegebenenfalls substituiertes Benzyloxyalkyl steht, R8und R9 gleich oder verschieden sind und für Wasser stoff, Alkyl, Alkenyl, Alkinyl, Cycloalkyl,\nAlkoxy, gegebenenfalls substituiertes Phenyl oder gegebenenfalls substituiertes Benzyl und Benzyloxy stehen,   R'     für Wasserstoff, Alkyl, Alkenyl,\n Alkinyl,\nHalogenalkyl oder gegebenenfalls substi tuiertes Phenyl steht und Y für gegebenenfalls substituiertes Aryl steht, mit der Massgabe, dass, falls Y für\nPhenyl steht, dieses substituiert sein muss, wenn   R1    bis   R'     Wasserstoff bedeuten,  aufgefunden.\n\n\nDiese neuen Tetrahydrofuran-Derivate weisen starke herbizide, insbesondere selektiv-hertizide Eigenschaften auf.\n\n\nWeiterhin wurde gefunden, dass man die Tetrahydrofuran-Derivate der Formel (I) erhält, wenn man (a) Alkoholate von 2-Hydroxymethyl-tetrahydrofuran-Derivaten der\nFormel\nEMI3.1     \n in welcher\nR1 bis   R9    die oben angegebene Bedeutung haben und\nM für ein Alkali- oder Erdalkalimetall steht, mit einer Verbindung der Formel\nEMI3.2     \n in welcher    R'     und Y die oben angegebene Bedeutung haben und\nZ für Halogen, insbesondere Chlor oder Brom, den Mesylat- oder Tosylat-Rest steht, gegebenenfalls in Gegenwart eines Verdiinnungsmittels umsetzt, oder wenn man   (b) Diole der Formel\nEMI4.1     \n in welcher\nRÚbis R10 und Y die oben angegebene Bedeutung haben, in Gegenwart eines sauren Katalysators erhitzt und gegebenenfalls in Gegenwart eines Verdünnungsmittels erhitzt.\n\n\nVerbindungen der Formel (I), in denen entweder R1 und R7 oder   R1    und R4 oder Rund R5 für Wasserstoff stehen, können auch erhalten werden, wenn man (c) Dihydrofuran-Derivate der Formeln\nEMI4.2     \n  in welchen\nRÚ bis R10 und Y die oben angegebene Bedeutung haben, in Gegenwart eines Katalysators und gegebenenfalls in Gegenwart eines Verdünnungsmittels mit Wasserstoff hydriert.\n\n\nVerbindungen der Formel (I), in denen   R',      R4,    R5 und R7 für Wasserstoff stehen, können auch erhalten werden, wenn man (d) Furan-Derivate der Formel\nEMI5.1     \n in welcher\nRê, R , R6, R8    R9,      R10 und    Y die oben angegebene Bedeutung haben, in Gegenwart eines Katalysators und gegebenenfalls in Gegenwart eines Verdünnungsmittels mit Wasserstoff hydriert.\n\n\nUeberraschenderweise sind die erfindungsgemässen Tetrahydrofuran Derivate den bekannten Gräserbekämpfungsmitteln, wie beispielsweise 2-Aethyl-6-methyl-N-(1'-methyl-2'-methoxyäthyl)-chloracetanilid, in der herbiziden Wirkung überlegen und zeigen ausserdem eine deutlich bessere Selektivität in wichtigen Klturpflanzen.\n\n\nDie erfindungsgemässen Wirkstoffe stellen somit eine wesentliche Bereicherung der herbiziden Mittel, insbesondere der Gräserherbizide, dar.  \n\n\nVerwendet man das Natriumalkoholat des Tetrahydrofurfurylalkohols und 2-Fluorbenzylbromid als Ausgangsstoffe, so kann der Reaktionsablauf durch das folgende Formelschema wiedergegeben werden (Verfahrensvariante a):\nEMI6.1     \n Verwendet man l-(2-Fluorbenzyloxy)-pentan-2,5-diol als Ausgangsstoff und p-Toluolsulfonsäure als Katalysator, so kann der Reaktionsablauf durch das folgende Formelschema wiedergegeben werden (Verfahrensvariante b):\nEMI6.2     \n Verwendet man   2, 3-Dihydro-2- (2-Fluorbenzyloxymethyl ) -furan    und Wasserstoff als Ausgangsstoffe, so kann der Reaktionsablauf durch das folgende Formelschema wiedergegeben werden (Verfahrens variante c):\n:\nEMI6.3     \n Verwendet man   2-[l-(2-Chlorbenzylcxy)-prop-1-yl)-furan    und Wasserstoff als Ausgangsstoffe, so kann der Reaktionsablauf durch das folgende Formelschema wiedergegeben werden (Verfahrensvariante d):\nEMI6.4     \n   Die für die Verfahrensvariante(a)als Ausgangsstoffe zu verwendenden Alkoholate von   2-Hydroxymethyl-tetrahydrofuran-Derivaten    sind durch die Formel (II) allgemein definiert.\nIn dieser Formel sind   R1    bis   R6    gleich oder verschieden und stehen vorzugsweise für Wasserstoff, geradkettiges oder verzweigtes Alkyl mit 1 bis 6 Kohlenstoffatomen, Halogenalkyl mit bis zu 2 Kohlenstoff- und bis zu drei gleichen oder verschiedenen Halogenatomen, wobei als Halogene insbesondere Fluor, Chlor und Brom stehen, Alkoxyalkyl mit 1 oder 2 Kohlenstoffatomen in jedem Alkylteil, sowie für gegebenenfalls substituiertes Phenyl und Benzyloxyalkyl mit 1 bis 2   Kohelenstoffatomen im    Alkylteil, wobei als Substituenten vorzugsweise infrage kommen:\nHalogen, Alkyl und Alkoxy mit jeweils 1 oder 2 Kohlenstoffatomen sowie Halogenalkyl mit bis zu 2 Kohlenstoff- und bis zu drei gleichen oder verschiedenen Halogenatomen, wie insbesondere Fluor und Chlor.   R5    und   R6    stehen ausserdem vorzugsweise gemeinsam für einen gesättigten carbocyclischen Ring mit insgesamt 3 bis 6 Kohlenstoffatomen.\n\n\nR7 steht vorzugsweise für Wasserstoff, geradkettiges oder verzweigtes Alkyl mit 1 bis 6 Kohlenstoffatomen, Cycloalkyl mit 3 bis 6 Kohlenstoffatomen, Alkenyl und Alkinyl mit jeweils 2 bis 4 Kohlenstoffatomen, Alkoxyalkyl mit 1 oder 2 Kohlenstoffatomen in jedem Alkylteil sowie für gegebenenfalls substituiertes Phenyl und Benzyloxyalkyl mit 1 bis 2 Kohlenstoffatomen im Alkylteil, wobei als Substituenten vorzugsweise die bei R1 bis R6 bereits vorzugsweise genannten infrage kommen.\n\n \n   R8    und R9 sind gleich oder verschieden und stehen vorzugsweise für Wasserstoff, geradkettiges oder verzweigtes Alkyl mit 1 bis 6 Kohlenstoffatomen, Cycloalkyl mit 3 bis 6 Kohlenstoffatomen, Alkenyl und Alkinyl mit jeweils 2 bis 4 Kohlenstoffatomen, Alkoxy mit 1 bis 4 Kohlenstoffatomen sowie für gegebenenfalls substituiertes Phenyl, Benzyl oder Benzyloxy, wobei als   Substituente    vorzugsweise die bei R1 bis R6 bereits vorzugsweise genannten infrage kommen.\n\n\nM steht vorzugsweise für die Alkalimetalle Natriun und Kalium  sowie für 1 Äquivalent der Erdalkalimetalle Magnesium und Calcium.\n\n\nDie Alkoholate der Formel (II) sind bekannt oder lassen sich nach bekannten Methoden herstellen. Man erhält sie z.B., indem   ian    die entsprechenden 2-Hydroxymethyl-tetrahydrofuran-Derivate mit geeigneten starken Basen, wie beispielsweise Alkali- bzw. Erdalkaliamiden, -hydriden oder -hydroxiden, in einem inerten Lö   sungsmittel    umsetzt. Die genannten 2-Hydroxymethyl-tetrahydrofuran-Derivate sind ebenfalls bekannt oder lassen sich nach bekannten Methoden herstellen (vergleiche u.a. H.Kröper, in Houben Weyl, 'Methoden der organischen Chemie', Band 6/3, S.519ff (1965) sowie die dort zitierte Literatur ).\n\n\nAls Beispiele für die 2-Hydroxymethyl-tetrahydrofuran-Derivate, die den erfindungsgemäss als Ausgangs stoffe zu verwendenden Alkoholaten der Formel (II) zugrunde liegen, seien genannt: 2-Hydroxymethyl-tetrahydrofuran 2-(1-Hydroxyprop-1-yl)-tetrahydrofuren 2-(l-Hydroxyäthyl)-tetrahydrofuran 2-(3-Hydroxypent-3-yl)-terahydrofuran   2-(Hydroxy-phenyl-methyl)-tetrahydroiura    2-(2-Hydroxyprop-2-yl)-tetrahydrofuren Die weiterhin für die Verfahrensvariante(* als   Ausgangsstoffe    zu verwendenden Verbindungen sind durch die Formel (iII) allgemein definiert.\nIn dieser Formel steht   Rw    vorzugsweise   ftir    Wasser Stoff, geradkettiges oder verzweigtes Alkyl mit 1 bis 6 Kohlenstoffatomen, Alkenyl und Alkinyl mit jeweils 2 bis 4 Kohlenstoffatomen, Halogenalkyl mit bis zu 2 Kohlenstoff- und bis zu drei gleichen oder verschiedenen Halogenatomen, wobei als Halogene insbesondere Fluor, Chlor und Brom stehen, sowie für gegebenenfalls substituiertes Phenyl, wobei als Substituenten vorzugsweise die bei   R1    bis R6 bei den Ausgangsstoffe der Formel (II) bereits vorzugsweise genannten infrage kommen.  \n\n\nY steht vorzugsweise für gegebenenfalls substituiertes Aryl mit 6 bis 10 Kohlenstoffatomen, insbesondere für Phenyl und Naphthyl, die einen oder mehrere gleiche oder verschiedene Substituenten tragen können. Als Substituenten seien vorzugsweise genannt, die Halogene Fluor, Chlor oder Brom; Alkyl und Alkoxy mit 1 bis 4 Kohlenstoffatomen;\nHalogenalkyl, Halogenalkoxy und Halogenalkylthio mit bis zu 4 Kohlenstoffatomen und bis zu 5 Halogenatomen, insbesondere mit bis zu 2 Kohlenstoff- und bis zu 3 gleichen oder verschiedenen Halogenatomen, wobei als Halogene insbesondere Fluor, Chlor und Brom stehen; gegebenenfalls durch Halogen, insbesondere Fluor, Chlor oder Brom, Alkyl und Alkoxy mit jeweils 1 bis 2 Kohlenstoffatomen sowie Halogenalkyl mit bis zu 2 Kohlenstoff- und bis zu 3 gleichen oder verschiedenen Halogenatomen, wie insbesondere Fluor und Chlor, substituiertes Phenyl, Phenoxy oder Phenoxycarbonyl; Alkoxycarbonyl mit 1 bis 4 Kohlenstoffatomen im Alkylteil; die Methylendioxo-Gruppe sowie der Tri-, Tetra- oder Pentamethylen-Rest. Für den Fall, dass Y für Phenyl steht, muss dieses substituiert sein, wenn R1bis   RIO    Wasserstoff bedeuten.\n\n\nDie Ausgangsstoffe der Formel (III) sind allgemein bekannte Verbindungen der organischen Chemie. Als Beispiele seien genannt: Benzylchlorid, Benzylbromid, Benzylmesylat, Benzyltosylat, 2-Fluorbenzylbromid, 3-Fluorbenzylbromid, 4-Fluorbenzylbromid, 2-Chlorbenzylchlorid, 3-Chlorbenzylchlorid, 4-Chlorbenzylchlorid, 2-Brombenzylchlorid, 3-Brombenzylchlorid, 4-Brombenzylchlorid, 2-Methylbenzylchlorid, 3-Methylbenzylchlorid, 4-Methylbenzylchlorid,   2-Methoxybenzylchlorid,      3-Kethoxy-    benzylchlorid, 4-Methoxybenzylchlorid,   2-Trifluormethylbenzyl-    chlorid, 3-Trifluormethylbenzylchlorid, 4-Trifluormethylbenzylchlorid, 4-Phenylbenzylchlorid,   2, 6-Difluorbenzylchlorid,    2,6 Dichlorbenzylchlorid, 2,4-Dichlorbenzylchlorid, 3,4-Dichlorbenzylchlorid, 2,5-Dichlorbenzylchlorid, 2,6-Dimethylbenzyl  chlorid,\n 2,4-Dimethylbenzylbromid, 3,4-Dimethylbenzylchlorid, 2,3-Dimethylbenzylchlorid, 3,4-Dioxomethylenbenzylchlorid, 2,6-Chlorfluorbenzylchlorid, 2-Fluor-5-chlorbenzylbromid, 2 Fluor-4-chlorbenzylbromid, 3-Chlor-4-fluorbenzylbromid, 3,4 Tetramethylenbenzylchlorid, 2-Methyl-6-chlorbenzylchlorid, 2 Methyl-6-fluorbenzylchlorid, 2-Fluor-3-methylbenzylchlorid, 2 Fluor-4-methylbenzylchlorid, 2-Fluor-5-methylbenzylchlorid, 2 Methyl-3-chlorbenzylchlorid, 2-Methyl-4-chlorbenzylchlorid, 2 Methyl-5-chlorbenzylchlorid, 2,4,5-Trichlorbenzylbromid, 2,4,6 Trichlorbenzylbromid,   Diphenylmethylbromid,    l-Brom-l-phenyl äthan, l-Brom-l-(2-fluorphenyl)-äthan, l-Brom-l-(2-methylphenyl) äthan.\n\n\nDie für die Verfahrensvariante(b)als Ausgangsstoffe zu verwendenden Diole sind durch die Formel (IV) allgemein definiert.\n\n\nIn dieser Formel stehen R' bis   R9    vorzugsweise für die Reste, die bei den Alkoholaten der Formel (II) bereits vorzugsweise genannt wurden.   RIO    und Y stehen vorzugsweise für die Reste die bei den Verbindungen der Formel (III) bereits vorzugsweise genannt wurden.\n\n\nDie Diole der Formel (IV) sind bekannt bzw. lassen sie sich nach bekannten Methoden herstellen. Als Beispiele seien genannt: l-Benzyloxy-pentan-2,5-diol l-(2-Fluorbenzyloxy)-pentan-2,5-diol l-(2-Chlorbenzyloxy)-pentan-2,5-diol l-(2-Methylbenzyloxy)-pentan-2,5-diol   l-(2-Brombenzyloxy)-pentan-2,5-diol    l-(4-Fluorbenzyloxy)-pentan-2,5-diol l-(2,6-Dichlorbenzyloxy)-pentan-2,5-diol l-Benzyloxy-5,5-dimethyl-pentan-2,5-diol   l-(2-Fluorbenzyloxy)-5,5-dimethyl-penwan-2,5-diol 1-(2-Chlorbenzyloxy)-5,5-dimethyl-pen an-2,5-diol l-(2-Methylbenzyloxy)-5,5-dimethyl-pentan-2,5-diol l-(2-Brombenzyloxy)-5,5-dimethyl-penatan-2,5-diol        l-(4-Fluorbenzyloxy)-5 , 5-dimethyl-pentan-2,\n 5-diol    l-(2,6-Dichlorbenzyloxy)-5,5-dimethyl-pentan-2,5-diol   l-Benzyloxy-2,5,5-trimethyl-pentan-2,5-diol    l-(2-Fluorbenzyloxy)-2,5,5-trimethyl-pentan-2,5-diol l-(2-Chlorbenzyloxy)-2,5,5-trimethyl-pentan-2,5-diol l-(2-Methylbenzyloxy)-2,5,5-trimethyl-pentan-2,5-diol l-(2-Brombenzyloxy)-2,5,5-trimethyl-pentan-2,5-diol    1-(4-Fluorbenzyloxy)-2,5,5-trimethyl-pentan-2,5-diol l-(2,6-Dichlorbenzyloxy)-2,5,5-trimethyl-pentan-2,5-dlol    1-Benzyloxy-2-äthyl-5,5-dimetyl-pentan-2,5-diol l-(2-Fluorbenzyloxy)-2-äthyl-5,5-dimethyl-pentan-2,5-diol 1-(2-Chlorbenzyloxy)-2-äthyl-5,5-dimethyl-pentan-2,5-diol l-(2-Methylbenzyloxy)-2-äthyl-5,5-dimethyl-pentan-2,5-diol    l-(2-Brombenzyloxy)-2-hthyl-5,5-dimethyl-pentsm-2,5-diol l-(4-Fluorbenzyloxy)-2-µthyl-5,5-dimethyl-pentan-2,5-diol  \n l-(2,6-Dichlorbenzyloxy)-2-Ethyl-5,5-dimethyl-pentan-2,5-diol    Die für die Verfahrensvariante (c) als Ausgangsstoffe zu verwendenden Dihydrofuran-Derivate sind durch die Formeln (Va), (Vb) und (Vc) allgemein definiert. In diesen Formeln stehen   R1    bis   R    vorzugsweise für die Reste, die bei den Alkoholaten der Formel (1I) bereits vorzugsweise genannt wurden.   RIO    und Y stehen vorzugsweise   für    die Reste, die bei den Verbindungen der Formel (III) bereits vorzugsweise genannt wurden.\n\n\nDie   Dihydroturan-Derivate    der Formeln (Va), (Vb) und (Vc) sind noch nicht bekannt. Man erhält sie jedoch auf einfache Weise wenn man entsprechend der Verfahrensvariante   zu    Alkoholate von 2-Hydroxymethyl-dihydrofuran-Derivaten der Formeln  \nEMI12.1     \n in welchen\nRÚ bis R9 und M die oben angegebene Bedeutung haben, mit einer Verbindung der Formel (III) gegebenenfalls in Gegenwart eines Verdünnungsmittels umsetzt.\n\n\nDie für die Verfahrensvariante (d) als Ausgangsstoffe zu verwendenden Furan-Derivate sind durch die Formel (VI) allgemein definiert.\n\n\nIn dieser Formel stehen   R2,      R3,      R*,      Raund    R9 vorzugsweise für die Reste, die bei den Alkoholaten der Formel (II) bereits vorzugsweise genannt wurden. R10 und Y stehen vorzugsweise für die Reste, die bei den Halogeniden der Formel (III) bereits vorzugsweise genannt wurden.  \n\n\nDie Furan-Derivate der Formel (VI) sind noch nicht bekannt. Man erhält sie jedoch auf einfache Weise, wenn man entsprechend der   Verfahrensvariante  &lt;     Alkoholate von 2-Hydroxymethyl-furan-Derivaten der Formel\nEMI13.1     \n in welcher\nRê,   R  ,    R6,R8\nR9 und M die oben angegebene Bedeutung haben, mit einer Verbindung der Formel (III) gegebenenfalls in Gegenwart eines Verdünnungmittels umsetzt.\n\n\nAls Ausgangsstoffe der Formel (VI) seien beispielsweise genannt: 2-(2-Fluorbenzyloxymethyl)-furan 2-[1-(2-Fluorbenzyloxy)-äth-l-yl]-furan 2-[l-(2-Chlorbenzyloxy)-prop-l-yl]-furan 2-[1-(2-Fluorbenzyloxy)-prop-l-yl]-furan 2-[1-(2-Fluorbenzyloxy)-äth-l-yl]-furan 2-[1-(2-Methylbenzyloxy)-äth-l-yl]-furan   2- l-(Benzyloxy)-äth-l-yl3-furan    2-[3-(2-fluorbenzyloxy)-pent-3-yl]-furan  2-[3-(2-Methylbenzyloxy)-pent-3-yl]-furan 2-[3-(2-Chlorbenzyloxy)-pent-3-yl]-furan 2-[1-(2-Chlorbenzyloxy)-äth-1-yl]-furan    - (2-Fluorbenzyloxy ) -benzyl) -furan 2-[a-(2-chlorbenzyloxy)-benzyl3-furan    2-[2-(2-Fluorbenzyloxy)-prop-2-yl]-furan 2-(a-Phenylbenzyloxy-methyl)-furan Die Alkoholate der Formeln (VIIa), (VIIb), (VIIc) und (VIII)sind bekannt oder lassen sich nach bekannten Methoden herstellen.\nMan erhält sie z.B. indem man die entsprechenden 2-Hydroxymethyldihydrofuran-Derivate bzw. 2-Hydroxymethyl-furan-Derivate mit geeigneten starken Basen, wie beispielsweise Alkali- oder Erdalkaliamiden, -hydriden oder -hydroxiden, in einem inerten Lösungsmittel umsetzt. Die genannten 2-Hydroxymethyl-Derivate sind ebenfalls bekannt oder lassen sich nach bekannten Methoden herstellen (vergleiche u.a. H.Kröper in Houben-Weyl, 'Methoden der organischen Chemie', Band 6/3, S.519ff (1965) sowie die dort zitierte Literatur).\n\n\nFür die erfindungsgemässe Umsetzung gemäss Verfahrensvariante   9    kommen als Verdünnungsmittel vorzugsweise inerte organische Lösungsmittel infrage. Hierzu gehören vorzugsweise Aether, wie Diäthyläther, Tetrahydrofuran oder Dioxan, aromatische Kohlenwasserstoffe, wie Benzol oder Toluol, in einzelnen Fällen auch chlorierte Kohlenwasserstoffe, wie Chloroform, Methylenchlorid oder Tetrachlorkohlenstoff.\n\n\nDie Reaktionstemperaturen können bei der Verfahrensvariante   Ca)    in einem grösseren Bereich variiert werden. Im allgemeinen arbeitet man zwischen 0 und 1200C, vorzugsweise bei 20 bis 1000C.  \n\n\nBei der Durchführung der erfindungsgemässen Verfahrensvariante   o    arbeitet man vorzugsweise in molaren Mengen. Es ist aber auch möglich, die Alkoholate der Formel (II) oder die Verbindungen der Formel (III) im Ueberschuss bis zu 1 Mol einzusetzen. Zur Isoleerung der Endprodukte wird das Reaktionsgemisch mit Wasser versetzt, die organische Phase abgetrennt und in üblicher Weise aufgearbeitet und gereinigt. In einzelnen Fällen kann das Endprodukt auch direkt nach dem Lösungsmittel aus dem Reaktionsprodukt abdestilliert werden.\n\n\nNach einer bevorzugten Ausführungsform wird zweckmässigerweise so verfahren, dass man von einem 2-Hydroxymethyl-tetrahydrofuran Derivat ausgeht, letzteres in einem geeigneten inerten Lösungsmittel mittels Alkalimetall-hydrid oder -amid in das Alkalimetall-alkoholat der Formel (II)   überführt,    und letzteres ohne Isolierung sofort mit einer Verbindung der Formel (III) umsetzt und somit die erfindungsgemässen Verbindungen der Formel   (i)    in einem Arbeitsgang erhält. Dabei kann die Verbindung der Formel (III) auch bereits vor der Herstellung des Alkoholats dem Reaktionsgemisch zugesetzt werden.\n\n\nNach einer weiteren bevorzugten   Ausfuhrungaform    werden zweckmässigerweise die Herstellung des Alkoholats der Formel (II) sowie die erfindungsgemässe Umsetzung nach   Verfahren(°    in einem Zweiphasensystem, wie z.B. wässrige Natron- oder Kalilauge / Toluol oder Methylenchlorid, unter Zusatz eines Phasen-Transfer-Katalysators, wie beispielsweise Ammonium- oder Phosphoniumverbindungen durchgeführt.\n\n\nDie erfindungsgemässe Umsetzung gemäss Verfahrensvariante wird vorzugsweise ohne Lösungsmittel durchgeführt.  \n\n\nDie erfindungsgemässe Umsetzung gemäss Verfahrensvariante(b)wird in Gegenwart eines sauren Katalysators durchgeführt. Man kann alle üblicherweise verwendbaren anorganischen und organischen sauren Katalysatoren einsetzen. Hierzu gehören vorzugsweise organische Säuren, wie p-Toluolsulfonsäure, anorganische Säuren, wie Salzsäure und Schwefelsäure, sowie Metallhalogenide, wie Aluminiumchlorid.\n\n\nDie Reaktionstemperaturen können bei der   Verfahrensvariante(b)    in einem grösseren Bereich variiert werden. Im allgemeinen arbeitet man zwischen 80 und 2500C, vorzugsweise zwischen etwa\n100 und 2200C.\n\n\n Zur Isolierung der Endprodukte wird bei der Verfahrensvariante (b)das Reaktionsgemisch im Vakuum destilliert und anschliessend das Wasser in üblicher Weise abgetrennt.\n\n\nFür die erfindungsgemässen Umsetzungen gemäss Verfahrensvarianten (c)und(d)kommen bei Verwendung eines Verdünnungsmittels vorzugsweise inerte organische Lösungsmittel infrage. Hierzu gehören vorzugsweise Alkohole, wie Methanol und Aethanol sowie   Ether,    wie Diäthyläther und Tetrahydrofuran.\n\n \nDie erfindungsgemässen Umsetzungen gemäss Verfahrensvarianten(c) und(° werden in Gegenwart eines Katalysators durchgeführt. Man kann alle üblicherweise verwendbaren Hydrierungskatalysatoren verwenden. Hierzu gehören vorzugsweise Edelmetall-, Edelmetalloxid  (bzw. Edelmetallhydroxid-) -Katalysatoren oder sogenannte 'Raney Katalysatoren', wie insbesondere Platir, Platinoxid, Nickel,\nRhodium, Rhodiumoxid, Ruthenium,   Palladium    und Osmium.\n\n\nDie Reaktionstemperaturen können bei den Verfahrensvarianten (c) und(d)in einem grösseren Bereich variiert werden. In allgemeinen arbeitet man zwischen 20 und 2000C, vorzugsweise bei 80 bis\n1500C.  \n\n\nDie Umsetzungen gemäss Verfahrensvarianten(c)und(d)können bei Normaldruck, aber auch bei erhöhtem Druck, vorzugsweise bei 1 bis 200 atü, durchgeführt werden.\n\n\nBei der Durchführung der erfindungsgemässen Verfahrensvarianten (c)und(d)setzt man auf 1 Mol der Verbindungen der Formeln (Va), (Vb), (Vc) bzw.(VI) vorzugsweise 2 Mol Wasserstoff und   0,01-OlMol    Katalysator ein. Zur Isolierung der Endprodukte wird vom Katalysator abfiltriert, gegebenenfalls vom Lösungsmittel im Vakuum befreit und die erhaltenen Produkte der Formel (I) werden durch Destillation oder Umkristallisation gereinigt.\n\n\nDie erfindungsgemässen Verbindungen der Formel (I) können gegebenenfalls in verschiedenen geometrischen Isomeren vorliegen, die in unterschiedlichen Mengenverhältnissen anfallen können.\n\n\nAusserdem liegen sie jeweils als optische Isomere vor. Dabei kann der Fall auftreten, dass bestimmte Isomere eine grössere Wirksamkeit als andere aufweisen, so dass es gegebenenfalls zweckmässig ist,dieaktivereKomponete herzustellen bzw. zu isolieren. Sämtliche Isomeren werden erfindungsgemäss beansprucht.\n\n\nAls Beispiele für besonders wirksame Vertreter der erfindungsgemässen Wirkstoffe seien ausser den Herstellungsbeispielen und den Beispielen der Tabelle 1 genannt:    2-Benzyloxymethyl-5 -methyl -tetrahydrofuran 2- (2-Fluorbenzyloxymethyl )-5-methyl-tetrahydrofuran 2- (2-Chlorbenzyloxymethyl ) -5-methyl-tetrahydrofuran 2- (2-Brombenzyloxymethyl ) -5-methyl-tetrahydrofurnn    2- (2-Methylbenzyloxymethyl) -5-methyl-tetrahydrofuran   2- (4-Fluorbenzyloxymethyl ) -5-methyl-tetrahydrofuran    2-(2,6-Dichlorbenzyloxymethyl)-5-methyl-terahydrofuranf 2-Benzyloxymethyl-2-methyl-tetrahydrofuran    2- (2-Fluorbenzyloxymethyl ) -2-methyl-tetrahydrofuran 2- (2-Chlorbenzyloxymethyl )-2-methyl-tetrahydrofuran    2-(2-Bromvbenzyloxymethyl)-2-methyl-tetrahydrofuran 2-(2-Methylbenzyloxymethyl)-2-methyl-tetrahydrofuran  \n 2-(4-Fluorbenzyloxymethyl)-2-methyl-tetrahydrofuran 2-(2,6-Dichlorbenzyloxymethyl)-2-methyl-tetrahydrofuran 2-Benzyloxymethyl-2-äthyl-tetrahydrofuran 2-(2-Fluorbenzyloxymethyl)-2-äthyl-tetrahydrofuran 2-(2-Chlorbenzyloxymethyl)-2-äthyl-tetrahydrofuran 2-(2-Brombenzyloxymethyl)-2-äthyl-tetrahydrofuran 2-(2-Methylbenzyloxymethyl)-2-äthyl-tetrahydrofuran 2-(4-Fluorbenzyloxymethyl)-2-äthyl-tetrahydrofuran 2-(2,6-Dichlorbenzyloxymethyl)-2-äthyl-tetrahydrofuran 2-Benzyloxymethyl-2-propyl-tetrahydrofuran 2-(2-Fluorbenzyloxymethyl)-2-propyl-tetrahydrofuran 2-(2-Chlorbenzyloxymethyl)-2-propyl-tetrahydrofuran 2-(2-Brombenzyloxymethyl)-2-propyl-tetrahydrofuran 2-(2-Methylbenzyloxymethyl)-2-propyl-tetrahydrofuran 2-(4-Fluorbenzyloxymethyl)-2-propyl-tetrahydrofuran 2-(2,6-Dichlorbenzyloxymethyl)-2-propyl-tetrahydrofuran 2-Benzyloxymethyl-2,5,5-trimethyl-tetrahydrofuran \n 2-(2-Fluorbenzyloxymethyl)-2,5,5-trimethyl-tetrahydrofuran 2-(2-Chlorbenzyloxymethyl)-2,5,5-trimethyl-tetrahydrofuran 2-(2-Brombenzyloxymethyl)-2,5,5-trimethyl-tetrahydrofuran 2-(2-Methylbenzyloxymethyl)-2,5,5-trimethyl-tetrahydrofuran 2-(2,6-Dichlorbenzyloxymethyl)-2,5,5-trimethyl-tetrahydrofuran 2-Benzyloxymethyl-2-äthyl-5,5-dimethyl-tetrahydrofuran 2-(2-Fluorbenzyloxymethyl)-2-äthyl-5,5-dimethyl-tetrahydrofuran 2-(2-Chlorbenzyloxymethyl)-2-äthyl-5,5-dimethyl-tetrahydrofuran 2-(2-Brombenzyloxymethyl)-2-äthyl-5,5-dimethyl-tetrahydrofuran 2-(2-Methylbenzyloxymethyl)-2-äthyl-5,5-dimethyl-tetrahydrofuran 2-(4-Fluorbenzyloxymethyl)-2-äthyl-5,5-dimethyl-tetrahydrofuran 2-(2,6-Dichlorbenzyloxymethyl)-2-äthyl-5,5-dimethyl-tetrahydrofuran 2-Benzyloxymethyl-2-propyl-5,5-dimethyl-tetrahydrofuran 2-(2-Fluorbenzyloxymethyl)-2-propyl-5,5-dimethyl-tetrahydrofuran \n 2-(2-Chlorbenzyloxymethyl)-2-propyl-5,5-dimethyl-tetrahydrofuran 2-(2-Fluorbenzyloxymethyl)-5-chlormethyl-tetrahydrofuran 2-(2-Chlorbenzyloxymethyl)-5-chlormethyl-tetrahydrofuran 2-(2-Brombenzyloxymethyl)-5-chlormethyl-tetrahydrofuran  2-(2-Brombenzyloxymethyl)-2-propyl-5,5-dimethyl-tetrahydrofuran   2-(2-Methylbenzyloxymethyl)-2-propyl-5,5-dimethyl-tetrahydro-    furan 2-(4-fluorbenzyloxymethyl)-2-propyl-5,5-dimethyl-tetrahydrofuran 2-(2,6-dichlorbenzyloxymethyl)-2-propyl-5,5-dimethyl-tetrahydrofuran furan    2-Benzyloxyme thyl-2-phenyl-tetrahydrofuran 2-(2-Fluorbenzyloxymethyl)-2-phenyl-tetrahydrofursn 2- (2-Chlorbenzyloxymethyl ) -2-phenyl-tetrahydrofuran    2-(2-Brombenzyloxymethyl)-2-phenyl-tetrahydrofuran    2- (2-Methylbenzyloxymethyl ) -2-phenyl-tetrahydrofuran 2- (4-Fluorbenzyloxymethyl ) -2-phenyl-tetrahydrofuran \n 2-(2,6-Dichlorbenzyloxymethyl)-2-phenyl-tetrahydrofursn    2-Benzyloxymetyl-2-äthyl-5-phenyl-tetrahydrofuran   2- (2-Fluorbenzyloxymethyl ) -2-äthyl-5-phenyl-tetrahydrofuran    2-(2-Chlorbenzyloxymethyl)-2-äthyl-5-phenyl-tetrahydrofuran    2- (2-Brombenzyloxymethyl) -2-äthyl-5-phenyl-tetrahydrofuran 2- (2-Methylbenzyloxymethyl)-2-äthyl-5-phenyl-tetrahydrofuran 2- (4-Fluorbenzyloxymethyl ) -2-äthyl-5-phenyl-tetrahydrofuran    2-(2,6-Dichlorbenzyloxymethyl)-2-äthyl-5-phenyl-tetrahydrofuran   2-Benzyloxymethyl-2 ,\n 5-diäthyl-5-methyl-tetrahydrofuran    2-(2-Fluorbenzyloxymethyl)-2,5-diäthyl-5-methyl-tetrahydrofuran 2-(2-Chlorbenzyloxymethyl)-2,5-diäthyl-5-methyl-tetrahydrofuran 2-(2-Brombenzyloxymethyl)-2,5-diäthyl-5-methyl-tetrahydrofuran   2-(2-Methylbenzyloxymethyl)-2,5-diäthyl-5-methyl-tetrahydro-    furan 2-(4-Fluorbenzyloxymethyl)-2,5-diäthyl-5-methyl-tetrahydrofuran 2-(2,6-Dichlorbenzyloxymethyl)-2,5-diäthyl-5-methyl-tetrahydrofuran 2-(2-Methylbenzyloxymethyl)-5-chlormethyl-tetrahydrofuran   2- (4-Fluorbenzyloxymethyl ) -5-chlormethyl-tetrehydrofuran    2-(2,6-Dichlorbenzyloxymethyl)-5-chlormethyl-tetrahydrofuran  2-Benzyloxymethyl-2-methyl-5-phenyl-tetrahydrofuran 2-(2-fluorbenzyloxymethyl)-2-methyl-5-phenyl-tetrahydrofuran    2-(2-Chlorbenzyloxymethyl ) -2-methyl-5-phenyl-tetrahydrofuran \n 2-(2-Brombenzyloxymethyl)-2-methyl-5-phenyl-tetrahydrofuran    2-(2-Methylbenzyloxymethyl)-2-methyl-5-phenyl-tetrahydrofuran   2-(4-Fluorbenzyloxymethyl )-2-methyl-5-phenyl-tetrahydrofuran    2-(2,6-Dichlorbenzyloxymethyl)-2-methyl-5-phenyl-tetrahydrofuran 2-Benzyloxymethyl-5-äthyl-tetrahydrofuran   2- ( 2-Fluorbenzyloxymethyl ) -5-äthyl-tetrahydrofuran    2- (2-Chlorbenzyloxymethyl ) 5-äthyl-tetrahydrofuran 2-(2-Brombenzyloxymethyl)-5-diäthyl-tetrahydrofuran 2-(2-Methylbenzyloxymethyl)-5-äthyl-tetrahydrofuran    2- ( 4-Fluorbenzyloxymethyl ) -5-äthyl-tetrahydrofuran 2- (2,\n 6-Dichlorbenzyloxymethyl) -5-äthyl-tetrahydrofuran    2-(Benzyloxymethyl)-2,5-dimethyl-5-vinyl-tetrahydrofuran 2-(2-Flurobenzyloxymethyl)-2,5-dimethyl-5-vinyl-tetrahydrofuran 2-(2-Chlorbenzyloxymethyl)-2,5-dimethyl-5-vinyl-tetrahydrofuran 2-(2-Brombenzyloxymethyl)-2,5-dimethyl-5-vinyl-tetrahydrofuran 2-(2-Methylbenzyloxymethyl)-2,5-dimethyl-5-vinyl-tetrahydrofuran 2-(4-Fluorbenzyloxymethyl)-2,5-dimethyl-5-vinyl-tetrahydrofuran 2-(2,6-Dichlorbenzyloxymethyl)-2,5-dimethyl-5-vinyl-tetrahydrofuran furan 2-(Benzyloxymethyl)-2,5-dimethyl-5-äthyl-tetrahydrofuran 2-(2-Fluorbenzyloxymethyl)-2,5-dimethyl-5-äthyl-tetrahydrofuran 2-(2-Chlorbenzyloxymethyl)-2,5-dimethyl-5-äthyl-tetrahydrofuran    2-(2-Brombenzyloxymethyl)-2 ,5-dimethyl-5-äthyl-tetrahydrofuran    2-(2-Methylbenzyloxymethyl)-2,5-dimethyl-5-äthyl-tetrahydrofuran  \n 2-(4-fluorbenzyloxymethyl)-2,5-dimethyl-5-äthyl-tetrahydrofuran 2-(2,6-Dichlorbenzyloxymethyl)-2,5-dimethyl-5-äthyl-tetrahydro furan    2-(Benzyloxymethyl)-5-methoxymethyl-tetrahydrofur.m 2-(2-Fluorbenzyloxymethyl ) -5-methoxymethyl-tetrahdrofuran 2-(2-Chlorbenzyloxymethyl)-5-methoxymethyl-tetrahrdrofuran 2- (2-Brombenzyloxymethyl ) -5 -methoxymethyl -tetrahy &lt; ir ofuran 2- (2-Methylbenzyloxymethyl ) -5-methoxyrrethyl-tetrahydrofuran    2- (4-Fluorbenzyloxymethyl) -5-methoxymethyl-tetrahydrofuran 2-(2,6-Dichlorbenzyloxymethyl)-5-methyoxymethyl-tetrahydrofuran 2-(Benzyloxymethyl)-5-chlormethyl-tetahydrofuran   Die   erfindungsgenessen    Wirkstoffe beeinflussen das Pflanzenwachstum und können deshalb als Defoliants, Desiccants,\n Kraut   abtötungsmittel,      Keimhemmungsmittel    und insbesondere als Un   krautvernichtungsmittel    verwendet werden. Unter Unkraut im weitesten Sinne sind alle Pflanzen zu verstehen, die an Orten aufwachsen, wo sie unerwünscht sind. Ob die erfindungsgemässen Stoffe als totale oder selektive Herbizide wirken, hängt im wesentlichen von der angewendeten Menge ab.\n\n\nDie erfindungsgemässen Wirkstoffe können z.B. bei den folgenden Pflanzen verwendet werden: Dikotyle Unkräuter der Gattungen: Senf (Sinapis), Kresse (Lepidium), Labkraut (Galium), Sternmiere (Stellaria), Kamille (Matricaria), Hundskamille (Anthemis), Knopfkraut (Galinsoga),   Gänsefuss    (Chenopodium), Brennessel (Urtica), Kreuzkraut (Senecio), Fuchsschwanz (Amaranthus), Portulak (Portulaca),   Spitzklette    (Xanthium), Winde (Convolvulus), Prunkwinde (Ipomoea), Knöterich (Polygonum), Sesbanie (Sesbania), Ambrosie (Ambrosia), Kratzdistel (Cirsium), Distel (Carduus), Gänsedistel (Sonchus), Nachtschatten (Solanum), Sumpfkresse (Rorippa), Rotala, BUchsenkraut (Lindernia), Taubnessel (Lamium), Ehrenpreis (Veronica), Schönmalve (Abutilon), Emex, Stechapfel (Datura), Veilchen   (Viola),    Hanfnessel,\n Hohlzahn   (Galeopsls),    Mohn (Papaver), Flockenblume (Centaurea).\n\n\nDicotyle Kulturen der Gattungen: Baumwolle (Gossypium),   Soja-    bohne (Glycine), Rübe (Beta), Möhre (Daucus),   Garvenbohne    (Phaseolus), Erbse (Pisum), Kartoffel (Solanum),   Lein    (Linum), Prunkwinde (Ipomoea), Bohne (Vicia), Tabak (Nicot:.ana), Tomate (Lycopersicon), Erdnuss (Arachis), Kohl   (Brassica),    Lattich (Lactuca), Gurke (Cucumis),   Kt±bis    (Cuburbita).\n\n\nMonokotyle Unkräuter der Gattungen:   Hühnerhirse      (Echinochloa),    Borstenhirse (Setaria), Hirse (Panicum), Fingerhirse (Digitaria), Lieschgras (Phleum), Rispengras (Poa), Schwingel (Festuca),   Eleusine, Brachiaria,   Lolch    (Lolium), Trespe (Bromus), Hafer (Avena), Zypergras (Cyperus), Mohrenhirse (Sorghum), Quecke (Agropyron), Hundszahngras (Cynodon), Monocharia, Fimbristylis, Pfeilkraut (Sagittaria), Sumpfried (Eleocharis), Simse (Scirpus), Paspalum, Ischaemum, Sphenoclea, Dactyloctenium, Straussgras (Agrostis), Fuchsschwanzgras (Alopecurus), Windhalm (Apera).\n\n\nMonokotyle Kulturen der Gattungen: Reis (Oryza), Mais (Zea), Weizen (Triticum), Gerste (Hordeum), Hafer (Avena), Roggen (Secale), Mohrenhirse (Sorghum), Hirse (Panicum), Zuckerrohr (Saccharum), Ananas (Ananas), Spargel (Asparagus), Lauch (Allium).\n\n\nDie Verwendung der erfindungsgemässen Wirkstoffe ist jedoch keineswegs auf diese Gattungen beschränkt, sondern erstreckt sich in gleicher Weise auch auf andere Pflanzen.\n\n\nDie Verbindungen eignen sich in Abhängigkeit von der Konzentration zur Totalunkrautbekämpfung z.B. auf Industrie- und Gleisanlagen und auf Wegen und Plätzen mit und ohne Baumbewuchs. Ebenso können die Verbindungen zur Unkrautbekämpfung in Dauerkulturen z.B. Forst-, Ziergehölz-, Obst-, Wein-,   Citrus-,    Nuss-,   Bananen-,    Kaffee-, Tee-, Gummi-,   olpalm-,    Kakao-, Beerenfrucht- und Hopfenanlagen und zur selektiven Unkrautbekämpfung in einjährigen Kulturen eingesetzt   werden.   \n\n\nDie erfindungsgemässen Wirkstoffe weisen insbesondere starke herbizide Wirkungen gegen Gräser auf,ohne verschiedene Kulturpflanzen zu schädigen. Die können deshalb vorzugsweise zur selektiven Ungräserbekämpfung eingesetzt werden. Als Kulturen kommen insbesondere infrage: RUben, Sojabohnen, Bohnen, Baumwolle, Raps, Erdnüsse, Gemüse, Mais und Reis.  \n\n\nDie erfindungsgemässen Wirkstoffe können in die üblichen Formulierungen übergeführt werden, wie Lösungen, Emulsionen, Suspensionen, Pulver, Pasten und Granulate. Diese werden in bekannter Weise hergestellt, z. B. durch Vermischen der Wirkstoffe mit Streckmitteln, also flüssigen Lösungsmitteln, unter Druck stehenden verflüssigten Gasen und/oder festen Trägerstoffen, gegebenenfalls unter Verwendung von oberflächenaktiven Mitteln, also Emulgiermitteln und/oder Dispergiermitteln und/oder schaumerzeugenden Mitteln. Im Falle der Benutzung von Wasser als Streckmittel können z. B. auch organische Lösungsmittel als Hilfslösungsmittel verwendet werden.\nAls flüssige Lösungsmittel kommen im wesentlichen in Frage: Aromaten, wie Xylol, Toluol, Benzol oder Alkylnaphthaline, chlorierte Aromaten oder chlorierte aliphatische Kohlenwasserstoffe, wie Chlorbenzole, Chloräthylene oder Methylenchlorid, aliphatische Kohlenwasserstoffe, wie Cyclohexan oder Paraffine, z. B. Erdölfraktionen, Alkohole, wie Butanol oder Glycol sowie deren Äther und Ester, Ketone, wie Aceton, Methyläthylketon, Methylisobutylketon oder Cyclohexanon, stark polare Lösungsmittel, wie Dimethylformamid und Dimethylsulfoxid, sowie Wasser; mit verflüssigten gasförmigen Streckmitteln oder Trägerstoffen sind solche Flüssigkeiten gemeint, welche bei normaler Temperatur und unter Normaldruck gasförmig sind,   z.    B.\nAerosol-Treibgase, wie Dichlordifluormethan oder Trichlorfluormethan; als feste Trägerstoffe:   natUr-    liche Gesteinsmehle, wie Kaoline, Tonerden, Talkum, Kreide, Quarz, Attapulgit, Montmorillonit oder   Diatomeene:rde    und synthetische Gesteinsmehle, wie hochdisperse   Kleselsiure,    Aluminiumoxid und Silikate; als Emulgiermittel;   nlchtionogene    und anionische Emulgatoren, wie   Polyoxyäthylen-FettsäurEster, Polyoxy-    äthylen-Fettalkohol-Äther,   z.B.      Alkylaryl-polygly      ol-Äther,    Alkylsulfonate, Alkylsulfate, Arylsulfonate sowie Eiweisshydrolysate; als Dispergiermittel: z. B. Lignin-   SLlfitablaugen    und Methylcellulose.  \n\n\nDie crfindungsgemässen Wirkstoffe können als solche oder in ihren Formulierungen zur Verstärkung und Ergänzung ihres Wirkungsspekrums je nach beabsichtigter Verwendung mit anderen herbiziden Wirkstoffcn   kombiniert    werden, wobei Fertiqformulierung oder Tankmischung möglich ist.\n\n\nBesonders hervorzuheben sind die Kombinationen der.erfindungsgemässen Wirkstoffe mit 4-Amino-3-methyl-6-phenyl-1,2-4,-triazin- 5(4H)-on (Metamitron) für   Rübenkulturen,    4-Amino-6-tert.-butyl3-methylthio-1,2,4-triazin-5(4H)-on (Metribuzin) für Sojabohnen, Tomaten und Kartoffeln und   2-Chlor-4-äthylamino-6-isopropylamino-    1,3,5-triazin (Atrazin) für Mais und Sojabohnen, mit 3-(3,4   Dichlorphenyl)-1,1-dimethylharnstoff    (Diuron) und 3-(3-Trifluormethylphenyl)-1,1-dimethylharnatoff (Fluomethuron) für Baumwolle.\n\n \nDie Formulierungen enthalten im allgemeinen zwischen   O,l    und 95 Gewichtsprozent Wirkstoff, vorzugsweise zwischen 0,5 und 90 Gewichtsprozent.\n\n\nDie Wirkstoffe können als solche, in Form ihrer Formulierungen oder der daraus bereiteten Anwendungsformen, wie gebrauchsfertige Lösungen, Emulsionen, Suspensionen, Pulver, Pasten und Granulate angewendet werden. Die Anwendung geschieht in üblicher Weise, z.B.\n\n\ndurch Spritzen,   Sprüngen,    Stäuben, Streuen und Giessen.\n\n\nDie erfindungsgemässen Wirkstoffe können sowohl nach als auch insbesondere vor dem Auflaufen der   Pflanzen    appliziert werden.\n\n\nSie können auch vor der Saat in den   Bolzen    eingearbeitet werden.  \n\n\nDie aufgewandte Wirkstoffmenge kann in grösseren Bereichen schwanken. Sie hängt im wesentlichen von der Art des gewünschten Effekts ab. Im allgemeinen liegen die Aufwandmengen zwischen 0,1 und 10 kg Wirkstoff pro ha, vorzugsweise zwischen 0,2 und 6 kg/ha.\n\n\nDie erfindungsgemässen Wirkstoffe besitzen nicht nur herbizide Eigenschaften, sondern darüberhinaus auch eine fungizide und insektizide Wirksamkeit.\n\n\nDie guten herbiziden Wirkungen der erfindungsgemässen Wirkstoffe und ihre selektiven Einsatzmöglichkeiten gehen aus den nachfolgenden beispielen hervor.  \n\n\nBeispiel A Pre-emergence-Test Lösungsmittel: 5 Gewichtsteile Aceton Emulgator: 1 Gewichtsteil Alkylarylpolyglycoläther Zur Herstellung einer zweckmässigen Wirkstoffzubereitung vermischt man 1 Gewichtsteil Wirkstoff mit der angegebenen Menge Lösungsmittel, gibt die angegebene Menge Emulgator zu und verdünnt das Konzentrat mit Wasser auf die gewünschte Konzentration.\n\n\nSamen der Testpflanzen werden in normalen Boden ausgesät und nach 24 Stunden mit der Wirkstoffzubereitung begossen.\n\n\nDabei hält man die Wassermenge pro Flächeneinheit zweckmässigerweise konstant. Die Wirkstoffkonzentration in der Zubereitung spielt keine Rolle, entscheidend ist nur die Aufwandmenge des Wirkstoffs pro Flächeneinheit. Nach drei Wochen wird der Schädigungsgrad der Pflanzen bonitiert in % Schädigung im Vergleich zur Entwicklung der unbehandelten Kontrolle.\nEs bedeuten:\n0 % = keine Wirkung (wie unbehandelte Kontrolle)\n100 % = totale Vernichtung Wirkstoffe, Aufwandmengen und Resultate gehen aus der nachfolgenden Tabelle hervor:     T a b e l l e: A   \nEMI27.1     \n\n Pre-emergence-Test &lt;SEP&gt; Wirkstoff- &lt;SEP&gt; Zucker- &lt;SEP&gt; Soja- &lt;SEP&gt; Mais &lt;SEP&gt; Raps &lt;SEP&gt; Echino- &lt;SEP&gt; Alope- &lt;SEP&gt; Poa\n&lt;tb&gt;  &lt;SEP&gt; aufwand &lt;SEP&gt; rüben &lt;SEP&gt; bohnen &lt;SEP&gt; chloa &lt;SEP&gt; curus &lt;SEP&gt; annua\n&lt;tb&gt;  &lt;SEP&gt; kg/ha &lt;SEP&gt; crus &lt;SEP&gt; myosu W &lt;SEP&gt; i &lt;SEP&gt; r &lt;SEP&gt; k &lt;SEP&gt; s &lt;SEP&gt; t &lt;SEP&gt; o &lt;SEP&gt; f &lt;SEP&gt; f &lt;SEP&gt; e &lt;SEP&gt; galli &lt;SEP&gt; roides\n&lt;tb&gt;  &lt;SEP&gt; CH3\n&lt;tb&gt;  &lt;SEP&gt; CH3\n&lt;tb&gt;  &lt;SEP&gt; CH-CH2-O-CH3\n&lt;tb&gt;  &lt;SEP&gt; # &lt;SEP&gt; N &lt;SEP&gt; 1,5 &lt;SEP&gt; 10 &lt;SEP&gt; 30 &lt;SEP&gt; 20 &lt;SEP&gt; 30 &lt;SEP&gt; 90 &lt;SEP&gt; 50 &lt;SEP&gt; 70\n&lt;tb&gt;  &lt;SEP&gt; CO-CH2Cl &lt;SEP&gt; 1,0 &lt;SEP&gt; 10 &lt;SEP&gt; 20 &lt;SEP&gt; 10 &lt;SEP&gt; 10 &lt;SEP&gt; 90 &lt;SEP&gt; 40 &lt;SEP&gt; 50\n&lt;tb&gt;  &lt;SEP&gt; C2H5\n&lt;tb&gt;  &lt;SEP&gt; (bekannt)\n&lt;tb&gt;  &lt;SEP&gt; # &lt;SEP&gt; CH2-O-CH2-# &lt;SEP&gt; \n 1,5 &lt;SEP&gt; 0 &lt;SEP&gt; 0 &lt;SEP&gt; 0 &lt;SEP&gt; 0 &lt;SEP&gt; 100 &lt;SEP&gt; 60 &lt;SEP&gt; 90\n&lt;tb&gt;  &lt;SEP&gt; (1) &lt;SEP&gt; F &lt;SEP&gt; 1,0 &lt;SEP&gt; 0 &lt;SEP&gt; 0 &lt;SEP&gt; 0 &lt;SEP&gt; 0 &lt;SEP&gt; 90 &lt;SEP&gt; 40 &lt;SEP&gt; 80\n&lt;tb&gt;    Herstellungsbeispiele BeisPiel 1\nEMI28.1     \n (Verfahrensvariante a) Zu einem Gemisch von 4,8 g (0,2 Mol) Natriumhydrid (6,0 g 80%iges Natriumhydrid in Paraffinöl) in 200 ml absolutem Dioxan werden bei Raumtemperatur unter Rühren 20,4 g (0,2 Mol) Tetrahydrofurfurylalkohol zugetropft. Man erhitzt danach noch 30 Minuten unter Rückfluss, kühlt auf 500C ab und tropft dann zu dem so erhaltenen Natriumsalz 38 g (0,2 Mol) 2-Fluorbenzylbromid zu. Anschliessend erhitzt man noch 3 Stunden unter Rückfluss, lässt auf Raumtemperatur abkühlen, versetzt zur Zerstörung von überschüssigem Natriumhydrid mit 20 ml Methanol und engtdurch Abdestillieren des Lösungsmittels im Vakuum ein.\nDer Rückstand wird in 200 ml Wasser aufgenommen und mit Methylenchlorid extrahiert. Die organische Phase wird über Natriumsulfat getrocknet, filtriert, das Lösungsmittel abgezogen und der Rückstand im Vakuum fraktioniert. Man erhält 37,8 g (90 % der Theorie) 2-(2-Fluorbenzyloxymethyl)-tetrahydrofuran vom Siedepunkt   790C/0,l    mm.\n\n\nBeispiel 2\nEMI28.2     \n (Verfahrensvariante d) 25 g (0,1 Mol)   2-[1- (2-Chlorbenzyloxy) -propyl]-furan    werden in 200 ml Methanol gelöst und nach Zugabe von 5 g Rbodium-Katalysator (5% Rhodium auf Aluminiumoxid) 4 Stunden bei 5 atü und Raumtemperatur hydriert. Danach wird der Katalysator abfiltriert, das Filtrat durch Abdestillieren des ösungsmittels im Vakuum eingeengt und der Rückstand fraktioniert im Vakuum destilliert. Man erhält 15,7 g (62   96    der Theorie)   2-[1-(2-Chlorbenzyloxy)-propyl3-    tetrahydrofuran vom Siedepunkt   101-1050C/0,1    mm.  \n\n\nIn analoger Weise können die in der nachfolgenden Tabelle 1 aufgeführten Verbindungen hergestellt werden.\n\n\n T a b e l l e: 1\nEMI29.1     \n  \nEMI30.1     \n\n  &lt;SEP&gt; Schmelzpunkt\n&lt;tb&gt; Bsp. &lt;SEP&gt; RÚ &lt;SEP&gt; Rê &lt;SEP&gt; R  &lt;SEP&gt; R4 &lt;SEP&gt; R5 &lt;SEP&gt; R6 &lt;SEP&gt; R7 &lt;SEP&gt; R8 &lt;SEP&gt; R9 &lt;SEP&gt; R10 &lt;SEP&gt; Y &lt;SEP&gt; ( C) &lt;SEP&gt; bzw. &lt;SEP&gt; Siede Nr &lt;SEP&gt; punkt &lt;SEP&gt; ( C)/mmHg  &lt;SEP&gt; Säule\n&lt;tb&gt; 3 &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; -#-Cl &lt;SEP&gt; 105/0,1\n&lt;tb&gt; 4 &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; -# &lt;SEP&gt; 110/0,1\n&lt;tb&gt;  &lt;SEP&gt; Cl\n&lt;tb&gt;  &lt;SEP&gt; Cl\n&lt;tb&gt; 5 &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; -# &lt;SEP&gt; 120/0,1\n&lt;tb&gt;  &lt;SEP&gt; Cl\n&lt;tb&gt;  &lt;SEP&gt; -Cl\n&lt;tb&gt; 6 &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; -# &lt;SEP&gt; -Cl &lt;SEP&gt; 112/0,1\n&lt;tb&gt;  &lt;SEP&gt; #\n&lt;tb&gt; 7 &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; -# &lt;SEP&gt; 134/0,1\n&lt;tb&gt; \n 8 &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; ## &lt;SEP&gt; 155/0,4\n&lt;tb&gt;  &lt;SEP&gt; CH3\n&lt;tb&gt; 9 &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; -# &lt;SEP&gt; 96/0,4\n&lt;tb&gt;  &lt;SEP&gt; CH3\n&lt;tb&gt; 10 &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; -# &lt;SEP&gt; 94/0,3\n&lt;tb&gt;  &lt;SEP&gt; Cl\n&lt;tb&gt; 11 &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; -# &lt;SEP&gt; 103/0,3\n&lt;tb&gt;  &lt;SEP&gt; CF3\n&lt;tb&gt; 12 &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; -# &lt;SEP&gt; 126/0,1\n&lt;tb&gt;  &lt;SEP&gt; CH3\n&lt;tb&gt; 13 &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; -# &lt;SEP&gt; -CH3 &lt;SEP&gt; 100/0,2\n&lt;tb&gt;   \nEMI31.1     \n\n  &lt;SEP&gt; Schmelzpunkt\n&lt;tb&gt; Bsp.\n&lt;SEP&gt; RÚ &lt;SEP&gt; Rê &lt;SEP&gt; R  &lt;SEP&gt; R4 &lt;SEP&gt; R5 &lt;SEP&gt; R6 &lt;SEP&gt; R7 &lt;SEP&gt; R8 &lt;SEP&gt; R9 &lt;SEP&gt; R10 &lt;SEP&gt; Y &lt;SEP&gt; ( C) &lt;SEP&gt; bzw. &lt;SEP&gt; Siede Nr &lt;SEP&gt; punkt &lt;SEP&gt; ( C)/mmHg  &lt;SEP&gt; Säule\n&lt;tb&gt; 14 &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; -#-Cl &lt;SEP&gt; 116/0,2\n&lt;tb&gt;  &lt;SEP&gt; CH3\n&lt;tb&gt; 15 &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; -# &lt;SEP&gt; -CH3 &lt;SEP&gt; 156/0,3\n&lt;tb&gt;  &lt;SEP&gt; CH2Cl\n&lt;tb&gt;  &lt;SEP&gt; O\n&lt;tb&gt; 16 &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; -#-O &lt;SEP&gt; 131/0,1\n&lt;tb&gt; 17 &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; -# &lt;SEP&gt; -OCH3 &lt;SEP&gt; 125/0,1\n&lt;tb&gt;  &lt;SEP&gt; O-#\n&lt;tb&gt; 18 &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; -# &lt;SEP&gt; 158/0,1\n&lt;tb&gt;  &lt;SEP&gt; Cl\n&lt;tb&gt; 19 &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H  \n &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; -#-Cl &lt;SEP&gt; 125/0,1\n&lt;tb&gt; 20 &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; -#-CO-O-# &lt;SEP&gt; 105/0,1\n&lt;tb&gt;  &lt;SEP&gt; OCH3\n&lt;tb&gt;  &lt;SEP&gt; Br\n&lt;tb&gt; 21 &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; -# &lt;SEP&gt; 107/0,1\n&lt;tb&gt; 22 &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; -#-# &lt;SEP&gt; 160/0,1\n&lt;tb&gt;  &lt;SEP&gt; F\n&lt;tb&gt; 23 &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; C2H5 &lt;SEP&gt; H &lt;SEP&gt; -# &lt;SEP&gt; 88/0,1\n&lt;tb&gt;  &lt;SEP&gt; F\n&lt;tb&gt; 24 &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; CH3 &lt;SEP&gt; H &lt;SEP&gt; -# &lt;SEP&gt; 90/0,6\n&lt;tb&gt;   \nEMI32.1     \n\n  &lt;SEP&gt; Schmelzpunkt\n&lt;tb&gt; Bsp. &lt;SEP&gt; RÚ &lt;SEP&gt; Rê &lt;SEP&gt; R  &lt;SEP&gt; R4 &lt;SEP&gt; R5 &lt;SEP&gt; R6 &lt;SEP&gt; R7 &lt;SEP&gt; R8 &lt;SEP&gt; R9 &lt;SEP&gt; R10 &lt;SEP&gt; Y &lt;SEP&gt; ( C) &lt;SEP&gt; bzw.\n&lt;SEP&gt; Siede Nr &lt;SEP&gt; punkt &lt;SEP&gt; ( C)/mmHg  &lt;SEP&gt; Säule\n&lt;tb&gt;  &lt;SEP&gt; CH3\n&lt;tb&gt; 25 &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; CH3 &lt;SEP&gt; H &lt;SEP&gt; -# &lt;SEP&gt; 93/0,4\n&lt;tb&gt; 26 &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; CH3 &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; -# &lt;SEP&gt; 101/0,5\n&lt;tb&gt;  &lt;SEP&gt; F\n&lt;tb&gt; 27 &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; C2H5 &lt;SEP&gt; C2H5 &lt;SEP&gt; H &lt;SEP&gt; -# &lt;SEP&gt; 110/0,4\n&lt;tb&gt;  &lt;SEP&gt; CH3\n&lt;tb&gt; 28 &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; C2H5 &lt;SEP&gt; C2H5 &lt;SEP&gt; H &lt;SEP&gt; -# &lt;SEP&gt; 99-103/0,4\n&lt;tb&gt;  &lt;SEP&gt; Cl\n&lt;tb&gt; 29 &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; C2H5 &lt;SEP&gt; C2H5 &lt;SEP&gt; H &lt;SEP&gt; -# &lt;SEP&gt; 108/0,1\n&lt;tb&gt;  &lt;SEP&gt; Cl\n&lt;tb&gt; 30 &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; CH3 &lt;SEP&gt; H &lt;SEP&gt; -# &lt;SEP&gt; 105/0,1\n&lt;tb&gt;  &lt;SEP&gt; F\n&lt;tb&gt; 31 &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; \n H &lt;SEP&gt; H &lt;SEP&gt; # &lt;SEP&gt; H &lt;SEP&gt; -# &lt;SEP&gt; 143/0,1\n&lt;tb&gt;  &lt;SEP&gt; Cl\n&lt;tb&gt; 32 &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; # &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; -# &lt;SEP&gt; 159/0,1\n&lt;tb&gt;  &lt;SEP&gt; F\n&lt;tb&gt; 33 &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; CH3 &lt;SEP&gt; CH3 &lt;SEP&gt; H &lt;SEP&gt; -# &lt;SEP&gt; 80-83/0,1\n&lt;tb&gt; 34 &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; -# &lt;SEP&gt; -# &lt;SEP&gt; 143/0,06\n&lt;tb&gt;   \nEMI33.1     \n\n  &lt;SEP&gt; Schmelzpunkt\n&lt;tb&gt; Bsp. &lt;SEP&gt; RÚ &lt;SEP&gt; Rê &lt;SEP&gt; R  &lt;SEP&gt; R4 &lt;SEP&gt; R5 &lt;SEP&gt; R6 &lt;SEP&gt; R7 &lt;SEP&gt; R8 &lt;SEP&gt; R9 &lt;SEP&gt; R10 &lt;SEP&gt; Y &lt;SEP&gt; ( C) &lt;SEP&gt; bzw.\n&lt;SEP&gt; Siede Nr &lt;SEP&gt; punkt &lt;SEP&gt; ( C)/mmHg  &lt;SEP&gt; Säule\n&lt;tb&gt; 35 &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; -#-CH3 &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; -# &lt;SEP&gt; 148/0,3\n&lt;tb&gt;  &lt;SEP&gt; F\n&lt;tb&gt; 36 &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; -#-CH3 &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; -# &lt;SEP&gt; 151/,03\n&lt;tb&gt;  &lt;SEP&gt; CH3\n&lt;tb&gt; 37 &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; -#-CH3 &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; -# &lt;SEP&gt; 148/0,5\n&lt;tb&gt;  &lt;SEP&gt; F\n&lt;tb&gt; 38 &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; CH3 &lt;SEP&gt; CH3 &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; H &lt;SEP&gt; -# &lt;SEP&gt; Oel\n&lt;tb&gt;    Herstellung von   AusgangsDrodukten    (a) Das gemäss Beispiel 2 als Ausgangsprodukt eingesetzte\n2-[1-(2-Chlorbenzyloxy)-propyl]-furan kann wie folgt hergestellt werden:\n: Zu einem Gemisch von 4,8 g (0,2 Mol) Natriumhydrid (6,0 g 80   iges    Natriumhydrid in Paraffinöl) und 200 ml absolutem Dioxan werden bei Raumtemperatur 27,2 g (0,2 Mol)   2-(1-Hyroxy-    propyl)-furan zugetropft.\n\n \nMan erhitzt danach 30 Min. unter Rückfluss, kühlt auf 500C ab und tropft dann zu dem so erhaltenen Natriumsalz 32 g (0,2 Mol) 2-Chlorbenzylchlorid zu. Anschliessend erhitzt man noch 3 Stunden unter Rückfluss, versetzt zur   Zerstbrung    von über   schussigem    Natriumhydrid mit 20 ml Methanol und engt durch Abdestillieren des   Losungsmittels    im Vakuum ein.\n\n\nDer Rückstand wird in 200 ml Wasser aufgenommen und mit   Methylenchlorit    extrahiert. Die organische Phase wird über Natriumsulfat getrocknet, filtriert, das Lösungsmittel abgezogen und der Rückstand im Vakuum   fraktioniort.    Man erhält 36,0 g (72 % d. Th.)   2-Z5-(2-Chlorbenzyloxy)-propyl7-    furan vom Siedepunkt 95 -   97 C/0,1    mm. \n</pre>\n            </p>\n         </div>\n      "^^<http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral> ;
+        <http://purl.org/dc/terms/identifier>
+                "EP-0000002-A1" ;
+        <http://purl.org/dc/terms/issued>
+                "2014-08-21T17:13:28Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+        <http://purl.org/dc/terms/license>
+                "User acknowledges that the Information Retrieval Facility (IRF) and its third party providers retain all right, title and interest in and to this xml under applicable copyright laws. User acquires no ownership rights to this xml including but not limited to its format. User hereby accepts the terms and conditions of the Licence Agreement set forth at http://www.ir-facility.org/legal/marec/data_licence" ;
+        <http://purl.org/dc/terms/license>
+                <http://creativecommons.org/publicdomain/zero/1.0/> ;
+        <http://purl.org/dc/terms/references>
+                <urn:x-temp:/doc/patent/EP-78100007-A> ;
+        <http://purl.org/dc/terms/title>
+                "Dérivés du tétrahydrofuranne, leurs procédés de préparation et leur utilisation comme herbicides."@fr , "Tetrahydrofuran-Derivate, Verfahren zu ihrer Herstellung sowie ihre Verwendung als Herbizide."@de , "Tetrahydrofurane derivatives, processes for their preparation and their use as herbicides."@en ;
+        <http://rdfs.org/sioc/ns#content>
+                "Dérivés du tétrahydrofuranne, leurs procédés de préparation et leur utilisation comme herbicides.\nTetrahydrofuran-Derivate, Verfahren zu ihrer Herstellung sowie ihre Verwendung als Herbizide.\nTetrahydrofurane derivatives, processes for their preparation and their use as herbicides.\n\n         <div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\">\n            <p>1. Tetrahydrofurane derivatives of the formula I  see diagramm : EP0000002,P22,F6  in which R**1 to R**6 are identical or different and represent hydrogen, straight-chain or branched C1-6 alkyl, C1-2 halogenalkyl with up to three identical or different halogen atoms, alkoxyalkyl with 1 or 2 C atoms in each alkyl part, as well as phenyl or benzyloxyalkyl with 1 or 2 C atoms in the alkyl part each optionally substituted by halogen, C1-2 alkyl, C1-2 alkoxy or C1-2 halogenoalkyl with up to three identical or different halogen atoms, R**5 and R**6 together also represent a saturated carboxylic ring with altogether 3 to 6 C atoms, R**7 represents hydrogen, straight-chain or branched C1-6 alkyl, C3-6 cycloalkyl, C2-4 alkenyl, C2-4 alkinyl, alkoxyalkyl with 1 to 2 C atoms in each alkyl part, as well as phenyl or benzyloxyalkyl with 1 or 2 C atoms in the alkyl part each substituted by halogen, C1-2 alkyl, C1-2 alkoxy, or C1-2 halogenoalkyl with up to three identical or different halogen atoms, R**8 and R**9 are identical or different and represent hydrogen, straight-chain or branched C1-6 alkyl, C2-4 alkenyl, C2-4 alkinyl, C3-6 cycloalkyl, C1-4 alkoxy, as well as phenyl, benzyl or benzyloxy each optionally substituted by halogen, C1-2 alkyl, C1-2 alkoxy or C1-2 halogenoalkyl with up to three identical or different halogen atoms, R**10 represents hydrogen, straight-chain or branched C1-6 alkyl, C2-4 alkenyl, C2-4 alkinyl, C1-2 halogenoalkyl with up to three identical or different halogen atoms, as well as phenyl optionally substituted by halogen, C1-2 alkyl, C1-2 alkoxy or C1-2 halogenoalkyl with up to three identical or different halogen atoms and Y represents optionally substituted aryl with 6 to 10 C atoms, which can carry one or more identical or different substituents from the following : the halogens fluorine, chlorine or bromine ; alkyl and alkoxy with in each case 1 to 4 C atoms ; halogenoalkyl, halogenoalkoxy and halogenoalkylthio with in each case up to 4 C atoms and up to 5 halogen atoms ; phenyl, phenoxy or phenoxycarbonyl optionally substituted by halogen, alkyl and alkoxy with in each case 1 to 2 C atoms as well as halogenalkyl with up to 1 C atoms and up to 3 identical or different halogen atoms as well as halogenoalkyl with up to 1 C atoms and up to 3 identical or different halogen the tri-, tetra- or penta-methylene radical ; with the proviso that if Y represents phenyl this must be substituted if R**1 to R**10 denote hydrogen.</p>\n         </div>\n      \n\n         <div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\">\n            <p>Die vorliegende Erfindung betrifft neue \nTetrahydrofuran-Derivate der allg. Formel \n<img file=\"00000001.tif\" he=\"20\" id=\"img-00000001\" img-content=\"cf\" img-format=\"tif\" inline=\"no\" orientation=\"unknown\" wi=\"55\"></img> \n(mit den für die Symbole R¹ bis R¹⁰ und Y in der Beschreibung \nangegebenen Bedeutungen), Verfahren zu deren Herstellung \nund deren Verwendung als Herbizide. </p>\n            <p>Insbesondere eignen sich die neuen Wirkstoffe zur selektiven \nUnkrautbekämpfung in verschiedenen Kulturen, wie \nz.B.Rüben, Sojabohnen, Bohnen, Baumwolle, Raps, Erdnüsse, \nGemüse, Mais und Reis. </p>\n         </div>\n      \n" ;
+        <http://www.patexpert.org/ontologies/pmo.owl#applicant>
+                <urn:x-temp:/id/6106fb32-a127-446d-8424-3a4dd800f25d> , <urn:x-temp:/id/898d7990-375a-425f-a176-008c548ceeb4> , <urn:x-temp:/id/a4cfe575-d145-40f6-b7f5-c660c0c8f68c> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#cites>
+                <urn:x-temp:/doc/patent/FR-1370678-A> , <urn:x-temp:/doc/patent/NL-7712227-A> , <urn:x-temp:/doc/patent/NL-7712277-A> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#countryOfFiling>
+                "EP" ;
+        <http://www.patexpert.org/ontologies/pmo.owl#dateOfPublication>
+                "1978-12-20"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#inventor>
+                <urn:x-temp:/id/0000d562-0b79-44c2-93c4-fa759bacb670> , <urn:x-temp:/id/03b178a4-65ae-44f1-b160-2f51fc76ce4a> , <urn:x-temp:/id/0b520770-5d35-4e5e-838b-569b668a7c81> , <urn:x-temp:/id/1dc1e283-0425-432c-8c4f-be7e6d22553b> , <urn:x-temp:/id/24584ed0-3538-4d3d-af59-1be55de35144> , <urn:x-temp:/id/37b13c1a-2653-408a-bb65-aae3c89fa4bc> , <urn:x-temp:/id/54bce7ce-dc9b-45c1-8af0-e0f680054efc> , <urn:x-temp:/id/6635be0c-4f68-4584-b3d1-b64f92ea7b69> , <urn:x-temp:/id/7e785be9-37ed-4629-a828-1b70b23c7d56> , <urn:x-temp:/id/c4a34d0a-2ab2-4649-9a47-a55df72e69d8> , <urn:x-temp:/id/c6dd6fe4-5dd3-42a6-a064-b20d13e2bca6> , <urn:x-temp:/id/ebd256a3-21ee-40af-a229-4b30a7749ef9> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#kindCode>
+                "A1" ;
+        <http://www.patexpert.org/ontologies/pmo.owl#patentFamily>
+                <urn:x-temp:/doc/family/6010385> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#publicationNumber>
+                "0000002" ;
+        <http://www.w3.org/ns/prov#generatedAtTime>
+                "2014-08-21T17:13:28Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+        <http://www.w3.org/ns/prov#wasAttributedTo>
+                <http://csarven.ca/#i> ;
+        <http://www.w3.org/ns/prov#wasDerivedFrom>
+                <http://relative-uri.fake/> ;
+        <http://www.w3.org/ns/prov#wasGeneratedBy>
+                <urn:x-temp:/prov/activity/39d966e6-251a-4949-8b55-ab2d19dde309> .
+
+<urn:x-temp:/doc/patent/EP-0000002-A1/claim/1>
+        a       <http://www.patexpert.org/ontologies/pso.owl#Claim> , <http://www.w3.org/2004/02/skos/core#Concept> ;
+        <http://www.w3.org/2004/02/skos/core#definition>
+                "\n               <div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"de\">\n                  <div>Patentansprüche\n\n\n</div>\n                  <div>1.) Tetrahydrofuran-Derivate der Formel\nEMI35.1     \n in welcher   R'bis      R6    gleich oder verschieden sind und für\nWasserstoff, Alkyl, Halogenalkyl, Alkoxy alkyl, gegebenenfalls substituiertes\nPhenyl oder gegebenenfalls substituiertes\nBenzyloxyalkyl stehen, R5und   R6    auch gemeinsam für einen gesättigten carbo cyclischen Ring stehen,   für    Wasserstoff, Alkyl, Alkenyl, Alkinyl,\nCycloalkyl, Alkoxyalkyl, gegebenenfalls substituiertes Phenyl oder gegebenenfalls substituiertes Benzyloxyalkyl steht,   R8und      R9    gleich oder verschieden sind und für Wasser stoff, Alkyl, Alkenyl, Alkinyl, Cycloalkyl,\nAlkoxy, gegebenenfalls substituiertes Phenyl oder gegebenenfalls substituiertes Benzyl und Benzyloxy stehen,   R'     für Wasserstoff,\n</div>\n                  <div> Alkyl, Alkenyl, Alkinyl,\nHalogenalkyl oder gegeber..enfalls substi tuiertes Phenyl steht und  \nY für gegebenenfalls substituiertes Aryl steht, mit der Massgabe, dass, falls Y für\nPhenyl steht, dieses substituiert sein muss, wenn   R1    bis R10 Wasserstoff bedeuten.\n\n\n</div>\n                  <div>2.) Verfahren zur Herstellung von   Tetrahydrofuran-Deri    vaten, dadurch   gekennzechnet,    dass man  (a) Alkoholate von 2-Hydroxymethyl-tetrahydrofuran-Deri vaten der Formel\nEMI36.1     \n in welcher   R1    bis   R9    die oben angegebene Bedeutung haben und M für ein Alkali- oder Erdalkalimetall steht, mit einer Verbindung der Formel\nEMI36.2     \n in welcher   RIO    und Y die oben angegebene Bedeutung haben und Z für Halogen, insbesondere Chlor oder Brom, den Mesylat- oder Tosylat-Rest steht,  gegebenenfalls in Gegenwart eines Verdünnungsmittels umsetzt, oder dass man (b) Diole der Formel\nEMI37.1     \n in welcher   R'bis RIO    und Y die oben angegebene Bedeutung haben,\n</div>\n                  <div> in Gegenwart eines sauren Katalysators und gegebenenfalls in Gegenwart eines Verdünnungsmittels erhitzt; oder dass man (c) diejenigen Verbindungen der Formel (I), in denen entweder R1 und R7 oder R1 und R4 oder R4 und R5 für Wasserstoff stehen, dadurch erhält, dass man Dihydrofuran-Derivate der Formeln\nEMI37.2     \n     und/oder   \nEMI38.1     \n in welchen R1 bis R10 und Y die oben angegebene Bedeutung haben, in Gegenwart eines Katalysators und gegebenenfalls in Gegenwart eines Verdünnungsmittels mit Wasserstoff hydriert;\n</div>\n                  <div> oder dass man (d) diejenigen Verbindungen der Formel (I), in denen R1, R4, R5 und R7 für Wasserstoff stehen, dadurch erhält, dass man Furan-Derivate der Formel\nEMI38.2     \n in welcher Rê, R , R6, R8   Ro,    R10 und Y die oben angegebene Bedeutung haben,  in Gegenwart eines Katalysators   uiid    gegebenenfalls in Gegen wart eines Verdünnungsmittels mit Wasserstoff hydriert.\n\n \n</div>\n                  <div>3.)Herbizide Mittel, gekennzeichnet durch einen Gehalt an\nTetrahydrofuran-Derivaten gemäss Anspruch 1.\n\n\n</div>\n                  <div>4.)Verfahren zur Bekämpfung von unerwünschtem Pflanzen wachstum, dadurch gekennzeichnet, dass man Tetrahydro furan-Derivate gemäss Anspruch 1 auf die unerwünschten\nPflanzen oder ihren Lebensraum einwirken lässt.\n\n\n</div>\n                  <div>5.)Verwendung von Tetrahydrofuran-Derivaten gemäss Anspruch 1 zur Bekämpfung von unerwünschtem Pflanzenwachstum.\n\n\n</div>\n                  <div>6.)Verfahren zur Herstellung von herbiziden Mitteln, dadurch gekennzeichnet, dass man Tetrahydrofuran-Derivate gemäss\nAnspruch 1 mit Streckmitteln und/oder oberflächenaktiven\nMitteln vermischt. \n</div>\n               </div>\n            "^^<http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral> ;
+        <http://www.w3.org/2004/02/skos/core#notation>
+                "1" ;
+        <http://www.w3.org/2004/02/skos/core#prefLabel>
+                "Claim 1"@en .
+
+<urn:x-temp:/id/0000d562-0b79-44c2-93c4-fa759bacb670>
+        a       <http://www.owl-ontologies.com/sumo.owl#Human> , <http://xmlns.com/foaf/0.1/Person> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "SCHMIDT, ROBERT RUDOLF, DR." ;
+        <http://www.patexpert.org/ontologies/pmo.owl#inventorOf>
+                <urn:x-temp:/doc/patent/EP-0000002-A1> ;
+        <http://xmlns.com/foaf/0.1/name>
+                "SCHMIDT, ROBERT RUDOLF, DR." .
+
+<urn:x-temp:/id/03b178a4-65ae-44f1-b160-2f51fc76ce4a>
+        a       <http://www.owl-ontologies.com/sumo.owl#Human> , <http://xmlns.com/foaf/0.1/Person> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "DRABER, WILFRIED, DR." ;
+        <http://www.patexpert.org/ontologies/pmo.owl#inventorOf>
+                <urn:x-temp:/doc/patent/EP-0000002-A1> ;
+        <http://xmlns.com/foaf/0.1/name>
+                "DRABER, WILFRIED, DR." .
+
+<urn:x-temp:/id/0b520770-5d35-4e5e-838b-569b668a7c81>
+        a                            <http://www.owl-ontologies.com/sumo.owl#Human> , <http://xmlns.com/foaf/0.1/Person> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "SCHMIDT, THOMAS, DR." ;
+        <http://schema.org/address>  <urn:x-temp:/id/0877e344-e1cd-4eaa-8cb3-490100905d2f> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#inventorOf>
+                <urn:x-temp:/doc/patent/EP-0000002-A1> ;
+        <http://xmlns.com/foaf/0.1/lastName>
+                "SCHMIDT, THOMAS, DR." .
+
+<urn:x-temp:/id/1dc1e283-0425-432c-8c4f-be7e6d22553b>
+        a                            <http://www.owl-ontologies.com/sumo.owl#Human> , <http://xmlns.com/foaf/0.1/Person> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "EUE, LUDWIG, DR." ;
+        <http://schema.org/address>  <urn:x-temp:/id/e9ca6e3d-5462-40cc-9f3e-9458a6b30657> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#inventorOf>
+                <urn:x-temp:/doc/patent/EP-0000002-A1> ;
+        <http://xmlns.com/foaf/0.1/lastName>
+                "EUE, LUDWIG, DR." .
+
+<urn:x-temp:/id/24584ed0-3538-4d3d-af59-1be55de35144>
+        a                            <http://www.owl-ontologies.com/sumo.owl#Human> , <http://xmlns.com/foaf/0.1/Person> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "DRABER, WILFRIED, DR." ;
+        <http://schema.org/address>  <urn:x-temp:/id/b38b4d08-9372-4f2c-8775-9ae38913ed82> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#inventorOf>
+                <urn:x-temp:/doc/patent/EP-0000002-A1> ;
+        <http://xmlns.com/foaf/0.1/lastName>
+                "DRABER, WILFRIED, DR." .
+
+<urn:x-temp:/id/37b13c1a-2653-408a-bb65-aae3c89fa4bc>
+        a       <http://www.owl-ontologies.com/sumo.owl#Human> , <http://xmlns.com/foaf/0.1/Person> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "SCHMIDT, THOMAS, DR." ;
+        <http://www.patexpert.org/ontologies/pmo.owl#inventorOf>
+                <urn:x-temp:/doc/patent/EP-0000002-A1> ;
+        <http://xmlns.com/foaf/0.1/name>
+                "SCHMIDT, THOMAS, DR." .
+
+<urn:x-temp:/id/54bce7ce-dc9b-45c1-8af0-e0f680054efc>
+        a       <http://www.owl-ontologies.com/sumo.owl#Human> , <http://xmlns.com/foaf/0.1/Person> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "SCHMIDT THOMAS DR" ;
+        <http://www.patexpert.org/ontologies/pmo.owl#inventorOf>
+                <urn:x-temp:/doc/patent/EP-0000002-A1> ;
+        <http://xmlns.com/foaf/0.1/name>
+                "SCHMIDT THOMAS DR" .
+
+<urn:x-temp:/id/6106fb32-a127-446d-8424-3a4dd800f25d>
+        a                            <http://xmlns.com/foaf/0.1/Agent> , <http://www.owl-ontologies.com/sumo.owl#CognitiveAgent> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "BAYER AG" ;
+        <http://schema.org/address>  <urn:x-temp:/id/bbc32a2b-d2d6-4257-ae33-6e2dd1cfff82> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#applicantOf>
+                <urn:x-temp:/doc/patent/EP-0000002-A1> ;
+        <http://xmlns.com/foaf/0.1/name>
+                "BAYER AG" .
+
+<urn:x-temp:/id/6635be0c-4f68-4584-b3d1-b64f92ea7b69>
+        a       <http://www.owl-ontologies.com/sumo.owl#Human> , <http://xmlns.com/foaf/0.1/Person> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "DRABER WILFRIED DR" ;
+        <http://www.patexpert.org/ontologies/pmo.owl#inventorOf>
+                <urn:x-temp:/doc/patent/EP-0000002-A1> ;
+        <http://xmlns.com/foaf/0.1/name>
+                "DRABER WILFRIED DR" .
+
+<urn:x-temp:/id/7e785be9-37ed-4629-a828-1b70b23c7d56>
+        a       <http://www.owl-ontologies.com/sumo.owl#Human> , <http://xmlns.com/foaf/0.1/Person> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "EUE LUDWIG DR" ;
+        <http://www.patexpert.org/ontologies/pmo.owl#inventorOf>
+                <urn:x-temp:/doc/patent/EP-0000002-A1> ;
+        <http://xmlns.com/foaf/0.1/name>
+                "EUE LUDWIG DR" .
+
+<urn:x-temp:/id/898d7990-375a-425f-a176-008c548ceeb4>
+        a                            <http://xmlns.com/foaf/0.1/Agent> , <http://www.owl-ontologies.com/sumo.owl#CognitiveAgent> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "BAYER AG" ;
+        <http://schema.org/address>  <urn:x-temp:/id/389250e0-9ca3-445b-88fc-46ab37903a29> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#applicantOf>
+                <urn:x-temp:/doc/patent/EP-0000002-A1> ;
+        <http://xmlns.com/foaf/0.1/name>
+                "BAYER AG" .
+
+<urn:x-temp:/id/a4cfe575-d145-40f6-b7f5-c660c0c8f68c>
+        a       <http://xmlns.com/foaf/0.1/Agent> , <http://www.owl-ontologies.com/sumo.owl#CognitiveAgent> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "BAYER AKTIENGESELLSCHAFT" ;
+        <http://www.patexpert.org/ontologies/pmo.owl#applicantOf>
+                <urn:x-temp:/doc/patent/EP-0000002-A1> ;
+        <http://xmlns.com/foaf/0.1/name>
+                "BAYER AKTIENGESELLSCHAFT" .
+
+<urn:x-temp:/id/c4a34d0a-2ab2-4649-9a47-a55df72e69d8>
+        a       <http://www.owl-ontologies.com/sumo.owl#Human> , <http://xmlns.com/foaf/0.1/Person> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "EUE, LUDWIG, DR." ;
+        <http://www.patexpert.org/ontologies/pmo.owl#inventorOf>
+                <urn:x-temp:/doc/patent/EP-0000002-A1> ;
+        <http://xmlns.com/foaf/0.1/name>
+                "EUE, LUDWIG, DR." .
+
+<urn:x-temp:/id/c6dd6fe4-5dd3-42a6-a064-b20d13e2bca6>
+        a       <http://www.owl-ontologies.com/sumo.owl#Human> , <http://xmlns.com/foaf/0.1/Person> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "SCHMIDT ROBERT RUDOLF DR" ;
+        <http://www.patexpert.org/ontologies/pmo.owl#inventorOf>
+                <urn:x-temp:/doc/patent/EP-0000002-A1> ;
+        <http://xmlns.com/foaf/0.1/name>
+                "SCHMIDT ROBERT RUDOLF DR" .
+
+<urn:x-temp:/id/ebd256a3-21ee-40af-a229-4b30a7749ef9>
+        a                            <http://www.owl-ontologies.com/sumo.owl#Human> , <http://xmlns.com/foaf/0.1/Person> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "SCHMIDT, ROBERT RUDOLF, DR." ;
+        <http://schema.org/address>  <urn:x-temp:/id/04f6108f-2999-4f08-afaa-6aba198c9f9b> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#inventorOf>
+                <urn:x-temp:/doc/patent/EP-0000002-A1> ;
+        <http://xmlns.com/foaf/0.1/lastName>
+                "SCHMIDT, ROBERT RUDOLF, DR." .
+
+<urn:x-temp:/doc/patent/EP-78100007-A>
+        a       <http://www.patexpert.org/ontologies/pmo.owl#PatentPublication> ;
+        <http://fusepool.eu/ontologies/general#filing-office>
+                <urn:x-temp:/code/filing-office/EP> ;
+        <http://fusepool.eu/ontologies/general#is-representative>
+                "NO" ;
+        <http://purl.org/dc/terms/identifier>
+                "EP-78100007-A" ;
+        <http://purl.org/dc/terms/language>
+                "de" ;
+        <http://www.patexpert.org/ontologies/pmo.owl#applicationNumber>
+                "78100007" ;
+        <http://www.patexpert.org/ontologies/pmo.owl#countryOfFiling>
+                "EP" ;
+        <http://www.patexpert.org/ontologies/pmo.owl#dateOfPublication>
+                "1978-06-01"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#kindCode>
+                "A" .
+
+<urn:x-temp:/doc/patent/FR-1370678-A>
+        a       <http://www.patexpert.org/ontologies/pmo.owl#PatentPublication> ;
+        <http://fusepool.eu/ontologies/general#filing-office>
+                <urn:x-temp:/code/filing-office/FR> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#citedBy>
+                <urn:x-temp:/doc/patent/EP-0000002-A1> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#countryOfFiling>
+                "FR" ;
+        <http://www.patexpert.org/ontologies/pmo.owl#kindCode>
+                "A" ;
+        <http://www.patexpert.org/ontologies/pmo.owl#publicationNumber>
+                "1370678" .
+
+<urn:x-temp:/doc/patent/NL-7712227-A>
+        a       <http://www.patexpert.org/ontologies/pmo.owl#PatentPublication> ;
+        <http://fusepool.eu/ontologies/general#filing-office>
+                <urn:x-temp:/code/filing-office/NL> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#citedBy>
+                <urn:x-temp:/doc/patent/EP-0000002-A1> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#countryOfFiling>
+                "NL" ;
+        <http://www.patexpert.org/ontologies/pmo.owl#kindCode>
+                "A" ;
+        <http://www.patexpert.org/ontologies/pmo.owl#publicationNumber>
+                "7712227" .
+
+<urn:x-temp:/doc/patent/NL-7712277-A>
+        a       <http://www.patexpert.org/ontologies/pmo.owl#PatentPublication> ;
+        <http://fusepool.eu/ontologies/general#filing-office>
+                <urn:x-temp:/code/filing-office/NL> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#citedBy>
+                <urn:x-temp:/doc/patent/EP-0000002-A1> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#countryOfFiling>
+                "NL" ;
+        <http://www.patexpert.org/ontologies/pmo.owl#kindCode>
+                "A" ;
+        <http://www.patexpert.org/ontologies/pmo.owl#publicationNumber>
+                "7712277" .
+
+<urn:x-temp:/prov/activity/39d966e6-251a-4949-8b55-ab2d19dde309>
+        a       <http://www.w3.org/ns/prov#Activity> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Transformed EP-0000002-A1 data"@en ;
+        <http://www.w3.org/ns/prov#generated>
+                <urn:x-temp:/doc/patent/EP-0000002-A1> ;
+        <http://www.w3.org/ns/prov#startedAtTime>
+                "2014-08-21T17:13:28Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+        <http://www.w3.org/ns/prov#used>
+                <http://relative-uri.fake/> , <https://github.com/fusepool/patents-reengineering/src/main/resources/xsl/marec.xsl> ;
+        <http://www.w3.org/ns/prov#wasAssociatedWith>
+                <http://csarven.ca/#i> .
+
+<urn:x-temp:/id/04f6108f-2999-4f08-afaa-6aba198c9f9b>
+        a       <http://schema.org/PostalAddress> ;
+        <http://schema.org/addressCountry>
+                <urn:x-temp:/code/country/DE> ;
+        <http://schema.org/addressLocality>
+                "D-5000 Köln 80" ;
+        <http://schema.org/streetAddress>
+                "Hahnenweg 5" .
+
+<urn:x-temp:/id/0877e344-e1cd-4eaa-8cb3-490100905d2f>
+        a       <http://schema.org/PostalAddress> ;
+        <http://schema.org/addressCountry>
+                <urn:x-temp:/code/country/DE> ;
+        <http://schema.org/addressLocality>
+                "D-5600 Wuppertal 1" ;
+        <http://schema.org/streetAddress>
+                "Wormser strasse 23" .
+
+<urn:x-temp:/id/e9ca6e3d-5462-40cc-9f3e-9458a6b30657>
+        a       <http://schema.org/PostalAddress> ;
+        <http://schema.org/addressCountry>
+                <urn:x-temp:/code/country/DE> ;
+        <http://schema.org/addressLocality>
+                "D- 090 Leverkusen 1" ;
+        <http://schema.org/streetAddress>
+                "Paul-Klee-Strasse 36" .
+
+<urn:x-temp:/id/b38b4d08-9372-4f2c-8775-9ae38913ed82>
+        a       <http://schema.org/PostalAddress> ;
+        <http://schema.org/addressCountry>
+                <urn:x-temp:/code/country/DE> ;
+        <http://schema.org/addressLocality>
+                "D-5600 Wuppertal 1" ;
+        <http://schema.org/streetAddress>
+                "In den Birken 81" .
+
+<urn:x-temp:/id/389250e0-9ca3-445b-88fc-46ab37903a29>
+        a       <http://schema.org/PostalAddress> ;
+        <http://schema.org/addressCountry>
+                <urn:x-temp:/code/country/DE> .
+
+<urn:x-temp:/id/bbc32a2b-d2d6-4257-ae33-6e2dd1cfff82>
+        a       <http://schema.org/PostalAddress> ;
+        <http://schema.org/addressCountry>
+                <urn:x-temp:/code/country/DE> ;
+        <http://schema.org/addressLocality>
+                "51368 Leverkusen" ;
+        <http://schema.org/streetAddress>
+                "" .
+
+<urn:x-temp:/doc/patent/EP-0000002-B1>
+        a       <http://www.patexpert.org/ontologies/pmo.owl#PatentPublication> , <http://fusepool.eu/ontologies/ecs#ContentItem> , <http://www.w3.org/ns/prov#Entity> , <http://www.patexpert.org/ontologies/pmo.owl#GrantedPatent> , <http://www.patexpert.org/ontologies/pso.owl#B1Document> ;
+        <http://fusepool.eu/ontologies/general#filing-office>
+                <urn:x-temp:/code/filing-office/EP> ;
+        <http://fusepool.eu/ontologies/general#priority-claim>
+                <urn:x-temp:/doc/patent/DE-2724675-A> ;
+        <http://purl.org/dc/elements/1.1/subject>
+                <urn:x-temp:/id/05dd79f9-c889-402e-aeb6-9405a1e5e12a> , <urn:x-temp:/id/087bf276-0baa-4609-bed2-9d0b92dadf26> , <urn:x-temp:/id/1f4a9d17-4eb7-4aa7-bebf-d5949806cede> , <urn:x-temp:/id/331561ac-3cf4-4387-860c-f7e52d23e90a> , <urn:x-temp:/id/3a258e0e-ff11-40fa-9be0-24c8d6b67fc2> , <urn:x-temp:/id/5129b0a6-d1ee-42bc-8927-d04366da7976> , <urn:x-temp:/id/543c5002-a111-45aa-b2f1-09f49c5d9d65> , <urn:x-temp:/id/5c8935fe-a13a-48dd-ae28-e5b89a96b0d5> , <urn:x-temp:/id/658db96a-e20a-4d2d-9fab-3226d500555a> , <urn:x-temp:/id/774c40c1-c728-4d73-9185-4ceb34434031> , <urn:x-temp:/id/8dc88aa1-b287-44e2-81ad-194d612e9bf0> , <urn:x-temp:/id/96e3a4dc-c851-4c0a-9763-05e84761acda> , <urn:x-temp:/id/d1c4678b-535d-4996-a172-02e160093684> , <urn:x-temp:/id/ec8fc2f4-03a4-4906-afc1-753fe5e1876b> ;
+        <http://purl.org/dc/terms/creator>
+                <http://csarven.ca/#i> ;
+        <http://purl.org/dc/terms/identifier>
+                "EP-0000002-B1" ;
+        <http://purl.org/dc/terms/issued>
+                "2014-08-21T17:13:31Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+        <http://purl.org/dc/terms/language>
+                "de" ;
+        <http://purl.org/dc/terms/license>
+                "User acknowledges that the Information Retrieval Facility (IRF) and its third party providers retain all right, title and interest in and to this xml under applicable copyright laws. User acquires no ownership rights to this xml including but not limited to its format. User hereby accepts the terms and conditions of the Licence Agreement set forth at http://www.ir-facility.org/legal/marec/data_licence" ;
+        <http://purl.org/dc/terms/license>
+                <http://creativecommons.org/publicdomain/zero/1.0/> ;
+        <http://purl.org/dc/terms/references>
+                <urn:x-temp:/doc/patent/EP-78100007-A> ;
+        <http://purl.org/dc/terms/title>
+                "Tetrahydrofuran-Derivate, Verfahren zu ihrer Herstellung sowie ihre Verwendung als Herbizide."@de , "Dérivés du tétrahydrofuranne, leurs procédés de préparation et leur utilisation comme herbicides"@fr , "TETRAHYDROFURANE DERIVATIVES, PROCESSES FOR THEIR PREPARATION AND THEIR USE AS HERBICIDES"@en ;
+        <http://rdfs.org/sioc/ns#content>
+                "Dérivés du tétrahydrofuranne, leurs procédés de préparation et leur utilisation comme herbicides\nTETRAHYDROFURANE DERIVATIVES, PROCESSES FOR THEIR PREPARATION AND THEIR USE AS HERBICIDES\nTetrahydrofuran-Derivate, Verfahren zu ihrer Herstellung sowie ihre Verwendung als Herbizide.\n" ;
+        <http://www.patexpert.org/ontologies/pmo.owl#applicant>
+                <urn:x-temp:/id/1f4a9d17-4eb7-4aa7-bebf-d5949806cede> , <urn:x-temp:/id/774c40c1-c728-4d73-9185-4ceb34434031> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#assignee>
+                <urn:x-temp:/id/eb2962fc-4343-467c-9697-c1cc946c56da> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#countryOfFiling>
+                "EP" ;
+        <http://www.patexpert.org/ontologies/pmo.owl#dateOfPublication>
+                "1981-08-26"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#inventor>
+                <urn:x-temp:/id/05dd79f9-c889-402e-aeb6-9405a1e5e12a> , <urn:x-temp:/id/087bf276-0baa-4609-bed2-9d0b92dadf26> , <urn:x-temp:/id/331561ac-3cf4-4387-860c-f7e52d23e90a> , <urn:x-temp:/id/3a258e0e-ff11-40fa-9be0-24c8d6b67fc2> , <urn:x-temp:/id/5129b0a6-d1ee-42bc-8927-d04366da7976> , <urn:x-temp:/id/543c5002-a111-45aa-b2f1-09f49c5d9d65> , <urn:x-temp:/id/5c8935fe-a13a-48dd-ae28-e5b89a96b0d5> , <urn:x-temp:/id/658db96a-e20a-4d2d-9fab-3226d500555a> , <urn:x-temp:/id/8dc88aa1-b287-44e2-81ad-194d612e9bf0> , <urn:x-temp:/id/96e3a4dc-c851-4c0a-9763-05e84761acda> , <urn:x-temp:/id/d1c4678b-535d-4996-a172-02e160093684> , <urn:x-temp:/id/ec8fc2f4-03a4-4906-afc1-753fe5e1876b> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#kindCode>
+                "B1" ;
+        <http://www.patexpert.org/ontologies/pmo.owl#patentFamily>
+                <urn:x-temp:/doc/family/6010385> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#publicationNumber>
+                "0000002" ;
+        <http://www.w3.org/ns/prov#generatedAtTime>
+                "2014-08-21T17:13:31Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+        <http://www.w3.org/ns/prov#wasAttributedTo>
+                <http://csarven.ca/#i> ;
+        <http://www.w3.org/ns/prov#wasDerivedFrom>
+                <http://relative-uri.fake/> ;
+        <http://www.w3.org/ns/prov#wasGeneratedBy>
+                <urn:x-temp:/prov/activity/fc0c17e1-d6da-43a7-8e48-7c56f827eb6f> .
+
+<urn:x-temp:/id/05dd79f9-c889-402e-aeb6-9405a1e5e12a>
+        a       <http://www.owl-ontologies.com/sumo.owl#Human> , <http://xmlns.com/foaf/0.1/Person> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "DRABER WILFRIED DR" ;
+        <http://www.patexpert.org/ontologies/pmo.owl#inventorOf>
+                <urn:x-temp:/doc/patent/EP-0000002-B1> ;
+        <http://xmlns.com/foaf/0.1/lastName>
+                "DRABER WILFRIED DR" .
+
+<urn:x-temp:/id/087bf276-0baa-4609-bed2-9d0b92dadf26>
+        a       <http://www.owl-ontologies.com/sumo.owl#Human> , <http://xmlns.com/foaf/0.1/Person> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "SCHMIDT ROBERT RUDOLF DR" ;
+        <http://www.patexpert.org/ontologies/pmo.owl#inventorOf>
+                <urn:x-temp:/doc/patent/EP-0000002-B1> ;
+        <http://xmlns.com/foaf/0.1/lastName>
+                "SCHMIDT ROBERT RUDOLF DR" .
+
+<urn:x-temp:/id/1f4a9d17-4eb7-4aa7-bebf-d5949806cede>
+        a       <http://xmlns.com/foaf/0.1/Agent> , <http://www.owl-ontologies.com/sumo.owl#CognitiveAgent> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "BAYER AG" ;
+        <http://www.patexpert.org/ontologies/pmo.owl#applicantOf>
+                <urn:x-temp:/doc/patent/EP-0000002-B1> ;
+        <http://xmlns.com/foaf/0.1/name>
+                "BAYER AG" .
+
+<urn:x-temp:/id/331561ac-3cf4-4387-860c-f7e52d23e90a>
+        a                            <http://www.owl-ontologies.com/sumo.owl#Human> , <http://xmlns.com/foaf/0.1/Person> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "SCHMIDT, THOMAS, DR." ;
+        <http://schema.org/address>  <urn:x-temp:/id/4926d1df-8cdc-4e18-96b3-9fd89646fa0b> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#inventorOf>
+                <urn:x-temp:/doc/patent/EP-0000002-B1> ;
+        <http://xmlns.com/foaf/0.1/lastName>
+                "SCHMIDT, THOMAS, DR." .
+
+<urn:x-temp:/id/3a258e0e-ff11-40fa-9be0-24c8d6b67fc2>
+        a                            <http://www.owl-ontologies.com/sumo.owl#Human> , <http://xmlns.com/foaf/0.1/Person> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "EUE, LUDWIG, DR." ;
+        <http://schema.org/address>  <urn:x-temp:/id/7205862b-33c1-4ef8-b1f1-02d9a348e10f> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#inventorOf>
+                <urn:x-temp:/doc/patent/EP-0000002-B1> ;
+        <http://xmlns.com/foaf/0.1/lastName>
+                "EUE, LUDWIG, DR." .
+
+<urn:x-temp:/id/5129b0a6-d1ee-42bc-8927-d04366da7976>
+        a                            <http://www.owl-ontologies.com/sumo.owl#Human> , <http://xmlns.com/foaf/0.1/Person> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "SCHMIDT, ROBERT RUDOLF, DR." ;
+        <http://schema.org/address>  <urn:x-temp:/id/b9283c9e-181f-4a68-9639-ed862180813e> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#inventorOf>
+                <urn:x-temp:/doc/patent/EP-0000002-B1> ;
+        <http://xmlns.com/foaf/0.1/lastName>
+                "SCHMIDT, ROBERT RUDOLF, DR." .
+
+<urn:x-temp:/id/543c5002-a111-45aa-b2f1-09f49c5d9d65>
+        a       <http://www.owl-ontologies.com/sumo.owl#Human> , <http://xmlns.com/foaf/0.1/Person> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "SCHMIDT, ROBERT RUDOLF, DR." ;
+        <http://www.patexpert.org/ontologies/pmo.owl#inventorOf>
+                <urn:x-temp:/doc/patent/EP-0000002-B1> ;
+        <http://xmlns.com/foaf/0.1/lastName>
+                "SCHMIDT, ROBERT RUDOLF, DR." .
+
+<urn:x-temp:/id/5c8935fe-a13a-48dd-ae28-e5b89a96b0d5>
+        a                            <http://www.owl-ontologies.com/sumo.owl#Human> , <http://xmlns.com/foaf/0.1/Person> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "DRABER, WILFRIED, DR." ;
+        <http://schema.org/address>  <urn:x-temp:/id/050d6b3b-c8cf-4454-aac5-eab0a253235f> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#inventorOf>
+                <urn:x-temp:/doc/patent/EP-0000002-B1> ;
+        <http://xmlns.com/foaf/0.1/lastName>
+                "DRABER, WILFRIED, DR." .
+
+<urn:x-temp:/id/658db96a-e20a-4d2d-9fab-3226d500555a>
+        a       <http://www.owl-ontologies.com/sumo.owl#Human> , <http://xmlns.com/foaf/0.1/Person> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "SCHMIDT THOMAS DR" ;
+        <http://www.patexpert.org/ontologies/pmo.owl#inventorOf>
+                <urn:x-temp:/doc/patent/EP-0000002-B1> ;
+        <http://xmlns.com/foaf/0.1/lastName>
+                "SCHMIDT THOMAS DR" .
+
+<urn:x-temp:/id/774c40c1-c728-4d73-9185-4ceb34434031>
+        a                            <http://xmlns.com/foaf/0.1/Agent> , <http://www.owl-ontologies.com/sumo.owl#CognitiveAgent> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "BAYER AG" ;
+        <http://schema.org/address>  <urn:x-temp:/id/aba9e857-fd1f-4627-ba84-b619829afb98> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#applicantOf>
+                <urn:x-temp:/doc/patent/EP-0000002-B1> ;
+        <http://xmlns.com/foaf/0.1/name>
+                "BAYER AG" .
+
+<urn:x-temp:/id/8dc88aa1-b287-44e2-81ad-194d612e9bf0>
+        a       <http://www.owl-ontologies.com/sumo.owl#Human> , <http://xmlns.com/foaf/0.1/Person> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "SCHMIDT, THOMAS, DR." ;
+        <http://www.patexpert.org/ontologies/pmo.owl#inventorOf>
+                <urn:x-temp:/doc/patent/EP-0000002-B1> ;
+        <http://xmlns.com/foaf/0.1/lastName>
+                "SCHMIDT, THOMAS, DR." .
+
+<urn:x-temp:/id/96e3a4dc-c851-4c0a-9763-05e84761acda>
+        a       <http://www.owl-ontologies.com/sumo.owl#Human> , <http://xmlns.com/foaf/0.1/Person> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "EUE LUDWIG DR" ;
+        <http://www.patexpert.org/ontologies/pmo.owl#inventorOf>
+                <urn:x-temp:/doc/patent/EP-0000002-B1> ;
+        <http://xmlns.com/foaf/0.1/lastName>
+                "EUE LUDWIG DR" .
+
+<urn:x-temp:/id/d1c4678b-535d-4996-a172-02e160093684>
+        a       <http://www.owl-ontologies.com/sumo.owl#Human> , <http://xmlns.com/foaf/0.1/Person> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "DRABER, WILFRIED, DR." ;
+        <http://www.patexpert.org/ontologies/pmo.owl#inventorOf>
+                <urn:x-temp:/doc/patent/EP-0000002-B1> ;
+        <http://xmlns.com/foaf/0.1/lastName>
+                "DRABER, WILFRIED, DR." .
+
+<urn:x-temp:/id/ec8fc2f4-03a4-4906-afc1-753fe5e1876b>
+        a       <http://www.owl-ontologies.com/sumo.owl#Human> , <http://xmlns.com/foaf/0.1/Person> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "EUE, LUDWIG, DR." ;
+        <http://www.patexpert.org/ontologies/pmo.owl#inventorOf>
+                <urn:x-temp:/doc/patent/EP-0000002-B1> ;
+        <http://xmlns.com/foaf/0.1/lastName>
+                "EUE, LUDWIG, DR." .
+
+<urn:x-temp:/id/eb2962fc-4343-467c-9697-c1cc946c56da>
+        a                            <http://xmlns.com/foaf/0.1/Agent> , <http://www.owl-ontologies.com/sumo.owl#CognitiveAgent> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "BAYER AG" ;
+        <http://schema.org/address>  <urn:x-temp:/id/ba32acdd-0048-4c53-bfd9-6ce65c6f3ef2> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#assigneeOf>
+                <urn:x-temp:/doc/patent/EP-0000002-B1> ;
+        <http://xmlns.com/foaf/0.1/name>
+                "BAYER AG" .
+
+<urn:x-temp:/prov/activity/fc0c17e1-d6da-43a7-8e48-7c56f827eb6f>
+        a       <http://www.w3.org/ns/prov#Activity> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Transformed EP-0000002-B1 data"@en ;
+        <http://www.w3.org/ns/prov#generated>
+                <urn:x-temp:/doc/patent/EP-0000002-B1> ;
+        <http://www.w3.org/ns/prov#startedAtTime>
+                "2014-08-21T17:13:31Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+        <http://www.w3.org/ns/prov#used>
+                <http://relative-uri.fake/> , <https://github.com/fusepool/patents-reengineering/src/main/resources/xsl/marec.xsl> ;
+        <http://www.w3.org/ns/prov#wasAssociatedWith>
+                <http://csarven.ca/#i> .
+
+<urn:x-temp:/id/050d6b3b-c8cf-4454-aac5-eab0a253235f>
+        a       <http://schema.org/PostalAddress> ;
+        <http://schema.org/addressCountry>
+                <urn:x-temp:/code/country/DE> ;
+        <http://schema.org/addressLocality>
+                "D-5600 Wuppertal 1" ;
+        <http://schema.org/streetAddress>
+                "In den Birken 81" .
+
+<urn:x-temp:/id/4926d1df-8cdc-4e18-96b3-9fd89646fa0b>
+        a       <http://schema.org/PostalAddress> ;
+        <http://schema.org/addressCountry>
+                <urn:x-temp:/code/country/DE> ;
+        <http://schema.org/addressLocality>
+                "D-5600 Wuppertal 1" ;
+        <http://schema.org/streetAddress>
+                "Wormser strasse 23" .
+
+<urn:x-temp:/id/7205862b-33c1-4ef8-b1f1-02d9a348e10f>
+        a       <http://schema.org/PostalAddress> ;
+        <http://schema.org/addressCountry>
+                <urn:x-temp:/code/country/DE> ;
+        <http://schema.org/addressLocality>
+                "D- 090 Leverkusen 1" ;
+        <http://schema.org/streetAddress>
+                "Paul-Klee-Strasse 36" .
+
+<urn:x-temp:/id/b9283c9e-181f-4a68-9639-ed862180813e>
+        a       <http://schema.org/PostalAddress> ;
+        <http://schema.org/addressCountry>
+                <urn:x-temp:/code/country/DE> ;
+        <http://schema.org/addressLocality>
+                "D-5000 Köln 80" ;
+        <http://schema.org/streetAddress>
+                "Hahnenweg 5" .
+
+<urn:x-temp:/id/aba9e857-fd1f-4627-ba84-b619829afb98>
+        a       <http://schema.org/PostalAddress> ;
+        <http://schema.org/addressCountry>
+                <urn:x-temp:/code/country/DE> .
+
+<urn:x-temp:/id/ba32acdd-0048-4c53-bfd9-6ce65c6f3ef2>
+        a       <http://schema.org/PostalAddress> ;
+        <http://schema.org/addressCountry>
+                <urn:x-temp:/code/country/DE> ;
+        <http://schema.org/addressLocality>
+                "51368 Leverkusen" ;
+        <http://schema.org/streetAddress>
+                "" .
+
+<urn:x-temp:/doc/family/33420928>
+        a       <http://www.patexpert.org/ontologies/pmo.owl#PatentFamily> , <http://www.w3.org/2004/02/skos/core#Collection> ;
+        <http://www.w3.org/2004/02/skos/core#notation>
+                "33420928" .
+
+<urn:x-temp:/doc/patent/EP-0000003-A1>
+        a       <http://www.patexpert.org/ontologies/pmo.owl#PatentPublication> , <http://fusepool.eu/ontologies/ecs#ContentItem> , <http://www.patexpert.org/ontologies/pso.owl#A1Document> , <http://www.w3.org/ns/prov#Entity> ;
+        <http://fusepool.eu/ontologies/general#agent>
+                <urn:x-temp:/id/01700083-b95b-40bf-ad97-f937c826d599> ;
+        <http://fusepool.eu/ontologies/general#claim>
+                <urn:x-temp:/doc/patent/EP-0000003-A1/claim/1> ;
+        <http://fusepool.eu/ontologies/general#filing-office>
+                <urn:x-temp:/code/filing-office/EP> ;
+        <http://fusepool.eu/ontologies/general#priority-claim>
+                <urn:x-temp:/doc/patent/GB-2307277-A> , <urn:x-temp:/doc/patent/US-90905878-A> ;
+        <http://purl.org/dc/elements/1.1/subject>
+                <urn:x-temp:/id/3237c9ae-f026-4751-b72a-4735373e31af> , <urn:x-temp:/id/3e428e73-5682-483d-8c56-1480a9e089d5> , <urn:x-temp:/id/915251cf-48b0-4c6e-9f7e-d60d7cb4e4af> , <urn:x-temp:/id/a87f488c-e3f3-4cff-956e-489fd7b189e1> , <urn:x-temp:/id/c5e4c20d-d289-40ba-999b-5f33b8a03d4e> , <urn:x-temp:/id/fbd010e9-b5e1-4645-b9e6-d6fb78d65515> ;
+        <http://purl.org/dc/terms/abstract>
+                "\n         <div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\">\n            <p>A combination lock, particularly a domestic door lock, \ncomprises a rotable and axially movable plunger (14), a \nplurality of axially displaceable pins (17, 17a) disposed \naround the plunger (14), a rotary ward disc carried by the \nplunger slots (19, 20, 21) in the pins (17, 17a) to allow rotary \nmovement of the plunger (14) only when selected ones of \nthe pins (17a) are axially displaced relative to the remainder \nof the pins (17), to have slots (19) therein aligned with the \nward disc (18), and a member (23, 24) carried by the plunger \n(14) and capable of moving the pins (17, 17a) to an aligned \nposition upon axial movement of the plunger (14). A user \ncan move said selected pins (17a) to render the plunger (14) \nturnable to open the door and then easily pull or push the \nplunger to cause said member (23, 24) to re-align the pins \n(17, 17a) to prevent the selected pins (17a) remaining depressed \nand the \"combination\" visible. </p>\n         </div>\n      "^^<http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral> ;
+        <http://purl.org/dc/terms/creator>
+                <http://csarven.ca/#i> ;
+        <http://purl.org/dc/terms/description>
+                "\n         <div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"de\">\n            <p>\n               <pre listing-type=\"other\" xml:space=\"preserve\">\n DESCRIPTION\n This invention relates to a combination lock, for example or use as a   .ront    door lock, or for any other purpose wherein a rotary unlocking and locking   notion    is desired.\n\n\n Accordingly the invention provides a combination lock comprising a   rotatable      and    axially movable plunger, a plurality of axially displaceable pins around the plunger, a rotary   r    disc carried by   te    plunger and cooperating wit said pins to allow rotary   @ovement    of the plunger only when selected ones of the pins are axially displaced relative to tile   re:-ainder,    and a member carried by the plunger and capable of moving the pins to an aligned position upon axial movement of the plunger.\n\n\n Preferably the lock comprises a cylindrical barrel closed at one end by a front plate, centrally of which a spigot surrounds the outer end of a plunger terminating  in a handle and around the spigot a number of equally spaced bore holes allow tie heads of the   sate    number of pins to project therefrom.\n\n\n   ward    disc may be carried by the plunger inside tile housing and selected ones of the pins may have slots which are aligned with the ward disc when   tJey    are displaced.\n\n\n Bach pin may also have a slot in its outer side in   te    corresponding position.\n\n\n Advantageously   each    pin has a central enlarged portion in which both said slots are formed.   An    outer setting plate carried by the plunger may engage the outer siloulders and an inner resetting plate may engage tile inner shoulders.\n\n\n The end of each pin remote from its head can be prevented from rotation by engagement with a resetting member,   tbis    member preferably being movable to   allow    each pin to be rotated   throu      1500    so as to enable it to be chosen to be one of said selected ones or not as desired,\nBy using the resetting member tne user can effectively select   is    own   conblnation.   \n\n\n The invention will be described further, by way of example, with reference t   the    accompanying   draings    which illustrate a preferred embodiment, it being understood that the following description is illustrative and not limitative of the scope of the invention.  \n\n\n In the drawings:\n   FiC.    1 is a cross-sectional elevation of a first preferred embodiment of lock of the present invention;\n Fig. 2 is an end elevation of the lock of Fig. 1; and\n Fig. 3 is an exploded view showing a second embodiment of lock, similar to the lock of Fig. 1, but with a modification\n   @ first    preferred embodiment of lock 10 of the invention   co@prises    a cylindrical barrel 11 closed at one end by a   @ront      @late    12. Centrally of the front plate 12 a spigot 13 surrounds the outer end of a plunger 14 terminating in a handle 15, and around the spigot 13 ten or any other number of equally spaced bores 16 allow the neads of the same number of pins 17 to project therefrom.\nThe pins 17 are axially slidable.   @    ward disc 18 is carried by the plunger 14   insi@e    the nousing and selected ones of the pins 17, for example the upper pin 17a in Fig. 1, have slots 19 which are   ali@ned    with the ward disc 18 when they are displaced inwardly towards the inner end of the barrel 11. The remainder have slots 20 which are aligned with the ward disc   13    men they are not so displaced. Each of the pins 1 also has a slot 21 in its outer side in   te    corresponding position.  \n\n\n Each pin 17 has a central enlarged portion 22 in which both said slots 19/20 and 21 are formed and inner and outer shoulders 29, 30 are at each end   oX    the central enlarged portion 22. An outer scrambling plate 23 carried by the plunger 14 can engage the outer shoulders 30 and an inner   scrambling    plate 24 can engage the inner shoulders 29.\n\n\n The pins 17 will nornally all lie in their iniier positions with their outer ends close to the surface of the front plate 12. To open the locl;   1G    under these circumstances the user pulls the   plunger    14 outwardly to cause the inner setting plate 24 to   push    all the pins 17 to protrude fro the front plate 12.   lle    then   pushes    said selected pins   17a      nowil    only to himself) inwards, enabling the ward disc 18 to rotate and thus   the    plunger 14. A   non-    circular protrusion 25 on the inner end of the plunger can operate a sliding bolt or the   like.   \n\n\n After rotation of the   plunger    14 and opening of say, a door,   the    selected pins 17a are still depressed,   thus    showing the combination. Thus after opening the door   the    user must depress or pull the plunger 14 to align all the pins 17 by the operation of one or other of scrambling plates 23 and 24 on the central portions 22 of   te    pins 17, 17a. so as to conceal or   \"scramble\"      the    combination.  \n\n\n The user can change the   combination    very simply. Each pin 17 is rotatably mounted by the barrel assembly 11 and its inner end   @as    a non-circular portion 26 slidable relative to a slot 27 in a slotted circular resetting\n   @ember    in the   for:    of a plate 28. By pressing this plate   2d,    to the   ieft    in Fig. 1 against the action of a spring 30,   te    user is enabled to rotate the pins 17 to bring one or other of said slots 27 into its radially inner   o-)erative    position. The   plate      2.    can   now    be returned to the normal locking position.\nWhen the combination lock is used in   comb@nation    with a convention \"Yale\" or like slidable blot on the inside of the door the lock can be made to act as a deadlock or a conventional spring lock   b@      sc:lccting    the   rotational    position of   the      plunger    14 at which the pins 17 are reset.\n\n \n The invention is not   linited    to use in connection with domestic doors, but can be used in any situation where a lockable rotary element is desired. Indicia 31 may be   @rovided    on tie   inner    end of the pins 17 to identify   the      position    of the slots 27   wl':en    setting the combination.\n\n\n   Deten@    eans are   provided    for retaining the pins in their various axial positions. Indicia 32 may also be provided on   the @ront    of the casing in order to identify individual   't)ins.     \n\n\n To secure the lock 10 to a door a front plate 12 can have threaded apertures (not   shown)    which can receive tie ends of set-screws passing through the door   front    the inside.\n\n\nAlternatively, studs can extend from the   plate    12 and be engaged by nuts on the inside of   te    door.\n\n \n Fig. 3 illustrates a variation of the lock 10. Plate 24 is a simple annulus and the rear of the lock comprises a closing plate 33 to which a plug 34 is securable by   screws 35.    An annular groove 41 in plug 34 accommodates a resilient ring 36 against which bears one of two concave surfaces 37 formed in a rear part of each of pins   1,    A second resilient ring 33 surrounds the rear parts of pins 17. To re-set the   lock    of Fig. 3, the screws   35    are re-oved and plug 34 detached. The desired pins   17    can   no    be rotated to be fart Of or out of the group of selected pins   l7a.   \n\n\nThe plug 34 is now replaced. A bolt operating tongue 39 is pivotally attached to the inner-end of plunger 14 by a split peg 40. \n</pre>\n            </p>\n         </div>\n      "^^<http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral> ;
+        <http://purl.org/dc/terms/identifier>
+                "EP-0000003-A1" ;
+        <http://purl.org/dc/terms/issued>
+                "2014-08-21T17:13:32Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+        <http://purl.org/dc/terms/license>
+                "User acknowledges that the Information Retrieval Facility (IRF) and its third party providers retain all right, title and interest in and to this xml under applicable copyright laws. User acquires no ownership rights to this xml including but not limited to its format. User hereby accepts the terms and conditions of the Licence Agreement set forth at http://www.ir-facility.org/legal/marec/data_licence" ;
+        <http://purl.org/dc/terms/license>
+                <http://creativecommons.org/publicdomain/zero/1.0/> ;
+        <http://purl.org/dc/terms/references>
+                <urn:x-temp:/doc/patent/EP-78300002-A> ;
+        <http://purl.org/dc/terms/title>
+                "Combination lock."@en , "Kombinationsschloss."@de , "Serrure à combinaisons."@fr ;
+        <http://rdfs.org/sioc/ns#content>
+                "Combination lock.\nKombinationsschloss.\nSerrure à combinaisons.\n\n         <div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\">\n            <p>A combination lock, particularly a domestic door lock, \ncomprises a rotable and axially movable plunger (14), a \nplurality of axially displaceable pins (17, 17a) disposed \naround the plunger (14), a rotary ward disc carried by the \nplunger slots (19, 20, 21) in the pins (17, 17a) to allow rotary \nmovement of the plunger (14) only when selected ones of \nthe pins (17a) are axially displaced relative to the remainder \nof the pins (17), to have slots (19) therein aligned with the \nward disc (18), and a member (23, 24) carried by the plunger \n(14) and capable of moving the pins (17, 17a) to an aligned \nposition upon axial movement of the plunger (14). A user \ncan move said selected pins (17a) to render the plunger (14) \nturnable to open the door and then easily pull or push the \nplunger to cause said member (23, 24) to re-align the pins \n(17, 17a) to prevent the selected pins (17a) remaining depressed \nand the \"combination\" visible. </p>\n         </div>\n      \n" ;
+        <http://www.patexpert.org/ontologies/pmo.owl#applicant>
+                <urn:x-temp:/id/a87f488c-e3f3-4cff-956e-489fd7b189e1> , <urn:x-temp:/id/c5e4c20d-d289-40ba-999b-5f33b8a03d4e> , <urn:x-temp:/id/fbd010e9-b5e1-4645-b9e6-d6fb78d65515> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#cites>
+                <urn:x-temp:/doc/patent/GB-209638-A> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#countryOfFiling>
+                "EP" ;
+        <http://www.patexpert.org/ontologies/pmo.owl#dateOfPublication>
+                "1978-12-20"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#inventor>
+                <urn:x-temp:/id/3237c9ae-f026-4751-b72a-4735373e31af> , <urn:x-temp:/id/3e428e73-5682-483d-8c56-1480a9e089d5> , <urn:x-temp:/id/915251cf-48b0-4c6e-9f7e-d60d7cb4e4af> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#kindCode>
+                "A1" ;
+        <http://www.patexpert.org/ontologies/pmo.owl#patentFamily>
+                <urn:x-temp:/doc/family/33420928> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#publicationNumber>
+                "0000003" ;
+        <http://www.w3.org/ns/prov#generatedAtTime>
+                "2014-08-21T17:13:32Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+        <http://www.w3.org/ns/prov#wasAttributedTo>
+                <http://csarven.ca/#i> ;
+        <http://www.w3.org/ns/prov#wasDerivedFrom>
+                <http://relative-uri.fake/> ;
+        <http://www.w3.org/ns/prov#wasGeneratedBy>
+                <urn:x-temp:/prov/activity/828c0f6d-6c7e-400b-9982-6922565fdeab> .
+
+<urn:x-temp:/id/01700083-b95b-40bf-ad97-f937c826d599>
+        a                            <http://www.owl-ontologies.com/sumo.owl#Agent> , <http://xmlns.com/foaf/0.1/Agent> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Daunton, Derek" ;
+        <http://fusepool.eu/ontologies/general#agentOf>
+                <urn:x-temp:/doc/patent/EP-0000003-A1> ;
+        <http://schema.org/address>  <urn:x-temp:/id/695f85bc-65d0-4682-a953-cd9a62df3fd8> ;
+        <http://xmlns.com/foaf/0.1/name>
+                "Daunton, Derek" .
+
+<urn:x-temp:/doc/patent/EP-0000003-A1/claim/1>
+        a       <http://www.patexpert.org/ontologies/pso.owl#Claim> , <http://www.w3.org/2004/02/skos/core#Concept> ;
+        <http://www.w3.org/2004/02/skos/core#definition>
+                "\n               <div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"de\">\n                  <div>    CLAI@S   \n\n\n</div>\n                  <div>1. A combination lock comprising a rotatable and axially movable   plunger      (14),    a plurality of axially displaceable pins (17,   17a)    around the plunger (14), a rotary ward disc (18) carried by the plunger (14) and co-operating with said pins (17,   17a)    to allow rotary movement of the plunger (14) only when selected ones of the pins (17a) are axially displaced relative to the remainder of the pins (17), and a member (23 or 24) carried   b    the plunger (14) and capable of moving   the    pins (17,   17a,    to an aligned position upon axial movement of the plunger (14).\n\n\n</div>\n                  <div>2. A lock as claimed in claim 1 characterised in that it comprises a cylindrical barrel (11) closed at one end by\n front plate (12), centrally of which a spigot (13) surrounds   te    outer end of the plunger (14) which terninates   ill    a handle (15).  \n\n\n</div>\n                  <div>3. A   loci:    as claimed in   claim    2 wherein a number of equally spaced bore   holes    (16) in the Iront   plate    (12j around the spigot (13) allow the   iieads    of   tile      salie    number of   ins    (17, 17a) to project therefrom.\n\n\n</div>\n                  <div>4, A lock as clained in claim 2 in   whic@    the ward disc (18, is carried by the plunger (14) inside tne barrel (11) and selected ones of the   pins    (17a), have slots (19) which align with the   ward    disc (18j when those selected pins (17a) are displaced relative to the other   ins    (17).\n\n\n</div>\n                  <div>5. A   lock    as   clairied    in   claii    4,   wherein    each   in      17,    17a) also   iias    a slot (21) in its outer side in a corresponding position to the aligned slots (19, 20).\n\n\n</div>\n                  <div>6. A lock as claimed in claim 5 in which each pin has a centrally enlarged portion (22), with inner and outer shoulders (29, 30) at respective ends, in which central enlarged portion said slots (19, 20, 21) are formed.\n\n\n</div>\n                  <div>7. A   lock    as claimed in claim 6 in which a first said member (23, 24) is in the   for    of a scrambling plate (23) carried by the plunger (14) and can engage the outer shoulder (30) of the centrally enlarged portions (22) of pins (17, 17a) and a second said member (23, 24) is in   te    form of a   scratnbling    plate (24)   whici    can engage the inner shoulders (30) of the said enlarged portions (22) of the pin (17,   17a).     \n\n\n</div>\n                  <div>8. A lock as claimed in claim 7 and wherein each pin (17, 17a) has a rear portion (26) thereof shaped to engage a re-setting member (28) relative to which it is normally axially slidable but not rotatable.\n\n\n</div>\n                  <div>9. A lock as claimed in claim 8, wherein the re-setting member is displaceable to allow each pin (17, 17a) to be rotated through 180    t@    enable it to be included in or excluded from said selected plurality at the will of the user.\n\n\n</div>\n                  <div>10. A lock as claimed in claim 9, wherein each pin (17, 17a) has a rectangular rear end   portion    (26j   engaged    in a slot (27) in a re-setting member in the form of a plate (28), the plate (28) being displaceable against the action of a spring (30) to disengage said rectangular   ed    portions (26) or   re-settin.   \n\n \n</div>\n                  <div>11.   @    lock as claimed in claim 9, wherein the re-setting\n   @ember    is in the   or;    of a plug (34) having a cylindrical outer surface and detachably secured to the barrel (11) of the lock, each pin (17, 17a)   @aving    two complementarily curved convex surfaces (37) at its rear end spaced 1800 apart, enabling one or the other to be disposed adjacent the plug (34).\n\n\n</div>\n                  <div>12. A lock as claimed in claim 11, wherein a resilient ring (36) is located in an annular grooge (41) in the plug (34).\n\n\n</div>\n                  <div>13.   A    lock as claimed in   clainn    12,   wherein    a second resilient ring (38) surrounds the rear end portions (26) of the pins (17, 17a). \n</div>\n               </div>\n            "^^<http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral> ;
+        <http://www.w3.org/2004/02/skos/core#notation>
+                "1" ;
+        <http://www.w3.org/2004/02/skos/core#prefLabel>
+                "Claim 1"@en .
+
+<urn:x-temp:/doc/patent/GB-2307277-A>
+        a       <http://www.patexpert.org/ontologies/pmo.owl#PatentPublication> ;
+        <http://fusepool.eu/ontologies/general#filing-office>
+                <urn:x-temp:/code/filing-office/GB> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#countryOfFiling>
+                "GB" ;
+        <http://www.patexpert.org/ontologies/pmo.owl#dateOfPublication>
+                "1977-06-01"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#kindCode>
+                "A" .
+
+<urn:x-temp:/doc/patent/US-90905878-A>
+        a       <http://www.patexpert.org/ontologies/pmo.owl#PatentPublication> , <http://www.patexpert.org/ontologies/pmo.owl#GrantedPatent> ;
+        <http://fusepool.eu/ontologies/general#filing-office>
+                <urn:x-temp:/code/filing-office/US> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#countryOfFiling>
+                "US" ;
+        <http://www.patexpert.org/ontologies/pmo.owl#dateOfPublication>
+                "1978-05-24"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#kindCode>
+                "A" .
+
+<urn:x-temp:/id/3237c9ae-f026-4751-b72a-4735373e31af>
+        a       <http://www.owl-ontologies.com/sumo.owl#Human> , <http://xmlns.com/foaf/0.1/Person> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "HATCH, GEORGE" ;
+        <http://www.patexpert.org/ontologies/pmo.owl#inventorOf>
+                <urn:x-temp:/doc/patent/EP-0000003-A1> ;
+        <http://xmlns.com/foaf/0.1/name>
+                "HATCH, GEORGE" .
+
+<urn:x-temp:/id/3e428e73-5682-483d-8c56-1480a9e089d5>
+        a                            <http://www.owl-ontologies.com/sumo.owl#Human> , <http://xmlns.com/foaf/0.1/Person> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "HATCH, GEORGE" ;
+        <http://schema.org/address>  <urn:x-temp:/id/39c033c9-2103-4d7d-a221-cff65382414c> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#inventorOf>
+                <urn:x-temp:/doc/patent/EP-0000003-A1> ;
+        <http://xmlns.com/foaf/0.1/lastName>
+                "HATCH, GEORGE" .
+
+<urn:x-temp:/id/915251cf-48b0-4c6e-9f7e-d60d7cb4e4af>
+        a                            <http://www.owl-ontologies.com/sumo.owl#Human> , <http://xmlns.com/foaf/0.1/Person> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "HATCH GEORGE" ;
+        <http://schema.org/address>  <urn:x-temp:/id/d680897e-c346-4998-98a4-9a4692c81414> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#inventorOf>
+                <urn:x-temp:/doc/patent/EP-0000003-A1> ;
+        <http://xmlns.com/foaf/0.1/name>
+                "HATCH GEORGE" .
+
+<urn:x-temp:/id/a87f488c-e3f3-4cff-956e-489fd7b189e1>
+        a       <http://xmlns.com/foaf/0.1/Agent> , <http://www.owl-ontologies.com/sumo.owl#CognitiveAgent> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "COMBI-LOCK ENTERPRISES LIMITED" ;
+        <http://www.patexpert.org/ontologies/pmo.owl#applicantOf>
+                <urn:x-temp:/doc/patent/EP-0000003-A1> ;
+        <http://xmlns.com/foaf/0.1/name>
+                "COMBI-LOCK ENTERPRISES LIMITED" .
+
+<urn:x-temp:/id/c5e4c20d-d289-40ba-999b-5f33b8a03d4e>
+        a                            <http://xmlns.com/foaf/0.1/Agent> , <http://www.owl-ontologies.com/sumo.owl#CognitiveAgent> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "COMBI LOCK" ;
+        <http://schema.org/address>  <urn:x-temp:/id/ad9247f9-053a-44ec-8afd-bb2552838fa2> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#applicantOf>
+                <urn:x-temp:/doc/patent/EP-0000003-A1> ;
+        <http://xmlns.com/foaf/0.1/name>
+                "COMBI LOCK" .
+
+<urn:x-temp:/id/fbd010e9-b5e1-4645-b9e6-d6fb78d65515>
+        a                            <http://xmlns.com/foaf/0.1/Agent> , <http://www.owl-ontologies.com/sumo.owl#CognitiveAgent> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "COMBI-LOCK ENTERPRISES LIMITED" ;
+        <http://schema.org/address>  <urn:x-temp:/id/05144572-708f-4e43-ae0b-2069c0569106> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#applicantOf>
+                <urn:x-temp:/doc/patent/EP-0000003-A1> ;
+        <http://xmlns.com/foaf/0.1/name>
+                "COMBI-LOCK ENTERPRISES LIMITED" .
+
+<urn:x-temp:/doc/patent/EP-78300002-A>
+        a       <http://www.patexpert.org/ontologies/pmo.owl#PatentPublication> ;
+        <http://fusepool.eu/ontologies/general#filing-office>
+                <urn:x-temp:/code/filing-office/EP> ;
+        <http://fusepool.eu/ontologies/general#is-representative>
+                "NO" ;
+        <http://purl.org/dc/terms/identifier>
+                "EP-78300002-A" ;
+        <http://www.patexpert.org/ontologies/pmo.owl#applicationNumber>
+                "78300002" ;
+        <http://www.patexpert.org/ontologies/pmo.owl#countryOfFiling>
+                "EP" ;
+        <http://www.patexpert.org/ontologies/pmo.owl#dateOfPublication>
+                "1978-06-01"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#kindCode>
+                "A" .
+
+<urn:x-temp:/doc/patent/GB-209638-A>
+        a       <http://www.patexpert.org/ontologies/pmo.owl#PatentPublication> ;
+        <http://fusepool.eu/ontologies/general#filing-office>
+                <urn:x-temp:/code/filing-office/GB> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#citedBy>
+                <urn:x-temp:/doc/patent/EP-0000003-A1> ;
+        <http://www.patexpert.org/ontologies/pmo.owl#countryOfFiling>
+                "GB" ;
+        <http://www.patexpert.org/ontologies/pmo.owl#kindCode>
+                "A" ;
+        <http://www.patexpert.org/ontologies/pmo.owl#publicationNumber>
+                "209638" .
+
+<urn:x-temp:/prov/activity/828c0f6d-6c7e-400b-9982-6922565fdeab>
+        a       <http://www.w3.org/ns/prov#Activity> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Transformed EP-0000003-A1 data"@en ;
+        <http://www.w3.org/ns/prov#generated>
+                <urn:x-temp:/doc/patent/EP-0000003-A1> ;
+        <http://www.w3.org/ns/prov#startedAtTime>
+                "2014-08-21T17:13:32Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+        <http://www.w3.org/ns/prov#used>
+                <http://relative-uri.fake/> , <https://github.com/fusepool/patents-reengineering/src/main/resources/xsl/marec.xsl> ;
+        <http://www.w3.org/ns/prov#wasAssociatedWith>
+                <http://csarven.ca/#i> .
+
+<urn:x-temp:/id/695f85bc-65d0-4682-a953-cd9a62df3fd8>
+        a       <http://schema.org/PostalAddress> ;
+        <http://schema.org/addressCountry>
+                <urn:x-temp:/code/country/GB> ;
+        <http://schema.org/addressLocality>
+                "Manchester M1 1PJ" ;
+        <http://schema.org/streetAddress>
+                "Barlow, Gillett &amp; Percival 94, Market Street" .
+
+<urn:x-temp:/id/05144572-708f-4e43-ae0b-2069c0569106>
+        a       <http://schema.org/PostalAddress> ;
+        <http://schema.org/addressCountry>
+                <urn:x-temp:/code/country/GB> ;
+        <http://schema.org/addressLocality>
+                "Farnworth, Bolton, BL4 7BW Lancashire" ;
+        <http://schema.org/streetAddress>
+                "Heaton Mill, Harrowby Street" .
+
+<urn:x-temp:/id/39c033c9-2103-4d7d-a221-cff65382414c>
+        a       <http://schema.org/PostalAddress> ;
+        <http://schema.org/addressCountry>
+                <urn:x-temp:/code/country/GB> ;
+        <http://schema.org/addressLocality>
+                "Failsworth, Manchaster M35 9JT" ;
+        <http://schema.org/streetAddress>
+                "23 Grimshaw Avenue" .
+
+<urn:x-temp:/id/d680897e-c346-4998-98a4-9a4692c81414>
+        a       <http://schema.org/PostalAddress> ;
+        <http://schema.org/addressCountry>
+                <urn:x-temp:/code/country/GB> .
+
+<urn:x-temp:/id/ad9247f9-053a-44ec-8afd-bb2552838fa2>
+        a       <http://schema.org/PostalAddress> ;
+        <http://schema.org/addressCountry>
+                <urn:x-temp:/code/country/GB> .

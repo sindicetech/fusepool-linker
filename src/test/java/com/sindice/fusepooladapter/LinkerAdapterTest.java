@@ -110,6 +110,30 @@ public class LinkerAdapterTest {
 
 //    ((DebuggingLinkerAdapter)adapter).analyze(2);
   }
+  
+  
+  @Test
+  public void testPatentsDataSelfInterlinkingFile() throws IOException {
+    LinkerAdapter adapter = new PatentsDeltaLinkerAdapter();
+    TripleCollection patents = Parser.getInstance().parse(getClass().getResourceAsStream("patent-data-mini.ttl"), SupportedFormat.TURTLE);
+    TripleCollection patentsDelta = Parser.getInstance().parse(getClass().getResourceAsStream("patent-data-mini.ttl"), SupportedFormat.TURTLE);
+
+//    LinkerConfiguration configuration = new LinkerConfiguration(LinkerConfiguration.loadConfig(PatentsDeltaLinkerConfiguration.CONFIG_FILE),
+//        PatentsDeltaLinkerConfiguration.getInstance().getSparqlQuery1(),
+//        PatentsDeltaLinkerConfiguration.getInstance().getSparqlQuery2());
+//    adapter = new DebuggingLinkerAdapter(configuration);
+
+    TripleCollection resultTriples = adapter.interlink(patents, patentsDelta);
+
+    Assert.assertTrue("No interlink found, but the datasets transform to identical records",
+        resultTriples.size() > 1);
+
+    for (Triple triple : resultTriples) {
+      System.out.println(triple.toString());
+    }
+
+//    ((DebuggingLinkerAdapter)adapter).analyze(2);
+  }
 
     @Test
     public void testPatentDbpediaInterlinkingSmall() throws IOException {

@@ -18,7 +18,11 @@ package com.sindice.fusepooladapter;
 import com.sindice.fusepooladapter.configuration.PatentsDeltaLinkerConfiguration;
 import eu.fusepool.datalifecycle.Interlinker;
 import org.apache.clerezza.rdf.core.TripleCollection;
+import org.apache.clerezza.rdf.core.access.TcManager;
 import org.osgi.service.component.annotations.Component;
+import org.osgi.service.component.annotations.Reference;
+import org.osgi.service.component.annotations.ReferenceCardinality;
+import org.osgi.service.component.annotations.ReferencePolicy;
 
 /**
  * A concrete implementation of the {@link com.sindice.fusepooladapter.LinkerAdapter} for interlinking a new patent delta with
@@ -39,7 +43,11 @@ public class PatentsDeltaLinkerAdapter extends LinkerAdapter {
 
 	@Override
 	public String getName() {
-		return "duke-interlinker "+ this.getClass().getName();
+		return "duke-PatentsDeltaLinker";
 	}
 
+    @Reference(policy = ReferencePolicy.STATIC, cardinality = ReferenceCardinality.MANDATORY)
+    protected void bindTcManager(TcManager tcManager) {
+        this.tcManager = tcManager;
+    }
 }

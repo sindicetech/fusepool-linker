@@ -1,0 +1,4 @@
+[submodule "duke"]
+	path = duke
+	url = https://github.com/jkot/Duke.git
+	branch = sesame

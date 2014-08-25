@@ -30,12 +30,14 @@ import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Iterator;
+import java.util.concurrent.locks.Lock;
 import no.priv.garshol.duke.Configuration;
 import no.priv.garshol.duke.DataSource;
 import no.priv.garshol.duke.datasources.CSVDataSource;
 import no.priv.garshol.duke.datasources.SparqlDataSource;
 import org.apache.clerezza.rdf.core.TripleCollection;
 import org.apache.clerezza.rdf.core.UriRef;
+import org.apache.clerezza.rdf.core.access.LockableMGraph;
 import org.apache.clerezza.rdf.core.access.TcManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -126,7 +128,11 @@ public abstract class LinkerAdapter implements Interlinker, Deduplicator {
     private long convertToCsv(TripleCollection dataset, String query, CsvConfig config, String outputFile) {
         logger.info("Converting input data to CSV {}", outputFile);
         StopWatch.start();
-
+        Lock lock = null;
+        if (dataset instanceof LockableMGraph) {
+            lock = ((LockableMGraph)dataset).getLock().readLock();
+            lock.lock();
+        }
         try (FileWriter writer = new FileWriter(outputFile)) {
             long size = new ConfigurableSesameToCsvInputStore(writer, config, query, defaultTmpDir()).populate(dataset);
 
@@ -136,6 +142,10 @@ public abstract class LinkerAdapter implements Interlinker, Deduplicator {
             return size;
         } catch (IOException e) {
             throw new RuntimeException("Problem converting input to CSV: " + e.getMessage(), e);
+        } finally {
+            if (lock != null) {
+                lock.unlock();
+            }
         }
 
     }
